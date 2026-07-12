@@ -1,0 +1,174 @@
+---
+/**
+ * Tab 2 island — Conspiracy Simulator. Sliders for people, per-person yearly
+ * leak probability, and time horizon; live P(secret survives) readout + curve,
+ * modelled on Grimes (2016). Vanilla TS + Canvas. Localized labels + es-AR number
+ * formatting passed via a JSON config the client script reads.
+ */
+import type { Locale } from '../../lib/i18n';
+import { HTML_LANG } from '../../lib/i18n';
+import { UI } from '../../i18n/ui';
+import { section } from '../../lib/content';
+
+interface Props {
+  locale: Locale;
+}
+const { locale } = Astro.props;
+const s = UI[locale].sim;
+const math = await section('feasibility-sim-math', locale);
+
+const config = {
+  numLocale: HTML_LANG[locale],
+  labels: s,
+  presets: {
+    single: { n: 3, p: 0.01, t: 5 },
+    calciopoli: { n: 30, p: 0.02, t: 8 },
+    institutional: { n: 150, p: 0.03, t: 12 },
+  },
+};
+---
+
+<div class="sim card" data-sim="conspiracy">
+  <script type="application/json" is:inline data-config set:html={JSON.stringify(config)} />
+  <p class="sim-flag spec">{UI[locale].speculative}</p>
+
+  <div class="sim-grid">
+    <div class="controls">
+      <label class="ctrl">
+        <span class="ctrl-label">{s.peopleSilent}: <b class="data" data-out="n">150</b></span>
+        <input type="range" min="2" max="500" step="1" value="150" data-in="n" />
+      </label>
+      <label class="ctrl">
+        <span class="ctrl-label">{s.leakChance}: <b class="data" data-out="p">3.0%</b></span>
+        <input type="range" min="0" max="100" step="1" value="61" data-in="p" />
+      </label>
+      <label class="ctrl">
+        <span class="ctrl-label">{s.years}: <b class="data" data-out="t">12</b></span>
+        <input type="range" min="1" max="50" step="1" value="12" data-in="t" />
+      </label>
+
+      <div class="presets">
+        <span class="presets-label">{s.presets}:</span>
+        <button type="button" class="btn" data-preset="single">{s.presetSingleRef}</button>
+        <button type="button" class="btn" data-preset="calciopoli">{s.presetCalciopoli}</button>
+        <button type="button" class="btn" data-preset="institutional">{s.presetInstitutional}</button>
+      </div>
+    </div>
+
+    <div class="readout">
+      <p class="big-label">{s.survives}</p>
+      <p class="big-num data" data-out="survive">—</p>
+      <canvas class="curve" width="480" height="200" data-canvas></canvas>
+      <p class="takeaway" data-out="takeaway"></p>
+    </div>
+  </div>
+
+  <details class="math">
+    <summary>{UI[locale].theMath}</summary>
+    <p>{math.full}</p>
+  </details>
+</div>
+
+<style>
+  .sim {
+    padding: var(--s-5);
+  }
+  .sim-flag {
+    margin: 0 0 var(--s-4);
+  }
+  .sim-grid {
+    display: grid;
+    grid-template-columns: 1fr 1.1fr;
+    gap: var(--s-5);
+  }
+  @media (max-width: 720px) {
+    .sim-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+  .controls {
+    display: grid;
+    gap: var(--s-4);
+    align-content: start;
+  }
+  .ctrl {
+    display: grid;
+    gap: var(--s-2);
+  }
+  .ctrl-label {
+    font-size: 0.9rem;
+    font-weight: 500;
+  }
+  .ctrl-label b {
+    color: var(--sky-ink);
+  }
+  input[type='range'] {
+    width: 100%;
+    accent-color: var(--sky);
+  }
+  .presets {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--s-2);
+    align-items: center;
+    margin-top: var(--s-2);
+  }
+  .presets-label {
+    font-size: 0.8rem;
+    color: var(--muted);
+    width: 100%;
+  }
+  .presets .btn {
+    font-size: 0.78rem;
+    padding: 0.4em 0.7em;
+  }
+  .readout {
+    text-align: center;
+  }
+  .big-label {
+    margin: 0;
+    font-size: 0.85rem;
+    color: var(--muted);
+  }
+  .big-num {
+    margin: 0.1em 0 var(--s-3);
+    font-size: clamp(2.6rem, 2rem + 3vw, 4rem);
+    font-weight: 700;
+    line-height: 1;
+    color: var(--sky-ink);
+  }
+  .curve {
+    width: 100%;
+    height: auto;
+    border-radius: var(--radius-sm);
+    background: var(--surface-2);
+  }
+  .takeaway {
+    margin: var(--s-3) 0 0;
+    font-weight: 600;
+    color: var(--pop);
+    min-height: 1.5em;
+  }
+  .math {
+    margin-top: var(--s-4);
+    border-top: 1px solid var(--line);
+    padding-top: var(--s-3);
+  }
+  .math summary {
+    cursor: pointer;
+    font-weight: 600;
+    color: var(--sky-ink);
+    font-family: var(--font-data);
+    font-size: 0.85rem;
+  }
+  .math p {
+    margin-top: var(--s-3);
+    color: var(--muted);
+    font-size: 0.92rem;
+  }
+</style>
+
+<script>
+  import { initConspiracy } from '../../scripts/conspiracy';
+  initConspiracy();
+</script>
