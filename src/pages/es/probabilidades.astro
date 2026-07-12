@@ -1,0 +1,11 @@
+---
+import Base from '../../layouts/Base.astro';
+import ProbabilitiesPage from '../../components/pages/ProbabilitiesPage.astro';
+import { section } from '../../lib/content';
+const locale = 'es' as const;
+const meta = await section('prob-intro', locale);
+---
+
+<Base locale={locale} tab="probabilities" title={meta.headline} description={meta.short}>
+  <ProbabilitiesPage locale={locale} />
+</Base>

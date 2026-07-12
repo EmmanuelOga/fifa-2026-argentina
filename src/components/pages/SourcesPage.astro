@@ -1,0 +1,101 @@
+---
+/**
+ * Tab 5 — Sources, grouped by reliability tier, each with a "why it matters".
+ */
+import type { Locale } from '../../lib/i18n';
+import { section, sourcesByTier } from '../../lib/content';
+import Callout from '../Callout.astro';
+
+interface Props {
+  locale: Locale;
+}
+const { locale } = Astro.props;
+const intro = await section('sources-intro', locale);
+const digDeeper = await section('sources-dig-deeper', locale);
+const tiers = await sourcesByTier();
+const LINKEDIN = 'https://www.linkedin.com/in/emmanueloga/';
+
+const TIER_LABEL: Record<number, Record<Locale, string>> = {
+  1: { en: 'Tier 1 — Primary / legal / official', es: 'Nivel 1 — Primarias / legales / oficiales' },
+  2: { en: 'Tier 2 — Quality journalism', es: 'Nivel 2 — Periodismo de calidad' },
+  3: { en: 'Tier 3 — Data & models', es: 'Nivel 3 — Datos y modelos' },
+  4: { en: 'Tier 4 — Academic', es: 'Nivel 4 — Académicas' },
+  5: { en: 'Tier 5 — Historical context', es: 'Nivel 5 — Contexto histórico' },
+};
+const searchUrl = (q: string) => `https://www.google.com/search?q=${encodeURIComponent(q)}`;
+---
+
+<div class="container-narrow tab-body stack">
+  <header>
+    <p class="eyebrow">{locale === 'es' ? 'Pestaña 5 — Fuentes' : 'Tab 5 — Sources'}</p>
+    <h1>{intro.headline}</h1>
+    <p class="lead">{intro.full}</p>
+  </header>
+
+  {
+    tiers.map(([tier, list]) => (
+      <section class="tier">
+        <h2>{TIER_LABEL[tier]?.[locale]}</h2>
+        <ul class="src-list">
+          {list.map((s) => {
+            const c = s.data.content[locale];
+            const href = s.data.url && !s.data.unverified ? s.data.url : searchUrl(c.title);
+            return (
+              <li>
+                <a href={href} target="_blank" rel="noopener">
+                  {c.title} ↗
+                  {s.data.unverified && (
+                    <span class="uv">{locale === 'es' ? ' (sin verificar)' : ' (unverified)'}</span>
+                  )}
+                </a>
+                <span class="why">{c.why}</span>
+              </li>
+            );
+          })}
+        </ul>
+      </section>
+    ))
+  }
+
+  <Callout variant="sky" icon="🔧" title={digDeeper.headline}>
+    <p>{digDeeper.full} <a href={LINKEDIN}>LinkedIn</a>.</p>
+  </Callout>
+</div>
+
+<style>
+  .tab-body {
+    padding-block: var(--s-6) var(--s-7);
+  }
+  .lead {
+    font-size: var(--step-1);
+  }
+  .tier h2 {
+    font-size: var(--step-1);
+    color: var(--sky-ink);
+  }
+  .src-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: grid;
+    gap: var(--s-4);
+  }
+  .src-list li {
+    display: grid;
+    gap: 0.2em;
+    padding-left: var(--s-4);
+    border-left: 3px solid var(--line);
+  }
+  .src-list a {
+    font-weight: 600;
+  }
+  .uv {
+    font-style: italic;
+    color: var(--muted);
+    font-weight: 400;
+  }
+  .why {
+    font-size: 0.9rem;
+    color: var(--muted);
+  }
+</style>

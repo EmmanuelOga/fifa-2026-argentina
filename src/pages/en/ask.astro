@@ -1,0 +1,9 @@
+---
+import Base from '../../layouts/Base.astro';
+import AskPage from '../../components/pages/AskPage.astro';
+const locale = 'en' as const;
+---
+
+<Base locale={locale} tab="ask" title="Ask the Research" description="Chat with the site's compiled research.">
+  <AskPage locale={locale} />
+</Base>

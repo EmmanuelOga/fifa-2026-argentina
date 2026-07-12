@@ -1,0 +1,39 @@
+---
+/**
+ * Tab — Ask the Research. An LLM chat grounded in the compiled research, with a
+ * graceful fallback when the serverless endpoint isn't available.
+ */
+import type { Locale } from '../../lib/i18n';
+import AskWidget from '../AskWidget.astro';
+
+interface Props {
+  locale: Locale;
+}
+const { locale } = Astro.props;
+const es = locale === 'es';
+---
+
+<div class="container-narrow tab-body stack">
+  <header>
+    <p class="eyebrow">{es ? 'Preguntá a la Investigación' : 'Ask the Research'}</p>
+    <h1>{es ? '¿Tenés una pregunta?' : 'Got a question?'}</h1>
+    <p class="lead">
+      {
+        es
+          ? 'Preguntale a un asistente que responde únicamente con la investigación compilada de este sitio. Si no puede responder, registra la pregunta para la próxima re-corrida.'
+          : 'Ask an assistant that answers only from this site’s compiled research. If it can’t answer, it logs your question for the next re-run.'
+      }
+    </p>
+  </header>
+
+  <AskWidget locale={locale} />
+</div>
+
+<style>
+  .tab-body {
+    padding-block: var(--s-6) var(--s-7);
+  }
+  .lead {
+    font-size: var(--step-1);
+  }
+</style>

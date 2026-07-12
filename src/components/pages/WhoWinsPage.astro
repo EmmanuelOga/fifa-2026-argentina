@@ -1,0 +1,233 @@
+---
+/**
+ * Tab 4 — Who Wins? Reads the bracket + model synthesis from src/data and renders
+ * for ANY bracket state. Triangulates Opta / Silver / bookmakers, shows the
+ * Monte Carlo sim, and closes in the author's voice (eliminated-state aware).
+ */
+import type { Locale } from '../../lib/i18n';
+import { section } from '../../lib/content';
+import { pct } from '../../lib/format';
+import { UI } from '../../i18n/ui';
+import {
+  TEAMS,
+  QUARTERFINALS,
+  SEMIFINALS,
+  FINAL,
+  argentinaEliminated,
+} from '../../data/bracket';
+import { OPTA, BOOKMAKERS, AUTHOR_RANGES, MODEL_ORDER } from '../../data/models';
+import Callout from '../Callout.astro';
+import SnapshotBadge from '../SnapshotBadge.astro';
+import SourceRefs from '../SourceRefs.astro';
+import KeyTerms from '../KeyTerms.astro';
+import MonteCarloBracket from '../sims/MonteCarloBracket.astro';
+
+interface Props {
+  locale: Locale;
+}
+const { locale } = Astro.props;
+const intro = await section('whowins-intro', locale);
+const silverNote = await section('whowins-silver-note', locale);
+const fatigue = await section('whowins-fatigue', locale);
+const eliminated = argentinaEliminated();
+const closing = await section(eliminated ? 'whowins-eliminated' : 'whowins-closing', locale);
+
+const teamName = (code: string) => TEAMS[code]?.name[locale] ?? code;
+const teamFlag = (code: string) => TEAMS[code]?.flag ?? '';
+---
+
+<div class="container-narrow tab-body stack">
+  <header>
+    <p class="eyebrow">{locale === 'es' ? 'Pestaña 4 — ¿Quién Gana?' : 'Tab 4 — Who Wins?'}</p>
+    <h1>{intro.headline}</h1>
+    <p class="lead">{intro.full}</p>
+    <p><SnapshotBadge locale={locale} /></p>
+  </header>
+
+  <KeyTerms ids={['elo', 'monte-carlo', 'overround']} locale={locale} />
+
+  {/* Bracket state */}
+  <section class="bracket" aria-label="Bracket">
+    <div class="bcol">
+      <h3>{locale === 'es' ? 'Cuartos' : 'Quarterfinals'}</h3>
+      {
+        QUARTERFINALS.map((m) => (
+          <p class="match done">
+            <span>{teamFlag(m.home)} {teamName(m.home)} <b class="data">{m.result?.home}</b></span>
+            <span class="vs">–</span>
+            <span><b class="data">{m.result?.away}</b> {teamName(m.away)} {teamFlag(m.away)}</span>
+          </p>
+        ))
+      }
+    </div>
+    <div class="bcol">
+      <h3>{locale === 'es' ? 'Semifinales' : 'Semifinals'}</h3>
+      {
+        SEMIFINALS.map((m) => (
+          <p class:list={['match', { done: !!m.result }]}>
+            <span>{teamFlag(m.home)} {teamName(m.home)}{m.result && <b class="data"> {m.result.home}</b>}</span>
+            <span class="vs">{m.result ? '–' : 'v'}</span>
+            <span>{m.result && <b class="data">{m.result.away} </b>}{teamName(m.away)} {teamFlag(m.away)}</span>
+            <span class="meta data">{m.date} · {m.venue[locale]}</span>
+          </p>
+        ))
+      }
+    </div>
+    <div class="bcol">
+      <h3>{locale === 'es' ? 'Final' : 'Final'}</h3>
+      <p class="match">
+        {
+          FINAL.result
+            ? `${teamFlag(FINAL.result.winner)} ${teamName(FINAL.result.winner)} 🏆`
+            : locale === 'es' ? 'Por definirse' : 'To be decided'
+        }
+        <span class="meta data">{FINAL.date} · {FINAL.venue[locale]}</span>
+      </p>
+    </div>
+  </section>
+
+  {/* Three-model table */}
+  <section class="block">
+    <h2>{locale === 'es' ? 'Los modelos, lado a lado' : 'The models, side by side'}</h2>
+    <div class="table-wrap">
+      <table>
+        <thead>
+          <tr>
+            <th>{locale === 'es' ? 'Selección' : 'Team'}</th>
+            <th>Opta {locale === 'es' ? 'título' : 'title'}</th>
+            <th>Opta {locale === 'es' ? 'a la final' : 'reach final'}</th>
+            <th>{locale === 'es' ? 'Casas' : 'Bookies'}</th>
+            <th>{locale === 'es' ? 'Rango (autor)' : 'Author range'} <span class="spec">{UI[locale].speculative}</span></th>
+          </tr>
+        </thead>
+        <tbody>
+          {
+            MODEL_ORDER.map((code) => {
+              const o = OPTA.teams[code as keyof typeof OPTA.teams];
+              const b = BOOKMAKERS.teams[code as keyof typeof BOOKMAKERS.teams];
+              const r = AUTHOR_RANGES[code];
+              return (
+                <tr class:list={{ arg: code === 'ARG' }}>
+                  <td>{teamFlag(code)} {teamName(code)}</td>
+                  <td class="data">{pct(locale, o.title)}</td>
+                  <td class="data">{pct(locale, o.reachFinal)}</td>
+                  <td class="data">{b.american} ({pct(locale, b.implied, 0)})</td>
+                  <td class="data">{r && `${pct(locale, r.low, 0)}–${pct(locale, r.high, 0)}`}</td>
+                </tr>
+              );
+            })
+          }
+        </tbody>
+      </table>
+    </div>
+    <SourceRefs ids={['opta', 'oddschecker']} locale={locale} />
+  </section>
+
+  <Callout variant="sun" icon="📊" title={silverNote.headline}>
+    <p>{silverNote.full}</p>
+    <SourceRefs ids={['silver']} locale={locale} />
+  </Callout>
+
+  {
+    !eliminated && (
+      <Callout variant="sky" icon="🥵" title={fatigue.headline}>
+        <p>{fatigue.full}</p>
+      </Callout>
+    )
+  }
+
+  <MonteCarloBracket locale={locale} />
+
+  <Callout variant="plain" icon="🇦🇷" title={closing.headline}>
+    <p class="closing">{closing.full}</p>
+  </Callout>
+</div>
+
+<style>
+  .tab-body {
+    padding-block: var(--s-6) var(--s-7);
+  }
+  .lead {
+    font-size: var(--step-1);
+  }
+  .bracket {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--s-4);
+  }
+  .bcol {
+    background: var(--surface);
+    border: 1px solid var(--line);
+    border-radius: var(--radius);
+    padding: var(--s-4);
+    box-shadow: var(--shadow-sm);
+  }
+  .bcol h3 {
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--muted);
+    font-family: var(--font-data);
+    margin-bottom: var(--s-3);
+  }
+  .match {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+    gap: 0.3em;
+    font-size: 0.9rem;
+    margin: 0 0 var(--s-3);
+    line-height: 1.4;
+  }
+  .match.done {
+    color: var(--ink);
+  }
+  .match .vs {
+    color: var(--muted);
+    padding-inline: 0.2em;
+  }
+  .match .meta {
+    flex-basis: 100%;
+    font-size: 0.72rem;
+    color: var(--muted);
+  }
+  .table-wrap {
+    overflow-x: auto;
+  }
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.9rem;
+  }
+  th,
+  td {
+    text-align: right;
+    padding: 0.55em 0.6em;
+    border-bottom: 1px solid var(--line);
+    white-space: nowrap;
+  }
+  th:first-child,
+  td:first-child {
+    text-align: left;
+  }
+  thead th {
+    font-family: var(--font-data);
+    font-size: 0.72rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: var(--muted);
+  }
+  tr.arg td {
+    background: color-mix(in srgb, var(--sky-soft) 40%, white);
+    font-weight: 600;
+  }
+  .closing {
+    font-size: var(--step-1);
+    margin: 0;
+  }
+  @media (max-width: 640px) {
+    .bracket {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>

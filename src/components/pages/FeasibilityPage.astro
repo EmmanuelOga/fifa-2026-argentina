@@ -1,0 +1,188 @@
+---
+/**
+ * Tab 2 — Could It Be Done? Feasibility rating, how appointments work, where
+ * discretion concentrates, detection risk, precedents, the Conspiracy Simulator,
+ * and the base-rate anchor.
+ */
+import type { Locale } from '../../lib/i18n';
+import { section, precedents } from '../../lib/content';
+import Callout from '../Callout.astro';
+import SourceRefs from '../SourceRefs.astro';
+import KeyTerms from '../KeyTerms.astro';
+import ConspiracySim from '../sims/ConspiracySim.astro';
+
+interface Props {
+  locale: Locale;
+}
+const { locale } = Astro.props;
+const intro = await section('feasibility-intro', locale);
+const appointments = await section('feasibility-appointments', locale);
+const discretion = await section('feasibility-discretion', locale);
+const detection = await section('feasibility-detection', locale);
+const baserate = await section('feasibility-baserate', locale);
+const simIntro = await section('feasibility-sim-intro', locale);
+const takeaway = await section('feasibility-takeaway', locale);
+const cases = await precedents();
+
+const blocks = [
+  { data: appointments, srcs: ['fifa-appointments'] },
+  { data: discretion, srcs: ['ifab-var-2026', 'wiki-calciopoli'] },
+  { data: detection, srcs: [] },
+];
+---
+
+<div class="container-narrow tab-body stack">
+  <header>
+    <p class="eyebrow">{locale === 'es' ? 'Pestaña 2 — ¿Se Puede?' : 'Tab 2 — Could It Be Done?'}</p>
+    <div class="rating-row">
+      <div class="rating" aria-label={locale === 'es' ? 'Factibilidad 3 de 10' : 'Feasibility 3 of 10'}>
+        <span class="rating-num data">3</span><span class="rating-den data">/10</span>
+      </div>
+      <div>
+        <h1>{intro.headline}</h1>
+        <p class="lead">{intro.full}</p>
+      </div>
+    </div>
+  </header>
+
+  <KeyTerms ids={['var', 'vmo', 'calciopoli', 'ifab', 'cas']} locale={locale} />
+
+  {
+    blocks.map((b) => (
+      <section class="block">
+        <h2>{b.data.headline}</h2>
+        <p>{b.data.full}</p>
+        {b.srcs.length > 0 && <SourceRefs ids={b.srcs} locale={locale} />}
+      </section>
+    ))
+  }
+
+  <section class="block">
+    <h2>{locale === 'es' ? 'Precedentes' : 'Precedents'}</h2>
+    <div class="precedents">
+      {
+        cases.map((c) => (
+          <article class:list={['prec', c.data.tag]}>
+            <p class="prec-year data">{c.data.year}</p>
+            <h3>{c.data.content[locale].name}</h3>
+            <p class="prec-sum">{c.data.content[locale].summary}</p>
+            <p class="prec-lesson">→ {c.data.content[locale].lesson}</p>
+            <SourceRefs ids={c.data.sources.map((s) => s.id)} locale={locale} />
+          </article>
+        ))
+      }
+    </div>
+  </section>
+
+  <Callout variant="sky" icon="🧮" title={simIntro.headline}>
+    <p>{simIntro.full}</p>
+  </Callout>
+
+  <ConspiracySim locale={locale} />
+
+  <Callout variant="plain" icon="⚓" title={baserate.headline}>
+    <p>{baserate.full}</p>
+  </Callout>
+
+  <Callout variant="sun" icon="💡" title={takeaway.headline}>
+    <p>{takeaway.full}</p>
+  </Callout>
+</div>
+
+<style>
+  .tab-body {
+    padding-block: var(--s-6) var(--s-7);
+  }
+  .rating-row {
+    display: flex;
+    gap: var(--s-5);
+    align-items: center;
+  }
+  .rating {
+    flex: none;
+    width: 92px;
+    height: 92px;
+    border-radius: 50%;
+    display: grid;
+    place-items: center;
+    background: conic-gradient(var(--sun) 0 30%, var(--surface-2) 30% 100%);
+    position: relative;
+  }
+  .rating::after {
+    content: '';
+    position: absolute;
+    inset: 8px;
+    border-radius: 50%;
+    background: var(--surface);
+  }
+  .rating-num,
+  .rating-den {
+    position: relative;
+    z-index: 1;
+    font-weight: 700;
+  }
+  .rating-num {
+    font-size: 2.2rem;
+    color: var(--sun-ink);
+  }
+  .rating-den {
+    font-size: 0.9rem;
+    color: var(--muted);
+  }
+  .lead {
+    font-size: var(--step-1);
+    margin: 0;
+  }
+  .block h2 {
+    font-size: var(--step-1);
+  }
+  .precedents {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(15rem, 1fr));
+    gap: var(--s-3);
+  }
+  .prec {
+    background: var(--surface);
+    border: 1px solid var(--line);
+    border-left: 4px solid var(--muted);
+    border-radius: var(--radius);
+    padding: var(--s-4);
+    box-shadow: var(--shadow-sm);
+  }
+  .prec.proven-domestic,
+  .prec.proven-betting {
+    border-left-color: var(--pop);
+  }
+  .prec.financial {
+    border-left-color: var(--sun);
+  }
+  .prec.suspected,
+  .prec.circumstantial {
+    border-left-color: var(--sky);
+  }
+  .prec-year {
+    margin: 0;
+    font-size: 0.8rem;
+    color: var(--muted);
+    font-weight: 600;
+  }
+  .prec h3 {
+    font-size: 1.05rem;
+    margin: 0.1em 0 var(--s-2);
+  }
+  .prec-sum {
+    font-size: 0.92rem;
+  }
+  .prec-lesson {
+    font-size: 0.92rem;
+    font-weight: 500;
+    color: var(--sky-ink);
+    margin-bottom: 0;
+  }
+  @media (max-width: 520px) {
+    .rating-row {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  }
+</style>

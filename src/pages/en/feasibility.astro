@@ -1,0 +1,11 @@
+---
+import Base from '../../layouts/Base.astro';
+import FeasibilityPage from '../../components/pages/FeasibilityPage.astro';
+import { section } from '../../lib/content';
+const locale = 'en' as const;
+const meta = await section('feasibility-intro', locale);
+---
+
+<Base locale={locale} tab="feasibility" title={meta.headline} description={meta.short}>
+  <FeasibilityPage locale={locale} />
+</Base>

@@ -1,0 +1,160 @@
+---
+/**
+ * Tab 1 — The Story. Intro + an expandable timeline (tap/scroll to open each
+ * node) + the two-threads insight + takeaway. All from the content layer.
+ */
+import type { Locale } from '../../lib/i18n';
+import { section, timeline } from '../../lib/content';
+import { longDate } from '../../lib/format';
+import Callout from '../Callout.astro';
+import ThreadTag from '../ThreadTag.astro';
+import SourceRefs from '../SourceRefs.astro';
+import KeyTerms from '../KeyTerms.astro';
+
+interface Props {
+  locale: Locale;
+}
+const { locale } = Astro.props;
+const intro = await section('story-intro', locale);
+const twoThreads = await section('story-two-threads', locale);
+const takeaway = await section('story-takeaway', locale);
+const events = await timeline();
+---
+
+<div class="container-narrow tab-body stack">
+  <header>
+    <p class="eyebrow">{locale === 'es' ? 'Pestaña 1 — La Historia' : 'Tab 1 — The Story'}</p>
+    <h1>{intro.headline}</h1>
+    <p class="lead">{intro.full}</p>
+  </header>
+
+  <KeyTerms ids={['var', 'afa', 'ifab', 'aet']} locale={locale} />
+
+  <ol class="timeline">
+    {
+      events.map((e) => (
+        <li class:list={['tl-item', e.data.thread]}>
+          <span class="tl-dot" aria-hidden="true">{e.data.icon}</span>
+          <details>
+            <summary>
+              <span class="tl-date data">
+                {longDate(locale, e.data.date)}
+                {e.data.dateApprox && ' ≈'}
+              </span>
+              <span class="tl-head">{e.data.content[locale].headline}</span>
+              <span class="tl-thread"><ThreadTag thread={e.data.thread} locale={locale} /></span>
+            </summary>
+            <div class="tl-detail">
+              <p class="tl-full">{e.data.content[locale].full}</p>
+              <p>{e.data.content[locale].detail}</p>
+              <SourceRefs ids={e.data.sources.map((s) => s.id)} locale={locale} />
+            </div>
+          </details>
+        </li>
+      ))
+    }
+  </ol>
+
+  <Callout variant="sun" icon="🧵" title={twoThreads.headline}>
+    <p>{twoThreads.full}</p>
+  </Callout>
+
+  <Callout variant="plain" icon="✅" title={takeaway.headline}>
+    <p>{takeaway.full}</p>
+  </Callout>
+</div>
+
+<style>
+  .tab-body {
+    padding-block: var(--s-6) var(--s-7);
+  }
+  .lead {
+    font-size: var(--step-1);
+  }
+  .timeline {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    position: relative;
+  }
+  .timeline::before {
+    content: '';
+    position: absolute;
+    left: 15px;
+    top: 8px;
+    bottom: 8px;
+    width: 2px;
+    background: var(--line);
+  }
+  .tl-item {
+    position: relative;
+    padding-left: 48px;
+    margin-bottom: var(--s-3);
+  }
+  .tl-dot {
+    position: absolute;
+    left: 0;
+    top: 2px;
+    width: 32px;
+    height: 32px;
+    display: grid;
+    place-items: center;
+    border-radius: 50%;
+    background: var(--surface);
+    border: 2px solid var(--line);
+    font-size: 0.95rem;
+    z-index: 1;
+  }
+  .tl-item.sporting .tl-dot {
+    border-color: color-mix(in srgb, var(--sky) 55%, white);
+  }
+  .tl-item.financial .tl-dot {
+    border-color: color-mix(in srgb, var(--sun) 60%, white);
+  }
+  details {
+    background: var(--surface);
+    border: 1px solid var(--line);
+    border-radius: var(--radius);
+    box-shadow: var(--shadow-sm);
+    overflow: hidden;
+  }
+  summary {
+    cursor: pointer;
+    list-style: none;
+    padding: var(--s-3) var(--s-4);
+    display: grid;
+    gap: 0.2em 0.6em;
+    grid-template-columns: 1fr auto;
+    align-items: center;
+  }
+  summary::-webkit-details-marker {
+    display: none;
+  }
+  summary:hover {
+    background: var(--surface-2);
+  }
+  .tl-date {
+    grid-column: 1 / -1;
+    font-size: 0.72rem;
+    color: var(--muted);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+  }
+  .tl-head {
+    font-family: var(--font-display);
+    font-weight: 700;
+    font-size: 1.05rem;
+    color: var(--sky-ink);
+  }
+  .tl-thread {
+    justify-self: end;
+  }
+  .tl-detail {
+    padding: 0 var(--s-4) var(--s-4);
+    border-top: 1px solid var(--line);
+  }
+  .tl-full {
+    font-weight: 500;
+    margin-top: var(--s-3);
+  }
+</style>

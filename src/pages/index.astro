@@ -1,0 +1,21 @@
+---
+/**
+ * Root redirect to the default locale. Static, base-path-agnostic (works under
+ * both Cloudflare Pages root and a GitHub Pages subpath).
+ */
+import { withBase } from '../lib/url';
+const target = withBase('/en');
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="refresh" content={`0; url=${target}`} />
+    <link rel="canonical" href={target} />
+    <title>La Alegría</title>
+  </head>
+  <body>
+    <p>Redirecting to <a href={target}>La Alegría</a>…</p>
+  </body>
+</html>

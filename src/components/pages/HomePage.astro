@@ -1,0 +1,120 @@
+---
+/**
+ * Home / hero page body. Sets the joy → honest look → joy arc, the bias
+ * disclosure and caveats boxes, and links into the five tabs. All prose from the
+ * content layer.
+ */
+import type { Locale } from '../../lib/i18n';
+import { TAB_KEYS } from '../../lib/i18n';
+import { UI, TAB_LABEL } from '../../i18n/ui';
+import { tabPath } from '../../lib/url';
+import { section } from '../../lib/content';
+import Hero from '../Hero.astro';
+import Callout from '../Callout.astro';
+import Prose from '../Prose.astro';
+
+interface Props {
+  locale: Locale;
+}
+const { locale } = Astro.props;
+const t = UI[locale];
+const bias = await section('bias-disclosure', locale);
+const caveats = await section('caveats', locale);
+const twoThreads = await section('story-two-threads', locale);
+const closing = await section('closing-note', locale);
+
+const tabBlurb: Record<string, { en: string; es: string }> = {
+  story: { en: 'What actually happened, as a timeline.', es: 'Lo que realmente pasó, en una línea de tiempo.' },
+  feasibility: { en: 'Could a fix even be pulled off? A simulator.', es: '¿Se puede siquiera arreglar? Un simulador.' },
+  probabilities: { en: 'Four hypotheses, and a Bayesian playground.', es: 'Cuatro hipótesis y un patio bayesiano.' },
+  'who-wins': { en: 'The models, the market, and a Monte Carlo.', es: 'Los modelos, el mercado y un Monte Carlo.' },
+  ask: { en: 'Chat with the compiled research.', es: 'Chateá con la investigación compilada.' },
+  sources: { en: 'Everything, traced to a source.', es: 'Todo, rastreado a una fuente.' },
+  log: { en: 'A living changelog of re-runs.', es: 'Un changelog vivo de re-corridas.' },
+};
+---
+
+<Hero locale={locale} />
+
+<div class="container-narrow home-body stack">
+  <Callout variant="sky" icon="🙋" title={bias.headline}>
+    <p>{bias.full}</p>
+  </Callout>
+
+  <Callout variant="sun" icon="🧵" title={twoThreads.headline}>
+    <p>{twoThreads.full}</p>
+  </Callout>
+
+  <section aria-label="Sections">
+    <h2>{locale === 'es' ? 'Recorré el análisis' : 'Explore the analysis'}</h2>
+    <div class="tab-cards">
+      {
+        TAB_KEYS.map((key) => (
+          <a class="tab-card" href={tabPath(locale, key)}>
+            <span class="tc-name">{TAB_LABEL[key][locale]}</span>
+            <span class="tc-blurb">{tabBlurb[key]![locale]}</span>
+            <span class="tc-arrow" aria-hidden="true">→</span>
+          </a>
+        ))
+      }
+    </div>
+  </section>
+
+  <Callout variant="pop" icon="⚠️" title={caveats.headline}>
+    <Prose data={caveats} list="ul" />
+  </Callout>
+
+  <Callout variant="plain" icon="🇦🇷" title={closing.headline}>
+    <p class="closing">{closing.full}</p>
+  </Callout>
+</div>
+
+<style>
+  .home-body {
+    padding-block: var(--s-6) var(--s-7);
+  }
+  .tab-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(15rem, 1fr));
+    gap: var(--s-3);
+  }
+  .tab-card {
+    position: relative;
+    display: grid;
+    gap: 0.25em;
+    text-decoration: none;
+    color: inherit;
+    background: var(--surface);
+    border: 1px solid var(--line);
+    border-radius: var(--radius);
+    padding: var(--s-4);
+    box-shadow: var(--shadow-sm);
+    transition: transform 0.12s ease, border-color 0.12s ease, box-shadow 0.12s ease;
+  }
+  .tab-card:hover {
+    transform: translateY(-2px);
+    border-color: var(--sky);
+    box-shadow: var(--shadow);
+  }
+  .tc-name {
+    font-family: var(--font-display);
+    font-weight: 700;
+    font-size: 1.1rem;
+    color: var(--sky-ink);
+  }
+  .tc-blurb {
+    font-size: 0.9rem;
+    color: var(--muted);
+  }
+  .tc-arrow {
+    position: absolute;
+    top: var(--s-4);
+    right: var(--s-4);
+    color: var(--sun);
+    font-weight: 700;
+  }
+  .closing {
+    font-size: var(--step-1);
+    margin: 0;
+  }
+</style>

@@ -1,0 +1,11 @@
+---
+import Base from '../../layouts/Base.astro';
+import HomePage from '../../components/pages/HomePage.astro';
+import { section } from '../../lib/content';
+const locale = 'es' as const;
+const hero = await section('hero', locale);
+---
+
+<Base locale={locale} title={hero.headline} description={hero.short}>
+  <HomePage locale={locale} />
+</Base>

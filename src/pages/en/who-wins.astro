@@ -1,0 +1,11 @@
+---
+import Base from '../../layouts/Base.astro';
+import WhoWinsPage from '../../components/pages/WhoWinsPage.astro';
+import { section } from '../../lib/content';
+const locale = 'en' as const;
+const meta = await section('whowins-intro', locale);
+---
+
+<Base locale={locale} tab="who-wins" title={meta.headline} description={meta.short}>
+  <WhoWinsPage locale={locale} />
+</Base>

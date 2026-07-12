@@ -1,0 +1,163 @@
+---
+/**
+ * Tab 6 — The Log / La Bitácora. A changelog of analysis re-runs, each with a
+ * prediction scorecard and (once outcomes are known) how the last run fared.
+ */
+import type { Locale } from '../../lib/i18n';
+import { section, updates } from '../../lib/content';
+import { longDate } from '../../lib/format';
+import Callout from '../Callout.astro';
+
+interface Props {
+  locale: Locale;
+}
+const { locale } = Astro.props;
+const intro = await section('log-intro', locale);
+const openQ = await section('open-questions', locale);
+const runs = await updates();
+
+const VERDICT: Record<string, Record<Locale, string>> = {
+  pending: { en: '⏳ pending', es: '⏳ pendiente' },
+  hit: { en: '✅ hit', es: '✅ acierto' },
+  miss: { en: '❌ miss', es: '❌ fallo' },
+  partial: { en: '◐ partial', es: '◐ parcial' },
+};
+---
+
+<div class="container-narrow tab-body stack">
+  <header>
+    <p class="eyebrow">{locale === 'es' ? 'Pestaña 6 — La Bitácora' : 'Tab 6 — The Log'}</p>
+    <h1>{intro.headline}</h1>
+    <p class="lead">{intro.full}</p>
+  </header>
+
+  <Callout variant="sun" icon="❓" title={openQ.headline}>
+    <ol class="oq">{openQ.body?.map((q) => <li>{q}</li>)}</ol>
+  </Callout>
+
+  {
+    runs.map((u) => (
+      <article class="run">
+        <div class="run-head">
+          <span class="run-badge data">#{u.data.run}</span>
+          <div>
+            <h2>{u.data.content[locale].title}</h2>
+            <p class="run-date data">{longDate(locale, u.data.date)}</p>
+          </div>
+        </div>
+        <p class="run-sum">{u.data.content[locale].summary}</p>
+        {u.data.content[locale].body.map((p) => <p>{p}</p>)}
+
+        {u.data.scorecard.length > 0 && (
+          <div class="scorecard">
+            <p class="sc-label">{locale === 'es' ? 'Marcador de predicciones' : 'Prediction scorecard'}</p>
+            <ul>
+              {u.data.scorecard.map((row) => (
+                <li>
+                  <span>{row.claim[locale]}</span>
+                  <span class:list={['verdict', row.verdict]}>{VERDICT[row.verdict]?.[locale]}</span>
+                </li>
+              ))}
+            </ul>
+          </div>
+        )}
+
+        {u.data.archiveUrl && (
+          <p class="archive">
+            <a href={u.data.archiveUrl} target="_blank" rel="noopener">
+              {locale === 'es' ? 'Ver versión archivada ↗' : 'View archived version ↗'}
+            </a>
+          </p>
+        )}
+      </article>
+    ))
+  }
+</div>
+
+<style>
+  .tab-body {
+    padding-block: var(--s-6) var(--s-7);
+  }
+  .lead {
+    font-size: var(--step-1);
+  }
+  .oq {
+    margin: 0;
+    padding-left: 1.2em;
+    display: grid;
+    gap: var(--s-2);
+  }
+  .run {
+    background: var(--surface);
+    border: 1px solid var(--line);
+    border-radius: var(--radius);
+    padding: var(--s-5);
+    box-shadow: var(--shadow-sm);
+  }
+  .run-head {
+    display: flex;
+    gap: var(--s-3);
+    align-items: center;
+    margin-bottom: var(--s-3);
+  }
+  .run-badge {
+    flex: none;
+    width: 2.4em;
+    height: 2.4em;
+    display: grid;
+    place-items: center;
+    border-radius: 50%;
+    background: var(--sky);
+    color: white;
+    font-weight: 700;
+  }
+  .run-head h2 {
+    font-size: var(--step-1);
+    margin: 0;
+  }
+  .run-date {
+    margin: 0;
+    font-size: 0.8rem;
+    color: var(--muted);
+  }
+  .run-sum {
+    font-weight: 500;
+  }
+  .scorecard {
+    margin-top: var(--s-4);
+    background: var(--surface-2);
+    border-radius: var(--radius-sm);
+    padding: var(--s-3) var(--s-4);
+  }
+  .sc-label {
+    font-family: var(--font-data);
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    font-size: 0.7rem;
+    font-weight: 700;
+    color: var(--muted);
+    margin: 0 0 var(--s-2);
+  }
+  .scorecard ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: grid;
+    gap: 0.4em;
+  }
+  .scorecard li {
+    display: flex;
+    justify-content: space-between;
+    gap: var(--s-3);
+    font-size: 0.9rem;
+  }
+  .verdict {
+    font-family: var(--font-data);
+    font-size: 0.8rem;
+    white-space: nowrap;
+  }
+  .archive {
+    margin: var(--s-3) 0 0;
+    font-weight: 600;
+  }
+</style>

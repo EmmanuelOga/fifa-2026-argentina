@@ -1,0 +1,243 @@
+---
+/**
+ * Tab 3 — The Probabilities. The H1≠H2 warning, four hypothesis cards (with
+ * count-up ranges, for/against, "what would change my mind"), the Bayesian
+ * Explorer, and the takeaway.
+ */
+import type { Locale } from '../../lib/i18n';
+import { section, hypotheses } from '../../lib/content';
+import { pct } from '../../lib/format';
+import { UI } from '../../i18n/ui';
+import Callout from '../Callout.astro';
+import SourceRefs from '../SourceRefs.astro';
+import KeyTerms from '../KeyTerms.astro';
+import ThreadTag from '../ThreadTag.astro';
+import BayesExplorer from '../sims/BayesExplorer.astro';
+
+interface Props {
+  locale: Locale;
+}
+const { locale } = Astro.props;
+const t = UI[locale];
+const intro = await section('prob-intro', locale);
+const warning = await section('prob-h1h2-warning', locale);
+const bayesIntro = await section('prob-bayes-intro', locale);
+const takeaway = await section('prob-takeaway', locale);
+const cards = await hypotheses();
+---
+
+<div class="container-narrow tab-body stack">
+  <header>
+    <p class="eyebrow">{locale === 'es' ? 'Pestaña 3 — Las Probabilidades' : 'Tab 3 — The Probabilities'}</p>
+    <h1>{intro.headline}</h1>
+    <p class="lead">{intro.full}</p>
+  </header>
+
+  <KeyTerms ids={['prior', 'posterior', 'likelihood-ratio', 'xg', 'doj']} locale={locale} />
+
+  <Callout variant="pop" icon="⚠️" title={warning.headline}>
+    <p>{warning.full}</p>
+  </Callout>
+
+  <div class="cards">
+    {
+      cards.map((h) => {
+        const c = h.data.content[locale];
+        const thread = h.data.thread;
+        return (
+          <article class:list={['hcard', thread]}>
+            <div class="hcard-top">
+              <span class="hcode data">{h.data.code}</span>
+              <ThreadTag thread={thread} locale={locale} />
+            </div>
+            <h2>{c.headline}</h2>
+            <p class="hshort">{c.full}</p>
+
+            <div class="ranges">
+              <div class="range">
+                <span
+                  class="range-num data"
+                  data-countup
+                  data-from={h.data.rangeLow}
+                  data-to={h.data.rangeHigh}
+                  data-locale={locale}
+                >
+                  {pct(locale, h.data.rangeLow, 0)}–{pct(locale, h.data.rangeHigh, 0)}
+                </span>
+                <span class="range-cap">
+                  {c.rangeCaption} <span class="spec">{t.speculative}</span>
+                </span>
+              </div>
+              {h.data.secondary && c.secondaryCaption && (
+                <div class="range secondary">
+                  <span class="range-num data">
+                    {pct(locale, h.data.secondary.low, 0)}–{pct(locale, h.data.secondary.high, 0)}
+                  </span>
+                  <span class="range-cap">{c.secondaryCaption}</span>
+                </div>
+              )}
+            </div>
+
+            <div class="fa">
+              <div>
+                <p class="fa-label for">{t.forLabel}</p>
+                <ul>{c.forPoints.map((p) => <li>{p}</li>)}</ul>
+              </div>
+              <div>
+                <p class="fa-label against">{t.againstLabel}</p>
+                <ul>{c.againstPoints.map((p) => <li>{p}</li>)}</ul>
+              </div>
+            </div>
+
+            <div class="change-mind">
+              <p class="cm-label">{t.changeMind}</p>
+              <p class="cm-text">{c.changeMind}</p>
+            </div>
+
+            <SourceRefs ids={h.data.sources.map((s) => s.id)} locale={locale} />
+          </article>
+        );
+      })
+    }
+  </div>
+
+  <Callout variant="sky" icon="🎛️" title={bayesIntro.headline}>
+    <p>{bayesIntro.full}</p>
+  </Callout>
+
+  <BayesExplorer locale={locale} />
+
+  <Callout variant="plain" icon="🧭" title={takeaway.headline}>
+    <p>{takeaway.full}</p>
+  </Callout>
+</div>
+
+<style>
+  .tab-body {
+    padding-block: var(--s-6) var(--s-7);
+  }
+  .lead {
+    font-size: var(--step-1);
+  }
+  .cards {
+    display: grid;
+    gap: var(--s-4);
+  }
+  .hcard {
+    background: var(--surface);
+    border: 1px solid var(--line);
+    border-top: 4px solid var(--sky);
+    border-radius: var(--radius);
+    padding: var(--s-5);
+    box-shadow: var(--shadow-sm);
+  }
+  .hcard.financial {
+    border-top-color: var(--sun);
+  }
+  .hcard-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .hcode {
+    font-family: var(--font-data);
+    font-weight: 700;
+    font-size: 1.3rem;
+    color: var(--sky-ink);
+  }
+  .hcard.financial .hcode {
+    color: var(--sun-ink);
+  }
+  .hcard h2 {
+    font-size: var(--step-1);
+    margin: var(--s-2) 0 var(--s-2);
+  }
+  .hshort {
+    color: var(--ink);
+  }
+  .ranges {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--s-4);
+    margin: var(--s-3) 0;
+    padding: var(--s-3) 0;
+    border-block: 1px solid var(--line);
+  }
+  .range {
+    display: grid;
+    gap: 0.2em;
+  }
+  .range-num {
+    font-size: 1.9rem;
+    font-weight: 700;
+    line-height: 1;
+    color: var(--sky-ink);
+  }
+  .hcard.financial .range-num {
+    color: var(--sun-ink);
+  }
+  .range.secondary .range-num {
+    font-size: 1.4rem;
+    color: var(--muted);
+  }
+  .range-cap {
+    font-size: 0.82rem;
+    color: var(--muted);
+    max-width: 26ch;
+  }
+  .fa {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--s-4);
+  }
+  .fa-label {
+    font-family: var(--font-data);
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    font-size: 0.72rem;
+    font-weight: 700;
+    margin: 0 0 var(--s-2);
+  }
+  .fa-label.for {
+    color: var(--sky-ink);
+  }
+  .fa-label.against {
+    color: var(--pop);
+  }
+  .fa ul {
+    margin: 0;
+    padding-left: 1.1em;
+    display: grid;
+    gap: 0.35em;
+    font-size: 0.9rem;
+  }
+  .change-mind {
+    margin-top: var(--s-4);
+    background: var(--surface-2);
+    border-radius: var(--radius-sm);
+    padding: var(--s-3) var(--s-4);
+  }
+  .cm-label {
+    font-family: var(--font-data);
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    font-size: 0.7rem;
+    font-weight: 700;
+    color: var(--sun-ink);
+    margin: 0 0 0.2em;
+  }
+  .cm-text {
+    margin: 0;
+    font-size: 0.92rem;
+  }
+  @media (max-width: 520px) {
+    .fa {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>
+
+<script>
+  import { initCountUp } from '../../scripts/countup';
+  initCountUp();
+</script>
