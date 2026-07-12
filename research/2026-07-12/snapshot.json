@@ -1,0 +1,51 @@
+{
+  "run": 1,
+  "date": "2026-07-12",
+  "bracketStage": "pre-semis",
+  "predictions": {
+    "titleProbabilities": {
+      "FRA": { "authorLow": 0.33, "authorHigh": 0.4, "opta": 0.34 },
+      "ESP": { "authorLow": 0.2, "authorHigh": 0.24, "opta": 0.234 },
+      "ENG": { "authorLow": 0.18, "authorHigh": 0.23, "opta": 0.219 },
+      "ARG": { "authorLow": 0.17, "authorHigh": 0.22, "opta": 0.206 }
+    },
+    "hypotheses": {
+      "H1_deliberate_favoritism": { "low": 0.02, "high": 0.08 },
+      "H2_inquiry_exists": { "low": 0.7, "high": 0.9 },
+      "H2_chargeable_conduct": { "low": 0.45, "high": 0.65 },
+      "H3_soft_bias_contributor": { "low": 0.35, "high": 0.55 },
+      "H4_variance_perception": { "low": 0.3, "high": 0.5 }
+    }
+  },
+  "outcomes": {
+    "note": "Fill in as results arrive on later runs.",
+    "champion": null,
+    "semifinals": { "FRA_v_ESP": null, "ENG_v_ARG": null },
+    "final": null,
+    "dojMovedToIndictment": null
+  },
+  "correctionsFromAppendixA": [
+    "Opta refreshed post-QF (25k sims): title FRA 34.0 / ESP 23.4 / ENG 21.9 / ARG 20.6; reach-final FRA 57.7 / ESP 42.3 / ENG 50.9 / ARG 49.1. The '49.1% ARG vs ENG' figure is ARG's reach-final (win the SF) probability.",
+    "Silver Bulletin 'PELE' per-team title numbers are paywalled; methodology (Elo/SPI-style, 100k sims, daily) + reputation noted; public prediction-market co-favorite figure (~FRA/ESP 17% pre-QF) cited instead of a fabricated number.",
+    "Bookmakers (FanDuel via FOX, Jul 12): FRA +140, ENG +310, ESP +330, ARG +400; Oddschecker aggregate differs in absolute price, same ordering. Implied % includes overround.",
+    "Penalty superlative softened: 8 penalties (5 in 2022, 3 in 2026) = most in recent World Cups, ~double any other side; dropped unsourced 'most in tournament history over a 12-match span'.",
+    "Cape Verde '~23M views' figure DROPPED — unverifiable.",
+    "Xhaka quote is a paraphrase ('a decision where you kill the game'), attributed as such, not a verbatim 'killed the game'.",
+    "Grondona labelled DOJ's 'Soccer Official #1' (not 'Co-Conspirator #1'); identified in reporting, deceased 2014, never charged.",
+    "TourProdEnter $260M/$57M split attributed to La Nación (single-source); widely-cited figure is '$300M+'. Private individuals referred to by role, not name.",
+    "'Two law-enforcement sources' attributed specifically to the Miami Herald.",
+    "Prosecutor names (Berger/Gushue/Ting) attributed to La Nación (single-source).",
+    "Tapia et al. 'procesados' (processed/charged) Mar 2026 for ~$12.7M social-security evasion, upheld on appeal Jun 2026; travel bond (30M pesos) requires return before Jul 21.",
+    "Dec 9 2025 raids hit AFA + 17 clubs (some outlets say 18, overlapping case).",
+    "Calciopoli '~150k wiretapped calls' softened/press-attributed; Grimes exponential form confirmed as the constant-population special case of the corrected model."
+  ],
+  "keySources": {
+    "opta": "https://theanalyst.com/articles/world-cup-2026-semi-final-predictions-opta-supercomputer",
+    "silver": "https://www.natesilver.net/p/world-cup-2026-odds-predictions",
+    "laNacionFBI": "https://www.lanacion.com.ar/politica/agentes-del-fbi-y-fiscales-federales-toman-testimonios-para-investigar-operaciones-financieras-de-la-afa-en-estados-unidos-nid06072026/",
+    "grimes": "https://doi.org/10.1371/journal.pone.0147905",
+    "grimesCorrection": "https://doi.org/10.1371/journal.pone.0151003",
+    "garicano": "https://direct.mit.edu/rest/article/87/2/208/57539",
+    "casLamptey": "https://jurisprudence.tas-cas.org/Shared%20Documents/5173.pdf"
+  }
+}
