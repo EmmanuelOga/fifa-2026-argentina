@@ -1,0 +1,179 @@
+---
+/**
+ * The signature hero: an abstract, slowly-rotating faceted object (original
+ * geometry — no crests/trademarks) reacting to pointer + scroll, with a
+ * ticker-tape (papelitos) burst on load. three.js is lazy-loaded and the page is
+ * fully readable without it. Under prefers-reduced-motion (or no WebGL), a static
+ * SVG rendition is shown and no JS animation runs.
+ */
+import type { Locale } from '../lib/i18n';
+import { UI, TAB_LABEL } from '../i18n/ui';
+import { tabPath } from '../lib/url';
+import { section } from '../lib/content';
+import SnapshotBadge from './SnapshotBadge.astro';
+
+interface Props {
+  locale: Locale;
+}
+const { locale } = Astro.props;
+const t = UI[locale];
+const hero = await section('hero', locale);
+const LINKEDIN = 'https://www.linkedin.com/in/emmanueloga/';
+---
+
+<section class="hero">
+  <div class="papelitos" aria-hidden="true"></div>
+  <div class="container hero-grid">
+    <div class="hero-copy">
+      <p class="eyebrow">🇦🇷 {t.tagline}</p>
+      <h1>{hero.headline}</h1>
+      <p class="hero-lead">{hero.full}</p>
+      <p class="hero-by">
+        {t.byline} <a href={LINKEDIN}>Emmanuel Oga</a>
+      </p>
+      <div class="hero-cta">
+        <a class="btn primary" href={tabPath(locale, 'story')}>{
+          locale === 'es' ? 'Empezar por la historia →' : 'Start with the story →'
+        }</a>
+        <a class="btn" href={tabPath(locale, 'who-wins')}>{TAB_LABEL['who-wins'][locale]}</a>
+      </div>
+      <p class="hero-snap"><SnapshotBadge locale={locale} /></p>
+    </div>
+
+    <div class="hero-visual" aria-hidden="true">
+      <canvas class="hero-canvas" data-hero-canvas></canvas>
+      <!-- static fallback shown until/unless three.js takes over -->
+      <svg class="hero-fallback" viewBox="0 0 200 200" data-hero-fallback>
+        <defs>
+          <radialGradient id="g" cx="40%" cy="35%">
+            <stop offset="0%" stop-color="#ffd77a" />
+            <stop offset="60%" stop-color="#f2a51c" />
+            <stop offset="100%" stop-color="#c97f06" />
+          </radialGradient>
+        </defs>
+        <circle cx="100" cy="100" r="70" fill="url(#g)" />
+        <g fill="none" stroke="#0b4a76" stroke-width="2.2" opacity="0.85">
+          <polygon points="100,44 128,64 118,98 82,98 72,64" fill="#0b4a76" opacity="0.9" />
+          <path d="M100 44 L100 20 M128 64 L150 54 M118 98 L138 120 M82 98 L62 120 M72 64 L50 54" />
+        </g>
+        <circle cx="100" cy="100" r="70" fill="none" stroke="#1f8ad0" stroke-width="3" />
+      </svg>
+    </div>
+  </div>
+</section>
+
+<style>
+  .hero {
+    position: relative;
+    overflow: hidden;
+    padding-block: var(--s-7) var(--s-6);
+    background:
+      radial-gradient(900px 500px at 78% 10%, rgba(242, 165, 28, 0.16), transparent 60%),
+      radial-gradient(700px 480px at 10% 0%, rgba(31, 138, 208, 0.16), transparent 60%);
+  }
+  .hero-grid {
+    display: grid;
+    grid-template-columns: 1.3fr 1fr;
+    gap: var(--s-6);
+    align-items: center;
+  }
+  .hero-copy h1 {
+    font-size: var(--step-4);
+    margin-bottom: var(--s-3);
+  }
+  .hero-lead {
+    font-size: var(--step-1);
+    color: var(--ink);
+    max-width: 40ch;
+  }
+  .hero-by {
+    color: var(--muted);
+    margin-bottom: var(--s-4);
+  }
+  .hero-cta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--s-3);
+    margin-bottom: var(--s-4);
+  }
+  .btn.primary {
+    background: var(--sky);
+    color: white;
+    border-color: var(--sky);
+  }
+  .btn.primary:hover {
+    background: var(--sky-ink);
+    border-color: var(--sky-ink);
+  }
+  .hero-visual {
+    position: relative;
+    aspect-ratio: 1;
+    min-height: 240px;
+  }
+  .hero-canvas,
+  .hero-fallback {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+  }
+  .hero-canvas {
+    opacity: 0;
+    transition: opacity 0.6s ease;
+  }
+  .hero-canvas.live {
+    opacity: 1;
+  }
+  .hero-canvas.live + .hero-fallback {
+    opacity: 0;
+  }
+  .papelitos {
+    position: absolute;
+    inset: 0 0 auto 0;
+    height: 100%;
+    pointer-events: none;
+    z-index: 1;
+  }
+  .hero-grid {
+    position: relative;
+    z-index: 2;
+  }
+  .papelito {
+    position: absolute;
+    top: -20px;
+    width: 9px;
+    height: 15px;
+    border-radius: 2px;
+    will-change: transform;
+    animation: fall linear forwards;
+  }
+  @keyframes fall {
+    to {
+      transform: translateY(var(--fall, 120vh)) rotate(var(--spin, 540deg));
+      opacity: 0;
+    }
+  }
+  @media (max-width: 780px) {
+    .hero-grid {
+      grid-template-columns: 1fr;
+    }
+    .hero-visual {
+      order: -1;
+      max-width: 280px;
+      margin-inline: auto;
+    }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .papelito {
+      display: none;
+    }
+    .hero-canvas {
+      display: none;
+    }
+  }
+</style>
+
+<script>
+  import { initHero } from '../scripts/hero';
+  initHero();
+</script>
