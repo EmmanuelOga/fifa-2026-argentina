@@ -1,0 +1,8 @@
+# Reproducible toolchain for la-alegria.
+# Run `mise install` to get the exact Node/pnpm used to build this site.
+[tools]
+node = "26.5.0"
+pnpm = "10.34.5"
+
+[env]
+# Keep pnpm's store inside the repo-less default; nothing project-specific needed.

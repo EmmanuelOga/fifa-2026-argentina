@@ -1,0 +1,19 @@
+# build output
+dist/
+.astro/
+
+# dependencies
+node_modules/
+
+# generated video output
+video/out/
+
+# generated at build from the content layer (rebuilt by `pnpm build`)
+functions/api/corpus.json
+
+# logs / os
+*.log
+.DS_Store
+.env
+.env.*
+!.env.example

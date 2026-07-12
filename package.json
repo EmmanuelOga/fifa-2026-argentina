@@ -1,0 +1,44 @@
+{
+  "name": "la-alegria",
+  "type": "module",
+  "version": "1.0.0",
+  "private": true,
+  "description": "La Alegría / The Joy — an explorable celebration of Argentina's World Cup 2026 run, with the homework done on the gossip.",
+  "author": "Emmanuel Oga <https://www.linkedin.com/in/emmanueloga/>",
+  "license": "MIT",
+  "engines": {
+    "node": ">=22"
+  },
+  "scripts": {
+    "dev": "astro dev",
+    "start": "astro dev",
+    "build": "node scripts/build-corpus.mjs && astro build",
+    "preview": "astro preview",
+    "check": "astro check",
+    "gen:og": "node scripts/gen-og.mjs",
+    "build:corpus": "node scripts/build-corpus.mjs",
+    "render:video": "node video/render.mjs",
+    "sanity": "node scripts/sanity.mjs",
+    "cf:dev": "wrangler pages dev dist --compatibility-date=2026-07-01",
+    "deploy:cf": "pnpm build && wrangler pages deploy dist"
+  },
+  "dependencies": {
+    "@fontsource-variable/bricolage-grotesque": "^5.2.10",
+    "@fontsource-variable/instrument-sans": "^5.2.8",
+    "@fontsource-variable/space-grotesk": "^5.2.10",
+    "astro": "^7.0.7",
+    "three": "^0.185.1"
+  },
+  "devDependencies": {
+    "@astrojs/check": "^0.9.9",
+    "@napi-rs/canvas": "^1.0.2",
+    "@types/three": "^0.185.1",
+    "typescript": "^5.9.0",
+    "wrangler": "^4.110.0"
+  },
+  "pnpm": {
+    "onlyBuiltDependencies": [
+      "esbuild"
+    ]
+  }
+}
