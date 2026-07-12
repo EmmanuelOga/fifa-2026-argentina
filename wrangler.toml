@@ -1,7 +1,7 @@
 # Cloudflare Pages config for `wrangler pages deploy` and local `wrangler pages dev`.
 # The dashboard Git integration (recommended) doesn't need this file, but it keeps
 # CLI deploys and local Functions testing reproducible.
-name = "la-alegria"
+name = "fifa-2026-argentina"
 compatibility_date = "2026-07-01"
 pages_build_output_dir = "dist"
 

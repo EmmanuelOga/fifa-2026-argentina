@@ -12,6 +12,12 @@ financial-probe hypothesis (H2) are kept visually distinct throughout.
 By [Emmanuel Oga](https://www.linkedin.com/in/emmanueloga/). Made with Claude.
 Opinion & analysis — not reporting, not affiliated with FIFA or AFA.
 
+> **How this was built.** The entire site — research verification, content, sims,
+> chat, video, and deploy config — was produced by Claude (Opus 4.8) from a single
+> detailed brief. That brief is committed verbatim as [`PROMPT.md`](./PROMPT.md) so
+> you can see exactly what was asked for and how the result maps to it. The ideas
+> backlog for where it could go next is in [`IDEAS.md`](./IDEAS.md).
+
 ---
 
 ## What's in here
@@ -140,15 +146,17 @@ fonts if they're absent.
    `wrangler kv namespace create QUESTIONS`.)
 4. Analytics: enable **Cloudflare Web Analytics** with one toggle in the Pages project
    (or paste the beacon into `src/components/Analytics.astro`). No `base` path needed —
-   the site serves from the root; `site` is `https://la-alegria.pages.dev`.
+   the site serves from the root; `site` is `https://fifa-2026-argentina.pages.dev`.
 
 Serves from root, so `astro.config.mjs` keeps `base: '/'`.
 
 ### Fallback: GitHub Pages
 
-`.github/workflows/deploy.yml` builds with a subpath base and deploys via GitHub
-Actions. One-time: repo **Settings → Pages → Source: "GitHub Actions"**. The workflow
-sets `SITE_URL=https://emmanueloga.github.io` and `BASE_PATH=/la-alegria`; all internal
+A ready-to-use workflow ships as [`deploy/github-pages.yml.example`](./deploy/github-pages.yml.example)
+(kept out of `.github/workflows/` so the repo can be pushed without the GitHub
+`workflow` OAuth scope). To activate it: copy it to `.github/workflows/deploy.yml`,
+then repo **Settings → Pages → Source: "GitHub Actions"**. It builds with a subpath base and
+sets `SITE_URL=https://emmanueloga.github.io` and `BASE_PATH=/fifa-2026-argentina`; all internal
 links go through `src/lib/url.ts` (`import.meta.env.BASE_URL`), so **switching hosts is
 config-only** — no hard-coded paths. The chat needs serverless functions and only works
 on Cloudflare; on GitHub Pages it degrades gracefully.
@@ -156,7 +164,7 @@ on Cloudflare; on GitHub Pages it degrades gracefully.
 Verify both host configs locally:
 ```bash
 pnpm build                                   # Cloudflare (root)
-SITE_URL=https://emmanueloga.github.io BASE_PATH=/la-alegria pnpm build   # GitHub Pages
+SITE_URL=https://emmanueloga.github.io BASE_PATH=/fifa-2026-argentina pnpm build   # GitHub Pages
 ```
 
 ### Analytics

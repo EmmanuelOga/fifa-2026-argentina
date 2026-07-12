@@ -1,0 +1,47 @@
+# GitHub Pages fallback deploy (the primary host is Cloudflare Pages).
+# To use it: repo Settings → Pages → Source: "GitHub Actions".
+# It builds with a subpath base + github.io site, so internal links stay correct
+# (they all go through src/lib/url.ts + import.meta.env.BASE_URL).
+# Note: the Ask-the-research chat needs serverless functions and only works on the
+# Cloudflare deployment — on GitHub Pages the chat degrades gracefully.
+name: Deploy to GitHub Pages
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: true
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    env:
+      SITE_URL: https://emmanueloga.github.io
+      BASE_PATH: /la-alegria
+    steps:
+      - uses: actions/checkout@v4
+      - name: Build with Astro (runs `pnpm build`, which builds the corpus too)
+        uses: withastro/action@v4
+        with:
+          path: .
+          node-version: 22
+          package-manager: pnpm@latest
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
