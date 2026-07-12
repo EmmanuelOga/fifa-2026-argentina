@@ -1,0 +1,22 @@
+# Cloudflare Pages config for `wrangler pages deploy` and local `wrangler pages dev`.
+# The dashboard Git integration (recommended) doesn't need this file, but it keeps
+# CLI deploys and local Functions testing reproducible.
+name = "la-alegria"
+compatibility_date = "2026-07-01"
+pages_build_output_dir = "dist"
+
+# ── Ask-the-research chat (functions/api/ask.ts) ──
+# The API key is a SECRET — set it with:
+#   wrangler pages secret put ANTHROPIC_API_KEY
+# (or in the Pages dashboard → Settings → Environment variables, encrypted).
+# Do NOT put it here.
+
+# Optional: override the chat model (defaults to claude-opus-4-8).
+# [vars]
+# CHAT_MODEL = "claude-opus-4-8"
+
+# Optional: KV namespace for logging questions the corpus can't answer.
+# Create it (`wrangler kv namespace create QUESTIONS`) then uncomment + fill the id:
+# [[kv_namespaces]]
+# binding = "QUESTIONS"
+# id = "<your-kv-namespace-id>"
