@@ -131,7 +131,7 @@ fonts if they're absent.
 
 1. Push this repo to GitHub under `emmanueloga`.
 2. Cloudflare dashboard → **Workers & Pages → Create → Pages → Connect to Git** →
-   select `emmanueloga/la-alegria`. Build command `pnpm build`, output `dist`,
+   select `emmanueloga/fifa-2026-argentina`. Build command `pnpm build`, output `dist`,
    framework preset **Astro**. Deploy. Every push to `main` auto-deploys after that,
    and every branch/PR gets a preview deployment.
 3. For the chat: Pages project → **Settings → Environment variables** → add
