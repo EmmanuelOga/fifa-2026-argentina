@@ -1,0 +1,102 @@
+---
+/**
+ * Persistent shell for every page: head/meta, header with tab nav + language
+ * toggle, main, footer. Tabs are routes that share this layout, so each is
+ * deep-linkable. hreflang alternates + es-AR lang attributes are emitted here.
+ */
+import '@fontsource-variable/bricolage-grotesque';
+import '@fontsource-variable/instrument-sans';
+import '@fontsource-variable/space-grotesk';
+import '../styles/global.css';
+import { HTML_LANG, LOCALES, type Locale, type TabKey } from '../lib/i18n';
+import { tabPath, homePath, withBase, asset } from '../lib/url';
+import { UI } from '../i18n/ui';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import Analytics from '../components/Analytics.astro';
+
+interface Props {
+  locale: Locale;
+  tab?: TabKey;
+  title: string;
+  description: string;
+}
+
+const { locale, tab, title, description } = Astro.props;
+const t = UI[locale];
+
+const pathFor = (l: Locale) => (tab ? tabPath(l, tab) : homePath(l));
+const canonical = new URL(pathFor(locale), Astro.site).toString();
+const ogImage = new URL(asset(`/og/${locale}.png`), Astro.site).toString();
+const fullTitle = tab ? `${title} — La Alegría` : title;
+---
+
+<!doctype html>
+<html lang={HTML_LANG[locale]}>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{fullTitle}</title>
+    <meta name="description" content={description} />
+    <link rel="canonical" href={canonical} />
+
+    {/* reciprocal hreflang alternates */}
+    {
+      LOCALES.map((l) => (
+        <link
+          rel="alternate"
+          hreflang={HTML_LANG[l]}
+          href={new URL(pathFor(l), Astro.site).toString()}
+        />
+      ))
+    }
+    <link rel="alternate" hreflang="x-default" href={new URL(pathFor('en'), Astro.site).toString()} />
+
+    {/* Open Graph / Twitter */}
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="La Alegría" />
+    <meta property="og:locale" content={locale === 'es' ? 'es_AR' : 'en_US'} />
+    <meta property="og:title" content={fullTitle} />
+    <meta property="og:description" content={description} />
+    <meta property="og:url" content={canonical} />
+    <meta property="og:image" content={ogImage} />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={fullTitle} />
+    <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content={ogImage} />
+
+    <meta name="theme-color" content="#1f8ad0" />
+    <link rel="icon" href={withBase('/favicon.svg')} type="image/svg+xml" />
+    <Analytics />
+  </head>
+  <body>
+    <a class="skip-link" href="#main">{t.skipToContent}</a>
+    <Header locale={locale} current={tab} />
+    <main id="main">
+      <slot />
+    </main>
+    <Footer locale={locale} />
+
+    <style>
+      .skip-link {
+        position: absolute;
+        left: var(--s-4);
+        top: -4rem;
+        z-index: 100;
+        background: var(--sky-ink);
+        color: white;
+        padding: 0.6em 1em;
+        border-radius: 0 0 var(--radius-sm) var(--radius-sm);
+        text-decoration: none;
+        transition: top 0.15s ease;
+      }
+      .skip-link:focus {
+        top: 0;
+        color: white;
+      }
+      main {
+        display: block;
+      }
+    </style>
+  </body>
+</html>

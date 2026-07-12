@@ -1,0 +1,65 @@
+---
+/**
+ * Small pill marking whether an item belongs to the sporting (sky) or financial
+ * (gold) thread — the visual device that keeps H1 (fixing) apart from H2 (money).
+ */
+import type { Locale } from '../lib/i18n';
+import { UI } from '../i18n/ui';
+
+interface Props {
+  thread: 'sporting' | 'financial' | 'both';
+  locale: Locale;
+}
+const { thread, locale } = Astro.props;
+const t = UI[locale];
+---
+
+{
+  thread === 'both' ? (
+    <span class="ttag both">
+      <span class="dot sky" /> <span class="dot sun" />
+      {t.thread.sporting} + {t.thread.financial}
+    </span>
+  ) : (
+    <span class:list={['ttag', thread]}>
+      <span class:list={['dot', thread === 'sporting' ? 'sky' : 'sun']} />
+      {thread === 'sporting' ? t.thread.sporting : t.thread.financial}
+    </span>
+  )
+}
+
+<style>
+  .ttag {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4em;
+    font-family: var(--font-data);
+    font-size: 0.68rem;
+    font-weight: 600;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    color: var(--muted);
+    border: 1px solid var(--line);
+    border-radius: 999px;
+    padding: 0.2em 0.6em;
+    background: var(--surface);
+  }
+  .dot {
+    width: 0.55em;
+    height: 0.55em;
+    border-radius: 50%;
+    display: inline-block;
+  }
+  .dot.sky {
+    background: var(--sky);
+  }
+  .dot.sun {
+    background: var(--sun);
+  }
+  .ttag.sporting {
+    border-color: color-mix(in srgb, var(--sky) 40%, white);
+  }
+  .ttag.financial {
+    border-color: color-mix(in srgb, var(--sun) 45%, white);
+  }
+</style>

@@ -1,0 +1,29 @@
+---
+/**
+ * A discoverable row of dotted-underline glossary terms (tooltips) relevant to a
+ * tab. Satisfies the tooltip requirement in a visible, accessible way.
+ */
+import type { Locale } from '../lib/i18n';
+import Term from './Term.astro';
+
+interface Props {
+  ids: string[];
+  locale: Locale;
+}
+const { ids, locale } = Astro.props;
+---
+
+<p class="key-terms">
+  {ids.map((id) => <Term id={id} locale={locale} />)}
+</p>
+
+<style>
+  .key-terms {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.6em 1.1em;
+    margin: 0 0 var(--s-5);
+    font-family: var(--font-data);
+    font-size: 0.82rem;
+  }
+</style>

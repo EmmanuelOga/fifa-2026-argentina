@@ -1,0 +1,55 @@
+---
+/**
+ * "Snapshot as of <date>" pill — surfaces the single lastUpdated field so every
+ * page makes the volatility of the data legible.
+ */
+import type { Locale } from '../lib/i18n';
+import { UI } from '../i18n/ui';
+import { meta } from '../data/meta';
+import { longDate } from '../lib/format';
+
+interface Props {
+  locale: Locale;
+}
+const { locale } = Astro.props;
+const t = UI[locale];
+---
+
+<span class="snapshot data">
+  <span class="pulse" aria-hidden="true"></span>
+  {t.snapshotAs} {longDate(locale, meta.lastUpdated)}
+</span>
+
+<style>
+  .snapshot {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5em;
+    font-size: 0.78rem;
+    font-weight: 600;
+    color: var(--sun-ink);
+    background: var(--sun-soft);
+    border: 1px solid color-mix(in srgb, var(--sun) 40%, white);
+    border-radius: 999px;
+    padding: 0.28em 0.75em;
+  }
+  .pulse {
+    width: 0.5em;
+    height: 0.5em;
+    border-radius: 50%;
+    background: var(--sun);
+    box-shadow: 0 0 0 0 color-mix(in srgb, var(--sun) 60%, transparent);
+    animation: pulse 2.4s infinite;
+  }
+  @keyframes pulse {
+    0% {
+      box-shadow: 0 0 0 0 color-mix(in srgb, var(--sun) 55%, transparent);
+    }
+    70% {
+      box-shadow: 0 0 0 0.5em transparent;
+    }
+    100% {
+      box-shadow: 0 0 0 0 transparent;
+    }
+  }
+</style>

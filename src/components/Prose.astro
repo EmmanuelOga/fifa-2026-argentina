@@ -1,0 +1,51 @@
+---
+/**
+ * Renders a content section's prose: the `full` lead paragraph followed by any
+ * `body[]` paragraphs. If `list` is set, body[] renders as an ordered/unordered
+ * list instead (used for the caveats and open-questions blocks).
+ */
+interface Props {
+  data: { full: string; body?: string[] };
+  list?: 'ul' | 'ol' | false;
+  lead?: boolean;
+}
+const { data, list = false, lead = false } = Astro.props;
+const body = data.body ?? [];
+---
+
+{data.full && <p class:list={['prose-lead', { lead }]}>{data.full}</p>}
+{
+  list === 'ul' && body.length > 0 && (
+    <ul class="prose-list">
+      {body.map((p) => (
+        <li>{p}</li>
+      ))}
+    </ul>
+  )
+}
+{
+  list === 'ol' && body.length > 0 && (
+    <ol class="prose-list">
+      {body.map((p) => (
+        <li>{p}</li>
+      ))}
+    </ol>
+  )
+}
+{!list && body.map((p) => <p>{p}</p>)}
+
+<style>
+  .prose-lead.lead {
+    font-size: var(--step-1);
+    color: var(--ink);
+  }
+  .prose-list {
+    margin: 0 0 var(--s-4);
+    padding-left: 1.2em;
+    display: grid;
+    gap: var(--s-2);
+  }
+  .prose-list li {
+    padding-left: 0.2em;
+  }
+</style>

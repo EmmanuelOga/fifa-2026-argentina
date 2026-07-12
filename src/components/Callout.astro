@@ -1,0 +1,71 @@
+---
+/**
+ * A titled callout box. Variants tint it: `sky` (sporting), `sun` (financial),
+ * `pop` (warning / the #1 error), `plain`. Used for the bias disclosure, the
+ * caveats block, the two-threads insight, and the H1≠H2 warning.
+ */
+interface Props {
+  variant?: 'sky' | 'sun' | 'pop' | 'plain';
+  icon?: string;
+  title?: string;
+}
+const { variant = 'plain', icon, title } = Astro.props;
+---
+
+<aside class:list={['callout', variant]}>
+  {(icon || title) && (
+    <p class="callout-head">
+      {icon && <span class="callout-icon" aria-hidden="true">{icon}</span>}
+      {title && <span class="callout-title">{title}</span>}
+    </p>
+  )}
+  <div class="callout-body">
+    <slot />
+  </div>
+</aside>
+
+<style>
+  .callout {
+    border-radius: var(--radius);
+    padding: var(--s-5);
+    border: 1px solid var(--line);
+    background: var(--surface);
+    box-shadow: var(--shadow-sm);
+  }
+  .callout.sky {
+    background: color-mix(in srgb, var(--sky-soft) 55%, white);
+    border-color: color-mix(in srgb, var(--sky) 35%, white);
+  }
+  .callout.sun {
+    background: color-mix(in srgb, var(--sun-soft) 55%, white);
+    border-color: color-mix(in srgb, var(--sun) 35%, white);
+  }
+  .callout.pop {
+    background: color-mix(in srgb, var(--pop-soft) 65%, white);
+    border-color: color-mix(in srgb, var(--pop) 35%, white);
+  }
+  .callout-head {
+    display: flex;
+    align-items: center;
+    gap: 0.5em;
+    margin: 0 0 var(--s-2);
+  }
+  .callout-icon {
+    font-size: 1.25em;
+  }
+  .callout-title {
+    font-family: var(--font-display);
+    font-weight: 700;
+    font-size: 1.05rem;
+    color: var(--sky-ink);
+  }
+  .callout.sun .callout-title {
+    color: var(--sun-ink);
+  }
+  .callout.pop .callout-title {
+    color: color-mix(in srgb, var(--pop) 78%, black);
+  }
+  .callout-body :global(p:last-child) {
+    margin-bottom: 0;
+  }
+</style>

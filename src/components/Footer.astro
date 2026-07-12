@@ -1,0 +1,81 @@
+---
+/**
+ * Footer: byline, LinkedIn, source link, and the required disclaimer
+ * (opinion/analysis, not affiliated, made with Claude) rendered from content.
+ */
+import type { Locale } from '../lib/i18n';
+import { UI } from '../i18n/ui';
+import { section } from '../lib/content';
+import { meta } from '../data/meta';
+import { longDate } from '../lib/format';
+
+interface Props {
+  locale: Locale;
+}
+const { locale } = Astro.props;
+const t = UI[locale];
+const disclaimer = await section('footer-disclaimer', locale);
+const LINKEDIN = 'https://www.linkedin.com/in/emmanueloga/';
+const REPO = 'https://github.com/emmanueloga/la-alegria';
+---
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="cols">
+      <div>
+        <p class="foot-brand">La Alegría 🇦🇷</p>
+        <p class="foot-by">
+          {t.byline} <a href={LINKEDIN}>Emmanuel Oga</a>
+        </p>
+        <p class="snap data">{t.snapshotAs} {longDate(locale, meta.lastUpdated)}</p>
+      </div>
+      <nav class="foot-links" aria-label="Footer">
+        <a href={LINKEDIN}>{t.footer.connect}</a>
+        <a href={REPO}>{t.footer.viewSource}</a>
+      </nav>
+    </div>
+    <p class="disclaimer">{disclaimer.full}</p>
+  </div>
+</footer>
+
+<style>
+  .site-footer {
+    margin-top: var(--s-8);
+    border-top: 1px solid var(--line);
+    background: color-mix(in srgb, var(--sky-soft) 40%, var(--paper));
+    padding-block: var(--s-6) var(--s-7);
+  }
+  .cols {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: var(--s-5);
+  }
+  .foot-brand {
+    font-family: var(--font-display);
+    font-weight: 800;
+    font-size: 1.2rem;
+    color: var(--sky-ink);
+    margin: 0 0 var(--s-1);
+  }
+  .foot-by {
+    margin: 0 0 var(--s-1);
+  }
+  .snap {
+    margin: 0;
+    font-size: 0.82rem;
+    color: var(--muted);
+  }
+  .foot-links {
+    display: flex;
+    flex-direction: column;
+    gap: var(--s-2);
+    font-weight: 600;
+  }
+  .disclaimer {
+    margin: var(--s-5) 0 0;
+    font-size: 0.82rem;
+    color: var(--muted);
+    max-width: 60ch;
+  }
+</style>

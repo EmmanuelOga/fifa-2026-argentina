@@ -1,0 +1,179 @@
+---
+/**
+ * Sticky header: brand + byline, the tab nav (routes), and a language toggle
+ * that swaps to the equivalent page in the other locale. On mobile the tab nav
+ * becomes a horizontally-scrollable pill bar usable at 360px.
+ */
+import { TAB_KEYS, otherLocale, type Locale, type TabKey } from '../lib/i18n';
+import { tabPath, homePath } from '../lib/url';
+import { UI, TAB_LABEL, TAB_SHORT } from '../i18n/ui';
+
+interface Props {
+  locale: Locale;
+  current?: TabKey;
+}
+const { locale, current } = Astro.props;
+const t = UI[locale];
+const other = otherLocale(locale);
+// Language toggle target: same tab in the other locale, or the other home page.
+const toggleHref = current ? tabPath(other, current) : homePath(other);
+---
+
+<header class="site-header">
+  <div class="container bar">
+    <a class="brand" href={homePath(locale)}>
+      <span class="brand-mark" aria-hidden="true">
+        <span class="stripe"></span><span class="stripe sun"></span><span class="stripe"></span>
+      </span>
+      <span class="brand-text">
+        <span class="brand-name">La Alegría</span>
+        <span class="brand-tag">{t.tagline}</span>
+      </span>
+    </a>
+
+    <a class="lang-toggle" href={toggleHref} hreflang={other === 'es' ? 'es-AR' : 'en'} rel="alternate">
+      <span aria-hidden="true">🌐</span> {t.switchTo}
+    </a>
+  </div>
+
+  <nav class="tabs container" aria-label={t.primaryNav}>
+    <ul>
+      {
+        TAB_KEYS.map((key) => (
+          <li>
+            <a
+              href={tabPath(locale, key)}
+              class:list={['tab', { active: current === key }]}
+              aria-current={current === key ? 'page' : undefined}
+            >
+              <span class="full">{TAB_LABEL[key][locale]}</span>
+              <span class="short">{TAB_SHORT[key][locale]}</span>
+            </a>
+          </li>
+        ))
+      }
+    </ul>
+  </nav>
+</header>
+
+<style>
+  .site-header {
+    position: sticky;
+    top: 0;
+    z-index: 50;
+    background: color-mix(in srgb, var(--paper) 88%, white);
+    backdrop-filter: saturate(1.4) blur(10px);
+    border-bottom: 1px solid var(--line);
+  }
+  .bar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: var(--s-4);
+    padding-block: var(--s-3);
+  }
+  .brand {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--s-3);
+    text-decoration: none;
+    color: inherit;
+  }
+  .brand-mark {
+    display: inline-grid;
+    grid-auto-flow: row;
+    gap: 2px;
+    width: 26px;
+  }
+  .brand-mark .stripe {
+    height: 5px;
+    border-radius: 2px;
+    background: var(--sky);
+  }
+  .brand-mark .stripe.sun {
+    background: var(--sun);
+  }
+  .brand-name {
+    display: block;
+    font-family: var(--font-display);
+    font-weight: 800;
+    font-size: 1.28rem;
+    line-height: 1;
+    color: var(--sky-ink);
+    letter-spacing: -0.02em;
+  }
+  .brand-tag {
+    display: block;
+    font-size: 0.74rem;
+    color: var(--muted);
+  }
+  @media (max-width: 460px) {
+    .brand-tag {
+      display: none;
+    }
+  }
+  .lang-toggle {
+    flex: none;
+    font-family: var(--font-body);
+    font-weight: 600;
+    font-size: 0.85rem;
+    text-decoration: none;
+    color: var(--sky-ink);
+    border: 1px solid var(--line);
+    background: var(--surface);
+    padding: 0.45em 0.85em;
+    border-radius: 999px;
+  }
+  .lang-toggle:hover {
+    border-color: var(--sky);
+    background: var(--sky-soft);
+  }
+  .tabs {
+    overflow-x: auto;
+    scrollbar-width: none;
+    -webkit-overflow-scrolling: touch;
+  }
+  .tabs::-webkit-scrollbar {
+    display: none;
+  }
+  .tabs ul {
+    display: flex;
+    gap: var(--s-2);
+    list-style: none;
+    margin: 0;
+    padding: 0 0 var(--s-3);
+  }
+  .tab {
+    display: inline-block;
+    white-space: nowrap;
+    text-decoration: none;
+    font-family: var(--font-body);
+    font-weight: 600;
+    font-size: 0.92rem;
+    color: var(--muted);
+    padding: 0.5em 0.95em;
+    border-radius: 999px;
+    border: 1px solid transparent;
+    transition: color 0.12s ease, background 0.12s ease, border-color 0.12s ease;
+  }
+  .tab:hover {
+    color: var(--sky-ink);
+    background: var(--sky-soft);
+  }
+  .tab.active {
+    color: white;
+    background: var(--sky);
+    border-color: var(--sky);
+  }
+  .tab .short {
+    display: none;
+  }
+  @media (max-width: 640px) {
+    .tab .full {
+      display: none;
+    }
+    .tab .short {
+      display: inline;
+    }
+  }
+</style>

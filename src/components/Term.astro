@@ -1,0 +1,176 @@
+---
+/**
+ * Dotted-underline glossary term with an accessible tooltip.
+ * - tap opens / tap-away closes (touch)
+ * - hover opens (pointer)
+ * - keyboard-focusable button; Escape closes
+ * - ARIA: button toggles aria-expanded; definition has role="tooltip"
+ * Usage: <Term id="var" locale={locale}>VAR</Term>  (slot overrides the label)
+ */
+import { getEntry } from 'astro:content';
+import type { Locale } from '../lib/i18n';
+import { UI } from '../i18n/ui';
+
+interface Props {
+  id: string;
+  locale: Locale;
+}
+const { id, locale } = Astro.props;
+const entry = await getEntry('glossary', id);
+if (!entry) throw new Error(`Missing glossary term: "${id}"`);
+const g = entry.data.content[locale];
+const t = UI[locale];
+
+// unique per-page id
+const n = (globalThis as any).__termN = ((globalThis as any).__termN ?? 0) + 1;
+const ttId = `tt-${id}-${n}`;
+const hasSlot = Astro.slots.has('default');
+---
+
+<span class="term-wrap">
+  <button
+    type="button"
+    class="term"
+    aria-expanded="false"
+    aria-describedby={ttId}
+  >
+    {hasSlot ? <slot /> : g.term}
+  </button>
+  <span class="tip" id={ttId} role="tooltip" hidden>
+    <span class="tip-term">{g.term}</span>
+    <span class="tip-def">{g.def}</span>
+    {g.learnMore && (
+      <a class="tip-more" href={g.learnMore} target="_blank" rel="noopener">{t.learnMore} ↗</a>
+    )}
+  </span>
+</span>
+
+<style>
+  .term-wrap {
+    position: relative;
+    display: inline-block;
+  }
+  .term {
+    font: inherit;
+    color: inherit;
+    background: none;
+    border: 0;
+    padding: 0;
+    cursor: help;
+    text-decoration: underline dotted;
+    text-decoration-color: var(--sun);
+    text-decoration-thickness: 0.11em;
+    text-underline-offset: 0.18em;
+  }
+  .term:hover {
+    color: var(--sky-ink);
+  }
+  .tip {
+    position: absolute;
+    z-index: 60;
+    left: 50%;
+    bottom: calc(100% + 0.5em);
+    transform: translateX(-50%);
+    width: max-content;
+    max-width: min(20rem, 78vw);
+    background: var(--ink);
+    color: #eef6fc;
+    border-radius: var(--radius-sm);
+    padding: 0.7em 0.85em;
+    box-shadow: var(--shadow-lg);
+    font-size: 0.86rem;
+    line-height: 1.45;
+    text-align: left;
+  }
+  .tip[hidden] {
+    display: none;
+  }
+  .tip::after {
+    content: '';
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    border: 6px solid transparent;
+    border-top-color: var(--ink);
+  }
+  .tip-term {
+    display: block;
+    font-family: var(--font-data);
+    font-weight: 600;
+    font-size: 0.72rem;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    color: var(--sun);
+    margin-bottom: 0.2em;
+  }
+  .tip-def {
+    display: block;
+  }
+  .tip-more {
+    display: inline-block;
+    margin-top: 0.45em;
+    color: var(--sky-soft);
+    font-weight: 600;
+  }
+</style>
+
+<script>
+  // Single delegated controller (Astro bundles this once no matter how many Terms).
+  (() => {
+    if ((window as any).__termInit) return;
+    (window as any).__termInit = true;
+
+    let open: HTMLElement | null = null;
+
+    const hide = (btn: HTMLElement) => {
+      const tip = document.getElementById(btn.getAttribute('aria-describedby') || '');
+      btn.setAttribute('aria-expanded', 'false');
+      if (tip) tip.hidden = true;
+      if (open === btn) open = null;
+    };
+    const show = (btn: HTMLElement) => {
+      if (open && open !== btn) hide(open);
+      const tip = document.getElementById(btn.getAttribute('aria-describedby') || '');
+      btn.setAttribute('aria-expanded', 'true');
+      if (tip) {
+        tip.hidden = false;
+        // nudge back into viewport if overflowing horizontally
+        tip.style.left = '50%';
+        const r = tip.getBoundingClientRect();
+        if (r.left < 6) tip.style.left = `calc(50% + ${6 - r.left}px)`;
+        else if (r.right > window.innerWidth - 6)
+          tip.style.left = `calc(50% - ${r.right - (window.innerWidth - 6)}px)`;
+      }
+      open = btn;
+    };
+
+    document.addEventListener('click', (e) => {
+      const btn = (e.target as HTMLElement).closest?.('.term') as HTMLElement | null;
+      if (btn) {
+        e.preventDefault();
+        btn.getAttribute('aria-expanded') === 'true' ? hide(btn) : show(btn);
+      } else if (open && !(e.target as HTMLElement).closest?.('.tip')) {
+        hide(open);
+      }
+    });
+
+    document.addEventListener('pointerover', (e) => {
+      const btn = (e.target as HTMLElement).closest?.('.term') as HTMLElement | null;
+      if (btn && matchMedia('(hover: hover)').matches) show(btn);
+    });
+    document.addEventListener('pointerout', (e) => {
+      const btn = (e.target as HTMLElement).closest?.('.term') as HTMLElement | null;
+      const to = (e as PointerEvent).relatedTarget as HTMLElement | null;
+      if (btn && matchMedia('(hover: hover)').matches && !to?.closest?.('.term-wrap')) hide(btn);
+    });
+
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && open) {
+        const btn = open;
+        hide(btn);
+        btn.focus();
+      }
+    });
+  })();
+</script>
