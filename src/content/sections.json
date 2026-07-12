@@ -1,0 +1,591 @@
+[
+  {
+    "id": "hero",
+    "content": {
+      "en": {
+        "headline": "La Alegría",
+        "short": "A celebration of Argentina's World Cup run — with the homework done on the gossip.",
+        "full": "A joyful, honest look at Argentina's 2026 World Cup run. I'm a fan, I think Messi is the GOAT, and I'm loving every minute. People kept bringing up the gossip — favoritism, an FBI probe, corruption whispers — so instead of shrugging, I did the homework.",
+        "body": [
+          "The arc here is simple: joy, then an honest look, then joy again — with a clear head. It's a celebration with footnotes, not an exposé.",
+          "Every probability on this site is a subjective estimate, labelled speculative. Every allegation is phrased as an allegation. And after all of it, I still celebrate every goal."
+        ]
+      },
+      "es": {
+        "headline": "La Alegría",
+        "short": "Una celebración del Mundial de Argentina — con la tarea hecha sobre los chismes.",
+        "full": "Una mirada alegre y honesta al Mundial 2026 de Argentina. Soy hincha, para mí Messi es el GOAT, y estoy disfrutando cada minuto. La gente insistía con los chismes — favoritismo, una pesquisa del FBI, murmullos de corrupción — así que en vez de encogerme de hombros, hice la tarea.",
+        "body": [
+          "El recorrido es simple: alegría, después una mirada honesta, y otra vez alegría — con la cabeza fría. Es una celebración con notas al pie, no una denuncia.",
+          "Cada probabilidad de este sitio es una estimación subjetiva, marcada como especulativa. Cada acusación se plantea como acusación. Y después de todo, sigo festejando cada gol."
+        ]
+      }
+    }
+  },
+  {
+    "id": "bias-disclosure",
+    "content": {
+      "en": {
+        "headline": "Bias disclosure",
+        "short": "I'm Argentinian and I want us to win. That's the lens — read accordingly.",
+        "full": "Full disclosure: I'm Argentinian, Messi is my GOAT, and I want Argentina to lift the trophy on July 19. I'm biased — what did you expect? 🇦🇷 I've tried hard to be fair here, to steelman the doubters and keep the numbers honest. But you should know the hand that's writing. Where I could be kidding myself, I've said so.",
+        "body": []
+      },
+      "es": {
+        "headline": "Declaración de sesgo",
+        "short": "Soy argentino y quiero que ganemos. Ese es el lente — leé en consecuencia.",
+        "full": "Aviso honesto: soy argentino, Messi es mi GOAT, y quiero que Argentina levante la copa el 19 de julio. Estoy sesgado — ¿qué esperabas? 🇦🇷 Me esforcé por ser justo acá, por darles la mejor versión a los escépticos y mantener los números honestos. Pero conviene que sepas de qué mano viene esto. Donde podría estar engañándome, lo dije.",
+        "body": []
+      }
+    }
+  },
+  {
+    "id": "caveats",
+    "content": {
+      "en": {
+        "headline": "Read this first",
+        "short": "Speculative estimates, reported (not confirmed) probes, controversy ≠ corruption.",
+        "full": "A few things to hold in mind throughout:",
+        "body": [
+          "All probabilities are subjective and speculative — estimates, not measured facts.",
+          "The FBI probe is reported, not officially confirmed; no charges have been filed, and the AFA denies wrongdoing.",
+          "Controversy ≠ corruption. Every flagged incident has a rule-based explanation on the record.",
+          "Complaints from the losing side are motivated — that doesn't make them wrong, but it's worth remembering.",
+          "Facts move fast: the semifinals (July 14–15) may change everything.",
+          "The single strongest reason to keep the match-fixing hypothesis low: no World Cup finals match has ever been proven fixed."
+        ]
+      },
+      "es": {
+        "headline": "Leé esto primero",
+        "short": "Estimaciones especulativas, pesquisas reportadas (no confirmadas), polémica ≠ corrupción.",
+        "full": "Algunas cosas para tener presentes en todo momento:",
+        "body": [
+          "Todas las probabilidades son subjetivas y especulativas — estimaciones, no hechos medidos.",
+          "La pesquisa del FBI está reportada, no confirmada oficialmente; no hay cargos presentados, y la AFA niega irregularidades.",
+          "Polémica ≠ corrupción. Cada incidente señalado tiene una explicación reglamentaria en actas.",
+          "Las quejas del lado perdedor son interesadas — eso no las vuelve falsas, pero conviene recordarlo.",
+          "Los hechos cambian rápido: las semifinales (14–15 de julio) pueden cambiar todo.",
+          "La razón más fuerte para mantener baja la hipótesis del arreglo: nunca se probó que se arreglara un partido de fase final de un Mundial."
+        ]
+      }
+    }
+  },
+  {
+    "id": "footer-disclaimer",
+    "content": {
+      "en": {
+        "headline": "Disclaimer",
+        "short": "Opinion and analysis, not reporting. Not affiliated with FIFA or AFA. Made with Claude.",
+        "full": "This is opinion and analysis, not journalism or reporting. It is not affiliated with FIFA, the AFA, or any team. Named individuals are discussed only as reported by the linked sources; nothing here asserts anyone's guilt. Made with Claude.",
+        "body": []
+      },
+      "es": {
+        "headline": "Descargo",
+        "short": "Opinión y análisis, no periodismo. Sin afiliación con FIFA ni AFA. Hecho con Claude.",
+        "full": "Esto es opinión y análisis, no periodismo ni reporteo. No tiene afiliación con la FIFA, la AFA ni ningún equipo. Las personas nombradas se mencionan solo según lo reportado por las fuentes enlazadas; nada aquí afirma la culpabilidad de nadie. Hecho con Claude.",
+        "body": []
+      }
+    }
+  },
+  {
+    "id": "story-intro",
+    "content": {
+      "en": {
+        "headline": "What actually happened",
+        "short": "Three tense knockout wins, a few disputed calls, and a separate FBI money story.",
+        "full": "Argentina reached the semifinals the hard way: three knockout wins decided in tight, late, extra-time moments. Along the way came disputed calls, a coach's favoritism allegation, an appointment controversy — and, entirely separately, a reported FBI inquiry into how the AFA moved money through US banks. Two very different threads got tangled together in the noise. Let's untangle them.",
+        "body": []
+      },
+      "es": {
+        "headline": "Lo que realmente pasó",
+        "short": "Tres triunfos ajustados de eliminación directa, algunos fallos discutidos y una historia aparte del FBI.",
+        "full": "Argentina llegó a la semifinal por el camino difícil: tres triunfos de eliminación directa definidos en momentos ajustados, tardíos, en el alargue. En el trayecto hubo fallos discutidos, la acusación de favoritismo de un DT, una polémica por designaciones — y, de manera totalmente separada, una pesquisa reportada del FBI sobre cómo la AFA movió dinero por bancos de EE.UU. Dos hilos muy distintos se enredaron en el ruido. Vamos a desenredarlos.",
+        "body": []
+      }
+    }
+  },
+  {
+    "id": "story-two-threads",
+    "content": {
+      "en": {
+        "headline": "Two threads, not one",
+        "short": "The officiating complaints and the FBI probe are independent. Conflating them is the #1 error.",
+        "full": "Here's the key insight, and it's the thing most people get wrong: the officiating complaints and the financial investigation are two independent threads with no documented evidentiary bridge between them. The probe is about money-laundering jurisdiction — dollars through US banks, the classic FIFA-Gate theory. It is not about match outcomes. A true financial case would say nothing about whether any whistle was blown unfairly. Keep them apart.",
+        "body": []
+      },
+      "es": {
+        "headline": "Dos hilos, no uno",
+        "short": "Las quejas por el arbitraje y la pesquisa del FBI son independientes. Confundirlas es el error N.º 1.",
+        "full": "Acá está la clave, y es lo que la mayoría confunde: las quejas por el arbitraje y la investigación financiera son dos hilos independientes, sin un puente probatorio documentado entre ellos. La pesquisa es sobre jurisdicción por lavado de dinero — dólares por bancos de EE.UU., la teoría clásica del FIFA-Gate. No es sobre resultados de partidos. Una causa financiera real no diría nada sobre si algún silbato sonó injustamente. Mantenelos separados.",
+        "body": []
+      }
+    }
+  },
+  {
+    "id": "story-takeaway",
+    "content": {
+      "en": {
+        "headline": "The takeaway",
+        "short": "One thread is a genuine, well-sourced money story. The other is perception. They aren't the same.",
+        "full": "So: one thread (the money) is a genuine, well-sourced investigation worth watching. The other (the whistle) is mostly perception, built from three nervy knockouts and a viral clip or two. Both can be true at once, and neither implies the scoreboard was rigged.",
+        "body": []
+      },
+      "es": {
+        "headline": "La conclusión",
+        "short": "Un hilo es una historia de dinero real y bien documentada. El otro es percepción. No son lo mismo.",
+        "full": "Entonces: un hilo (el dinero) es una investigación genuina y bien documentada que vale la pena seguir. El otro (el silbato) es mayormente percepción, armada con tres octavos/cuartos de nervios y algún clip viral. Ambos pueden ser ciertos a la vez, y ninguno implica que el marcador estuviera arreglado.",
+        "body": []
+      }
+    }
+  },
+  {
+    "id": "feasibility-intro",
+    "content": {
+      "en": {
+        "headline": "Could it be done?",
+        "short": "Feasibility of a FIFA-level fix: low-to-moderate. My rating is 3 out of 10.",
+        "full": "Set aside whether it happened — could an organizing body actually tilt a modern World Cup match undetected? My honest answer: low-to-moderate. I rate it 3 out of 10. Not zero, because selection-based nudging hides inside normal discretion. But not high, because instructed calls in 2026 run headfirst into body cams, comms records, semi-automated offside and connected-ball telemetry.",
+        "body": []
+      },
+      "es": {
+        "headline": "¿Se puede?",
+        "short": "Factibilidad de un arreglo a nivel FIFA: baja a moderada. Mi puntaje es 3 sobre 10.",
+        "full": "Dejemos de lado si pasó — ¿podría un organizador inclinar un partido moderno de Mundial sin que se note? Mi respuesta honesta: baja a moderada. Le pongo 3 sobre 10. No cero, porque el 'empujoncito' vía designaciones se esconde dentro de la discrecionalidad normal. Pero tampoco alta, porque las órdenes de cobrar tal o cual jugada en 2026 chocan de frente con body cams, registros de comunicaciones, offside semiautomático y telemetría de la pelota conectada.",
+        "body": []
+      }
+    }
+  },
+  {
+    "id": "feasibility-appointments",
+    "content": {
+      "en": {
+        "headline": "How appointments actually work",
+        "short": "A Referees Committee picks match-by-match from a 52-referee pool, ~3 days out. No self-officiating.",
+        "full": "FIFA's Referees Committee, chaired by Pierluigi Collina, appoints officials match-by-match, roughly three days out, from the 'Team One' pool: 52 referees, 88 assistant referees and 30 video officials drawn from all six confederations. Officials never handle their own nation's matches. There's no predetermined knockout list — it's form-based. That design is mostly a safeguard.",
+        "body": []
+      },
+      "es": {
+        "headline": "Cómo funcionan las designaciones",
+        "short": "Un Comité de Árbitros designa partido a partido de un plantel de 52, ~3 días antes. Nadie arbitra a su país.",
+        "full": "El Comité de Árbitros de la FIFA, presidido por Pierluigi Collina, designa partido a partido, unos tres días antes, del plantel 'Team One': 52 árbitros, 88 asistentes y 30 oficiales de video de las seis confederaciones. Nadie dirige partidos de su propio país. No hay lista predeterminada para las eliminatorias — es por rendimiento. Ese diseño es, sobre todo, una salvaguarda.",
+        "body": []
+      }
+    }
+  },
+  {
+    "id": "feasibility-discretion",
+    "content": {
+      "en": {
+        "headline": "Where discretion concentrates",
+        "short": "The vulnerability is the small committee that assigns — and the VAR booth that decides what to review.",
+        "full": "If there's a soft spot, it's in two places: the small committee that assigns officials (the Calciopoli-style vulnerability — corrupt the designator, not the ref) and the VAR booth's discretion over what even gets reviewed. New for 2026, VAR can recommend overturning a clearly-wrong second-yellow red — the exact mechanism used on Embolo — and review attacking fouls before a restart. More discretion means more surface area for both real error and suspicion.",
+        "body": []
+      },
+      "es": {
+        "headline": "Dónde se concentra la discrecionalidad",
+        "short": "La vulnerabilidad es el pequeño comité que designa — y la cabina del VAR que decide qué revisar.",
+        "full": "Si hay un punto débil, está en dos lados: el pequeño comité que designa a los árbitros (la vulnerabilidad estilo Calciopoli — corromper al designador, no al árbitro) y la discrecionalidad de la cabina del VAR sobre qué se revisa siquiera. Nuevo en 2026: el VAR puede recomendar revertir una segunda amarilla claramente errónea — el mecanismo exacto usado con Embolo — y revisar faltas de ataque antes de una reanudación. Más discrecionalidad significa más superficie tanto para el error real como para la sospecha.",
+        "body": []
+      }
+    }
+  },
+  {
+    "id": "feasibility-detection",
+    "content": {
+      "en": {
+        "headline": "2026 makes hiding harder",
+        "short": "Body cams, semi-automated offside and connected-ball data all raise the chance a fix leaks.",
+        "full": "To tilt a match by instruction today you'd need a compromised appointer plus a compliant referee and/or video official, plus silence across a multi-person booth — all of it against body cams, recorded comms, semi-automated offside and connected-ball telemetry. Every extra device and every extra person is another way for the secret to leak. That's the whole logic of the simulator below.",
+        "body": []
+      },
+      "es": {
+        "headline": "2026 hace más difícil esconderlo",
+        "short": "Body cams, offside semiautomático y datos de la pelota elevan la chance de que un arreglo se filtre.",
+        "full": "Para inclinar un partido por orden hoy necesitarías un designador comprometido más un árbitro y/u oficial de video dispuestos, más silencio en una cabina de varias personas — todo eso contra body cams, comunicaciones grabadas, offside semiautomático y telemetría de la pelota conectada. Cada dispositivo extra y cada persona extra es otra forma de que el secreto se filtre. Esa es toda la lógica del simulador de abajo.",
+        "body": []
+      }
+    }
+  },
+  {
+    "id": "feasibility-baserate",
+    "content": {
+      "en": {
+        "headline": "The base rate that anchors everything",
+        "short": "No World Cup finals match has ever been legally proven fixed by an organizing body.",
+        "full": "Here's the anchor: no World Cup finals match has ever been legally proven fixed or referee-manipulated by an organizing body. The proven fixes in history (Lamptey, Perumal) were betting-syndicate jobs on qualifiers and friendlies — never an organizer favoring a team, never a finals match. Selection-based nudging is plausible; instructed, orchestrated finals fixing is, on the record, unprecedented.",
+        "body": []
+      },
+      "es": {
+        "headline": "La tasa base que ancla todo",
+        "short": "Nunca se probó legalmente que un organizador arreglara un partido de fase final de un Mundial.",
+        "full": "Acá está el ancla: nunca se probó legalmente que un organizador arreglara o manipulara el arbitraje de un partido de fase final de un Mundial. Los arreglos probados de la historia (Lamptey, Perumal) fueron trabajos de mafias de apuestas en eliminatorias y amistosos — nunca un organizador favoreciendo a una selección, nunca un partido de fase final. El 'empujoncito' vía designaciones es plausible; el arreglo orquestado de una final, en los papeles, no tiene precedentes.",
+        "body": []
+      }
+    }
+  },
+  {
+    "id": "feasibility-sim-intro",
+    "content": {
+      "en": {
+        "headline": "Try it: the Conspiracy Simulator",
+        "short": "More people, more time, higher leak odds — watch how fast a big secret is expected to break.",
+        "full": "Move the sliders. The more people who must stay silent, the higher each person's yearly chance of slipping, and the longer the horizon, the faster the secret is expected to break. It's a toy version of a real published model — but the shape of the curve is the point: small, tight secrets can hold; big institutional ones don't.",
+        "body": []
+      },
+      "es": {
+        "headline": "Probalo: el Simulador de Conspiraciones",
+        "short": "Más gente, más tiempo, más chance de filtración — mirá qué rápido se espera que caiga un secreto grande.",
+        "full": "Movés los deslizadores. Cuanta más gente deba callar, mayor la chance anual de que a alguien se le escape, y cuanto más largo el horizonte, más rápido se espera que caiga el secreto. Es una versión de juguete de un modelo real publicado — pero la forma de la curva es lo que importa: los secretos chicos y cerrados pueden aguantar; los institucionales grandes, no.",
+        "body": []
+      }
+    }
+  },
+  {
+    "id": "feasibility-sim-math",
+    "content": {
+      "en": {
+        "headline": "The math",
+        "short": "P(secret survives to time t) ≈ e^(−N·p·t), from Grimes (2016).",
+        "full": "The baseline is Grimes' constant-population case: the probability a secret is still intact after t years is roughly e^(−N·p·t), where N is the number of people who must stay silent and p is each person's per-year chance of exposing it. Expected leaks accumulate as N·p·t; the survival probability decays exponentially. Grimes' full model allows the group to shrink over time (people die, retire); his published correction generalizes the exponent to an integral. We use the simple form — it's an intuition pump, not a forecast.",
+        "body": []
+      },
+      "es": {
+        "headline": "La matemática",
+        "short": "P(el secreto sobrevive hasta t) ≈ e^(−N·p·t), según Grimes (2016).",
+        "full": "La base es el caso de población constante de Grimes: la probabilidad de que un secreto siga intacto tras t años es aproximadamente e^(−N·p·t), donde N es la cantidad de personas que deben callar y p es la chance anual de que cada una lo exponga. Las filtraciones esperadas se acumulan como N·p·t; la probabilidad de supervivencia decae exponencialmente. El modelo completo de Grimes permite que el grupo se achique con el tiempo (la gente muere, se retira); su corrección publicada generaliza el exponente a una integral. Usamos la forma simple — es un disparador de intuición, no un pronóstico.",
+        "body": []
+      }
+    }
+  },
+  {
+    "id": "feasibility-takeaway",
+    "content": {
+      "en": {
+        "headline": "Takeaway",
+        "short": "Big fixes leak. A finals-scale conspiracy is the kind the math says can't stay quiet.",
+        "full": "Big fixes leak. That's the lesson of both the history and the math: a single bribed referee might hide for a while, but a multi-person, institution-level fix of a World Cup — the kind you'd need to steer a champion — is exactly the kind the numbers say can't stay quiet for long.",
+        "body": []
+      },
+      "es": {
+        "headline": "Conclusión",
+        "short": "Los arreglos grandes se filtran. Una conspiración a escala de final es la que la matemática dice que no puede quedar callada.",
+        "full": "Los arreglos grandes se filtran. Esa es la lección de la historia y de la matemática: un árbitro sobornado puede esconderse un tiempo, pero un arreglo de varias personas, a nivel institucional, de un Mundial — el que haría falta para dirigir a un campeón — es justo del tipo que los números dicen que no puede quedar callado mucho tiempo.",
+        "body": []
+      }
+    }
+  },
+  {
+    "id": "prob-intro",
+    "content": {
+      "en": {
+        "headline": "The probabilities",
+        "short": "Four hypotheses, each with a speculative range and a 'what would change my mind'.",
+        "full": "Four hypotheses try to explain the noise around Argentina. Each gets a speculative range, the three best points for and against, and an honest 'what would change my mind'. These are my subjective estimates — argue with them using the Bayesian explorer below.",
+        "body": []
+      },
+      "es": {
+        "headline": "Las probabilidades",
+        "short": "Cuatro hipótesis, cada una con un rango especulativo y un 'qué me haría cambiar de opinión'.",
+        "full": "Cuatro hipótesis intentan explicar el ruido alrededor de Argentina. Cada una tiene un rango especulativo, los tres mejores puntos a favor y en contra, y un honesto 'qué me haría cambiar de opinión'. Son mis estimaciones subjetivas — discutilas con el explorador bayesiano de abajo.",
+        "body": []
+      }
+    }
+  },
+  {
+    "id": "prob-h1h2-warning",
+    "content": {
+      "en": {
+        "headline": "H1 is not H2",
+        "short": "A real money case (H2) would NOT imply match-fixing (H1). This is the #1 error people make.",
+        "full": "Before the cards: the single most common mistake is to treat the financial probe (H2) and match-fixing (H1) as one claim. They are not. H2 is credible and well-sourced; H1 is unproven and, on base rates, unlikely. A grand jury indictment for moving money through US banks would tell you nothing about whether a referee's whistle was crooked. Watch the colors on this page — blue for the sporting thread, gold for the financial one — and keep them apart.",
+        "body": []
+      },
+      "es": {
+        "headline": "H1 no es H2",
+        "short": "Una causa financiera real (H2) NO implica arreglo de partidos (H1). Es el error N.º 1.",
+        "full": "Antes de las tarjetas: el error más común es tratar la pesquisa financiera (H2) y el arreglo de partidos (H1) como una sola afirmación. No lo son. H2 es creíble y bien documentada; H1 no está probada y, por tasas base, es improbable. Una imputación por mover dinero por bancos de EE.UU. no te diría nada sobre si el silbato de un árbitro fue torcido. Mirá los colores de esta página — celeste para el hilo deportivo, dorado para el financiero — y mantenelos separados.",
+        "body": []
+      }
+    }
+  },
+  {
+    "id": "prob-bayes-intro",
+    "content": {
+      "en": {
+        "headline": "Try it: the Bayesian Explorer",
+        "short": "Set a prior and a few evidence strengths; watch the posterior update against my published range.",
+        "full": "Pick a hypothesis, set your prior, then slide the evidence strengths. The tool combines them in log-odds and shows the posterior against my published range band. Reset returns the defaults that reproduce my ranges. It's an intuition pump: the evidence is treated as independent, which it isn't fully — so this reasons about beliefs, it doesn't compute the truth.",
+        "body": []
+      },
+      "es": {
+        "headline": "Probalo: el Explorador Bayesiano",
+        "short": "Fijá un prior y algunas fuerzas de evidencia; mirá cómo el posterior se actualiza contra mi rango publicado.",
+        "full": "Elegí una hipótesis, fijá tu prior y deslizá las fuerzas de la evidencia. La herramienta las combina en log-odds y muestra el posterior contra mi banda de rango publicado. 'Reiniciar' devuelve los valores por defecto que reproducen mis rangos. Es un disparador de intuición: la evidencia se trata como independiente, cosa que no es del todo cierta — así que esto razona sobre creencias, no calcula la verdad.",
+        "body": []
+      }
+    }
+  },
+  {
+    "id": "prob-bayes-how",
+    "content": {
+      "en": {
+        "headline": "How Bayes works, quickly",
+        "short": "Start with prior odds, multiply by each evidence's likelihood ratio, convert back to a probability.",
+        "full": "Bayes in one line: turn your prior probability into odds, multiply by the likelihood ratio of each piece of evidence (how much more expected it is if the claim is true vs false), and convert the result back to a probability. Doing it in log-odds just means adding instead of multiplying, which keeps the arithmetic stable. Strong evidence has a ratio far from 1; weak evidence sits near 1 and barely moves the needle.",
+        "body": []
+      },
+      "es": {
+        "headline": "Cómo funciona Bayes, rápido",
+        "short": "Partí de las odds del prior, multiplicá por la razón de verosimilitud de cada evidencia, y volvé a probabilidad.",
+        "full": "Bayes en una línea: convertí tu probabilidad previa en odds, multiplicá por la razón de verosimilitud de cada evidencia (cuánto más esperable es si la afirmación es verdadera vs falsa) y convertí el resultado de nuevo en probabilidad. Hacerlo en log-odds solo significa sumar en vez de multiplicar, lo que mantiene la aritmética estable. La evidencia fuerte tiene una razón lejos de 1; la débil está cerca de 1 y casi no mueve la aguja.",
+        "body": []
+      }
+    }
+  },
+  {
+    "id": "prob-takeaway",
+    "content": {
+      "en": {
+        "headline": "Takeaway",
+        "short": "H3 + H4 together best explain the perception. A real money case wouldn't change that.",
+        "full": "Put together, soft/structural bias (H3) and plain variance plus a perception cascade (H4) are the most likely explanation of the officiating perception — not a conspiracy. The financial thread (H2) can be entirely real and still leave that conclusion standing. Deliberate FIFA-level favoritism (H1) stays low, right where the base rate keeps it.",
+        "body": []
+      },
+      "es": {
+        "headline": "Conclusión",
+        "short": "H3 + H4 juntas explican mejor la percepción. Una causa financiera real no cambiaría eso.",
+        "full": "En conjunto, el sesgo blando/estructural (H3) y la simple varianza más una cascada de percepción (H4) son la explicación más probable de la percepción sobre el arbitraje — no una conspiración. El hilo financiero (H2) puede ser totalmente real y aun así dejar esa conclusión en pie. El favoritismo deliberado a nivel FIFA (H1) se mantiene bajo, justo donde lo deja la tasa base.",
+        "body": []
+      }
+    }
+  },
+  {
+    "id": "whowins-intro",
+    "content": {
+      "en": {
+        "headline": "Who wins?",
+        "short": "Four teams left. The models say France; the heart says Argentina. Both can be honest.",
+        "full": "Four teams remain. To answer 'who wins' honestly I triangulate three independent sources — Opta, Nate Silver's model, and the betting market — then give my own synthesized ranges. Spoiler: the numbers favor France, and my heart favors Argentina. This tab is about holding both without lying to yourself.",
+        "body": []
+      },
+      "es": {
+        "headline": "¿Quién gana?",
+        "short": "Quedan cuatro. Los modelos dicen Francia; el corazón dice Argentina. Ambos pueden ser honestos.",
+        "full": "Quedan cuatro selecciones. Para responder '¿quién gana?' con honestidad triangulo tres fuentes independientes — Opta, el modelo de Nate Silver y el mercado de apuestas — y después doy mis propios rangos sintetizados. Adelanto: los números favorecen a Francia, y mi corazón favorece a Argentina. Esta pestaña es sobre sostener ambas cosas sin mentirte.",
+        "body": []
+      }
+    }
+  },
+  {
+    "id": "whowins-silver-note",
+    "content": {
+      "en": {
+        "headline": "A note on the third model",
+        "short": "Silver's per-team numbers are paywalled, so we cite his method and the public market instead.",
+        "full": "Full honesty: Nate Silver's live per-team title numbers sit behind his paywall, so I can't reproduce them here. His model is Elo/SPI-style with 100,000 daily simulations, from the founder of FiveThirtyEight — a strong 2008/2012 record with notable 2016/2024 misses. Where his exact numbers would go, I use the public prediction-market figure and lean on Opta and the bookmakers as the two fully-visible quantitative anchors.",
+        "body": []
+      },
+      "es": {
+        "headline": "Una nota sobre el tercer modelo",
+        "short": "Los números por selección de Silver están tras un muro de pago; citamos su método y el mercado público.",
+        "full": "Con total honestidad: los números por selección de Nate Silver están detrás de su muro de pago, así que no puedo reproducirlos acá. Su modelo es estilo Elo/SPI con 100.000 simulaciones diarias, del fundador de FiveThirtyEight — buen historial 2008/2012 con fallos notorios en 2016/2024. Donde irían sus números exactos, uso la cifra pública del mercado de predicciones y me apoyo en Opta y las casas de apuestas como los dos anclajes cuantitativos plenamente visibles.",
+        "body": []
+      }
+    }
+  },
+  {
+    "id": "whowins-fatigue",
+    "content": {
+      "en": {
+        "headline": "The un-glamorous fade factor",
+        "short": "Argentina has played three straight 120-minute matches. That's real, and it isn't a conspiracy.",
+        "full": "If Argentina fades, the boring explanation is the most likely one: three straight knockouts to 120 minutes is a lot of legs. No whistle required. It's exactly the kind of concrete, non-conspiratorial factor worth naming before reaching for anything more exotic.",
+        "body": []
+      },
+      "es": {
+        "headline": "El factor de caída poco glamoroso",
+        "short": "Argentina jugó tres partidos seguidos de 120 minutos. Eso es real, y no es una conspiración.",
+        "full": "Si Argentina se cae, la explicación aburrida es la más probable: tres eliminatorias seguidas hasta los 120 minutos son muchas piernas. Sin silbato de por medio. Es justo el tipo de factor concreto y no conspirativo que conviene nombrar antes de buscar algo más exótico.",
+        "body": []
+      }
+    }
+  },
+  {
+    "id": "whowins-mc-intro",
+    "content": {
+      "en": {
+        "headline": "Try it: the Monte Carlo bracket",
+        "short": "Simulate the rest of the tournament 10,000 times from the current bracket.",
+        "full": "This runs 10,000 simulated tournaments from wherever the bracket currently sits, using an Elo-style logistic on team strengths you can adjust. There's one clearly-labelled, speculative 'bias nudge' slider that adds percentage points to Argentina's per-match win chance — set it to zero and the output converges on the clean model. Everything here is speculative; the nudge especially so.",
+        "body": []
+      },
+      "es": {
+        "headline": "Probalo: el cuadro Monte Carlo",
+        "short": "Simulá el resto del torneo 10.000 veces desde el cuadro actual.",
+        "full": "Esto corre 10.000 torneos simulados desde donde esté el cuadro ahora, usando una logística estilo Elo sobre fuerzas de equipo que podés ajustar. Hay un único deslizador especulativo y claramente etiquetado, el 'empujón de sesgo', que suma puntos porcentuales a la chance de Argentina por partido — ponelo en cero y la salida converge al modelo limpio. Todo acá es especulativo; el empujón, más que nada.",
+        "body": []
+      }
+    }
+  },
+  {
+    "id": "whowins-mc-math",
+    "content": {
+      "en": {
+        "headline": "The math",
+        "short": "Each match: P(A beats B) = 1 / (1 + 10^(−(Rᴀ−Rʙ)/400)). Champions counted over 10,000 runs.",
+        "full": "Each match uses the logistic Elo formula P(A beats B) = 1 / (1 + 10^(−(Rᴀ−Rʙ)/400)), where R is a team's strength rating. A seedable pseudo-random generator draws each result, the winner advances, and we tally champions over 10,000 tournaments. The ratings are tuned so that at nudge = 0 the title odds land near the clean model. The 'bias nudge' simply adds a capped number of percentage points to Argentina's per-match win probability — a what-if, not a forecast.",
+        "body": []
+      },
+      "es": {
+        "headline": "La matemática",
+        "short": "Cada partido: P(A vence a B) = 1 / (1 + 10^(−(Rᴀ−Rʙ)/400)). Se cuentan campeones en 10.000 corridas.",
+        "full": "Cada partido usa la fórmula logística de Elo P(A vence a B) = 1 / (1 + 10^(−(Rᴀ−Rʙ)/400)), donde R es el puntaje de fuerza de un equipo. Un generador pseudoaleatorio con semilla sortea cada resultado, el ganador avanza, y contamos campeones en 10.000 torneos. Los puntajes están calibrados para que, con empujón = 0, las chances de título queden cerca del modelo limpio. El 'empujón de sesgo' simplemente suma una cantidad acotada de puntos porcentuales a la probabilidad de Argentina por partido — un qué-pasaría-si, no un pronóstico.",
+        "body": []
+      }
+    }
+  },
+  {
+    "id": "whowins-nudge-note",
+    "content": {
+      "en": {
+        "headline": "About the bias nudge",
+        "short": "Soft bias ≈ +2–5pp. A strong (unproven) fix could reach ~30–45%. Presented as a what-if only.",
+        "full": "If only soft, structural bias were real (H3), it might add 2–5 percentage points to Argentina — nudging the title odds into the low-to-mid 20s. If a strong H1 somehow held — unproven, and unlikely on base rates — manipulation would show up exactly in tight knockout margins, and the odds could reach roughly 30–45%. I regard that high end as unlikely. It's here as a conditional what-if you can dial yourself, not a prediction.",
+        "body": []
+      },
+      "es": {
+        "headline": "Sobre el empujón de sesgo",
+        "short": "Sesgo blando ≈ +2–5pp. Un arreglo fuerte (no probado) podría llegar a ~30–45%. Solo como qué-pasaría-si.",
+        "full": "Si solo fuera real el sesgo blando y estructural (H3), podría sumarle 2–5 puntos porcentuales a Argentina — llevando las chances de título a los 20 y pico. Si de algún modo se sostuviera un H1 fuerte — no probado, e improbable por tasas base — la manipulación aparecería justo en los márgenes ajustados de la eliminación directa, y las chances podrían llegar a ~30–45%. Considero ese extremo alto improbable. Está acá como un qué-pasaría-si condicional que podés graduar vos, no como una predicción.",
+        "body": []
+      }
+    }
+  },
+  {
+    "id": "whowins-closing",
+    "content": {
+      "en": {
+        "headline": "The models say France. The heart says Argentina.",
+        "short": "Both can coexist honestly. I'll take the numbers seriously and cheer anyway.",
+        "full": "So here's where I land: the models say France, and the heart says Argentina — and both can coexist honestly. I'll take the numbers seriously, keep my hypotheses labelled, and cheer every Argentine goal like it's the last one Messi ever scores. Vamos.",
+        "body": []
+      },
+      "es": {
+        "headline": "Los modelos dicen Francia. El corazón dice Argentina.",
+        "short": "Ambos pueden convivir con honestidad. Me tomo en serio los números y aliento igual.",
+        "full": "Entonces acá quedo: los modelos dicen Francia, y el corazón dice Argentina — y ambos pueden convivir con honestidad. Me tomo en serio los números, mantengo mis hipótesis etiquetadas, y grito cada gol argentino como si fuera el último que Messi va a hacer en su vida. Vamos.",
+        "body": []
+      }
+    }
+  },
+  {
+    "id": "whowins-eliminated",
+    "content": {
+      "en": {
+        "headline": "Not our year — and still, gracias",
+        "short": "Argentina is out. The joy was real, the run was ours, and the analysis stays honest.",
+        "full": "Argentina is out. It stings, because I wanted the fairytale. But the joy of this run was real and no scoreboard can take it back — and notice that a fair exit is itself evidence: the same tight margins that fed the whispers cut the other way this time. The honest version of being a fan includes the losses. Gracias, muchachos. On to the next one.",
+        "body": []
+      },
+      "es": {
+        "headline": "No fue lo nuestro — y aun así, gracias",
+        "short": "Argentina quedó afuera. La alegría fue real, la campaña fue nuestra, y el análisis sigue honesto.",
+        "full": "Argentina quedó afuera. Duele, porque quería el cuento de hadas. Pero la alegría de esta campaña fue real y ningún marcador la borra — y ojo que una eliminación justa es evidencia en sí misma: los mismos márgenes ajustados que alimentaron los murmullos esta vez cortaron para el otro lado. La versión honesta de ser hincha incluye las derrotas. Gracias, muchachos. A la próxima.",
+        "body": []
+      }
+    }
+  },
+  {
+    "id": "open-questions",
+    "content": {
+      "en": {
+        "headline": "The three biggest open questions",
+        "short": "What I'm actually watching next.",
+        "full": "Three things will tell us more than any hot take:",
+        "body": [
+          "Does the DOJ move from a preliminary inquiry to an indictment or a cooperating witness? Watch the window after July 19.",
+          "Does any hard artifact — leaked comms, a whistleblower, an assignment-anomaly study — ever link appointments or VAR to outcomes?",
+          "Does the officiating pattern regress under maximum semifinal and final scrutiny?"
+        ]
+      },
+      "es": {
+        "headline": "Las tres preguntas abiertas más grandes",
+        "short": "Lo que realmente estoy mirando de acá en más.",
+        "full": "Tres cosas nos van a decir más que cualquier opinión al pasar:",
+        "body": [
+          "¿Pasa el DOJ de una pesquisa preliminar a una imputación o a un testigo cooperante? Mirá la ventana después del 19 de julio.",
+          "¿Aparece algún artefacto duro — comunicaciones filtradas, un denunciante, un estudio de anomalías en las designaciones — que ligue designaciones o VAR a resultados?",
+          "¿Se normaliza el patrón arbitral bajo el máximo escrutinio de semifinal y final?"
+        ]
+      }
+    }
+  },
+  {
+    "id": "sources-intro",
+    "content": {
+      "en": {
+        "headline": "Sources",
+        "short": "Grouped by reliability tier, each with a one-line 'why it matters'.",
+        "full": "Everything above traces to something here. Sources are grouped by reliability tier — primary and legal first, then quality journalism, data and models, academic work, and historical context — each with a line on why it matters. Where I couldn't verify a link, I say so.",
+        "body": []
+      },
+      "es": {
+        "headline": "Fuentes",
+        "short": "Agrupadas por nivel de fiabilidad, cada una con un 'por qué importa' de una línea.",
+        "full": "Todo lo de arriba se remonta a algo de acá. Las fuentes están agrupadas por nivel de fiabilidad — primarias y legales primero, después periodismo de calidad, datos y modelos, trabajo académico, y contexto histórico — cada una con una línea sobre por qué importa. Donde no pude verificar un enlace, lo aclaro.",
+        "body": []
+      }
+    }
+  },
+  {
+    "id": "sources-dig-deeper",
+    "content": {
+      "en": {
+        "headline": "Dig deeper — and correct me",
+        "short": "Found an error or a better source? Tell me on LinkedIn. I'll log the fix.",
+        "full": "This is a living document and I'd rather be corrected than comfortable. If you find an error, a dead link, or a stronger source, tell me on LinkedIn — real corrections get logged in the changelog with credit.",
+        "body": []
+      },
+      "es": {
+        "headline": "Profundizá — y corregime",
+        "short": "¿Encontraste un error o una mejor fuente? Decímelo por LinkedIn. Registro la corrección.",
+        "full": "Este es un documento vivo y prefiero que me corrijan antes que estar cómodo. Si encontrás un error, un enlace roto o una fuente más fuerte, decímelo por LinkedIn — las correcciones reales quedan registradas en el changelog con crédito.",
+        "body": []
+      }
+    }
+  },
+  {
+    "id": "log-intro",
+    "content": {
+      "en": {
+        "headline": "The Log",
+        "short": "A living changelog: each re-run refreshes the data, scores old predictions, and archives the last version.",
+        "full": "This site is meant to be re-run. As the semifinals and final are played — and as the FBI story develops — I refresh the research, update the numbers, and grade what the last version predicted. Every entry below is one such run: what changed, how the old forecast held up, and a link to the archived version. Predictions are only honest if you keep score.",
+        "body": []
+      },
+      "es": {
+        "headline": "La Bitácora",
+        "short": "Un changelog vivo: cada re-corrida refresca los datos, puntúa predicciones viejas y archiva la versión anterior.",
+        "full": "Este sitio está pensado para re-correrse. A medida que se juegan las semifinales y la final — y a medida que avanza la historia del FBI — refresco la investigación, actualizo los números y califico lo que predijo la versión anterior. Cada entrada de abajo es una de esas corridas: qué cambió, cómo aguantó el pronóstico viejo, y un enlace a la versión archivada. Las predicciones solo son honestas si llevás el marcador.",
+        "body": []
+      }
+    }
+  },
+  {
+    "id": "closing-note",
+    "content": {
+      "en": {
+        "headline": "Vamos Argentina",
+        "short": "A celebration with footnotes. After all the homework, I still hope we lift it on July 19.",
+        "full": "That's the whole thing: joy, an honest look, and joy again. I did the homework so I could enjoy the tournament more, not less. The gossip deserves a fair hearing; the football deserves a full-throated cheer. On July 19, with a clear head and zero apology — vamos Argentina. 🇦🇷",
+        "body": []
+      },
+      "es": {
+        "headline": "Vamos Argentina",
+        "short": "Una celebración con notas al pie. Después de toda la tarea, sigo deseando que la levantemos el 19 de julio.",
+        "full": "Es todo esto: alegría, una mirada honesta, y otra vez alegría. Hice la tarea para disfrutar más el torneo, no menos. El chisme merece una audiencia justa; el fútbol merece un grito a pleno pulmón. El 19 de julio, con la cabeza fría y sin pedir perdón — vamos Argentina. 🇦🇷",
+        "body": []
+      }
+    }
+  }
+]

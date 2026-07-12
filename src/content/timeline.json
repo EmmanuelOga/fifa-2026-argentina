@@ -1,0 +1,202 @@
+[
+  {
+    "id": "dec-raids",
+    "order": 1,
+    "date": "2025-12-09",
+    "thread": "financial",
+    "icon": "🏦",
+    "sources": ["cnn-raids", "lanacion-tapia"],
+    "content": {
+      "en": {
+        "headline": "December 2025: raids on the AFA and clubs",
+        "short": "Argentine authorities raid AFA HQ and 17 clubs in a money-laundering case.",
+        "full": "Months before the World Cup, Argentine authorities carry out simultaneous raids on the AFA and 17 clubs in a domestic money-laundering case.",
+        "detail": "On December 9, 2025, around 33 simultaneous raids hit AFA headquarters, its Ezeiza complex and 17 clubs (some outlets say 18, in an overlapping case). This is a separate, domestic matter — the backdrop against which AFA president Claudio Tapia is later processed for roughly $12.7M in alleged social-security evasion (upheld on appeal in June 2026). Tapia alleges political persecution amid his feud with President Milei. No connection to match results is alleged."
+      },
+      "es": {
+        "headline": "Diciembre 2025: allanamientos a la AFA y clubes",
+        "short": "La justicia argentina allana la sede de la AFA y 17 clubes en una causa por lavado.",
+        "full": "Meses antes del Mundial, la justicia argentina realiza allanamientos simultáneos a la AFA y 17 clubes en una causa local por lavado de dinero.",
+        "detail": "El 9 de diciembre de 2025, unos 33 allanamientos simultáneos alcanzan la sede de la AFA, su predio de Ezeiza y 17 clubes (algunos medios dicen 18, en una causa que se superpone). Es un asunto local y aparte — el telón de fondo sobre el cual el presidente de la AFA, Claudio Tapia, es luego procesado por una presunta evasión de aportes de unos US$12,7M (confirmada en apelación en junio de 2026). Tapia alega persecución política en medio de su enfrentamiento con el presidente Milei. No se alega vínculo con resultados deportivos."
+      }
+    }
+  },
+  {
+    "id": "cape-verde",
+    "order": 2,
+    "date": "2026-06-29",
+    "dateApprox": true,
+    "thread": "sporting",
+    "icon": "🩹",
+    "sources": ["ifab-laws"],
+    "content": {
+      "en": {
+        "headline": "Cape Verde: the blood-injury restart",
+        "short": "A restart after a bleeding-player stoppage goes viral — but the rule was applied correctly.",
+        "full": "Argentina's knockout win over Cape Verde produces the tournament's first viral 'robbery' clip: a restart after a bleeding player left the pitch. The catch — the referee applied the IFAB rule exactly as written.",
+        "detail": "Under Law 5, a bleeding player must leave the field and can only return on the referee's signal. The stoppage and restart followed the letter of the rule. It looked unfair in a fast clip; it wasn't. (An earlier claim that the clip drew tens of millions of views could not be verified, so no number is given.)"
+      },
+      "es": {
+        "headline": "Cabo Verde: la reanudación por sangrado",
+        "short": "Una reanudación tras un jugador sangrando se hace viral — pero la regla se aplicó bien.",
+        "full": "El triunfo de Argentina sobre Cabo Verde produce el primer clip viral de 'robo' del torneo: una reanudación tras salir un jugador que sangraba. El detalle — el árbitro aplicó la regla de IFAB tal como está escrita.",
+        "detail": "Según la Regla 5, un jugador que sangra debe salir del campo y solo puede volver con la señal del árbitro. La detención y la reanudación siguieron la letra de la regla. En un clip rápido pareció injusto; no lo fue. (Una versión previa hablaba de decenas de millones de vistas; no se pudo verificar, así que no damos ninguna cifra.)"
+      }
+    }
+  },
+  {
+    "id": "egypt-r16",
+    "order": 3,
+    "date": "2026-07-07",
+    "thread": "sporting",
+    "icon": "🇪🇬",
+    "sources": ["fifa-collina-statement", "yahoo-fifa-problem"],
+    "content": {
+      "en": {
+        "headline": "Egypt: a disallowed goal and an allegation",
+        "short": "A VAR-disallowed Egypt goal; coach Hossam Hassan alleges favoritism; Collina rejects it.",
+        "full": "In the Round of 16 in Atlanta, an Egypt goal is disallowed by VAR for a build-up foul on Lisandro Martínez. Egypt coach Hossam Hassan alleges favoritism afterward; FIFA's refereeing chief Pierluigi Collina publicly rejects the claim.",
+        "detail": "The disallowed goal followed a build-up foul by Marwan Attia on Lisandro Martínez. Hassan's post-match remarks included an unsubstantiated claim that officials wanted Messi to shine at the tournament. Collina, on the record, called such bias allegations unfounded and said they have no place in the sport. A defensible rule-based reading of the call exists; the allegation remains an allegation."
+      },
+      "es": {
+        "headline": "Egipto: un gol anulado y una acusación",
+        "short": "Un gol de Egipto anulado por el VAR; el DT Hossam Hassan alega favoritismo; Collina lo rechaza.",
+        "full": "En octavos de final en Atlanta, un gol de Egipto es anulado por el VAR por una falta en la jugada previa a Lisandro Martínez. El DT de Egipto, Hossam Hassan, alega favoritismo; el jefe de arbitraje de la FIFA, Pierluigi Collina, rechaza públicamente la acusación.",
+        "detail": "El gol anulado siguió a una falta de Marwan Attia sobre Lisandro Martínez en la jugada previa. Los dichos de Hassan tras el partido incluyeron una afirmación sin sustento de que se quería que Messi brillara en el torneo. Collina, en actas, calificó de infundadas esas acusaciones de sesgo y dijo que no tienen lugar en el deporte. Existe una lectura reglamentaria defendible del fallo; la acusación sigue siendo una acusación."
+      }
+    }
+  },
+  {
+    "id": "fbi-report",
+    "order": 4,
+    "date": "2026-07-08",
+    "thread": "financial",
+    "icon": "🔎",
+    "sources": ["lanacion-fbi", "miami-herald", "wlrn-probe"],
+    "content": {
+      "en": {
+        "headline": "The FBI money story breaks",
+        "short": "La Nación reports an FBI/DOJ preliminary inquiry into AFA's US financial flows. No charges.",
+        "full": "La Nación reports that FBI agents and federal prosecutors are taking testimony in a preliminary inquiry into how the AFA moved money through US banks and companies. The Miami Herald corroborates, citing two law-enforcement sources.",
+        "detail": "Per La Nación (Francisco Olivera and Hugo Alconada Mon), the inquiry examines $300M+ in AFA revenue routed through US institutions — including a Florida company (reported as TourProdEnter LLC) that, per La Nación, administered at least $260M with roughly $57M lacking clear economic justification. The '$260M/$57M' split is single-sourced to La Nación; most coverage cites '$300M+'. The company's operators are named in reporting as inquiry subjects — not charged. La Nación also names three federal prosecutors. The FBI's Miami office declined to comment. No US charges have been filed. This is the classic FIFA-Gate template: jurisdiction over dollars, not scorelines."
+      },
+      "es": {
+        "headline": "Estalla la historia del FBI y el dinero",
+        "short": "La Nación reporta una pesquisa preliminar del FBI/DOJ sobre los flujos financieros de la AFA en EE.UU. Sin cargos.",
+        "full": "La Nación reporta que agentes del FBI y fiscales federales toman testimonios en una pesquisa preliminar sobre cómo la AFA movió dinero por bancos y empresas de EE.UU. El Miami Herald corrobora, citando dos fuentes policiales.",
+        "detail": "Según La Nación (Francisco Olivera y Hugo Alconada Mon), la pesquisa examina más de US$300M de ingresos de la AFA canalizados por instituciones estadounidenses — incluida una empresa de Florida (reportada como TourProdEnter LLC) que, según La Nación, administró al menos US$260M con unos US$57M sin justificación económica clara. La división 'US$260M/US$57M' proviene solo de La Nación; la mayoría de la cobertura cita 'más de US$300M'. Los operadores de la empresa son nombrados en la prensa como sujetos de la pesquisa — no imputados. La Nación también nombra a tres fiscales federales. La oficina del FBI en Miami no hizo comentarios. No hay cargos presentados en EE.UU. Es el molde clásico del FIFA-Gate: jurisdicción sobre dólares, no sobre marcadores."
+      }
+    }
+  },
+  {
+    "id": "pinheiro",
+    "order": 5,
+    "date": "2026-07-08",
+    "dateApprox": true,
+    "thread": "sporting",
+    "icon": "🧑‍⚖️",
+    "sources": ["nbcdfw-pinheiro"],
+    "content": {
+      "en": {
+        "headline": "The Pinheiro appointment",
+        "short": "FIFA names João Pinheiro for the quarterfinal despite fresh Champions League baggage.",
+        "full": "FIFA appoints João Pinheiro for the Argentina quarterfinal, days after debate over a controversial handball reversal he made in a Bayern–PSG Champions League semifinal.",
+        "detail": "Appointing a referee with fresh controversy for a high-stakes Argentina match was, at minimum, an optics problem. It fuels perception without being evidence of anything: a referee's recent notoriety is not proof of a plan. Appointments are made roughly three days out and are, in principle, form-based."
+      },
+      "es": {
+        "headline": "La designación de Pinheiro",
+        "short": "La FIFA nombra a João Pinheiro para el cuarto de final pese a una polémica reciente en la Champions.",
+        "full": "La FIFA designa a João Pinheiro para el cuarto de final de Argentina, días después del debate por una polémica revisión de mano suya en una semifinal Bayern–PSG de la Champions.",
+        "detail": "Designar a un árbitro con una polémica fresca para un partido de alto voltaje de Argentina fue, como mínimo, un problema de óptica. Alimenta la percepción sin ser evidencia de nada: la notoriedad reciente de un árbitro no prueba un plan. Las designaciones se hacen unos tres días antes y, en principio, son por rendimiento."
+      }
+    }
+  },
+  {
+    "id": "tello-crew",
+    "order": 6,
+    "date": "2026-07-09",
+    "thread": "sporting",
+    "icon": "🇦🇷",
+    "sources": ["yahoo-fifa-problem"],
+    "content": {
+      "en": {
+        "headline": "An all-Argentine crew — for a rival's match",
+        "short": "Facundo Tello and four compatriots officiate France–Morocco. Bad optics, wrong direction.",
+        "full": "An all-Argentine officiating crew — Facundo Tello plus four compatriots — is appointed for France–Morocco. It looks bad, but note the direction: it's a rival's match, not Argentina's.",
+        "detail": "This is the detail that cuts against the favoritism story more than for it. If FIFA were shading toward Argentina, putting an all-Argentine crew on a rival's quarterfinal is the opposite of what you'd design — you'd keep them far from anything touching Argentina's path. It's an optics own-goal, not a smoking gun."
+      },
+      "es": {
+        "headline": "Una terna toda argentina — para un partido rival",
+        "short": "Facundo Tello y cuatro compatriotas dirigen Francia–Marruecos. Mala óptica, dirección equivocada.",
+        "full": "Se designa una terna arbitral toda argentina — Facundo Tello más cuatro compatriotas — para Francia–Marruecos. Se ve mal, pero ojo la dirección: es el partido de un rival, no de Argentina.",
+        "detail": "Este es el detalle que juega más en contra de la historia del favoritismo que a favor. Si la FIFA se inclinara hacia Argentina, poner una terna toda argentina en el cuarto de final de un rival es lo opuesto a lo que diseñarías — los mantendrías lejos de todo lo que toque el camino de Argentina. Es un autogol de óptica, no una prueba."
+      }
+    }
+  },
+  {
+    "id": "switzerland-qf",
+    "order": 7,
+    "date": "2026-07-11",
+    "thread": "sporting",
+    "icon": "🇨🇭",
+    "sources": ["espn-arg-sui", "fifa-arg-sui-report", "aljazeera-arg-sui", "ifab-var-2026"],
+    "content": {
+      "en": {
+        "headline": "Switzerland 1–3 (AET): the Embolo red",
+        "short": "Argentina win in extra time; Breel Embolo is sent off for simulation after a VAR review.",
+        "full": "Argentina beat Switzerland 3–1 after extra time in Kansas City. Breel Embolo is dismissed for a second yellow — simulation — after the referee is sent to the monitor, and Switzerland's Granit Xhaka is furious.",
+        "detail": "Mac Allister 10′, Ndoye 67′, Álvarez 112′, Lautaro Martínez 120+1′. Embolo went off around the 72nd minute for a second caution after a VAR-recommended review under the new 2026 protocol; replays showed a clear dive. Xhaka's reaction was that of a man who felt the game turned — he called it a decision that 'kills the game' (a paraphrase, not a verbatim quote). A red for simulation, confirmed on replay, is a defensible call; it's also exactly the kind of swing that fuels perception."
+      },
+      "es": {
+        "headline": "Suiza 1–3 (tras alargue): la roja a Embolo",
+        "short": "Argentina gana en el alargue; Breel Embolo es expulsado por simulación tras una revisión del VAR.",
+        "full": "Argentina vence a Suiza 3–1 tras el alargue en Kansas City. Breel Embolo es expulsado por doble amarilla — simulación — después de que el árbitro va al monitor, y el suizo Granit Xhaka queda furioso.",
+        "detail": "Mac Allister 10′, Ndoye 67′, Álvarez 112′, Lautaro Martínez 120+1′. Embolo salió cerca del minuto 72 por segunda amonestación tras una revisión recomendada por el VAR bajo el nuevo protocolo 2026; las repeticiones mostraron un claro clavado. La reacción de Xhaka fue la de alguien que sintió que el partido se dio vuelta — dijo que fue una decisión que 'mata el partido' (una paráfrasis, no una cita textual). Una roja por simulación, confirmada en la repetición, es un fallo defendible; también es justo el tipo de vuelco que alimenta la percepción."
+      }
+    }
+  },
+  {
+    "id": "penalty-outlier",
+    "order": 8,
+    "date": "2026-07-12",
+    "thread": "sporting",
+    "icon": "⚽",
+    "sources": ["yahoo-fifa-problem"],
+    "content": {
+      "en": {
+        "headline": "The penalty outlier",
+        "short": "8 penalties across the 2022 + 2026 World Cups — roughly double any other nation.",
+        "full": "The stat that keeps the conversation alive: Argentina has been awarded 8 penalties across its last 12 World Cup matches (five in 2022, three in 2026) — the most of any nation in recent World Cups, roughly double the next side.",
+        "detail": "This is the strongest single number the doubters have, and it's real. Two honest caveats: Messi has missed two of the 2026 ones (vs Austria and Egypt), so 'awarded' isn't 'converted'; and the exact superlative — 'most ever over a 12-match span' — isn't cleanly sourced, so I frame it as 'most in recent World Cups.' An outlier invites scrutiny; it isn't proof of a thumb on the scale."
+      },
+      "es": {
+        "headline": "El dato atípico de los penales",
+        "short": "8 penales entre los Mundiales 2022 + 2026 — aproximadamente el doble que cualquier otra selección.",
+        "full": "El dato que mantiene viva la charla: a Argentina le cobraron 8 penales en sus últimos 12 partidos de Mundial (cinco en 2022, tres en 2026) — la mayor cantidad de cualquier selección en los Mundiales recientes, casi el doble que el siguiente.",
+        "detail": "Es el número más fuerte que tienen los escépticos, y es real. Dos aclaraciones honestas: Messi erró dos de los de 2026 (vs Austria y Egipto), así que 'cobrado' no es 'convertido'; y el superlativo exacto — 'la mayor cantidad en un tramo de 12 partidos en la historia' — no tiene fuente limpia, así que lo planteo como 'la mayor en los Mundiales recientes'. Un dato atípico invita al escrutinio; no es prueba de un pulgar en la balanza."
+      }
+    }
+  },
+  {
+    "id": "semis-ahead",
+    "order": 9,
+    "date": "2026-07-14",
+    "thread": "both",
+    "icon": "🏆",
+    "sources": ["opta"],
+    "content": {
+      "en": {
+        "headline": "What's next: the semifinals",
+        "short": "France v Spain (Jul 14) and England v Argentina (Jul 15). The final is July 19.",
+        "full": "Two semifinals decide the finalists: France v Spain in Dallas (July 14) and England v Argentina in Atlanta (July 15), with the final in New York/New Jersey on July 19. Maximum scrutiny now falls on every call.",
+        "detail": "This is where the perception hypotheses get tested in real time. If the officiating pattern regresses under the brightest lights, that argues for variance over conspiracy. If it doesn't, the doubters get a real data point. Either way, the football is about to be spectacular — see the 'Who wins?' tab for the numbers."
+      },
+      "es": {
+        "headline": "Lo que viene: las semifinales",
+        "short": "Francia v España (14/7) e Inglaterra v Argentina (15/7). La final es el 19 de julio.",
+        "full": "Dos semifinales definen a los finalistas: Francia v España en Dallas (14 de julio) e Inglaterra v Argentina en Atlanta (15 de julio), con la final en Nueva York/Nueva Jersey el 19 de julio. Ahora el máximo escrutinio cae sobre cada fallo.",
+        "detail": "Acá es donde las hipótesis de percepción se ponen a prueba en tiempo real. Si el patrón arbitral se normaliza bajo las luces más brillantes, eso juega a favor de la varianza por sobre la conspiración. Si no, los escépticos consiguen un dato real. En cualquier caso, el fútbol está por ser espectacular — mirá los números en la pestaña '¿Quién gana?'."
+      }
+    }
+  }
+]

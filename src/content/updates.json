@@ -1,0 +1,47 @@
+[
+  {
+    "id": "run-1-2026-07-12",
+    "date": "2026-07-12",
+    "run": 1,
+    "scorecard": [
+      {
+        "claim": { "en": "Champion", "es": "Campeón" },
+        "verdict": "pending"
+      },
+      {
+        "claim": { "en": "Semifinal — France v Spain", "es": "Semifinal — Francia v España" },
+        "verdict": "pending"
+      },
+      {
+        "claim": { "en": "Semifinal — England v Argentina", "es": "Semifinal — Inglaterra v Argentina" },
+        "verdict": "pending"
+      },
+      {
+        "claim": { "en": "DOJ moves to an indictment or cooperating witness", "es": "El DOJ pasa a una imputación o testigo cooperante" },
+        "verdict": "pending"
+      }
+    ],
+    "content": {
+      "en": {
+        "title": "Run 1 — first build (pre-semifinals)",
+        "summary": "The initial analysis, built July 12 with the quarterfinals complete and the semifinals still to play.",
+        "body": [
+          "This is the first pass. The bracket sits at pre-semifinals: France v Spain and England v Argentina are still to be played, so every title number here is a genuine forecast, not hindsight.",
+          "What Phase 0 verification changed from the source draft: Opta was refreshed post-quarterfinals (France 34.0%, Spain 23.4%, England 21.9%, Argentina 20.6% to win it); Nate Silver's per-team numbers turned out to be paywalled, so I cite his method and the public market instead of inventing a figure; the 'most penalties in tournament history' superlative was softened to 'most in recent World Cups'; and an unverifiable '23M views' figure was dropped entirely.",
+          "On the money story: it's real and traceable to La Nación and the Miami Herald, but several specifics (the $260M/$57M split, the named prosecutors) are single-sourced, so they're attributed rather than asserted, and the private individuals at the Florida company are referred to by role, not name.",
+          "My headline forecast for the scorecard above: the models say France; my heart says Argentina. When the semifinals are played, I'll grade this run and archive it."
+        ]
+      },
+      "es": {
+        "title": "Corrida 1 — primer build (pre-semifinales)",
+        "summary": "El análisis inicial, armado el 12 de julio con los cuartos terminados y las semifinales aún por jugarse.",
+        "body": [
+          "Este es el primer intento. El cuadro está en pre-semifinales: Francia v España e Inglaterra v Argentina todavía no se jugaron, así que cada número de título acá es un pronóstico genuino, no una mirada con el diario del lunes.",
+          "Qué cambió la verificación de la Fase 0 respecto del borrador original: Opta se actualizó tras los cuartos (Francia 34,0%, España 23,4%, Inglaterra 21,9%, Argentina 20,6% para salir campeón); los números por selección de Nate Silver resultaron estar tras un muro de pago, así que cito su método y el mercado público en vez de inventar una cifra; el superlativo 'la mayor cantidad de penales en la historia' se suavizó a 'la mayor en los Mundiales recientes'; y una cifra inverificable de '23M de vistas' se descartó por completo.",
+          "Sobre la historia del dinero: es real y rastreable a La Nación y al Miami Herald, pero varios detalles (la división US$260M/US$57M, los fiscales nombrados) provienen de una sola fuente, así que se atribuyen en lugar de afirmarse, y a las personas de la empresa de Florida se las menciona por su rol, no por su nombre.",
+          "Mi pronóstico principal para el marcador de arriba: los modelos dicen Francia; mi corazón dice Argentina. Cuando se jueguen las semifinales, califico esta corrida y la archivo."
+        ]
+      }
+    }
+  }
+]

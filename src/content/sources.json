@@ -1,0 +1,302 @@
+[
+  {
+    "id": "fifa-appointments",
+    "order": 1,
+    "tier": 1,
+    "url": "https://inside.fifa.com/refereeing/media-releases/fifa-world-cup-2026-match-referees-appointed",
+    "content": {
+      "en": { "title": "FIFA — Match officials appointed for the 2026 World Cup", "why": "The official 'Team One' pool: 52 referees, 88 assistants, 30 video officials. Establishes how appointments actually work." },
+      "es": { "title": "FIFA — Designación de árbitros para el Mundial 2026", "why": "El plantel oficial 'Team One': 52 árbitros, 88 asistentes, 30 oficiales de video. Define cómo funcionan realmente las designaciones." }
+    }
+  },
+  {
+    "id": "fifa-arg-sui-report",
+    "order": 2,
+    "tier": 1,
+    "url": "https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/articles/argentina-switzerland-match-report-highlights",
+    "content": {
+      "en": { "title": "FIFA — Argentina v Switzerland official match report", "why": "Primary record of the quarterfinal scoreline, goals and the Embolo dismissal." },
+      "es": { "title": "FIFA — Informe oficial del partido Argentina v Suiza", "why": "Registro primario del resultado, los goles y la expulsión de Embolo en el cuarto de final." }
+    }
+  },
+  {
+    "id": "fifa-collina-statement",
+    "order": 3,
+    "tier": 1,
+    "unverified": true,
+    "content": {
+      "en": { "title": "FIFA / Collina — rejection of the Egypt bias allegations", "why": "FIFA's refereeing chief publicly rejected the favoritism claims. On-record integrity statement (locate via FIFA media releases / wire reports)." },
+      "es": { "title": "FIFA / Collina — rechazo a las acusaciones de favoritismo de Egipto", "why": "El jefe de arbitraje de la FIFA rechazó públicamente las acusaciones. Declaración de integridad en actas (buscar en comunicados de FIFA / cables de agencias)." }
+    }
+  },
+  {
+    "id": "ifab-laws",
+    "order": 4,
+    "tier": 1,
+    "url": "https://www.theifab.com/laws/latest/the-referee/",
+    "content": {
+      "en": { "title": "IFAB — Laws of the Game, Law 5 (bleeding player)", "why": "The bleeding-player rule that the viral Cape Verde restart correctly applied." },
+      "es": { "title": "IFAB — Reglas de Juego, Regla 5 (jugador sangrando)", "why": "La regla del jugador que sangra, aplicada correctamente en la reanudación viral ante Cabo Verde." }
+    }
+  },
+  {
+    "id": "ifab-var-2026",
+    "order": 5,
+    "tier": 1,
+    "url": "https://inside.fifa.com/media-releases/ifab-introduces-further-measures-improve-match-flow-player-behaviour",
+    "content": {
+      "en": { "title": "IFAB — 2026/27 protocol changes (second-yellow VAR review)", "why": "The new provision letting VAR flag a clearly-wrong second-caution red — the exact mechanism used on Embolo. Narrow scope." },
+      "es": { "title": "IFAB — Cambios de protocolo 2026/27 (revisión VAR de segunda amarilla)", "why": "La nueva norma que permite al VAR marcar una segunda amonestación claramente errónea: el mecanismo usado con Embolo. Alcance acotado." }
+    }
+  },
+  {
+    "id": "doj-fifagate-2015",
+    "order": 6,
+    "tier": 1,
+    "url": "https://www.justice.gov/usao-edny/pr/nine-fifa-officials-and-five-corporate-executives-indicted-racketeering-conspiracy-and",
+    "content": {
+      "en": { "title": "US DOJ (EDNY) — 2015 FIFA racketeering indictment", "why": "The FIFA-Gate template: $150M+ in bribes routed through US banks. Why the money angle has real jurisdictional teeth." },
+      "es": { "title": "Departamento de Justicia de EE.UU. (EDNY) — imputación FIFA-Gate 2015", "why": "El molde del FIFA-Gate: más de US$150M en sobornos por bancos estadounidenses. Por qué la vía financiera tiene jurisdicción real." }
+    }
+  },
+  {
+    "id": "doj-arzuaga",
+    "order": 7,
+    "tier": 1,
+    "url": "https://www.justice.gov/usao-edny/pr/former-managing-director-swiss-bank-pleads-guilty-money-laundering-charge-connection",
+    "content": {
+      "en": { "title": "US DOJ — Jorge Arzuaga guilty plea", "why": "Banker admitted moving $25M+ for 'Soccer Official #1' — identified in reporting as the late AFA president Julio Grondona (never charged)." },
+      "es": { "title": "Departamento de Justicia de EE.UU. — declaración de culpabilidad de Jorge Arzuaga", "why": "Un banquero admitió mover más de US$25M para el 'Directivo de Fútbol N.º 1', identificado por la prensa como el fallecido Julio Grondona (nunca imputado)." }
+    }
+  },
+  {
+    "id": "cas-lamptey",
+    "order": 8,
+    "tier": 1,
+    "url": "https://inside.fifa.com/legal/football-regulatory/media-releases/fifa-statement-on-cas-decision-relating-to-match-official-joseph-odart-2926374",
+    "content": {
+      "en": { "title": "CAS 2017/A/5173 — Lamptey lifetime ban upheld", "why": "A referee proven to have manipulated a World Cup qualifier — a real fix, and a betting job, not an organizer favoring a team." },
+      "es": { "title": "TAS 2017/A/5173 — se confirma la inhabilitación de por vida a Lamptey", "why": "Un árbitro probadamente manipuló una eliminatoria mundialista: un arreglo real, ligado a apuestas, no a un organizador favoreciendo a una selección." }
+    }
+  },
+  {
+    "id": "lanacion-fbi",
+    "order": 20,
+    "tier": 2,
+    "url": "https://www.lanacion.com.ar/politica/agentes-del-fbi-y-fiscales-federales-toman-testimonios-para-investigar-operaciones-financieras-de-la-afa-en-estados-unidos-nid06072026/",
+    "content": {
+      "en": { "title": "La Nación (Olivera & Alconada Mon) — the FBI/AFA report", "why": "The origin point of the story. Newspaper of record; Alconada Mon has a strong AFA/FIFA investigative track record. The single strongest-sourced thread." },
+      "es": { "title": "La Nación (Olivera y Alconada Mon) — la nota sobre el FBI y la AFA", "why": "El origen de la historia. Diario de referencia; Alconada Mon tiene una sólida trayectoria investigando a la AFA/FIFA. El hilo mejor documentado." }
+    }
+  },
+  {
+    "id": "miami-herald",
+    "order": 21,
+    "tier": 2,
+    "url": "https://www.tampabay.com/news/florida/2026/07/11/argentine-football-association-investigation-miami-florida/",
+    "content": {
+      "en": { "title": "Miami Herald — Florida firm linked to the FBI probe (via Tampa Bay Times)", "why": "Independent US corroboration citing two law-enforcement sources. Original is paywalled; linked here via syndication." },
+      "es": { "title": "Miami Herald — firma de Florida vinculada a la pesquisa del FBI (vía Tampa Bay Times)", "why": "Corroboración estadounidense independiente que cita dos fuentes policiales. El original es de pago; se enlaza vía sindicación." }
+    }
+  },
+  {
+    "id": "lanacion-tapia",
+    "order": 22,
+    "tier": 2,
+    "url": "https://www.lanacion.com.ar/politica/confirmaron-los-procesamientos-de-tapia-toviggino-y-la-afa-por-evasion-de-impuestos-nid26062026/",
+    "content": {
+      "en": { "title": "La Nación — Tapia processing upheld on appeal (Argentine case)", "why": "The best-documented, court-record part of the story: the domestic ~$12.7M social-security case, distinct from the US inquiry." },
+      "es": { "title": "La Nación — se confirma el procesamiento de Tapia en apelación (causa argentina)", "why": "La parte mejor documentada, con expediente judicial: la causa local por ~US$12,7M en aportes, distinta de la pesquisa estadounidense." }
+    }
+  },
+  {
+    "id": "cnn-raids",
+    "order": 23,
+    "tier": 2,
+    "url": "https://www.cnn.com/2025/12/09/americas/argentina-football-raid-latam-intl",
+    "content": {
+      "en": { "title": "CNN — December 2025 raids on AFA and clubs", "why": "Confirms the Dec 9 2025 raids on AFA HQ and 17 clubs in a separate money-laundering case." },
+      "es": { "title": "CNN — allanamientos de diciembre de 2025 a la AFA y clubes", "why": "Confirma los allanamientos del 9/12/2025 a la sede de la AFA y a 17 clubes en otra causa por lavado." }
+    }
+  },
+  {
+    "id": "wlrn-probe",
+    "order": 24,
+    "tier": 2,
+    "url": "https://www.wlrn.org/americas/2026-07-11/federal-probe-centers-on-argentine-soccer-federation-for-alleged-money-laundering-in-miami",
+    "content": {
+      "en": { "title": "WLRN — federal probe centers on AFA (FBI declined comment)", "why": "US public-radio summary; confirms the FBI Miami Field Office declined to comment and that no charges exist." },
+      "es": { "title": "WLRN — la pesquisa federal se centra en la AFA (el FBI no hizo comentarios)", "why": "Resumen de la radio pública de EE.UU.; confirma que la oficina del FBI en Miami no hizo comentarios y que no hay cargos." }
+    }
+  },
+  {
+    "id": "cbs-probe",
+    "order": 25,
+    "tier": 2,
+    "url": "https://www.cbssports.com/soccer/news/fbi-investigates-argentina-football-association-alleged-money-laundering-in-u-s-2026/",
+    "content": {
+      "en": { "title": "CBS Sports — explainer on the FBI/AFA probe", "why": "A clear general-audience summary of the reported inquiry and its limits." },
+      "es": { "title": "CBS Sports — explicación de la pesquisa FBI/AFA", "why": "Un resumen claro, para público general, de la investigación reportada y sus límites." }
+    }
+  },
+  {
+    "id": "nbcdfw-pinheiro",
+    "order": 26,
+    "tier": 2,
+    "url": "https://www.nbcdfw.com/world-cup/referee-with-controversial-history-on-argentina-switzerland-2026-fifa-world-cup-match/4047663/",
+    "content": {
+      "en": { "title": "NBC DFW — the Pinheiro appointment scrutiny", "why": "Context on why the quarterfinal referee's appointment drew debate." },
+      "es": { "title": "NBC DFW — el escrutinio a la designación de Pinheiro", "why": "Contexto sobre por qué la designación del árbitro del cuarto de final generó debate." }
+    }
+  },
+  {
+    "id": "yahoo-fifa-problem",
+    "order": 27,
+    "tier": 2,
+    "url": "https://sports.yahoo.com/articles/fifa-argentina-problem-why-fans-203519501.html",
+    "content": {
+      "en": { "title": "Yahoo Sports — 'FIFA's Argentina Problem'", "why": "Represents the perception side: why many fans and pundits raised eyebrows, fairly summarized." },
+      "es": { "title": "Yahoo Sports — 'El problema de la FIFA con Argentina'", "why": "Representa el lado de la percepción: por qué muchos hinchas y analistas levantaron la ceja, resumido con justicia." }
+    }
+  },
+  {
+    "id": "espn-arg-sui",
+    "order": 28,
+    "tier": 2,
+    "url": "https://www.espn.com/soccer/match/_/gameId/760513/switzerland-argentina",
+    "content": {
+      "en": { "title": "ESPN — Argentina 3–1 Switzerland match report", "why": "Independent match record and detail on the Embolo red card." },
+      "es": { "title": "ESPN — crónica de Argentina 3–1 Suiza", "why": "Registro independiente del partido y detalle de la roja a Embolo." }
+    }
+  },
+  {
+    "id": "aljazeera-arg-sui",
+    "order": 29,
+    "tier": 2,
+    "url": "https://www.aljazeera.com/sports/2026/7/12/argentina-defeat-switzerland-to-set-up-england-semifinal-at-world-cup-2026",
+    "content": {
+      "en": { "title": "Al Jazeera — Argentina beat Switzerland, set up England semifinal", "why": "Neutral international coverage confirming the result and the semifinal draw." },
+      "es": { "title": "Al Jazeera — Argentina vence a Suiza y jugará la semi con Inglaterra", "why": "Cobertura internacional neutral que confirma el resultado y el cruce de semifinal." }
+    }
+  },
+  {
+    "id": "opta",
+    "order": 40,
+    "tier": 3,
+    "url": "https://theanalyst.com/articles/world-cup-2026-semi-final-predictions-opta-supercomputer",
+    "content": {
+      "en": { "title": "Opta / The Analyst — 2026 supercomputer predictions", "why": "25,000-simulation model, refreshed post-quarterfinals. One of three independent 'who wins' anchors." },
+      "es": { "title": "Opta / The Analyst — predicciones de la supercomputadora 2026", "why": "Modelo de 25.000 simulaciones, actualizado tras los cuartos. Uno de los tres anclajes independientes de '¿quién gana?'." }
+    }
+  },
+  {
+    "id": "silver",
+    "order": 41,
+    "tier": 3,
+    "url": "https://www.natesilver.net/p/world-cup-2026-odds-predictions",
+    "content": {
+      "en": { "title": "Silver Bulletin — Nate Silver's World Cup model", "why": "An Elo/SPI-style model (100k sims, updated daily) from FiveThirtyEight's founder. Strong 2008/2012 record, notable 2016/2024 misses; live per-team numbers are paywalled." },
+      "es": { "title": "Silver Bulletin — el modelo mundialista de Nate Silver", "why": "Modelo estilo Elo/SPI (100k simulaciones, actualizado a diario) del fundador de FiveThirtyEight. Buen historial 2008/2012, fallos notorios 2016/2024; los números por selección están tras un muro de pago." }
+    }
+  },
+  {
+    "id": "oddschecker",
+    "order": 42,
+    "tier": 3,
+    "url": "https://www.oddschecker.com/us/soccer/world-cup",
+    "content": {
+      "en": { "title": "Oddschecker — aggregated outright title odds", "why": "The market's view. Implied percentages include the bookmaker's overround (margin)." },
+      "es": { "title": "Oddschecker — cuotas agregadas de campeón", "why": "La mirada del mercado. Los porcentajes implícitos incluyen el margen (overround) de la casa." }
+    }
+  },
+  {
+    "id": "garicano-2005",
+    "order": 60,
+    "tier": 4,
+    "url": "https://direct.mit.edu/rest/article/87/2/208/57539",
+    "content": {
+      "en": { "title": "Garicano, Palacios-Huerta & Prendergast (2005) — 'Favoritism Under Social Pressure'", "why": "The classic finding: ~2× the injury time when the home side trails by one vs leads by one, across ~750 La Liga matches. The empirical backbone of H3." },
+      "es": { "title": "Garicano, Palacios-Huerta y Prendergast (2005) — 'Favoritism Under Social Pressure'", "why": "El hallazgo clásico: ~2× de tiempo añadido cuando el local pierde por uno vs cuando gana por uno, en ~750 partidos de La Liga. La columna empírica de H3." }
+    }
+  },
+  {
+    "id": "grimes-2016",
+    "order": 61,
+    "tier": 4,
+    "url": "https://doi.org/10.1371/journal.pone.0147905",
+    "content": {
+      "en": { "title": "Grimes (2016) — 'On the Viability of Conspiratorial Beliefs' (PLOS ONE)", "why": "The math behind the Conspiracy Simulator: big secrets leak, and the more people and the more time, the faster." },
+      "es": { "title": "Grimes (2016) — 'On the Viability of Conspiratorial Beliefs' (PLOS ONE)", "why": "La matemática detrás del Simulador de Conspiraciones: los secretos grandes se filtran, y cuantas más personas y más tiempo, más rápido." }
+    }
+  },
+  {
+    "id": "grimes-correction",
+    "order": 62,
+    "tier": 4,
+    "url": "https://doi.org/10.1371/journal.pone.0151003",
+    "content": {
+      "en": { "title": "Grimes (2016) — published correction", "why": "Generalizes the model to a time-varying population; conclusions unchanged. We use the constant-population special case." },
+      "es": { "title": "Grimes (2016) — corrección publicada", "why": "Generaliza el modelo a una población variable en el tiempo; las conclusiones no cambian. Usamos el caso especial de población constante." }
+    }
+  },
+  {
+    "id": "erikstad-2020",
+    "order": 63,
+    "tier": 4,
+    "url": "https://doi.org/10.3389/fspor.2020.00019",
+    "content": {
+      "en": { "title": "Erikstad & Johansen (2020) — favoritism toward successful teams", "why": "Evidence that referees can shade toward high-status sides — supports the soft-bias hypothesis." },
+      "es": { "title": "Erikstad y Johansen (2020) — favoritismo hacia equipos exitosos", "why": "Evidencia de que los árbitros pueden inclinarse hacia equipos de alto estatus: apoya la hipótesis del sesgo blando." }
+    }
+  },
+  {
+    "id": "morgulev-2018",
+    "order": 64,
+    "tier": 4,
+    "url": "https://doi.org/10.3389/fpsyg.2018.02637",
+    "content": {
+      "en": { "title": "Morgulev et al. (2018) — a null result on referee bias", "why": "The honest counterweight: not every study finds star-team bias. Included so H3 isn't cherry-picked." },
+      "es": { "title": "Morgulev et al. (2018) — un resultado nulo sobre el sesgo arbitral", "why": "El contrapeso honesto: no todos los estudios encuentran sesgo pro-estrella. Incluido para que H3 no sea selección interesada." }
+    }
+  },
+  {
+    "id": "wiki-1978",
+    "order": 80,
+    "tier": 5,
+    "url": "https://en.wikipedia.org/wiki/Argentina_v_Peru_(1978_FIFA_World_Cup)",
+    "content": {
+      "en": { "title": "Argentina 6–0 Peru (1978) — the enduring allegation", "why": "The most cited 'suspicious' Argentina match: junta-era circumstantial suspicion, never proven." },
+      "es": { "title": "Argentina 6–0 Perú (1978) — la sospecha que perdura", "why": "El partido 'sospechoso' de Argentina más citado: indicios de la época de la dictadura, nunca probados." }
+    }
+  },
+  {
+    "id": "wiki-calciopoli",
+    "order": 81,
+    "tier": 5,
+    "url": "https://en.wikipedia.org/wiki/Calciopoli",
+    "content": {
+      "en": { "title": "Calciopoli (2006) — referee-assignment manipulation", "why": "The clearest real case of designators being gamed. Domestic league, and it still leaked (wiretaps)." },
+      "es": { "title": "Calciopoli (2006) — manipulación de designaciones arbitrales", "why": "El caso real más claro de designadores manipulados. Liga doméstica, y aun así se filtró (escuchas)." }
+    }
+  },
+  {
+    "id": "beinsports-2002",
+    "order": 82,
+    "tier": 5,
+    "url": "https://www.beinsports.com/en-us/soccer/fifa-world-cup-2026/articles/south-korea-2002-the-refereeing-decisions-that-eliminated-italy-and-spain-2026-06-04",
+    "content": {
+      "en": { "title": "South Korea 2002 — the decisions that knocked out Italy and Spain", "why": "Widely suspected officiating, never proven — a lesson in why suspicion isn't evidence." },
+      "es": { "title": "Corea del Sur 2002 — los fallos que eliminaron a Italia y España", "why": "Arbitraje muy sospechado, nunca probado: una lección de por qué la sospecha no es prueba." }
+    }
+  },
+  {
+    "id": "cnn-perumal",
+    "order": 83,
+    "tier": 5,
+    "url": "https://edition.cnn.com/2014/08/28/sport/football/match-fixing-wilson-raj-perumal-referee-corruption",
+    "content": {
+      "en": { "title": "Wilson Raj Perumal — how real fixes actually happened", "why": "Proven fixes were betting-syndicate jobs on friendlies, never an organizer favoring a team in a finals match." },
+      "es": { "title": "Wilson Raj Perumal — cómo ocurrieron los arreglos reales", "why": "Los arreglos probados fueron de mafias de apuestas en amistosos, nunca un organizador favoreciendo a una selección en un partido de fase final." }
+    }
+  }
+]

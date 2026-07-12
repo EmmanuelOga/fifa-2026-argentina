@@ -1,0 +1,116 @@
+[
+  {
+    "id": "calciopoli",
+    "order": 1,
+    "year": "2006",
+    "tag": "proven-domestic",
+    "sources": ["wiki-calciopoli"],
+    "content": {
+      "en": {
+        "name": "Calciopoli (Italy)",
+        "summary": "Referee assignments in Serie A were manipulated by club officials. Exposed by wiretaps; Juventus were stripped of two titles and relegated.",
+        "lesson": "The one clear case of gaming the designators — and it was a domestic league, over a full season, and it still leaked."
+      },
+      "es": {
+        "name": "Calciopoli (Italia)",
+        "summary": "Dirigentes de clubes manipularon las designaciones arbitrales en la Serie A. Destapado por escuchas; a la Juventus le quitaron dos títulos y descendió.",
+        "lesson": "El único caso claro de manipular a los designadores — y fue una liga doméstica, a lo largo de una temporada entera, y aun así se filtró."
+      }
+    }
+  },
+  {
+    "id": "fifagate",
+    "order": 2,
+    "year": "2015",
+    "tag": "financial",
+    "sources": ["doj-fifagate-2015", "doj-arzuaga"],
+    "content": {
+      "en": {
+        "name": "FIFA-Gate (US DOJ)",
+        "summary": "A 47-count US indictment over $150M+ in bribes routed through American banks. A Swiss banker later admitted moving $25M+ tied to the late AFA president.",
+        "lesson": "The proof that the money angle has real teeth in US courts — and the template today's reported AFA inquiry would follow."
+      },
+      "es": {
+        "name": "FIFA-Gate (DOJ de EE.UU.)",
+        "summary": "Una imputación estadounidense de 47 cargos por más de US$150M en sobornos canalizados por bancos de EE.UU. Un banquero suizo admitió después mover más de US$25M ligados al fallecido presidente de la AFA.",
+        "lesson": "La prueba de que la vía del dinero tiene dientes reales en tribunales de EE.UU. — y el molde que seguiría la pesquisa reportada sobre la AFA."
+      }
+    }
+  },
+  {
+    "id": "korea-2002",
+    "order": 3,
+    "year": "2002",
+    "tag": "suspected",
+    "sources": ["beinsports-2002"],
+    "content": {
+      "en": {
+        "name": "South Korea 2002",
+        "summary": "Refereeing decisions helped eliminate Italy and Spain as co-hosts South Korea advanced. Widely suspected of favoritism; never proven.",
+        "lesson": "The canonical 'everyone knows' case that never produced evidence. Suspicion, however widespread, is not proof."
+      },
+      "es": {
+        "name": "Corea del Sur 2002",
+        "summary": "Fallos arbitrales ayudaron a eliminar a Italia y España mientras la coanfitriona Corea del Sur avanzaba. Muy sospechado de favoritismo; nunca probado.",
+        "lesson": "El caso canónico de 'todos lo saben' que nunca produjo evidencia. La sospecha, por más extendida que sea, no es prueba."
+      }
+    }
+  },
+  {
+    "id": "peru-1978",
+    "order": 4,
+    "year": "1978",
+    "tag": "circumstantial",
+    "sources": ["wiki-1978"],
+    "content": {
+      "en": {
+        "name": "Argentina 6–0 Peru",
+        "summary": "Argentina needed to win big to reach the final and did, amid junta-era allegations of a grain shipment and a dressing-room visit. Circumstantial; never proven.",
+        "lesson": "Argentina's own most-cited ghost — an enduring allegation with no proven quid pro quo. I include it precisely because it's inconvenient for me."
+      },
+      "es": {
+        "name": "Argentina 6–0 Perú",
+        "summary": "Argentina necesitaba ganar por goleada para llegar a la final y lo hizo, entre acusaciones de la época de la dictadura sobre un envío de granos y una visita al vestuario. Circunstancial; nunca probado.",
+        "lesson": "El fantasma más citado de la propia Argentina — una acusación que perdura sin quid pro quo probado. Lo incluyo justamente porque me resulta incómodo."
+      }
+    }
+  },
+  {
+    "id": "lamptey",
+    "order": 5,
+    "year": "2016",
+    "tag": "proven-betting",
+    "sources": ["cas-lamptey"],
+    "content": {
+      "en": {
+        "name": "Lamptey (World Cup qualifier)",
+        "summary": "A referee was banned for life, upheld by CAS, for manipulating a World Cup qualifier to fit a betting pattern.",
+        "lesson": "A real, proven fix — but a betting-syndicate job on a qualifier, not an organizer favoring a team in a finals match."
+      },
+      "es": {
+        "name": "Lamptey (eliminatoria mundialista)",
+        "summary": "Un árbitro fue inhabilitado de por vida, confirmado por el TAS, por manipular una eliminatoria mundialista para encajar en un patrón de apuestas.",
+        "lesson": "Un arreglo real y probado — pero un trabajo de una mafia de apuestas en una eliminatoria, no un organizador favoreciendo a una selección en un partido de fase final."
+      }
+    }
+  },
+  {
+    "id": "perumal",
+    "order": 6,
+    "year": "2010",
+    "tag": "proven-betting",
+    "sources": ["cnn-perumal"],
+    "content": {
+      "en": {
+        "name": "Perumal / Chaibou friendlies",
+        "summary": "A match-fixing syndicate supplied referees for pre-World-Cup friendlies, including one with fabricated penalties, for betting fraud.",
+        "lesson": "Shows what real fixing looks like: low-stakes friendlies, betting money, corrupt individuals — not a steered champion."
+      },
+      "es": {
+        "name": "Amistosos de Perumal / Chaibou",
+        "summary": "Una mafia de arreglos proveyó árbitros para amistosos previos al Mundial, incluido uno con penales fabricados, para fraude de apuestas.",
+        "lesson": "Muestra cómo es el arreglo real: amistosos de bajo riesgo, dinero de apuestas, individuos corruptos — no un campeón dirigido."
+      }
+    }
+  }
+]

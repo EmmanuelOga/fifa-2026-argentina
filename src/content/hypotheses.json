@@ -1,0 +1,185 @@
+[
+  {
+    "id": "h1",
+    "order": 1,
+    "code": "H1",
+    "rangeLow": 0.02,
+    "rangeHigh": 0.08,
+    "thread": "sporting",
+    "sources": ["yahoo-fifa-problem", "nbcdfw-pinheiro", "cnn-perumal"],
+    "content": {
+      "en": {
+        "headline": "Deliberate FIFA-level officiating favoritism",
+        "short": "That an organizing body is steering matches toward Argentina on purpose.",
+        "full": "The strong claim: FIFA-level actors are deliberately favoring Argentina through appointments and calls. On base rates and detectability, I think this is unlikely.",
+        "rangeCaption": "speculative probability this is happening",
+        "forPoints": [
+          "The penalty outlier is real — 8 across two World Cups, roughly double any other side.",
+          "The Pinheiro appointment and an all-Argentine crew nearby were, at minimum, bad optics.",
+          "A Messi farewell has enormous commercial value, which is a motive if you're looking for one."
+        ],
+        "againstPoints": [
+          "Zero proven finals precedent, ever — the base rate is punishing.",
+          "Each flagged call has a defensible, rule-based explanation on the record.",
+          "The all-Argentine crew was on a rival's match — the opposite of what favoritism would design."
+        ],
+        "changeMind": "Leaked comms, a VMO or appointer whistleblower, or a rigorous assignment-anomaly study linking appointments to outcomes would move this sharply upward."
+      },
+      "es": {
+        "headline": "Favoritismo arbitral deliberado a nivel FIFA",
+        "short": "Que un organizador esté dirigiendo partidos hacia Argentina a propósito.",
+        "full": "La afirmación fuerte: actores a nivel FIFA favorecen deliberadamente a Argentina vía designaciones y fallos. Por tasas base y detectabilidad, me parece improbable.",
+        "rangeCaption": "probabilidad especulativa de que esté ocurriendo",
+        "forPoints": [
+          "El dato de los penales es real — 8 en dos Mundiales, casi el doble que cualquier otro.",
+          "La designación de Pinheiro y una terna toda argentina cerca fueron, como mínimo, mala óptica.",
+          "Una despedida de Messi tiene enorme valor comercial, y eso es un móvil si andás buscando uno."
+        ],
+        "againstPoints": [
+          "Cero precedentes probados en una fase final, nunca — la tasa base es implacable.",
+          "Cada fallo señalado tiene una explicación reglamentaria defendible en actas.",
+          "La terna toda argentina fue en el partido de un rival — lo opuesto a lo que diseñaría el favoritismo."
+        ],
+        "changeMind": "Comunicaciones filtradas, un denunciante desde el VAR o las designaciones, o un estudio riguroso de anomalías que ligue designaciones a resultados moverían esto fuerte hacia arriba."
+      }
+    }
+  },
+  {
+    "id": "h2",
+    "order": 2,
+    "code": "H2",
+    "rangeLow": 0.7,
+    "rangeHigh": 0.9,
+    "secondary": { "low": 0.45, "high": 0.65 },
+    "thread": "financial",
+    "sources": ["lanacion-fbi", "miami-herald", "doj-fifagate-2015", "doj-arzuaga", "lanacion-tapia"],
+    "content": {
+      "en": {
+        "headline": "AFA financial corruption (the money thread)",
+        "short": "That a genuine US federal inquiry exists — and might, eventually, produce charges.",
+        "full": "The credible thread. I split it in two: that a genuine preliminary inquiry exists, and — separately and lower — that chargeable US conduct is eventually established. Note: this says nothing about match outcomes.",
+        "rangeCaption": "that a genuine preliminary inquiry exists",
+        "secondaryCaption": "that chargeable US conduct is eventually established",
+        "forPoints": [
+          "La Nación plus Miami Herald sourcing — a newspaper of record and independent US corroboration.",
+          "Specific detail (a Florida company, named prosecutors) and a perfect FIFA-Gate jurisdictional fit.",
+          "Tapia's separate Argentine charges and the December 2025 raids show real regulatory heat."
+        ],
+        "againstPoints": [
+          "No charges have been filed, and the FBI declined to comment.",
+          "Key financial specifics are single-sourced or rest on anonymous law-enforcement sources.",
+          "The AFA denies wrongdoing and frames the domestic cases as political persecution."
+        ],
+        "changeMind": "A grand jury subpoena, an indictment, or a cooperating witness would raise the second number; a documented AFA rebuttal of the money trail would lower both."
+      },
+      "es": {
+        "headline": "Corrupción financiera de la AFA (el hilo del dinero)",
+        "short": "Que exista una pesquisa federal estadounidense genuina — y que, con el tiempo, derive en cargos.",
+        "full": "El hilo creíble. Lo divido en dos: que exista una pesquisa preliminar genuina, y — por separado y más bajo — que se establezca conducta imputable en EE.UU. Ojo: esto no dice nada sobre resultados de partidos.",
+        "rangeCaption": "que exista una pesquisa preliminar genuina",
+        "secondaryCaption": "que se establezca conducta imputable en EE.UU.",
+        "forPoints": [
+          "Fuentes de La Nación más Miami Herald — un diario de referencia y corroboración estadounidense independiente.",
+          "Detalle específico (una empresa de Florida, fiscales nombrados) y un encaje jurisdiccional perfecto con el FIFA-Gate.",
+          "Los cargos argentinos aparte de Tapia y los allanamientos de diciembre de 2025 muestran presión regulatoria real."
+        ],
+        "againstPoints": [
+          "No hay cargos presentados, y el FBI no hizo comentarios.",
+          "Detalles financieros clave provienen de una sola fuente o de fuentes policiales anónimas.",
+          "La AFA niega irregularidades y plantea las causas locales como persecución política."
+        ],
+        "changeMind": "Una citación de gran jurado, una imputación o un testigo cooperante subirían el segundo número; una refutación documentada de la AFA sobre el rastro del dinero bajaría ambos."
+      }
+    }
+  },
+  {
+    "id": "h3",
+    "order": 3,
+    "code": "H3",
+    "rangeLow": 0.35,
+    "rangeHigh": 0.55,
+    "thread": "sporting",
+    "sources": ["garicano-2005", "erikstad-2020", "morgulev-2018"],
+    "content": {
+      "en": {
+        "headline": "Soft / structural bias (no conspiracy)",
+        "short": "That referees unconsciously shade toward star teams — a real effect, no plan required.",
+        "full": "The quiet, well-studied one: referees, under crowd and status pressure, unconsciously shade toward high-profile sides. No conspiracy, no instruction — just human bias. I think this is a material contributor.",
+        "rangeCaption": "as a material contributor to the perception",
+        "forPoints": [
+          "Peer-reviewed status-bias literature — Garicano et al. found ~2× injury time favoring home sides under pressure.",
+          "Argentina fits the champion-with-a-megastar profile that draws deference (cf. Erikstad & Johansen).",
+          "VAR-era penalty inflation gives borderline calls more chances to break one way."
+        ],
+        "againstPoints": [
+          "Some studies find null results (e.g., Morgulev et al. in basketball) — the effect isn't universal.",
+          "Argentina's key calls each have defensible, specific rule-based explanations.",
+          "The rival-crew assignment is inconsistent with systematic shading toward Argentina."
+        ],
+        "changeMind": "An xG-adjusted study of Argentina's decisions versus peer teams — showing they do (or don't) get more marginal calls — would sharpen this a lot."
+      },
+      "es": {
+        "headline": "Sesgo blando / estructural (sin conspiración)",
+        "short": "Que los árbitros se inclinen inconscientemente hacia equipos estrella — un efecto real, sin plan.",
+        "full": "La silenciosa y bien estudiada: los árbitros, bajo presión del público y del estatus, se inclinan inconscientemente hacia equipos de alto perfil. Sin conspiración, sin orden — solo sesgo humano. Creo que es un contribuyente importante.",
+        "rangeCaption": "como contribuyente importante a la percepción",
+        "forPoints": [
+          "Literatura revisada por pares sobre sesgo de estatus — Garicano et al. hallaron ~2× de tiempo añadido a favor del local bajo presión.",
+          "Argentina encaja en el perfil de campeón con megaestrella que genera deferencia (cf. Erikstad y Johansen).",
+          "La inflación de penales en la era VAR da a los fallos límite más chances de romper para un lado."
+        ],
+        "againstPoints": [
+          "Algunos estudios dan resultados nulos (p. ej. Morgulev et al. en básquet) — el efecto no es universal.",
+          "Los fallos clave de Argentina tienen, cada uno, explicaciones reglamentarias específicas y defendibles.",
+          "La designación de la terna rival es inconsistente con una inclinación sistemática hacia Argentina."
+        ],
+        "changeMind": "Un estudio ajustado por xG de las decisiones de Argentina versus equipos pares — que muestre si recibe (o no) más fallos marginales — afinaría mucho esto."
+      }
+    }
+  },
+  {
+    "id": "h4",
+    "order": 4,
+    "code": "H4",
+    "rangeLow": 0.3,
+    "rangeHigh": 0.5,
+    "thread": "sporting",
+    "sources": ["fifa-collina-statement", "ifab-laws"],
+    "content": {
+      "en": {
+        "headline": "No bias: variance + a perception cascade",
+        "short": "That it's just tight games, correct calls, and social media doing what it does.",
+        "full": "The boring, powerful one: three straight nervy knockouts plus a couple of viral clips plus social media equals a narrative — with no bias at all. Combined with H3, this is my best explanation of the perception.",
+        "rangeCaption": "as the primary explanation of the perception",
+        "forPoints": [
+          "Three straight one-goal / extra-time knockouts naturally breed 'rub of the green' stories.",
+          "Correct rule-based explanations existed for the viral moments (the Cape Verde restart, the Embolo dive).",
+          "Collina's on-record rejection of bias is a direct, accountable statement, not spin."
+        ],
+        "againstPoints": [
+          "The penalty outlier stubbornly persists across two tournaments.",
+          "Complaints came from many independent pundits, not only the losing sides.",
+          "'It's just variance' is unfalsifiable if you never look at the pattern rigorously."
+        ],
+        "changeMind": "If the officiating pattern regresses to the mean under semifinal and final scrutiny, that's strong confirmation; if it intensifies, this weakens."
+      },
+      "es": {
+        "headline": "Sin sesgo: varianza + una cascada de percepción",
+        "short": "Que son solo partidos ajustados, fallos correctos y las redes sociales haciendo lo suyo.",
+        "full": "La aburrida y poderosa: tres eliminatorias de nervios seguidas, más un par de clips virales, más redes sociales, igual a un relato — sin ningún sesgo. Combinada con H3, es mi mejor explicación de la percepción.",
+        "rangeCaption": "como explicación principal de la percepción",
+        "forPoints": [
+          "Tres eliminatorias seguidas por un gol / en el alargue naturalmente generan historias de 'suerte del campeón'.",
+          "Existían explicaciones reglamentarias correctas para los momentos virales (la reanudación de Cabo Verde, el clavado de Embolo).",
+          "El rechazo de Collina al sesgo, en actas, es una declaración directa y responsable, no maquillaje."
+        ],
+        "againstPoints": [
+          "El dato atípico de los penales persiste tozudamente en dos torneos.",
+          "Las quejas vinieron de muchos analistas independientes, no solo de los perdedores.",
+          "'Es solo varianza' es infalsable si nunca mirás el patrón con rigor."
+        ],
+        "changeMind": "Si el patrón arbitral regresa a la media bajo el escrutinio de semifinal y final, es una confirmación fuerte; si se intensifica, esto se debilita."
+      }
+    }
+  }
+]
