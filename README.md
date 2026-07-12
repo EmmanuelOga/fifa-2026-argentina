@@ -64,6 +64,7 @@ research/       dated archive of each analysis re-run (findings + machine-readab
 
 ```bash
 mise install            # or: use Node ≥22 + pnpm
+direnv allow            # optional: auto-loads the toolchain + local secrets (.envrc)
 pnpm install
 pnpm dev                # http://localhost:4321  → redirects to /en/
 pnpm build              # builds the corpus, then the static site into dist/

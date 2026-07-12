@@ -17,3 +17,7 @@ functions/api/corpus.json
 .env
 .env.*
 !.env.example
+
+# direnv + wrangler local secrets
+.direnv/
+.dev.vars
