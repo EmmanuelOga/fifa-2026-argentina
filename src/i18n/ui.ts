@@ -243,7 +243,7 @@ export const UI: Record<Locale, Dict> = {
     sim: {
       reset: 'Reiniciar',
       presets: 'Preajustes',
-      speculativeToy: 'Especulativo — un disparador de intuición, no un pronóstico.',
+      speculativeToy: 'Especulativo — un empujón a la intuición, no un pronóstico.',
       peopleSilent: 'Personas que deben callar',
       leakChance: 'Chance anual de que cada una lo exponga',
       years: 'Años que el secreto debe aguantar',

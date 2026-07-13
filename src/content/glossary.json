@@ -52,14 +52,14 @@
     "id": "vmo",
     "content": {
       "en": { "term": "VMO", "def": "Video Match Official — a referee working the VAR booth. WC2026 has a pool of 30." },
-      "es": { "term": "VMO", "def": "Oficial de Partido de Video — un árbitro que trabaja en la cabina del VAR. El Mundial 2026 tiene 30." }
+      "es": { "term": "VMO", "def": "Oficial de Partido de Video — un árbitro que trabaja en la cabina del VAR. El Mundial 2026 cuenta con un plantel de 30." }
     }
   },
   {
     "id": "calciopoli",
     "content": {
       "en": { "term": "Calciopoli", "def": "The 2006 Italian scandal where referee assignments were manipulated; exposed by wiretaps, Juventus were relegated.", "learnMore": "https://en.wikipedia.org/wiki/Calciopoli" },
-      "es": { "term": "Calciopoli", "def": "El escándalo italiano de 2006 en el que se manipularon las designaciones arbitrales; destapado por escuchas, la Juventus descendió.", "learnMore": "https://en.wikipedia.org/wiki/Calciopoli" }
+      "es": { "term": "Calciopoli", "def": "El escándalo italiano de 2006 en el que se digitaron las designaciones arbitrales; lo destaparon unas escuchas y la Juventus terminó en el descenso.", "learnMore": "https://en.wikipedia.org/wiki/Calciopoli" }
     }
   },
   {
@@ -73,7 +73,7 @@
     "id": "overround",
     "content": {
       "en": { "term": "overround", "def": "The bookmaker's built-in margin. It's why implied odds across all outcomes add up to more than 100%." },
-      "es": { "term": "overround", "def": "El margen incorporado de la casa de apuestas. Por eso las probabilidades implícitas de todos los resultados suman más de 100%." }
+      "es": { "term": "overround", "def": "El margen que la casa de apuestas ya trae incorporado. Por eso las probabilidades implícitas de todos los resultados suman más de 100%." }
     }
   },
   {

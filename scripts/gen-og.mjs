@@ -21,7 +21,7 @@ const COPY = {
   },
   es: {
     title: 'La Alegría',
-    sub: 'Una celebración del Mundial de Argentina —\ncon la tarea hecha sobre los chismes.',
+    sub: 'Un festejo de la campaña de Argentina —\ncon la tarea hecha sobre los chismes.',
     tag: 'ALEGRÍA · MIRADA HONESTA · ALEGRÍA',
   },
 };

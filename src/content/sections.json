@@ -13,8 +13,8 @@
       },
       "es": {
         "headline": "La Alegría",
-        "short": "Una celebración del Mundial de Argentina — con la tarea hecha sobre los chismes.",
-        "full": "Una mirada alegre y honesta al Mundial 2026 de Argentina. Soy hincha, para mí Messi es el GOAT, y estoy disfrutando cada minuto. La gente insistía con los chismes — favoritismo, una pesquisa del FBI, murmullos de corrupción — así que en vez de encogerme de hombros, hice la tarea.",
+        "short": "Un festejo de la campaña de Argentina en el Mundial — con la tarea hecha sobre los chismes.",
+        "full": "Una mirada alegre y honesta a la campaña de Argentina en el Mundial 2026. Soy hincha, para mí Messi es el GOAT, y estoy disfrutando cada minuto. Me venían con los chismes — favoritismo, una pesquisa del FBI, murmullos de corrupción — así que en vez de mirar para otro lado, me puse a investigar.",
         "body": [
           "El recorrido es simple: alegría, después una mirada honesta, y otra vez alegría — con la cabeza fría. Es una celebración con notas al pie, no una denuncia.",
           "Cada probabilidad de este sitio es una estimación subjetiva, marcada como especulativa. Cada acusación se plantea como acusación. Y después de todo, sigo festejando cada gol."
@@ -33,8 +33,8 @@
       },
       "es": {
         "headline": "Declaración de sesgo",
-        "short": "Soy argentino y quiero que ganemos. Ese es el lente — leé en consecuencia.",
-        "full": "Aviso honesto: soy argentino, Messi es mi GOAT, y quiero que Argentina levante la copa el 19 de julio. Estoy sesgado — ¿qué esperabas? 🇦🇷 Me esforcé por ser justo acá, por darles la mejor versión a los escépticos y mantener los números honestos. Pero conviene que sepas de qué mano viene esto. Donde podría estar engañándome, lo dije.",
+        "short": "Soy argentino y quiero que ganemos. Ese es el sesgo — leé sabiéndolo.",
+        "full": "Te soy sincero: soy argentino, Messi es mi GOAT, y quiero que Argentina levante la copa el 19 de julio. Estoy sesgado — ¿qué esperabas? 🇦🇷 Me esforcé por ser justo acá, por darles la mejor versión a los escépticos y mantener los números honestos. Pero está bueno que sepas de qué mano viene esto. Donde capaz me estoy haciendo el vivo conmigo mismo, lo dije.",
         "body": []
       }
     }
@@ -99,7 +99,7 @@
       "es": {
         "headline": "Lo que realmente pasó",
         "short": "Tres triunfos ajustados de eliminación directa, algunos fallos discutidos y una historia aparte del FBI.",
-        "full": "Argentina llegó a la semifinal por el camino difícil: tres triunfos de eliminación directa definidos en momentos ajustados, tardíos, en el alargue. En el trayecto hubo fallos discutidos, la acusación de favoritismo de un DT, una polémica por designaciones — y, de manera totalmente separada, una pesquisa reportada del FBI sobre cómo la AFA movió dinero por bancos de EE.UU. Dos hilos muy distintos se enredaron en el ruido. Vamos a desenredarlos.",
+        "full": "Argentina llegó a la semifinal por el camino difícil: tres triunfos de eliminación directa, todos ajustados y definidos sobre la hora, en el alargue. En el camino hubo fallos discutidos, la acusación de favoritismo de un DT, una polémica por designaciones — y, por un carril totalmente aparte, una pesquisa reportada del FBI sobre cómo la AFA movió plata por bancos de EE.UU. Dos hilos muy distintos se enredaron en el ruido. Vamos a desenredarlos.",
         "body": []
       }
     }
@@ -116,7 +116,7 @@
       "es": {
         "headline": "Dos hilos, no uno",
         "short": "Las quejas por el arbitraje y la pesquisa del FBI son independientes. Confundirlas es el error N.º 1.",
-        "full": "Acá está la clave, y es lo que la mayoría confunde: las quejas por el arbitraje y la investigación financiera son dos hilos independientes, sin un puente probatorio documentado entre ellos. La pesquisa es sobre jurisdicción por lavado de dinero — dólares por bancos de EE.UU., la teoría clásica del FIFA-Gate. No es sobre resultados de partidos. Una causa financiera real no diría nada sobre si algún silbato sonó injustamente. Mantenelos separados.",
+        "full": "Acá está la clave, y es en lo que casi todos se confunden: las quejas por el arbitraje y la investigación financiera son dos hilos independientes, sin un puente probatorio documentado entre ellos. La pesquisa es sobre jurisdicción por lavado de dinero — dólares por bancos de EE.UU., la teoría clásica del FIFA-Gate. No es sobre resultados de partidos. Una causa financiera real no diría nada sobre si a alguien lo perjudicó un pitazo injusto. Tenelos separados.",
         "body": []
       }
     }
@@ -133,7 +133,7 @@
       "es": {
         "headline": "La conclusión",
         "short": "Un hilo es una historia de dinero real y bien documentada. El otro es percepción. No son lo mismo.",
-        "full": "Entonces: un hilo (el dinero) es una investigación genuina y bien documentada que vale la pena seguir. El otro (el silbato) es mayormente percepción, armada con tres octavos/cuartos de nervios y algún clip viral. Ambos pueden ser ciertos a la vez, y ninguno implica que el marcador estuviera arreglado.",
+        "full": "Entonces: un hilo (el dinero) es una investigación genuina y bien documentada que vale la pena seguir. El otro (el pitazo) es mayormente percepción, armada con tres eliminaciones directas a puro nervio y uno que otro clip viral. Ambos pueden ser ciertos a la vez, y ninguno implica que el marcador estuviera arreglado.",
         "body": []
       }
     }
@@ -252,7 +252,7 @@
       "es": {
         "headline": "La matemática",
         "short": "P(el secreto sobrevive hasta t) ≈ e^(−N·p·t), según Grimes (2016).",
-        "full": "La base es el caso de población constante de Grimes: la probabilidad de que un secreto siga intacto tras t años es aproximadamente e^(−N·p·t), donde N es la cantidad de personas que deben callar y p es la chance anual de que cada una lo exponga. Las filtraciones esperadas se acumulan como N·p·t; la probabilidad de supervivencia decae exponencialmente. El modelo completo de Grimes permite que el grupo se achique con el tiempo (la gente muere, se retira); su corrección publicada generaliza el exponente a una integral. Usamos la forma simple — es un disparador de intuición, no un pronóstico.",
+        "full": "La base es el caso de población constante de Grimes: la probabilidad de que un secreto siga intacto tras t años es aproximadamente e^(−N·p·t), donde N es la cantidad de personas que deben callar y p es la chance anual de que cada una lo exponga. Las filtraciones esperadas se acumulan como N·p·t; la probabilidad de supervivencia decae exponencialmente. El modelo completo de Grimes permite que el grupo se achique con el tiempo (la gente muere, se retira); su corrección publicada generaliza el exponente a una integral. Usamos la forma simple — es para tantear la intuición, no un pronóstico.",
         "body": []
       }
     }
@@ -303,7 +303,7 @@
       "es": {
         "headline": "H1 no es H2",
         "short": "Una causa financiera real (H2) NO implica arreglo de partidos (H1). Es el error N.º 1.",
-        "full": "Antes de las tarjetas: el error más común es tratar la pesquisa financiera (H2) y el arreglo de partidos (H1) como una sola afirmación. No lo son. H2 es creíble y bien documentada; H1 no está probada y, por tasas base, es improbable. Una imputación por mover dinero por bancos de EE.UU. no te diría nada sobre si el silbato de un árbitro fue torcido. Mirá los colores de esta página — celeste para el hilo deportivo, dorado para el financiero — y mantenelos separados.",
+        "full": "Antes de las tarjetas: el error más común es tratar la pesquisa financiera (H2) y el arreglo de partidos (H1) como una sola afirmación. No lo son. H2 es creíble y bien documentada; H1 no está probada y, por tasas base, es improbable. Una imputación por mover dinero por bancos de EE.UU. no te diría nada sobre si un árbitro cobró torcido. Fijate en los colores de esta página — celeste para el hilo deportivo, dorado para el financiero — y tenelos separados.",
         "body": []
       }
     }
@@ -320,7 +320,7 @@
       "es": {
         "headline": "Probalo: el Explorador Bayesiano",
         "short": "Fijá un prior y algunas fuerzas de evidencia; mirá cómo el posterior se actualiza contra mi rango publicado.",
-        "full": "Elegí una hipótesis, fijá tu prior y deslizá las fuerzas de la evidencia. La herramienta las combina en log-odds y muestra el posterior contra mi banda de rango publicado. 'Reiniciar' devuelve los valores por defecto que reproducen mis rangos. Es un disparador de intuición: la evidencia se trata como independiente, cosa que no es del todo cierta — así que esto razona sobre creencias, no calcula la verdad.",
+        "full": "Elegí una hipótesis, fijá tu prior y deslizá las fuerzas de la evidencia. La herramienta las combina en log-odds y muestra el posterior contra mi banda de rango publicado. 'Reiniciar' devuelve los valores por defecto que reproducen mis rangos. Es para tantear la intuición: la evidencia se trata como independiente, cosa que no es del todo cierta — así que esto razona sobre creencias, no calcula la verdad.",
         "body": []
       }
     }
@@ -405,7 +405,7 @@
       "es": {
         "headline": "El factor de caída poco glamoroso",
         "short": "Argentina jugó tres partidos seguidos de 120 minutos. Eso es real, y no es una conspiración.",
-        "full": "Si Argentina se cae, la explicación aburrida es la más probable: tres eliminatorias seguidas hasta los 120 minutos son muchas piernas. Sin silbato de por medio. Es justo el tipo de factor concreto y no conspirativo que conviene nombrar antes de buscar algo más exótico.",
+        "full": "Si Argentina se cae, la explicación aburrida es la más probable: tres eliminaciones directas seguidas hasta los 120 minutos son un montón de piernas gastadas. Sin ningún pitazo de por medio. Es justo el tipo de factor concreto y nada conspirativo que conviene nombrar antes de salir a buscar algo más exótico.",
         "body": []
       }
     }

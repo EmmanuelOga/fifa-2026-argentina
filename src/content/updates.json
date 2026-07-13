@@ -17,7 +17,7 @@
         "verdict": "pending"
       },
       {
-        "claim": { "en": "DOJ moves to an indictment or cooperating witness", "es": "El DOJ pasa a una imputación o testigo cooperante" },
+        "claim": { "en": "DOJ moves to an indictment or cooperating witness", "es": "El DOJ avanza a una imputación o a un testigo cooperante" },
         "verdict": "pending"
       }
     ],
@@ -34,12 +34,12 @@
       },
       "es": {
         "title": "Corrida 1 — primer build (pre-semifinales)",
-        "summary": "El análisis inicial, armado el 12 de julio con los cuartos terminados y las semifinales aún por jugarse.",
+        "summary": "El análisis inicial, armado el 12 de julio con los cuartos ya jugados y las semifinales todavía por delante.",
         "body": [
-          "Este es el primer intento. El cuadro está en pre-semifinales: Francia v España e Inglaterra v Argentina todavía no se jugaron, así que cada número de título acá es un pronóstico genuino, no una mirada con el diario del lunes.",
-          "Qué cambió la verificación de la Fase 0 respecto del borrador original: Opta se actualizó tras los cuartos (Francia 34,0%, España 23,4%, Inglaterra 21,9%, Argentina 20,6% para salir campeón); los números por selección de Nate Silver resultaron estar tras un muro de pago, así que cito su método y el mercado público en vez de inventar una cifra; el superlativo 'la mayor cantidad de penales en la historia' se suavizó a 'la mayor en los Mundiales recientes'; y una cifra inverificable de '23M de vistas' se descartó por completo.",
-          "Sobre la historia del dinero: es real y rastreable a La Nación y al Miami Herald, pero varios detalles (la división US$260M/US$57M, los fiscales nombrados) provienen de una sola fuente, así que se atribuyen en lugar de afirmarse, y a las personas de la empresa de Florida se las menciona por su rol, no por su nombre.",
-          "Mi pronóstico principal para el marcador de arriba: los modelos dicen Francia; mi corazón dice Argentina. Cuando se jueguen las semifinales, califico esta corrida y la archivo."
+          "Esta es la primera pasada. El cuadro está en pre-semifinales: Francia v España e Inglaterra v Argentina todavía no se jugaron, así que cada número de título que ves acá es un pronóstico de verdad, no la típica sabiduría con el diario del lunes.",
+          "Qué cambió la verificación de la Fase 0 respecto del borrador original: Opta se actualizó después de los cuartos (Francia 34,0%, España 23,4%, Inglaterra 21,9%, Argentina 20,6% para salir campeón); los números por selección de Nate Silver terminaron siendo pagos, así que cito su método y el mercado público en lugar de inventar una cifra; el superlativo de 'la mayor cantidad de penales en la historia' lo bajé a 'la mayor en los Mundiales recientes'; y un dato inverificable de '23M de vistas' lo saqué por completo.",
+          "Sobre la historia del dinero: es real y se puede rastrear hasta La Nación y el Miami Herald, pero varios detalles (el reparto de US$260M/US$57M, los fiscales con nombre y apellido) vienen de una sola fuente, así que los atribuyo en vez de darlos por ciertos, y a las personas de la empresa de Florida las menciono por su rol, no por su nombre.",
+          "Mi pronóstico principal para el marcador de arriba: los modelos dicen Francia; el corazón dice Argentina. Cuando se jueguen las semifinales, le pongo nota a esta corrida y la archivo."
         ]
       }
     }
