@@ -6,7 +6,7 @@
  * This keeps the chat answering from the SAME single source of truth as the site,
  * so a content edit propagates to the assistant on the next build.
  */
-import { readFileSync, writeFileSync, mkdirSync } from 'node:fs';
+import { readFileSync, writeFileSync, mkdirSync, readdirSync } from 'node:fs';
 import { fileURLToPath } from 'node:url';
 import { dirname, join } from 'node:path';
 
@@ -14,14 +14,20 @@ const here = dirname(fileURLToPath(import.meta.url));
 const root = join(here, '..');
 const read = (p) => JSON.parse(readFileSync(join(root, p), 'utf8'));
 
+/** Newest dated research folder — so a fresh `update:research` run flows into the build. */
+const latestResearch = readdirSync(join(root, 'research'))
+  .filter((d) => /^\d{4}-\d{2}-\d{2}$/.test(d))
+  .sort()
+  .at(-1);
+
 const sections = read('src/content/sections.json');
 const timeline = read('src/content/timeline.json');
 const hypotheses = read('src/content/hypotheses.json');
 const precedents = read('src/content/precedents.json');
 const sources = read('src/content/sources.json');
 const updates = read('src/content/updates.json');
-const findings = readFileSync(join(root, 'research/2026-07-12/findings.md'), 'utf8');
-const snapshot = read('research/2026-07-12/snapshot.json');
+const findings = readFileSync(join(root, `research/${latestResearch}/findings.md`), 'utf8');
+const snapshot = read(`research/${latestResearch}/snapshot.json`);
 
 function buildLocale(loc) {
   const out = [];

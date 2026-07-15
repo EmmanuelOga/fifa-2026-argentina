@@ -6,3 +6,57 @@ pnpm = "10.34.5"
 
 [env]
 # Keep pnpm's store inside the repo-less default; nothing project-specific needed.
+
+# ── The living-loop update pipeline ─────────────────────────────────────────
+# One command to re-run the analysis and republish — the natural thing to repeat
+# by hand or on a cron. Everything routes through scripts/update.mjs (see its
+# header). The default run is ADDITIVE: pull the current state, do more online
+# research (accumulate, don't replace), decide whether the run is Log-worthy,
+# translate, refresh the RAG corpus, and republish. AI steps (research/translate)
+# shell out to headless `claude`; the rest run the existing scripts. `build`
+# rebuilds the chat's RAG corpus, so RAG refreshes on every publish. Nothing
+# auto-commits — you review the diff, then commit.
+#
+#   mise run update                     # everything (additive): research → log → translate → score → build → deploy
+#   mise run update:research            # research + Log decision only
+#   mise run update:translate           # just the rioplatense Spanish pass
+#   mise run update:publish             # just build + deploy to Cloudflare
+#   mise run update -- research build   # an arbitrary subset, in the order given
+#   mise run update -- --no-deploy      # everything except the deploy
+#   mise run update:scratch -- "topic"  # bootstrap a brand-new research topic
+#
+# The Log step: research writes a recommendation to .update-pending-log.json; the
+# `log` step then asks you to confirm (interactive) or auto-adds (cron), and adds
+# nothing when the LLM judged the change cosmetic.
+
+[tasks.update]
+description = "Re-run the analysis and republish (default: everything, additive). Pass steps after -- to scope it."
+run = "node scripts/update.mjs"
+
+[tasks."update:research"]
+description = "Additive research re-run: web-search refresh → new research/DATE/ → numbers + prose, then the Log decision"
+run = "node scripts/update.mjs research log"
+
+[tasks."update:log"]
+description = "Process the pending Log recommendation from the last research run (ask to add it, or auto-add on cron)"
+run = "node scripts/update.mjs log"
+
+[tasks."update:translate"]
+description = "Spanish editorial pass only (rioplatense/voseo), merging into changed content"
+run = "node scripts/update.mjs translate"
+
+[tasks."update:publish"]
+description = "Build the corpus + site and deploy to Cloudflare Pages"
+run = "node scripts/update.mjs build deploy"
+
+[tasks."update:score"]
+description = "Grade the latest run's predictions (Brier scorecard) once outcomes are known"
+run = "node scripts/update.mjs score"
+
+[tasks."update:video"]
+description = "Re-render the social video from current content"
+run = "node scripts/update.mjs video"
+
+[tasks."update:scratch"]
+description = 'Bootstrap a brand-new research topic from scratch. Usage: mise run update:scratch -- "topic"'
+run = "node scripts/update.mjs scratch"
