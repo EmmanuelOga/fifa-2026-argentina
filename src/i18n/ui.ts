@@ -12,8 +12,8 @@ export const TAB_LABEL: Record<TabKey, Record<Locale, string>> = {
   probabilities: { en: 'The Probabilities', es: 'Las Probabilidades' },
   'who-wins': { en: 'Who Wins?', es: '¿Quién Gana?' },
   ask: { en: 'Ask the Research', es: 'Preguntá a la Investigación' },
-  sources: { en: 'Sources', es: 'Fuentes' },
-  log: { en: 'The Log', es: 'La Bitácora' },
+  sources: { en: 'Sources & Fine Print', es: 'Fuentes y Letra Chica' },
+  log: { en: 'Blog', es: 'Blog' },
 };
 
 export const TAB_SHORT: Record<TabKey, Record<Locale, string>> = {
@@ -22,8 +22,8 @@ export const TAB_SHORT: Record<TabKey, Record<Locale, string>> = {
   probabilities: { en: 'Odds', es: 'Probabilidades' },
   'who-wins': { en: 'Who Wins', es: 'Quién Gana' },
   ask: { en: 'Ask', es: 'Preguntá' },
-  sources: { en: 'Sources', es: 'Fuentes' },
-  log: { en: 'Log', es: 'Bitácora' },
+  sources: { en: 'Fine print', es: 'Letra chica' },
+  log: { en: 'Blog', es: 'Blog' },
 };
 
 type Dict = {

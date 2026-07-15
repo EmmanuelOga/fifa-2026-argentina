@@ -20,16 +20,17 @@ export const LOCALE_LABEL: Record<Locale, string> = {
   es: 'Español',
 };
 
-/** Canonical tab keys, in nav order. `log` is the re-run changelog; `ask` is the
- *  LLM chat over the compiled research. */
+/** Canonical tab keys, in nav order. `log` is the blog (per-run posts); `ask` is
+ *  the LLM chat over the compiled research; `sources` is the "Sources & fine
+ *  print" appendix. Keys are internal — display slugs/labels are mapped below. */
 export const TAB_KEYS = [
   'story',
+  'log',
   'feasibility',
   'probabilities',
   'who-wins',
   'ask',
   'sources',
-  'log',
 ] as const;
 export type TabKey = (typeof TAB_KEYS)[number];
 
@@ -40,8 +41,8 @@ export const TAB_SLUGS: Record<TabKey, Record<Locale, string>> = {
   probabilities: { en: 'probabilities', es: 'probabilidades' },
   'who-wins': { en: 'who-wins', es: 'quien-gana' },
   ask: { en: 'ask', es: 'consultar' },
-  sources: { en: 'sources', es: 'fuentes' },
-  log: { en: 'log', es: 'bitacora' },
+  sources: { en: 'fine-print', es: 'letra-chica' },
+  log: { en: 'blog', es: 'blog' },
 };
 
 /** Reverse lookup: given a locale + slug, find the canonical tab key. */

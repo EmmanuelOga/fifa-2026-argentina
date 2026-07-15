@@ -24,12 +24,13 @@ Opinion & analysis — not reporting, not affiliated with FIFA or AFA.
 
 - **Bilingual site** (English `/en/…`, rioplatense Spanish `/es/…`) — 7 deep-linkable
   routes: The Story, Could It Be Done?, The Probabilities, Who Wins?, Ask the
-  Research, Sources, and The Log.
+  Research, the Blog (one post per re-run), and Sources & Fine Print.
 - **Three interactive simulations** (vanilla TS + Canvas, mobile-friendly): a
   Conspiracy Simulator (Grimes 2016 math), a Bayesian Explorer (log-odds), and a
   seeded Monte Carlo bracket simulator.
-- **A three.js hero** (lazy-loaded, with a static SVG fallback under
-  `prefers-reduced-motion`) and a papelitos/ticker-tape moment on load.
+- **A text-first, bracket-aware masthead** — the headline tracks the bracket state
+  (final set / champion / eliminated). The three.js hero component still exists in
+  the tree but no longer ships on the home page's first paint.
 - **Ask the Research** — an LLM chat grounded *only* in the site's compiled research,
   running as a Cloudflare Pages Function; unanswerable questions are logged to feed
   the next research re-run.
@@ -129,7 +130,7 @@ Nothing auto-commits — you always review `git diff` and commit yourself.
 
 The research/translate steps run headless `claude` under the hood (edit + web-search
 only, no arbitrary shell) against the scoped prompts in `scripts/prompts/`; the rest
-run the plain scripts. **The Log is judged, not automatic:** the research step writes
+run the plain scripts. **The Blog is judged, not automatic:** the research step writes
 a recommendation, and the `log` step either asks you to confirm the entry (when run
 interactively, with the recommendation shown), auto-adds it (non-interactive / cron),
 or adds nothing when the change was cosmetic. `build` regenerates
@@ -139,11 +140,11 @@ instead? The same steps, unrolled:
 
 1. Re-run the Phase 0 research (web search over the same checklist). Drop a new
    `research/YYYY-MM-DD/` folder with `findings.md` + `snapshot.json`.
-2. Update `src/data/` and any content that changed. Add a Log/Bitácora entry in
+2. Update `src/data/` and any content that changed. Add a Blog entry in
    `src/content/updates.json` (bump the `run` number; note what changed).
 3. Once outcomes are known, fill the `outcomes` block of an earlier snapshot and run
    `node scripts/score-predictions.mjs research/2026-07-12/snapshot.json` — it prints
-   a Brier score + hit/miss table. Paste that into the new Log entry's `scorecard`.
+   a Brier score + hit/miss table. Paste that into the new Blog entry's `scorecard`.
 4. Optionally link the previous version: Cloudflare Pages keeps a persistent URL per
    deployment (`wrangler pages deployment list`) — put it in the entry's `archiveUrl`.
 

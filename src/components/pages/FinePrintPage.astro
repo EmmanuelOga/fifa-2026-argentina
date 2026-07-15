@@ -1,0 +1,144 @@
+---
+/**
+ * Sources & fine print — the consolidated appendix. One calm, prose-first page:
+ * bias disclosure, caveats, open questions, model notes, the full tiered source
+ * list, and the disclaimer. The rest of the site links here instead of carrying
+ * callout boxes.
+ */
+import type { Locale } from '../../lib/i18n';
+import { section, sourcesByTier } from '../../lib/content';
+import Prose from '../Prose.astro';
+
+interface Props {
+  locale: Locale;
+}
+const { locale } = Astro.props;
+const intro = await section('sources-intro', locale);
+const bias = await section('bias-disclosure', locale);
+const caveats = await section('caveats', locale);
+const openQuestions = await section('open-questions', locale);
+const silverNote = await section('whowins-silver-note', locale);
+const digDeeper = await section('sources-dig-deeper', locale);
+const disclaimer = await section('footer-disclaimer', locale);
+const tiers = await sourcesByTier();
+const LINKEDIN = 'https://www.linkedin.com/in/emmanueloga/';
+
+const TIER_LABEL: Record<number, Record<Locale, string>> = {
+  1: { en: 'Tier 1 — Primary / legal / official', es: 'Nivel 1 — Primarias / legales / oficiales' },
+  2: { en: 'Tier 2 — Quality journalism', es: 'Nivel 2 — Periodismo de calidad' },
+  3: { en: 'Tier 3 — Data & models', es: 'Nivel 3 — Datos y modelos' },
+  4: { en: 'Tier 4 — Academic', es: 'Nivel 4 — Académicas' },
+  5: { en: 'Tier 5 — Historical context', es: 'Nivel 5 — Contexto histórico' },
+};
+const searchUrl = (q: string) => `https://www.google.com/search?q=${encodeURIComponent(q)}`;
+---
+
+<div class="container-narrow tab-body stack">
+  <header>
+    <p class="eyebrow">{locale === 'es' ? 'Fuentes y letra chica' : 'Sources & fine print'}</p>
+    <h1>{intro.headline}</h1>
+    <p class="lead">{intro.full}</p>
+  </header>
+
+  <section class="block">
+    <h2>{bias.headline}</h2>
+    <p>{bias.full}</p>
+  </section>
+
+  <section class="block">
+    <h2>{caveats.headline}</h2>
+    <Prose data={caveats} list="ul" />
+  </section>
+
+  <section class="block">
+    <h2>{openQuestions.headline}</h2>
+    <Prose data={openQuestions} list="ul" />
+  </section>
+
+  <section class="block">
+    <h2>{silverNote.headline}</h2>
+    <p>{silverNote.full}</p>
+  </section>
+
+  <section class="block">
+    <h2>{locale === 'es' ? 'Las fuentes' : 'The sources'}</h2>
+    {
+      tiers.map(([tier, list]) => (
+        <section class="tier">
+          <h3>{TIER_LABEL[tier]?.[locale]}</h3>
+          <ul class="src-list">
+            {list.map((s) => {
+              const c = s.data.content[locale];
+              const href = s.data.url && !s.data.unverified ? s.data.url : searchUrl(c.title);
+              return (
+                <li>
+                  <a href={href} target="_blank" rel="noopener">
+                    {c.title} ↗
+                    {s.data.unverified && (
+                      <span class="uv">{locale === 'es' ? ' (sin verificar)' : ' (unverified)'}</span>
+                    )}
+                  </a>
+                  <span class="why">{c.why}</span>
+                </li>
+              );
+            })}
+          </ul>
+        </section>
+      ))
+    }
+  </section>
+
+  <section class="block">
+    <h2>{digDeeper.headline}</h2>
+    <p>{digDeeper.full} <a href={LINKEDIN}>LinkedIn</a>.</p>
+  </section>
+
+  <p class="disclaimer">{disclaimer.full}</p>
+</div>
+
+<style>
+  .tab-body {
+    padding-block: var(--s-6) var(--s-7);
+  }
+  .lead {
+    font-size: var(--step-1);
+  }
+  .block h2 {
+    font-size: var(--step-1);
+  }
+  .tier h3 {
+    font-size: 1rem;
+    color: var(--sky-ink);
+    margin-top: var(--s-5);
+  }
+  .src-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: grid;
+    gap: var(--s-4);
+  }
+  .src-list li {
+    display: grid;
+    gap: 0.2em;
+    padding-left: var(--s-4);
+    border-left: 3px solid var(--line);
+  }
+  .src-list a {
+    font-weight: 600;
+  }
+  .uv {
+    font-style: italic;
+    color: var(--muted);
+    font-weight: 400;
+  }
+  .why {
+    font-size: 0.9rem;
+    color: var(--muted);
+  }
+  .disclaimer {
+    font-size: 0.82rem;
+    color: var(--muted);
+    max-width: 60ch;
+  }
+</style>

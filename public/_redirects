@@ -1,0 +1,9 @@
+# Legacy slugs → new slugs (blog-first refactor, 2026-07-15).
+/en/log /en/blog/ 301
+/en/log/* /en/blog/ 301
+/es/bitacora /es/blog/ 301
+/es/bitacora/* /es/blog/ 301
+/en/sources /en/fine-print/ 301
+/en/sources/* /en/fine-print/ 301
+/es/fuentes /es/letra-chica/ 301
+/es/fuentes/* /es/letra-chica/ 301

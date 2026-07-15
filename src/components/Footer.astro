@@ -1,11 +1,11 @@
 ---
 /**
- * Footer: byline, LinkedIn, source link, and the required disclaimer
- * (opinion/analysis, not affiliated, made with Claude) rendered from content.
+ * Footer: byline, LinkedIn, source link, and a one-line disclaimer pointing at
+ * the consolidated "Sources & fine print" appendix (which carries the full text).
  */
 import type { Locale } from '../lib/i18n';
 import { UI } from '../i18n/ui';
-import { section } from '../lib/content';
+import { tabPath } from '../lib/url';
 import { meta } from '../data/meta';
 import { longDate } from '../lib/format';
 
@@ -14,7 +14,6 @@ interface Props {
 }
 const { locale } = Astro.props;
 const t = UI[locale];
-const disclaimer = await section('footer-disclaimer', locale);
 const LINKEDIN = 'https://www.linkedin.com/in/emmanueloga/';
 const REPO = 'https://github.com/emmanueloga/fifa-2026-argentina';
 ---
@@ -34,7 +33,12 @@ const REPO = 'https://github.com/emmanueloga/fifa-2026-argentina';
         <a href={REPO}>{t.footer.viewSource}</a>
       </nav>
     </div>
-    <p class="disclaimer">{disclaimer.full}</p>
+    <p class="disclaimer">
+      {t.footer.madeWith} {t.footer.rights}
+      <a href={tabPath(locale, 'sources')}>
+        {locale === 'es' ? 'Fuentes y letra chica' : 'Sources & fine print'}
+      </a>.
+    </p>
   </div>
 </footer>
 

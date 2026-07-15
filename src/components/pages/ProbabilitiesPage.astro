@@ -8,7 +8,6 @@ import type { Locale } from '../../lib/i18n';
 import { section, hypotheses } from '../../lib/content';
 import { pct } from '../../lib/format';
 import { UI } from '../../i18n/ui';
-import Callout from '../Callout.astro';
 import SourceRefs from '../SourceRefs.astro';
 import KeyTerms from '../KeyTerms.astro';
 import ThreadTag from '../ThreadTag.astro';
@@ -29,16 +28,15 @@ const cards = await hypotheses();
 
 <div class="container-narrow tab-body stack">
   <header>
-    <p class="eyebrow">{locale === 'es' ? 'Pestaña 3 — Las Probabilidades' : 'Tab 3 — The Probabilities'}</p>
+    <p class="eyebrow">{locale === 'es' ? 'Las Probabilidades' : 'The Probabilities'}</p>
     <h1>{intro.headline}</h1>
     <p class="lead">{intro.full}</p>
   </header>
 
   <KeyTerms ids={['prior', 'posterior', 'likelihood-ratio', 'xg', 'doj']} locale={locale} />
 
-  <Callout variant="pop" icon="⚠️" title={warning.headline}>
-    <p>{warning.full}</p>
-  </Callout>
+  {/* Load-bearing guardrail: the H1≠H2 distinction stays inline, slim, un-boxed. */}
+  <p class="h1h2-note"><strong>{warning.headline}.</strong> {warning.full}</p>
 
   <div class="cards">
     {
@@ -103,15 +101,17 @@ const cards = await hypotheses();
   </div>
 
   <DeepDive locale={locale}>
-    <Callout variant="sky" icon="🎛️" title={bayesIntro.headline}>
+    <section class="block">
+      <h2>{bayesIntro.headline}</h2>
       <p>{bayesIntro.full}</p>
-    </Callout>
+    </section>
     <BayesExplorer locale={locale} />
   </DeepDive>
 
-  <Callout variant="plain" icon="🧭" title={takeaway.headline}>
+  <section class="block">
+    <h2>{takeaway.headline}</h2>
     <p>{takeaway.full}</p>
-  </Callout>
+  </section>
 </div>
 
 <style>
@@ -120,6 +120,14 @@ const cards = await hypotheses();
   }
   .lead {
     font-size: var(--step-1);
+  }
+  .block h2 {
+    font-size: var(--step-1);
+  }
+  .h1h2-note {
+    border-left: 3px solid var(--pop);
+    padding-left: var(--s-4);
+    margin: 0;
   }
   .cards {
     display: grid;

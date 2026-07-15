@@ -1,13 +1,12 @@
 ---
 /**
- * Tab 6 — The Log / La Bitácora. A changelog of analysis re-runs, each with a
- * prediction scorecard and (once outcomes are known) how the last run fared.
+ * The Blog — one post per analysis re-run, each with a prediction scorecard
+ * and (once outcomes are known) how the last run fared.
  */
 import { Image } from 'astro:assets';
 import type { Locale } from '../../lib/i18n';
 import { section, updates } from '../../lib/content';
 import { longDate } from '../../lib/format';
-import Callout from '../Callout.astro';
 
 interface Props {
   locale: Locale;
@@ -26,7 +25,7 @@ const VERDICT: Record<string, Record<Locale, string>> = {
 
 <div class="container-narrow tab-body stack">
   <header>
-    <p class="eyebrow">{locale === 'es' ? 'Pestaña 6 — La Bitácora' : 'Tab 6 — The Log'}</p>
+    <p class="eyebrow">Blog</p>
     <h1>{intro.headline}</h1>
     <p class="lead">{intro.full}</p>
   </header>

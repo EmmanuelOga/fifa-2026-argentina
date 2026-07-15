@@ -1,11 +1,11 @@
 ---
 import Base from '../../layouts/Base.astro';
-import SourcesPage from '../../components/pages/SourcesPage.astro';
+import FinePrintPage from '../../components/pages/FinePrintPage.astro';
 import { section } from '../../lib/content';
-const locale = 'es' as const;
+const locale = 'en' as const;
 const meta = await section('sources-intro', locale);
 ---
 
 <Base locale={locale} tab="sources" title={meta.headline} description={meta.short}>
-  <SourcesPage locale={locale} />
+  <FinePrintPage locale={locale} />
 </Base>

@@ -26,7 +26,7 @@ type MatchEvents = {
 };
 const eventsFor = (id: string): MatchEvents | undefined =>
   (matchEvents.matches as Record<string, MatchEvents>)[id];
-import Callout from '../Callout.astro';
+import { tabPath } from '../../lib/url';
 import SnapshotBadge from '../SnapshotBadge.astro';
 import SourceRefs from '../SourceRefs.astro';
 import KeyTerms from '../KeyTerms.astro';
@@ -38,7 +38,6 @@ interface Props {
 }
 const { locale } = Astro.props;
 const intro = await section('whowins-intro', locale);
-const silverNote = await section('whowins-silver-note', locale);
 const favoriteLost = await section('whowins-favorite-lost', locale);
 const fatigue = await section('whowins-fatigue', locale);
 const eliminated = argentinaEliminated();
@@ -50,7 +49,7 @@ const teamFlag = (code: string) => TEAMS[code]?.flag ?? '';
 
 <div class="container-narrow tab-body stack">
   <header>
-    <p class="eyebrow">{locale === 'es' ? 'Pestaña 4 — ¿Quién Gana?' : 'Tab 4 — Who Wins?'}</p>
+    <p class="eyebrow">{locale === 'es' ? '¿Quién Gana?' : 'Who Wins?'}</p>
     <h1>{intro.headline}</h1>
     <p class="lead">{intro.full}</p>
     <p><SnapshotBadge locale={locale} /></p>
@@ -157,22 +156,31 @@ const teamFlag = (code: string) => TEAMS[code]?.flag ?? '';
         </tbody>
       </table>
     </div>
-    {/* Silver's model: mentioned honestly, but paywalled — footnote, not a table row. */}
-    <p class="model-note">{silverNote.full}</p>
+    {/* Silver's model: paywalled, so not a table row — the full note lives in the appendix. */}
+    <p class="model-note">
+      {locale === 'es'
+        ? 'El modelo de Nate Silver está tras un muro de pago, así que no va en la tabla — '
+        : "Nate Silver's model is paywalled, so it isn't in the table — "}
+      <a href={tabPath(locale, 'sources')}>
+        {locale === 'es' ? 'más en la letra chica' : 'more in the fine print'}
+      </a>.
+    </p>
     <SourceRefs ids={['opta', 'oddschecker', 'silver']} locale={locale} />
   </section>
 
   {/* France was the favorite and lost — what that does (and doesn't) say about models */}
-  <Callout variant="sky" icon="🎲" title={favoriteLost.headline}>
+  <section class="block">
+    <h2>{favoriteLost.headline}</h2>
     <p>{favoriteLost.full}</p>
     {favoriteLost.body.map((para) => <p>{para}</p>)}
-  </Callout>
+  </section>
 
   {
     !eliminated && (
-      <Callout variant="sky" icon="🥵" title={fatigue.headline}>
+      <section class="block">
+        <h2>{fatigue.headline}</h2>
         <p>{fatigue.full}</p>
-      </Callout>
+      </section>
     )
   }
 
@@ -180,9 +188,10 @@ const teamFlag = (code: string) => TEAMS[code]?.flag ?? '';
     <MonteCarloBracket locale={locale} />
   </DeepDive>
 
-  <Callout variant="plain" icon="🇦🇷" title={closing.headline}>
+  <section class="block">
+    <h2>{closing.headline}</h2>
     <p class="closing">{closing.full}</p>
-  </Callout>
+  </section>
 </div>
 
 <style>

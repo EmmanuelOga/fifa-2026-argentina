@@ -7,7 +7,6 @@ import { Image } from 'astro:assets';
 import type { Locale } from '../../lib/i18n';
 import { section, timeline } from '../../lib/content';
 import { longDate } from '../../lib/format';
-import Callout from '../Callout.astro';
 import maradona86 from '../../assets/photos/maradona-86-copa.jpg';
 import ThreadTag from '../ThreadTag.astro';
 import SourceRefs from '../SourceRefs.astro';
@@ -25,7 +24,7 @@ const events = await timeline();
 
 <div class="container-narrow tab-body stack">
   <header>
-    <p class="eyebrow">{locale === 'es' ? 'Pestaña 1 — La Historia' : 'Tab 1 — The Story'}</p>
+    <p class="eyebrow">{locale === 'es' ? 'La Historia' : 'The Story'}</p>
     <h1>{intro.headline}</h1>
     <p class="lead">{intro.full}</p>
   </header>
@@ -77,13 +76,15 @@ const events = await timeline();
     }
   </ol>
 
-  <Callout variant="sun" icon="🧵" title={twoThreads.headline}>
+  <section class="block">
+    <h2>{twoThreads.headline}</h2>
     <p>{twoThreads.full}</p>
-  </Callout>
+  </section>
 
-  <Callout variant="plain" icon="✅" title={takeaway.headline}>
+  <section class="block">
+    <h2>{takeaway.headline}</h2>
     <p>{takeaway.full}</p>
-  </Callout>
+  </section>
 </div>
 
 <style>
@@ -91,6 +92,9 @@ const events = await timeline();
     padding-block: var(--s-6) var(--s-7);
   }
   .lead {
+    font-size: var(--step-1);
+  }
+  .block h2 {
     font-size: var(--step-1);
   }
   .timeline {
