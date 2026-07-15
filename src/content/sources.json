@@ -358,5 +358,35 @@
       "en": { "title": "Wilson Raj Perumal — how real fixes actually happened", "why": "Proven fixes were betting-syndicate jobs on friendlies, never an organizer favoring a team in a finals match." },
       "es": { "title": "Wilson Raj Perumal — cómo ocurrieron los arreglos reales", "why": "Los arreglos que se probaron fueron cosa de mafias de apuestas en amistosos, nunca un organizador favoreciendo a una selección en un partido de fase final." }
     }
+  },
+  {
+    "id": "sf-host-committee-events",
+    "order": 90,
+    "tier": 2,
+    "url": "https://www.sfbayareafwc26.com/bay-area-events",
+    "content": {
+      "en": { "title": "SF Bay Area Host Committee — fan zones & watch parties", "why": "The official Bay Area events hub for the July 19 final watch parties (Yerba Buena, Ferry Building, Thrive City, North Beach, Pride House at KQED). Verified 2026-07-15." },
+      "es": { "title": "Comité anfitrión del Área de la Bahía — fan zones y watch parties", "why": "El hub oficial de eventos del Área de la Bahía para las watch parties de la final del 19 de julio (Yerba Buena, Ferry Building, Thrive City, North Beach, Pride House en KQED). Verificado el 15-07-2026." }
+    }
+  },
+  {
+    "id": "sftravel-watch-parties",
+    "order": 91,
+    "tier": 2,
+    "url": "https://www.sftravel.com/article/your-guide-to-fifa-world-cup-2026-watch-parties-san-francisco",
+    "content": {
+      "en": { "title": "SF Travel — guide to World Cup watch parties in San Francisco", "why": "The city tourism board's guide; confirms the final-day venues are free and open to the public." },
+      "es": { "title": "SF Travel — guía de watch parties del Mundial en San Francisco", "why": "La guía del ente de turismo de la ciudad; confirma que las sedes del día de la final son gratuitas y abiertas a todos." }
+    }
+  },
+  {
+    "id": "missionlocal-viewing-guide",
+    "order": 92,
+    "tier": 2,
+    "url": "https://missionlocal.org/2026/06/san-francisco-world-cup-viewing-guide-map/",
+    "content": {
+      "en": { "title": "Mission Local — San Francisco World Cup viewing guide & map", "why": "Independent local journalism mapping ~55 bars plus the official final venues across the city." },
+      "es": { "title": "Mission Local — guía y mapa para ver el Mundial en San Francisco", "why": "Periodismo local independiente que mapea ~55 bares y las sedes oficiales de la final en toda la ciudad." }
+    }
   }
 ]

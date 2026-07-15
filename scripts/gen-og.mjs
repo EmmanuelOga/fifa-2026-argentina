@@ -16,12 +16,12 @@ const F = registerFonts();
 const COPY = {
   en: {
     title: 'La Alegría',
-    sub: 'A celebration of Argentina’s World Cup run —\nwith the homework done on the gossip.',
+    sub: 'Argentina are in the World Cup final —\na celebration with footnotes.',
     tag: 'JOY · HONEST LOOK · JOY',
   },
   es: {
     title: 'La Alegría',
-    sub: 'Un festejo de la campaña de Argentina —\ncon la tarea hecha sobre los chismes.',
+    sub: 'Argentina está en la final del Mundial —\nuna celebración con notas al pie.',
     tag: 'ALEGRÍA · MIRADA HONESTA · ALEGRÍA',
   },
 };

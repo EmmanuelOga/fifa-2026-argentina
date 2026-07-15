@@ -1,51 +1,104 @@
 ---
 /**
- * Home / hero page body. Sets the joy → honest look → joy arc, the bias
- * disclosure and caveats boxes, and links into the five tabs. All prose from the
- * content layer.
+ * Home — celebration-first landing. A text-first, bracket-aware masthead (no
+ * three.js on first paint), the latest blog post as the lead item, the two
+ * audience path cards, a calm "rumors" ease-in, the SF watch-party guide (EN),
+ * and the tab grid. The fine print lives one click away on the appendix page.
  */
 import type { Locale } from '../../lib/i18n';
 import { TAB_KEYS } from '../../lib/i18n';
 import { UI, TAB_LABEL } from '../../i18n/ui';
 import { tabPath } from '../../lib/url';
 import { section, updates } from '../../lib/content';
-import Hero from '../Hero.astro';
-import Callout from '../Callout.astro';
-import Prose from '../Prose.astro';
+import { longDate } from '../../lib/format';
+import { TEAMS, SEMIFINALS, FINAL, bracketStage, argentinaEliminated } from '../../data/bracket';
+import SnapshotBadge from '../SnapshotBadge.astro';
+import SourceRefs from '../SourceRefs.astro';
 
 interface Props {
   locale: Locale;
 }
 const { locale } = Astro.props;
 const t = UI[locale];
+const hero = await section('hero', locale);
+const rumors = await section('home-rumors', locale);
 const bias = await section('bias-disclosure', locale);
-const caveats = await section('caveats', locale);
-// Latest Log entry feeds the one-line news banner (updates() sorts newest first).
-const latestRun = (await updates())[0];
-const twoThreads = await section('story-two-threads', locale);
 const closing = await section('closing-note', locale);
+const latestRun = (await updates())[0];
+const LINKEDIN = 'https://www.linkedin.com/in/emmanueloga/';
+
+/* Bracket-aware masthead: the headline tracks the tournament state, so the
+ * re-run loop only has to update src/data/bracket.ts. */
+const stage = bracketStage();
+const eliminated = argentinaEliminated();
+const mastheadId = eliminated
+  ? 'masthead-eliminated'
+  : stage === 'champion'
+    ? FINAL.result?.winner === 'ARG'
+      ? 'masthead-champion'
+      : 'masthead-eliminated'
+    : 'masthead-final-set';
+const masthead = await section(mastheadId, locale);
+
+/* Final matchup line, derived from the semifinal winners (ARG listed last). */
+const finalists = SEMIFINALS.map((m) => m.result?.winner).filter(
+  (w): w is string => !!w,
+).sort((a, b) => (a === 'ARG' ? 1 : b === 'ARG' ? -1 : 0));
+const matchLine =
+  finalists.length === 2
+    ? `${TEAMS[finalists[0]!]?.flag} ${TEAMS[finalists[0]!]?.name[locale]} v ${TEAMS[finalists[1]!]?.name[locale]} ${TEAMS[finalists[1]!]?.flag}`
+    : null;
+
+/* "Where to watch in SF" — EN only; re-verified 2026-07-15 against the host
+ * committee, SF Travel and Mission Local guides (see sources). All free. */
+const sfSpots =
+  locale === 'en'
+    ? [
+        { name: 'Yerba Buena Gardens', note: 'The big official fan-zone lawn — live music and vendors from noon.' },
+        { name: 'Ferry Building', note: 'Final on the bayside plaza; Hog Island oysters and Fort Point beers.' },
+        { name: 'Thrive City (Chase Center)', note: 'Fan zone by the arena, from noon.' },
+        { name: 'China Basin Park (Mission Rock)', note: 'Waterfront screen across from Oracle Park.' },
+        { name: 'PIER 39', note: '“Soccer with the sea lions” — the Embarcadero option.' },
+        { name: 'North Beach block party (1560 Powell St)', note: '12-foot screen and a DJ in the street, 11am–4pm.' },
+        { name: 'Pride House SF at KQED (2601 Mariposa St)', note: 'Watch party in the Mission from noon.' },
+      ]
+    : [];
 
 const tabBlurb: Record<string, { en: string; es: string }> = {
   story: { en: 'What actually happened, as a timeline.', es: 'Lo que realmente pasó, en una línea de tiempo.' },
+  log: { en: 'One post per re-run, predictions graded.', es: 'Un post por corrida, con las predicciones calificadas.' },
   feasibility: { en: 'Could a fix even be pulled off? A simulator.', es: '¿Se puede siquiera arreglar? Un simulador.' },
   probabilities: { en: 'Four hypotheses, and a Bayesian playground.', es: 'Cuatro hipótesis y un patio bayesiano.' },
   'who-wins': { en: 'The models, the market, and a Monte Carlo.', es: 'Los modelos, el mercado y un Monte Carlo.' },
   ask: { en: 'Chat with the compiled research.', es: 'Chateá con la investigación compilada.' },
-  sources: { en: 'Everything, traced to a source.', es: 'Todo, rastreado a una fuente.' },
-  log: { en: 'A living changelog of re-runs.', es: 'Un changelog vivo de re-corridas.' },
+  sources: { en: 'Every source, plus all the fine print.', es: 'Todas las fuentes, más la letra chica.' },
 };
 ---
 
-<Hero locale={locale} />
+<section class="masthead" data-stage={eliminated ? 'eliminated' : stage}>
+  <div class="container-narrow">
+    <p class="eyebrow">🇦🇷 {t.tagline}</p>
+    <h1>{masthead.headline}</h1>
+    {matchLine && stage === 'final-set' && (
+      <p class="matchline data">
+        {matchLine} · {longDate(locale, FINAL.date)} · {FINAL.venue[locale]}
+      </p>
+    )}
+    <p class="mast-kicker">{masthead.full}</p>
+    <p class="mast-lead">{hero.full}</p>
+    <p class="mast-by">
+      {t.byline} <a href={LINKEDIN}>Emmanuel Oga</a> · <SnapshotBadge locale={locale} />
+    </p>
+  </div>
+</section>
 
 <div class="container-narrow home-body stack">
   {latestRun && (
-    <a class="news-banner" href={tabPath(locale, 'log')}>
-      <span class="nb-tag">{locale === 'es' ? '¡Mirá la Bitácora!' : 'Check the Log!'}</span>
-      <span class="nb-text">
-        {locale === 'es' ? 'Lo último' : 'Latest'}: {latestRun.data.content[locale].title}
-      </span>
-      <span class="nb-arrow" aria-hidden="true">→</span>
+    <a class="blog-lead" href={tabPath(locale, 'log')}>
+      <span class="bl-tag">{locale === 'es' ? 'Lo último en el blog' : 'Latest from the blog'}</span>
+      <span class="bl-title">{latestRun.data.content[locale].title}</span>
+      <span class="bl-sum">{latestRun.data.content[locale].summary}</span>
+      <span class="bl-more">{locale === 'es' ? 'Leer el blog →' : 'Read the blog →'}</span>
     </a>
   )}
 
@@ -71,13 +124,36 @@ const tabBlurb: Record<string, { en: string; es: string }> = {
     </a>
   </div>
 
-  <Callout variant="sky" icon="🙋" title={bias.headline}>
-    <p>{bias.full}</p>
-  </Callout>
+  {sfSpots.length > 0 && (
+    <section class="sf" aria-label="Where to watch in San Francisco">
+      <h2>Watching from San Francisco? Come celebrate.</h2>
+      <p>
+        The final kicks off Sunday, July 19 at noon Pacific. These watch parties are
+        free and open to everyone:
+      </p>
+      <ul class="sf-list">
+        {sfSpots.map((s) => (
+          <li>
+            <strong>{s.name}</strong> — {s.note}
+          </li>
+        ))}
+      </ul>
+      <SourceRefs
+        ids={['sf-host-committee-events', 'sftravel-watch-parties', 'missionlocal-viewing-guide']}
+        locale={locale}
+      />
+    </section>
+  )}
 
-  <Callout variant="sun" icon="🧵" title={twoThreads.headline}>
-    <p>{twoThreads.full}</p>
-  </Callout>
+  {/* The homework, one click behind the joy. */}
+  <section class="rumors">
+    <h2>{rumors.headline}</h2>
+    <p>{rumors.full}</p>
+    <p class="rumor-links">
+      <a href={tabPath(locale, 'story')}>{locale === 'es' ? 'La historia →' : 'The story →'}</a>
+      <a href={tabPath(locale, 'probabilities')}>{locale === 'es' ? 'Las probabilidades →' : 'The probabilities →'}</a>
+    </p>
+  </section>
 
   <section aria-label="Sections">
     <h2>{locale === 'es' ? 'Recorré el análisis' : 'Explore the analysis'}</h2>
@@ -94,47 +170,106 @@ const tabBlurb: Record<string, { en: string; es: string }> = {
     </div>
   </section>
 
-  <Callout variant="pop" icon="⚠️" title={caveats.headline}>
-    <Prose data={caveats} list="ul" />
-  </Callout>
+  {/* One-sentence disclosure inline; the full fine print is one click away. */}
+  <p class="bias-line">
+    {bias.short}{' '}
+    <a href={tabPath(locale, 'sources')}>
+      {locale === 'es' ? 'Toda la letra chica acá.' : 'All the fine print here.'}
+    </a>
+  </p>
 
-  <Callout variant="plain" icon="🇦🇷" title={closing.headline}>
-    <p class="closing">{closing.full}</p>
-  </Callout>
+  <p class="closing">🇦🇷 {closing.full}</p>
 </div>
 
 <style>
-  .news-banner {
-    display: flex;
-    align-items: baseline;
-    gap: var(--s-3);
-    flex-wrap: wrap;
-    padding: var(--s-3) var(--s-4);
+  .masthead {
+    position: relative;
+    overflow: hidden;
+    padding-block: var(--s-7) var(--s-6);
+    background:
+      radial-gradient(900px 500px at 78% 10%, rgba(242, 165, 28, 0.16), transparent 60%),
+      radial-gradient(700px 480px at 10% 0%, rgba(31, 138, 208, 0.16), transparent 60%);
+  }
+  /* Faint albiceleste stripes + SVG grain for texture; ~0 bytes, no request. */
+  .masthead::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    background:
+      repeating-linear-gradient(
+        100deg,
+        transparent 0 90px,
+        rgba(31, 138, 208, 0.035) 90px 180px
+      ),
+      url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='140' height='140'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2'/%3E%3C/filter%3E%3Crect width='140' height='140' filter='url(%23n)' opacity='0.05'/%3E%3C/svg%3E");
+  }
+  .masthead > div {
+    position: relative;
+  }
+  .masthead h1 {
+    font-size: var(--step-5, var(--step-4));
+    line-height: 1.05;
+    margin-bottom: var(--s-3);
+    color: var(--sky-ink);
+  }
+  .matchline {
+    font-weight: 700;
+    font-size: var(--step-1);
+    margin: 0 0 var(--s-3);
+  }
+  .mast-kicker {
+    font-size: var(--step-1);
+    font-weight: 600;
+    color: var(--sun-ink);
+    margin: 0 0 var(--s-3);
+  }
+  .mast-lead {
+    font-size: var(--step-1);
+    max-width: 55ch;
+  }
+  .mast-by {
+    color: var(--muted);
+    margin: 0;
+  }
+  .home-body {
+    padding-block: var(--s-6) var(--s-7);
+  }
+  .blog-lead {
+    display: grid;
+    gap: 0.3em;
+    padding: var(--s-4) var(--s-5);
     border: 1px solid var(--sky);
     border-radius: var(--radius);
     background: var(--sky-soft);
     text-decoration: none;
     color: var(--ink);
+    box-shadow: var(--shadow-sm);
   }
-  .news-banner:hover {
+  .blog-lead:hover {
     background: color-mix(in srgb, var(--sky-soft) 70%, white);
   }
-  .nb-tag {
+  .bl-tag {
     font-family: var(--font-data);
     font-size: 0.72rem;
     font-weight: 700;
     text-transform: uppercase;
     letter-spacing: 0.06em;
     color: var(--sky-ink);
-    white-space: nowrap;
   }
-  .nb-text {
-    font-size: 0.9rem;
-    flex: 1;
-    min-width: 12em;
-  }
-  .nb-arrow {
+  .bl-title {
+    font-family: var(--font-display);
+    font-weight: 700;
+    font-size: 1.15rem;
     color: var(--sky-ink);
+  }
+  .bl-sum {
+    font-size: 0.92rem;
+  }
+  .bl-more {
+    font-weight: 600;
+    color: var(--sky-ink);
+    font-size: 0.9rem;
   }
   .paths {
     display: grid;
@@ -171,8 +306,23 @@ const tabBlurb: Record<string, { en: string; es: string }> = {
       grid-template-columns: 1fr;
     }
   }
-  .home-body {
-    padding-block: var(--s-6) var(--s-7);
+  .sf h2,
+  .rumors h2 {
+    font-size: var(--step-1);
+  }
+  .sf-list {
+    margin: 0;
+    padding-left: 1.1em;
+    display: grid;
+    gap: 0.45em;
+    font-size: 0.95rem;
+  }
+  .rumor-links {
+    display: flex;
+    gap: var(--s-5);
+    flex-wrap: wrap;
+    font-weight: 600;
+    margin: 0;
   }
   .tab-cards {
     display: grid;
@@ -213,6 +363,11 @@ const tabBlurb: Record<string, { en: string; es: string }> = {
     right: var(--s-4);
     color: var(--sun);
     font-weight: 700;
+  }
+  .bias-line {
+    font-size: 0.9rem;
+    color: var(--muted);
+    margin: 0;
   }
   .closing {
     font-size: var(--step-1);
