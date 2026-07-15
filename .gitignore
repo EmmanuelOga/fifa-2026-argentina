@@ -18,6 +18,10 @@ functions/api/corpus.json
 .env.*
 !.env.example
 
-# direnv + wrangler local secrets
+# direnv + wrangler local secrets & temp
 .direnv/
 .dev.vars
+.wrangler/
+
+# transient hand-off from `update` research step → `log` step (consumed each run)
+.update-pending-log.json

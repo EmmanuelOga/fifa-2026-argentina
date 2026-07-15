@@ -9,14 +9,14 @@ Live now: **https://fifa-2026-argentina.pages.dev** · sources:
 Run project commands through mise (your interactive shell doesn't auto-load it
 unless you added the hooks to `~/.bashrc`): `mise exec -- pnpm …`.
 
-## 1. Turn on the Ask-the-Research chat (2 min)
-```bash
-mise exec -- pnpm wrangler pages secret put ANTHROPIC_API_KEY --project-name fifa-2026-argentina
-mise exec -- pnpm build && mise exec -- pnpm wrangler pages deploy dist --project-name fifa-2026-argentina
-```
-Optional: log unanswered questions →
-`mise exec -- pnpm wrangler kv namespace create QUESTIONS`, uncomment the binding
-in `wrangler.toml` with the printed id, redeploy.
+## 1. ✅ DONE (2026-07-15) — Ask-the-Research chat is live
+The chat runs on a $20/month-capped Anthropic workspace key (`la-alegria-chat`
+workspace) with Sonnet 5 (`CHAT_MODEL` in wrangler.toml), Turnstile bot
+protection (widget `la-alegria-chat`, managed via `wrangler turnstile widget`),
+and KV-backed rate limits (10/IP/hour, 100/day) in `functions/api/ask.ts`.
+The QUESTIONS KV namespace also logs unanswered questions for the next re-run.
+Remember: Pages secrets only bind on the NEXT deployment, and `secret put`
+needs `pbpaste |` piping when run from a Claude Code session.
 
 ## 2. Auto-deploy on push (5 min, one-time)
 Cloudflare dashboard → the `fifa-2026-argentina` Pages project → **Settings →

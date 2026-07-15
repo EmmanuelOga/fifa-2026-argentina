@@ -90,7 +90,52 @@ pnpm sanity             # sim-math sanity checks (MC convergence, Bayes, Grimes)
 
 ## Re-running the analysis (the living loop)
 
-The site is designed to be re-run as facts move and predictions resolve:
+**One command:** `mise run update` runs the whole loop end-to-end and is the natural
+thing to repeat — by hand or on a cron. It's **additive**: it pulls the current state,
+does *more* online research (accumulating new verified facts/sources, not starting
+over), decides whether the run is worth a Log entry, does the rioplatense Spanish
+pass, scores predictions, refreshes the chat's RAG corpus, builds, and deploys to
+Cloudflare. Scope it when you only need a piece:
+
+```bash
+mise run update                    # everything (additive): research → log → translate → score → build → deploy
+mise run update:research           # additive research refresh (+ the Log decision)
+mise run update:translate          # just the Spanish editorial pass
+mise run update:publish            # just build + deploy (rebuilds the RAG corpus too)
+mise run update -- research build  # an arbitrary subset, in order
+mise run update -- --no-deploy     # everything except the deploy
+mise run update:scratch -- "topic" # bootstrap a brand-new research topic from scratch
+```
+
+**Which one do I want?** (run `mise tasks` to see all of these with descriptions)
+
+| If you want to… | Run |
+| --- | --- |
+| Do the normal refresh — new research, translate, ship. The everyday command. | `mise run update` |
+| Same, but eyeball the changes before going live | `mise run update -- --no-deploy`, review `git diff`, then `mise run update:publish` |
+| Only pull in fresh research + numbers (no translate/deploy yet) | `mise run update:research` |
+| Only fix up the Spanish after editing English by hand | `mise run update:translate` |
+| Just ship what's already committed (also refreshes the chat's RAG corpus) | `mise run update:publish` |
+| Decide/add a Log entry from the last research run | `mise run update:log` |
+| Grade past predictions once real outcomes are in | `mise run update:score` |
+| Re-render the social video after content changed | `mise run update:video` |
+| Start a **brand-new topic** (wipes subject content, keeps the machinery) | `mise run update:scratch -- "your topic"` |
+| Run it unattended (cron): no prompts — Log auto-adds when warranted | `mise run update` |
+
+Rules of thumb: **`update` is additive and safe to repeat** — it accumulates research
+and merges, it never wipes and restarts (only `update:scratch` does that). Steps run
+in order and **stop before deploy on any failure**, so a broken step never ships.
+Nothing auto-commits — you always review `git diff` and commit yourself.
+
+The research/translate steps run headless `claude` under the hood (edit + web-search
+only, no arbitrary shell) against the scoped prompts in `scripts/prompts/`; the rest
+run the plain scripts. **The Log is judged, not automatic:** the research step writes
+a recommendation, and the `log` step either asks you to confirm the entry (when run
+interactively, with the recommendation shown), auto-adds it (non-interactive / cron),
+or adds nothing when the change was cosmetic. `build` regenerates
+`functions/api/corpus.json`, so the RAG side the chat is grounded in refreshes on
+every publish. Nothing auto-commits — review `git diff`, then commit. Doing it by hand
+instead? The same steps, unrolled:
 
 1. Re-run the Phase 0 research (web search over the same checklist). Drop a new
    `research/YYYY-MM-DD/` folder with `findings.md` + `snapshot.json`.
