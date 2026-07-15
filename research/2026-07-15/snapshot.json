@@ -1,19 +1,28 @@
 {
-  "run": 3,
+  "run": 4,
   "date": "2026-07-15",
-  "bracketStage": "one-semi",
+  "bracketStage": "final-set",
+  "supersedes": "Run 3 (same day, mid-SF2 snapshot). Run 3's exact findings.md/snapshot.json are preserved in git at commit 399ec52; findings.md in this folder keeps the full Run 3 text with the Run 4 section appended.",
   "predictions": {
     "titleProbabilities": {
-      "ESP": { "authorLow": 0.52, "authorHigh": 0.6, "opta": 0.234, "optaNote": "Opta not refreshed post-SF1 at pass time; last published Jul 12 figure, stale-low" },
-      "ENG": { "authorLow": 0.21, "authorHigh": 0.26, "opta": 0.219 },
-      "ARG": { "authorLow": 0.17, "authorHigh": 0.23, "opta": 0.206 },
-      "FRA": { "authorLow": 0, "authorHigh": 0, "opta": 0, "optaNote": "resolved to 0 by elimination Jul 14; Opta's Jul 12 article still shows 34.0" }
+      "ESP": { "authorLow": 0.55, "authorHigh": 0.6, "opta": 0.234, "optaNote": "Opta post-semis refresh still unpublished at pass time; last published Jul 12 figure, stale-low" },
+      "ARG": { "authorLow": 0.4, "authorHigh": 0.45, "opta": 0.206, "optaNote": "same staleness caveat; with one match left, title odds = final-match odds" },
+      "ENG": { "authorLow": 0, "authorHigh": 0, "opta": 0, "optaNote": "resolved to 0 by elimination Jul 15 (lost SF2 1-2 to Argentina)" },
+      "FRA": { "authorLow": 0, "authorHigh": 0, "opta": 0, "optaNote": "resolved to 0 by elimination Jul 14" }
     },
     "market": {
-      "asOf": "2026-07-15",
-      "draftkings": { "ESP": "-156", "ENG": "+300", "ARG": "+400" },
-      "fanduel": { "ESP": "-150", "ENG": "+280", "ARG": "+370" },
-      "kalshi": { "ESP": 0.576, "ENG": 0.229, "ARG": 0.198 }
+      "asOf": "2026-07-15T17:00-04:00",
+      "trophy": {
+        "caesars": { "ESP": "-170", "ARG": "+135" },
+        "bet365": { "ESP": "-175", "ARG": "+125" },
+        "thescore": { "ESP": "-160", "ARG": "+130" },
+        "kalshi": { "ESP": 0.58, "ARG": 0.43 }
+      },
+      "final90min": { "betmgm": { "ESP": "+125", "draw": "+200", "ARG": "+250", "over25": "+135", "under25": "-150" } }
+    },
+    "optaMatchCalls": {
+      "sf1_FRA_v_ESP": { "favored": "FRA", "p": 0.577, "outcome": "ESP won - 42.3% branch" },
+      "sf2_ENG_v_ARG": { "favored": "ENG", "p": 0.523, "outcome": "ARG won - 47.7% branch", "source": "Opta match preview Jul 15; 90-min split ENG 37.3 / draw 30.7 / ARG 32.0" }
     },
     "hypotheses": {
       "H1_deliberate_favoritism": { "low": 0.02, "high": 0.08 },
@@ -24,42 +33,42 @@
     }
   },
   "outcomes": {
-    "note": "SF1 resolved: Spain 2-0 France (Jul 14, Arlington; Oyarzabal 22' pen, Porro 58'). SF2 England v Argentina was LIVE (0-0, first half) at pass time - left null; Run 4 fills it and grades the semis scorecards.",
+    "note": "Both semifinals resolved. SF2: England 1-2 Argentina (Jul 15, Atlanta; Gordon 55'; E. Fernandez 85', L. Martinez 90+2' from a Messi cross; ARG 64% possession, xG ~1.84 v ~0.53; referee Ismail Elfath, USA - no officiating controversy of substance). Final: Spain v Argentina, Jul 19, MetLife. Grading of Run 1-3 scorecards belongs to the score step.",
     "champion": null,
-    "semifinals": { "FRA_v_ESP": "ESP 2-0", "ENG_v_ARG": null },
+    "semifinals": { "FRA_v_ESP": "ESP 2-0", "ENG_v_ARG": "ARG 2-1" },
     "final": null,
     "dojMovedToIndictment": null
   },
-  "carriedForwardFromRun2": "All Run 1-2 verified facts stand: Opta Jul 12 figures (now partially resolved by reality), Silver paywall note, penalty superlative softening, five named banks, Miami Herald ~$90M, La Nacion $260M/$57M attribution, Tofoni ~3h videoconference interview (witness, not charged), AFA pushback quote, no US charges, FBI declined comment.",
-  "newSinceRun2": [
-    "Spain 2-0 France (Jul 14): Oyarzabal 22' penalty (Digne foul on Lamine Yamal - hotly disputed, VAR did not overturn), Pedro Porro 58'. Referee Ivan Barton (El Salvador). Spain xG ~1.63 v ~0.31. France eliminated; Spain in the Jul 19 final.",
-    "The SF1 penalty produced its own officiating firestorm with Argentina uninvolved: Deschamps questioned whether the referee 'had the level' for a semifinal; Collina defended the official; ex-PGMOL chief Keith Hackett called the penalty correct. Added as timeline node + H4 forPoint: scrutiny is tournament-wide, not Argentina-specific.",
-    "Market flipped to Spain as clear favorite: DraftKings ESP -156 / ENG +300 / ARG +400; FanDuel -150/+280/+370; Kalshi 57.6/22.9/19.8. models.ts BOOKMAKERS refreshed asOf 2026-07-15; author ranges re-synthesized (ESP .52-.60, ENG .21-.26, ARG .17-.23, FRA 0).",
-    "Opta NOT refreshed post-SF1 at pass time (re-verified by fetch Jul 15); elimination-resolved zeros applied for France with comments; other teams keep last published figures flagged as pre-SF1. Opta's 57.7% France-to-final lean resolved to the 42.3% branch.",
-    "England v Argentina live at pass time (0-0 first half, Atlanta). England: Rice started despite illness doubt; three changes (Rogers, Spence, R. James); Henderson out (arm/wrist reported inconsistently - kept vague). Result deliberately left null.",
-    "Financial thread: no material movement; coverage is syndication of known facts. One attributed nugget added: Tapia (processed in the separate Argentine case) reportedly needed judicial authorization to travel to the US with the squad.",
-    "Hypothesis bands unchanged (H1 2-8, H2 70-90/45-65, H3 35-55, H4 30-50)."
+  "carriedForwardFromRun3": "All Run 1-3 verified facts stand: Spain 2-0 France with the disputed Digne-on-Yamal penalty (Deschamps/Collina/Hackett), market flip to Spain, Opta Jul 12 figures partially resolved by reality, Silver paywall note, penalty superlative softening, five named banks, Miami Herald ~$90M, La Nacion $260M/$57M attribution, Tofoni ~3h videoconference interview (witness, not charged), Tapia travel-authorization nugget, AFA pushback quote, no US charges, FBI declined comment.",
+  "newSinceRun3": [
+    "England 1-2 Argentina (Jul 15, Atlanta): Gordon 55'; Enzo Fernandez 85' from distance, Lautaro Martinez 90+2' header from a Messi cross. ARG dominated (64% possession, xG ~1.84 v ~0.53 per ESPN). First Argentina knockout win of the run inside 90 minutes. Final set: Spain v Argentina, Jul 19, MetLife, 3 p.m. ET.",
+    "The pre-match officiating storm fizzled: US referee Ismail Elfath was dubbed 'Messi's lucky charm' (2022-final fourth official, viral 4-0 record around Messi teams) and led the first all-US crew in a WC semifinal - then the match produced no disputed call worth a headline (Gordon's goal stood after a routine offside check). Added as timeline node england-argentina-semi + H4 forPoint: under the brightest lights so far, the pattern regressed.",
+    "Opta's SF2 preview (Jul 15) leaned England (52.3% to advance; 90-min ENG 37.3 / draw 30.7 / ARG 32.0) - the 47.7% branch happened. Both Opta slim semifinal favorites lost (57.7%, 52.3%); added as a calibration postscript to the whowins-favorite-lost section.",
+    "Final opening prices (Jul 15 evening): Caesars ESP -170 / ARG +135, bet365 -175/+125, theScore -160/+130, Kalshi 58c/43c, BetMGM 90-min ESP +125/draw +200/ARG +250. BOOKMAKERS refreshed; author ranges re-synthesized to ESP 0.55-0.60 / ARG 0.40-0.45.",
+    "No suspensions for the final on either side (yellows wiped post-QF, no reds in the semis); Spain has one extra rest day (semi Jul 14 v Jul 15) - added to the fatigue section. Messi: 8 goals (tied lead), 6th World Cup, first competitive international meeting with Lamine Yamal.",
+    "Financial thread: no material movement (re-searched); Daily Star's ~19bn pesos (~$13M) domestic-case figure consistent with the published ~$12.7M. Key date now four days out: Tapia must return to Argentina after the Jul 19 final under his travel bond.",
+    "Hypothesis bands unchanged (H1 2-8, H2 70-90/45-65, H3 35-55, H4 30-50); H4 gains its second semifinal forPoint."
   ],
   "dataChangesThisRun": [
-    "meta.lastUpdated -> 2026-07-15.",
-    "bracket.ts: sf-fra-esp result filled (FRA 0-2 ESP, winner ESP, bilingual note with scorers + disputed penalty); header comment -> one-semi snapshot; ESP rating 2020 -> 2045 (tuning comment).",
-    "models.ts: OPTA block France resolved to 0/0 and Spain reachFinal -> 1.0 by elimination/qualification (documented as arithmetic resolution, not model output); ESP/ENG/ARG title figures kept as last published with stale flag; BOOKMAKERS refreshed asOf 2026-07-15 (ESP -150/.600, ENG +280/.263, ARG +370/.213, FRA dash/0); AUTHOR_RANGES re-synthesized; MODEL_ORDER -> ESP, ENG, ARG, FRA.",
+    "meta.lastUpdated already 2026-07-15 - unchanged (same-day pass).",
+    "bracket.ts unchanged (SF2 result was already filled and ESPN-verified at 14:10 local; ESP 2045 v ARG 2000 already yields ~56/44 at nudge=0 from the final-set state).",
+    "models.ts: BOOKMAKERS refreshed to post-SF2 final prices (Caesars -170/.630, +135/.426; comment lists bet365/theScore/Kalshi and the BetMGM 90-min line); AUTHOR_RANGES -> ESP .55-.60 / ARG .40-.45; OPTA comment extended with the two resolved semifinal branches (57.7%, 52.3%).",
     "bayes.ts unchanged (bands hold).",
-    "timeline.json: new node spain-france-semi (order 11); semis-ahead headline reframed as semifinal-eve (historical); dec-raids detail + one attributed Tapia-travel sentence.",
-    "hypotheses.json h4: new forPoint (SF1 controversy, Argentina uninvolved) + ibtimes-refs source.",
-    "sections.json: whowins-intro and whowins-closing reconciled ('models say France' -> Spain favorite, France out, Opta-refresh caveat).",
-    "sources.json: added espn-fra-esp, ibtimes-refs, yahoo-hackett (tier 2) and espn-odds (tier 3)."
+    "timeline.json: new node england-argentina-semi (order 12).",
+    "hypotheses.json h4: new forPoint (SF2 clean under maximum scrutiny) + espn-eng-arg, aljazeera-elfath sources.",
+    "sections.json: whowins-intro (market now fresh, Opta-only caveat, 55-60/40-45 spoiler); whowins-favorite-lost (calibration postscript: both slim favorites lost); whowins-fatigue (streak broken in 90, Spain's extra rest day).",
+    "sources.json: added espn-eng-arg, aljazeera-elfath (tier 2), opta-eng-arg-preview, sbd-final-odds (tier 3)."
   ],
   "keySources": {
-    "espnFraEsp": "https://www.espn.com/soccer/match/_/gameId/760514/spain-france",
-    "nprFraEsp": "https://www.npr.org/2026/07/14/nx-s1-5893692/2026-world-cup-fifa-spain-france-semifinal",
-    "ibtimesRefs": "https://www.ibtimes.co.uk/controversial-officiating-spain-france-world-cup-semifinal-1808747",
-    "hackett": "https://sports.yahoo.com/articles/great-viewing-angle-ex-refs-052000744.html",
-    "espnOdds": "https://www.espn.com/espn/betting/story/_/id/48386952/espn-soccer-futbol-world-cup-betting-odds-championship-groups",
-    "siKalshi": "https://www.si.com/betting/spain-odds-to-win-world-cup-after-advancing-to-final-spain-set-as-odds-on-favorite-01kxh918s8bq",
+    "espnEngArg": "https://www.espn.com/soccer/match/_/gameId/760515/argentina-england",
+    "cbsEngArg": "https://www.cbsnews.com/news/argentina-beats-england-world-cup-final/",
+    "nprEngArg": "https://www.npr.org/2026/07/15/nx-s1-5893895/2026-world-cup-fifa-argentina-england-semifinal",
+    "aljazeeraElfath": "https://www.aljazeera.com/sports/2026/7/14/fifa-world-cup-meet-ismail-elfath-referee-for-england-argentina-semifinal",
+    "optaEngArgPreview": "https://theanalyst.com/articles/england-vs-argentina-prediction-world-cup-2026-match-preview",
+    "sbdFinalOdds": "https://www.sportsbettingdime.com/news/soccer/spain-vs-odds-world-cup-final-opening-moneyline-total/",
+    "foxFinalKnow": "https://www.foxsports.com/stories/soccer/spain-vs-england-argentina-confirmed-world-cup-final-heres-what-know",
     "opta": "https://theanalyst.com/articles/world-cup-2026-semi-final-predictions-opta-supercomputer",
     "silver": "https://www.natesilver.net/p/world-cup-2026-odds-predictions",
-    "laNacionFBI": "https://www.lanacion.com.ar/politica/agentes-del-fbi-y-fiscales-federales-toman-testimonios-para-investigar-operaciones-financieras-de-la-afa-en-estados-unidos-nid06072026/",
-    "engArgLive": "https://www.nbcnews.com/sports/soccer/live-blog/england-argentina-world-cup-2026-july-15-live-updates-rcna587325"
+    "laNacionFBI": "https://www.lanacion.com.ar/politica/agentes-del-fbi-y-fiscales-federales-toman-testimonios-para-investigar-operaciones-financieras-de-la-afa-en-estados-unidos-nid06072026/"
   }
 }

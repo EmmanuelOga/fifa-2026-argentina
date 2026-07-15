@@ -26,17 +26,17 @@
       },
       {
         "claim": {
-          "en": "Semifinal: France v Spain",
-          "es": "Semifinal: Francia v España"
+          "en": "Semifinal: France v Spain (models leaned France, 57.7% to reach the final)",
+          "es": "Semifinal: Francia v España (los modelos se inclinaban por Francia, 57,7% de llegar a la final)"
         },
-        "verdict": "pending"
+        "verdict": "miss"
       },
       {
         "claim": {
-          "en": "Semifinal: England v Argentina",
-          "es": "Semifinal: Inglaterra v Argentina"
+          "en": "Semifinal: England v Argentina (models leaned England, narrowly — 50.9%)",
+          "es": "Semifinal: Inglaterra v Argentina (los modelos se inclinaban apenas por Inglaterra — 50,9%)"
         },
-        "verdict": "pending"
+        "verdict": "miss"
       },
       {
         "claim": {
@@ -96,17 +96,17 @@
       },
       {
         "claim": {
-          "en": "Semifinal: France v Spain",
-          "es": "Semifinal: Francia v España"
+          "en": "Semifinal: France v Spain (models leaned France, 57.7% to reach the final)",
+          "es": "Semifinal: Francia v España (los modelos se inclinaban por Francia, 57,7% de llegar a la final)"
         },
-        "verdict": "pending"
+        "verdict": "miss"
       },
       {
         "claim": {
-          "en": "Semifinal: England v Argentina",
-          "es": "Semifinal: Inglaterra v Argentina"
+          "en": "Semifinal: England v Argentina (models leaned England, narrowly — 50.9%)",
+          "es": "Semifinal: Inglaterra v Argentina (los modelos se inclinaban apenas por Inglaterra — 50,9%)"
         },
-        "verdict": "pending"
+        "verdict": "miss"
       },
       {
         "claim": {
@@ -166,8 +166,8 @@
       },
       {
         "claim": {
-          "en": "Semifinal: England v Argentina",
-          "es": "Semifinal: Inglaterra v Argentina"
+          "en": "The final passes without a major officiating controversy (the last half of H4's regression test)",
+          "es": "La final pasa sin una polémica arbitral mayor (la mitad que falta de la prueba de regresión de H4)"
         },
         "verdict": "pending"
       },
@@ -181,23 +181,25 @@
     ],
     "content": {
       "en": {
-        "title": "Run 3: Spain knock out the favorites (one semi in the books)",
-        "summary": "Spain beat France 2–0 and the market flipped to Spain as the new favorite. England v Argentina was live and scoreless when this snapshot was taken.",
+        "title": "Run 3: Argentina are in the final — and the referee storm that never was",
+        "summary": "Argentina came from behind to beat England 2–1 in Atlanta. The final is Spain v Argentina, July 19 at MetLife; the market opened around 57/43 for Spain. The much-hyped 'lucky charm' referee narrative met a match with no controversy at all.",
         "body": [
-          "The bracket finally moved. Spain shut out France 2–0 in Arlington (an Oyarzabal penalty on 22 minutes, a Pedro Porro goal on 58) and is in the July 19 final. I took this snapshot with the second semifinal, England v Argentina, still in progress (scoreless in the first half in Atlanta), so that result is left blank on purpose; the next run fills it in and grades the semifinal predictions.",
-          "This is the detail the site was built for: the semifinal's refereeing controversy had nothing to do with Argentina. The disputed early penalty (Digne on Lamine Yamal, replays splitting opinion on who initiated contact) had Deschamps publicly questioning whether the referee 'had the level' for a semifinal; Collina defended the official, and former referees' chief Keith Hackett called the penalty correct on review. The previous run said the semis would stress-test the perception hypotheses. Data point one points toward variance and perception cascade (H3/H4): scrutiny follows the tournament, not one team. The hypothesis bands stay put.",
-          "The numbers moved a lot, though. With France out, the market flipped to Spain (around −150 at the big US books; prediction markets near 58%), England next, Argentina still the longest shot of the three. One caveat: Opta hadn't refreshed its model when I checked, so its pre-semi Spain figure is stale; I flagged that in the tab and re-synthesized my own speculative ranges around the market (Spain 52–60%, England 21–26%, Argentina 17–23%). Worth saying plainly: the models had France at 57.7% to reach the final, and the 42.3% branch happened. There's a longer note on the Who Wins tab about what a favorite losing does and doesn't say about the models; the short version is that one match can't refute a probability, which is why the scorecard below exists.",
-          "The money thread barely moved: no charges, the FBI still isn't commenting, and the new coverage mostly syndicates what Runs 1 and 2 established. One small attributed addition: reporting notes that AFA president Tapia, processed in the separate Argentine case, needed judicial authorization to travel to the US with the squad. The numbers now say Spain; the heart, as ever, says Argentina."
+          "Same-day update, a few hours after full time, because the blank the morning snapshot left now has an answer: Argentina 2, England 1. Anthony Gordon put England ahead on 55, Enzo Fernández equalized from distance on 85, and Lautaro Martínez headed in a Messi cross deep in stoppage time. Argentina dominated the night (64% possession, roughly 1.8 to 0.5 on expected goals) and, for the first time in this knockout run, won inside 90 minutes. So: Spain v Argentina, Sunday July 19 at MetLife.",
+          "Now the part this site exists for. Before kickoff the perception machinery was fully loaded: the referee, American Ismail Elfath, had been dubbed 'Messi's lucky charm' across social media and previews (he was fourth official at the 2022 final, and Messi's club sides had never lost with him in charge), leading the first all-US crew in a World Cup semifinal. If you wanted a night built for the favoritism narrative, this was it. What happened instead: England's goal stood after a routine offside check, no VAR intervention decided anything, and the loudest complaint in the live blogs was some early card management. The previous run said the semifinals would stress-test the perception hypotheses. Both data points are in and they cut the same way: the only genuine officiating controversy of the round happened in France v Spain, and Argentina's biggest match produced nothing. The hypothesis bands stay put; the final is the last half of that test.",
+          "The numbers: the market opened the final around Spain −170 / Argentina +135, with prediction markets near 58¢ to 43¢, so my synthesized speculative range is now Spain 55–60%, Argentina 40–45%. Opta still hadn't refreshed its main model when I checked, but its pre-match preview leaned England at 52.3%, so both of Opta's slim semifinal favorites lost inside two days. That isn't the models failing twice; a 52% favorite loses all the time. It is exactly why the Who Wins tab now carries a calibration note instead of a victory lap in either direction.",
+          "The money thread stayed quiet (no charges, no new reporting of substance, the FBI still not commenting), but its calendar just got concrete: after Sunday's final, Tapia is due back in Argentina under his travel bond, and Argentine reporting has long suggested US authorities would move, if they move, only after the tournament. The same weekend holds both threads of this site at once. The heart, for once, doesn't have to argue with the numbers about what to want: vamos.",
+          "One practical note, because I'll be watching from San Francisco. The city has free, open watch parties for Sunday's final: Yerba Buena Gardens, the Ferry Building plaza, Thrive City, China Basin Park, Pier 39, a North Beach block party on Powell Street, and Pride House SF at KQED. I put the list, with sources, on the home page. Wear the celeste y blanca."
         ]
       },
       "es": {
-        "title": "Corrida 3: España elimina al favorito (una semi ya jugada)",
-        "summary": "España le ganó 2–0 a Francia y el mercado se dio vuelta: ahora España es la clara favorita. Inglaterra v Argentina estaba en juego, sin goles, cuando saqué esta foto.",
+        "title": "Corrida 3: Argentina está en la final — y la tormenta arbitral que nunca fue",
+        "summary": "Argentina lo dio vuelta y le ganó 2–1 a Inglaterra en Atlanta. La final es España v Argentina, el 19 de julio en el MetLife; el mercado abrió más o menos 57/43 para España. El tan anunciado relato del árbitro 'amuleto' se encontró con un partido sin ninguna polémica.",
         "body": [
-          "El cuadro por fin se movió. España dejó en cero a Francia en Arlington — penal de Oyarzabal a los 22 y gol de Pedro Porro a los 58 — y ya está en la final del 19 de julio. Saqué esta foto con la segunda semifinal, Inglaterra v Argentina, literalmente en juego (sin goles en el primer tiempo en Atlanta), así que ese resultado queda en blanco a propósito; la próxima corrida lo completa y le pone nota a los pronósticos de las semis.",
-          "Y acá el detalle para el que se armó este sitio: el incendio arbitral de la semifinal no tuvo nada que ver con Argentina. El penal tempranero y discutido — de Digne a Lamine Yamal, con repeticiones que dividieron opiniones sobre quién buscó el contacto — dejó a Deschamps preguntando en público si el árbitro 'tenía el nivel' para una semifinal, mientras Collina defendió al juez y el exjefe de árbitros Keith Hackett dijo, tras revisar las imágenes, que el penal estuvo bien cobrado. La corrida anterior decía que las semis iban a poner a prueba las hipótesis de percepción bajo las luces más brillantes. Llegó el primer dato, y apunta a la varianza y la cascada de percepción (H3/H4): la lupa sigue al torneo, no a una camiseta. Las bandas de las hipótesis no se mueven.",
-          "Los números, en cambio, se movieron un montón. Con Francia afuera, el mercado se dio vuelta y puso a España como clara favorita (alrededor de −150 en las casas grandes de EE.UU.; los mercados de predicción cerca del 58%), con Inglaterra después y Argentina como la que paga más de las tres. Una aclaración honesta: Opta no había actualizado su modelo cuando saqué la foto, así que su número pre-semi de España queda viejo y bajo al lado del mercado — lo dejé marcado en la pestaña y rearmé mis propios rangos especulativos alrededor del mercado (España 52–60%, Inglaterra 21–26%, Argentina 17–23%). Y vale decirlo sin vueltas: los modelos tenían a Francia con 57,7% de llegar a la final, y pasó la rama del 42,3%. Agregué una nota más larga en la pestaña ¿Quién Gana? sobre lo que la caída de una favorita dice — y no dice — de los modelos; la versión corta: un partido no puede refutar una probabilidad, y justo por eso existe la libreta de calificaciones de acá abajo.",
-          "El hilo de la plata no se movió en serio — sin cargos, el FBI sigue sin comentar, y la cobertura nueva es más que nada sindicación de lo que las Corridas 1 y 2 ya habían establecido. Una sola adición chica y atribuida: la prensa señala que el presidente de la AFA, Tapia, procesado en la causa argentina que va por separado, necesitó autorización judicial para viajar a EE.UU. con el plantel. Los números ahora dicen España; el corazón, como siempre, dice Argentina."
+          "Actualización del mismo día, escrita unas horas después del pitazo final, porque lo que la foto de la mañana dejó en blanco ya tiene respuesta: Argentina 2, Inglaterra 1. Anthony Gordon puso en ventaja a Inglaterra a los 55, Enzo Fernández empató desde afuera a los 85, y Lautaro Martínez cabeceó un centro de Messi bien entrado el descuento. Argentina dominó la noche — 64% de posesión y más o menos 1,8 a 0,5 en goles esperados — y, por primera vez en este mata-mata, ganó en los 90 minutos. La final quedó definida: España v Argentina, el domingo 19 de julio en el MetLife.",
+          "Ahora la parte para la que existe este sitio. Antes del partido, la maquinaria de la percepción venía cargada al máximo: al árbitro, el estadounidense Ismail Elfath, lo habían bautizado 'el amuleto de Messi' en redes y previas (fue cuarto árbitro en la final de 2022, y los equipos de Messi a nivel clubes nunca perdieron con él dirigiendo), al frente de la primera terna toda estadounidense en una semifinal de Mundial. Si querías una noche servida para el relato del favoritismo, era esta. Lo que pasó en cambio: el gol de Inglaterra quedó convalidado tras un chequeo de offside de rutina, ninguna intervención del VAR definió nada, y la queja más fuerte de los relatos en vivo fue el manejo de tarjetas del arranque. La corrida anterior decía que las semifinales iban a poner a prueba las hipótesis de percepción. Ya están los dos datos, y los dos cortan para el mismo lado: el único incendio real de la ronda cayó en Francia–España, y el partido más grande de Argentina en el torneo no dejó nada. Las bandas de las hipótesis no se mueven — la final es la mitad que falta de esa prueba.",
+          "Los números: el mercado abrió la final alrededor de España −170 / Argentina +135, con los mercados de predicción cerca de 58¢ contra 43¢, así que mi rango especulativo sintetizado queda en España 55–60%, Argentina 40–45%. Opta seguía sin actualizar su modelo principal cuando revisé, pero su previa del partido se inclinaba por Inglaterra con 52,3% — o sea que los dos favoritos por poquito de Opta en las semis perdieron en el lapso de dos días. Eso no es 'los modelos pifiándola dos veces': las casi-monedas caen del otro lado todo el tiempo. Pero sí es exactamente el motivo por el que la pestaña ¿Quién Gana? ahora lleva una nota de calibración en vez de una vuelta olímpica para cualquiera de los dos lados.",
+          "El hilo de la plata siguió quieto — sin cargos, sin cobertura nueva de sustancia, el FBI sin comentar — pero su calendario se volvió muy concreto: después de la final del domingo, Tapia tiene que volver a Argentina por su permiso de viaje, y la prensa argentina viene sugiriendo hace rato que las autoridades de EE.UU. se moverían, si se mueven, recién después del torneo. Así que el mismo fin de semana junta los dos hilos de este sitio a la vez. El corazón, por una vez, no tiene que discutir con los números sobre qué desear: vamos.",
+          "Una nota práctica, porque la final la voy a ver desde San Francisco: la ciudad tiene watch parties gratuitas y abiertas para el domingo — Yerba Buena Gardens, la plaza del Ferry Building, Thrive City, China Basin Park, Pier 39, una fiesta de cuadra en North Beach sobre la calle Powell, y Pride House SF en KQED. Dejé la lista, con fuentes, en la página de inicio. Andá con la celeste y blanca puesta."
         ]
       }
     }

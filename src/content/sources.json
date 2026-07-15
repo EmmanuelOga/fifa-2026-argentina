@@ -230,6 +230,26 @@
     }
   },
   {
+    "id": "espn-eng-arg",
+    "order": 35,
+    "tier": 2,
+    "url": "https://www.espn.com/soccer/match/_/gameId/760515/argentina-england",
+    "content": {
+      "en": { "title": "ESPN — England 1–2 Argentina semifinal match report", "why": "Independent record of semifinal 2: Gordon's opener, the Fernández and Martínez comeback, referee Ismail Elfath, and the xG gap (1.84 v 0.53)." },
+      "es": { "title": "ESPN — crónica de la semifinal Inglaterra 1–2 Argentina", "why": "Registro independiente de la segunda semi: el gol de Gordon, la remontada de Fernández y Martínez, el árbitro Ismail Elfath y la diferencia de xG (1,84 a 0,53)." }
+    }
+  },
+  {
+    "id": "aljazeera-elfath",
+    "order": 36,
+    "tier": 2,
+    "url": "https://www.aljazeera.com/sports/2026/7/14/fifa-world-cup-meet-ismail-elfath-referee-for-england-argentina-semifinal",
+    "content": {
+      "en": { "title": "Al Jazeera — meet Ismail Elfath, the semifinal referee", "why": "Documents the pre-match 'Messi's lucky charm' narrative around the US referee — the perception storm that preceded a match with no officiating firestorm." },
+      "es": { "title": "Al Jazeera — quién es Ismail Elfath, el árbitro de la semifinal", "why": "Documenta el relato previo del 'amuleto de Messi' alrededor del árbitro estadounidense — la tormenta de percepción que precedió a un partido sin incendio arbitral." }
+    }
+  },
+  {
     "id": "opta",
     "order": 40,
     "tier": 3,
@@ -267,6 +287,26 @@
     "content": {
       "en": { "title": "ESPN Betting — championship odds after France's elimination", "why": "The market snapshot behind the Jul 15 refresh: Spain odds-on at DraftKings (−156), England +300, Argentina +400." },
       "es": { "title": "ESPN Betting — cuotas de campeón tras la eliminación de Francia", "why": "La foto del mercado detrás de la actualización del 15/7: España pagando menos que la apuesta en DraftKings (−156), Inglaterra +300, Argentina +400." }
+    }
+  },
+  {
+    "id": "opta-eng-arg-preview",
+    "order": 44,
+    "tier": 3,
+    "url": "https://theanalyst.com/articles/england-vs-argentina-prediction-world-cup-2026-match-preview",
+    "content": {
+      "en": { "title": "Opta / The Analyst — England v Argentina match preview", "why": "Opta's Jul 15 pre-match numbers: England to advance in 52.3% of simulations. The 47.7% branch happened — the second slim favorite to fall in two days." },
+      "es": { "title": "Opta / The Analyst — la previa de Inglaterra v Argentina", "why": "Los números de Opta del 15/7 antes del partido: Inglaterra avanzaba en el 52,3% de las simulaciones. Pasó la rama del 47,7% — el segundo favorito por poquito que se cae en dos días." }
+    }
+  },
+  {
+    "id": "sbd-final-odds",
+    "order": 45,
+    "tier": 3,
+    "url": "https://www.sportsbettingdime.com/news/soccer/spain-vs-odds-world-cup-final-opening-moneyline-total/",
+    "content": {
+      "en": { "title": "Sports Betting Dime — Spain v Argentina final opening odds", "why": "The post-semifinal market snapshot (Jul 15 evening): Spain around −160/−175 to lift the trophy, Argentina +125/+135; Kalshi 58¢ v 43¢." },
+      "es": { "title": "Sports Betting Dime — cuotas de apertura de la final España v Argentina", "why": "La foto del mercado tras las semis (15/7 a la noche): España alrededor de −160/−175 para levantar la copa, Argentina +125/+135; Kalshi 58¢ contra 43¢." }
     }
   },
   {

@@ -79,7 +79,7 @@
       "en": {
         "headline": "The rumors? Let's get that out of the way.",
         "short": "Disputed calls, favoritism talk, an FBI money story — I did the homework so you don't have to squint.",
-        "full": "You've probably heard the noise: disputed calls, favoritism talk, an FBI money story. Instead of shrugging I did the homework — a timeline of what actually happened, and an honest probability on every hypothesis — so we can look it in the eye and then get back to the football.",
+        "full": "You've probably heard the noise: disputed calls, favoritism talk, an FBI money story. Instead of shrugging I did the homework (a timeline of what actually happened, and an honest probability on every hypothesis) so we can look it in the eye and then get back to the football.",
         "body": []
       },
       "es": {
@@ -433,13 +433,13 @@
       "en": {
         "headline": "Who wins?",
         "short": "The final is set: Spain v Argentina. The numbers say Spain; the heart says Argentina. Both can be honest.",
-        "full": "The final is set: Spain v Argentina, July 19 at MetLife. Spain shut out France; Argentina came from behind to beat England 2–1. To answer 'who wins' I triangulate three independent sources (Opta, Nate Silver's model, the betting market), then give my own synthesized ranges. One caveat: the models and market numbers below are from before Argentina's win, so they lag the bracket; the next run refreshes them. Spoiler: the numbers favor Spain, and my heart favors Argentina. This tab is about holding both without lying to yourself.",
+        "full": "The final is set: Spain v Argentina, July 19 at MetLife. Spain shut out France; Argentina came from behind to beat England 2–1. To answer 'who wins' I triangulate three independent sources (Opta, Nate Silver's model, the betting market), then give my own synthesized ranges. The market prices below are from the evening after Argentina's win; the one caveat is Opta, which hadn't published a post-semifinal refresh at snapshot time, so its figures lag the bracket. Spoiler: the numbers favor Spain, roughly 55–60 to 40–45, and my heart favors Argentina. This tab is about holding both without lying to yourself.",
         "body": []
       },
       "es": {
         "headline": "¿Quién gana?",
         "short": "Final definida: España v Argentina. Los números dicen España; el corazón dice Argentina. Ambos pueden ser honestos.",
-        "full": "La final ya está definida: España v Argentina, el 19 de julio en el MetLife. España dejó en cero a Francia; Argentina lo dio vuelta y le ganó 2–1 a Inglaterra. Para responder '¿quién gana?' triangulo tres fuentes independientes (Opta, el modelo de Nate Silver y el mercado de apuestas) y después doy mis propios rangos sintetizados. Una aclaración: los números de los modelos y del mercado de acá abajo son de antes del triunfo argentino, así que van detrás del cuadro; la próxima corrida los actualiza. Adelanto: los números favorecen a España, y mi corazón favorece a Argentina. Esta pestaña es sobre sostener ambas cosas sin mentirte.",
+        "full": "La final ya está definida: España v Argentina, el 19 de julio en el MetLife. España dejó en cero a Francia; Argentina lo dio vuelta y le ganó 2–1 a Inglaterra. Para responder '¿quién gana?' triangulo tres fuentes independientes (Opta, el modelo de Nate Silver y el mercado de apuestas) y después doy mis propios rangos sintetizados. Los precios del mercado de acá abajo son frescos, de la misma noche del triunfo argentino; queda una sola aclaración — Opta todavía no había publicado su actualización pos-semifinales cuando saqué la foto, así que sus números siguen yendo detrás del cuadro. Adelanto: los números favorecen a España, más o menos 55–60 contra 40–45, y mi corazón favorece a Argentina. Esta pestaña es sobre sostener ambas cosas sin mentirte.",
         "body": []
       }
     }
@@ -466,14 +466,14 @@
     "content": {
       "en": {
         "headline": "The un-glamorous fade factor",
-        "short": "Argentina has played three straight 120-minute matches. That's real, and it isn't a conspiracy.",
-        "full": "If Argentina fades, the boring explanation is the most likely one: three straight knockouts to 120 minutes is a lot of legs, no whistle required. It's the kind of concrete, non-conspiratorial factor worth naming before reaching for anything exotic.",
+        "short": "Three straight 120-minute matches before the semi, and one day less rest than Spain. Real, and not a conspiracy.",
+        "full": "If Argentina fades, the boring explanation is the most likely one: three straight knockouts to 120 minutes is a lot of legs, no whistle required. The England win, the first of the run to end inside 90, eases the streak but doesn't erase it, and Spain reaches the final with an extra day of rest (their semi was July 14, Argentina's the 15th). It's the kind of concrete, non-conspiratorial factor worth naming before reaching for anything exotic.",
         "body": []
       },
       "es": {
         "headline": "El factor de caída poco glamoroso",
-        "short": "Argentina jugó tres partidos seguidos de 120 minutos. Eso es real, y no es una conspiración.",
-        "full": "Si Argentina se cae, la explicación aburrida es la más probable: tres eliminaciones directas seguidas hasta los 120 minutos son un montón de piernas gastadas. Sin ningún pitazo de por medio. Es justo el tipo de factor concreto y nada conspirativo que conviene nombrar antes de salir a buscar algo más exótico.",
+        "short": "Tres partidos seguidos de 120 minutos antes de la semi, y un día menos de descanso que España. Real, y no es conspiración.",
+        "full": "Si Argentina se cae, la explicación aburrida es la más probable: tres eliminaciones directas seguidas hasta los 120 minutos son un montón de piernas gastadas. Sin ningún pitazo de por medio. El triunfo ante Inglaterra por fin llegó en los 90 — el primero de la campaña — lo que alivia la racha pero no la borra, y España llega a la final con un día más de descanso (su semi fue el 14 de julio; la de Argentina, el 15). Es justo el tipo de factor concreto y nada conspirativo que conviene nombrar antes de salir a buscar algo más exótico.",
         "body": []
       }
     }
@@ -487,7 +487,8 @@
         "full": "France is out, and France was everyone's favorite. It's tempting to read that as 'the models failed', but a probability is not a promise. Opta's last pre-semifinal run gave France a 34% title chance and 57.7% to reach the final. Flip those: the same model said France would probably not win the trophy (66%) and gave better than 4-in-10 odds (42.3%) that they'd fall right here. The less likely branch happened; that's what probabilities do.",
         "body": [
           "The 'everyone predicted France' feeling is mostly a compression artifact. A model that says 34%, merely the biggest number in a four-team field, gets headlined as 'France will win', and the hedge dies in translation. What the numbers actually said: nobody clears 50%, France leads a tight pack. One match can't refute that claim, and it can't vindicate it either. If Spain wins the final, that won't prove the market 'right' any more than Monday proved Opta 'wrong'.",
-          "So how do you catch a genuinely bad forecaster? Calibration over volume: of all the times they say 60%, do those things happen about 60% of the time? That's the test this site signs up for. Every probability here is on the record in the Blog with a snapshot date, and after the final I'll score the lot with a Brier score, no grading on a curve. A forecast you never score is just vibes with decimals."
+          "So how do you catch a genuinely bad forecaster? Calibration over volume: of all the times they say 60%, do those things happen about 60% of the time? That's the test this site signs up for. Every probability here is on the record in the Blog with a snapshot date, and after the final I'll score the lot with a Brier score, no grading on a curve. A forecast you never score is just vibes with decimals.",
+          "Postscript, one day later: it happened again. Opta's pre-match model leaned England in semifinal 2, 52.3% to advance, and Argentina won. Two semifinals, two slim favorites down (57.7% and 52.3%). That's not the models 'blowing it twice'; near-coin-flips land on the other face all the time, and a 52% call losing is barely information. It is, though, the kind of run that gets headlined 'the models keep failing', which is why the paragraph above insists on scoring claims in bulk, not one dramatic branch at a time."
         ]
       },
       "es": {
@@ -496,7 +497,8 @@
         "full": "Francia quedó afuera, y Francia era la favorita de todos. Es tentador leerlo como 'los modelos fallaron' — pero una probabilidad no es una promesa. La última corrida pre-semifinales de Opta le daba a Francia 34% de título y 57,7% de llegar a la final. Dalo vuelta: el mismo modelo decía que lo más probable era que Francia no levantara la copa (66%), y le daba más de 4 chances en 10 (42,3%) de caerse justo acá. Pasó la rama menos probable. Eso no es el modelo equivocándose; es el modelo haciendo lo que hacen las probabilidades.",
         "body": [
           "La sensación de que 'todos predijeron a Francia' es más que nada un artefacto de compresión. Un modelo que dice 34% — apenas el número más grande entre cuatro selecciones — termina titulado como 'Francia va a ganar', y el matiz se muere en la traducción. Lo que los números decían en realidad era otra cosa: ninguna llega al 50%; Francia encabeza un pelotón apretado. Un partido no puede refutar esa afirmación — y, para ser honestos en las dos direcciones, un partido tampoco puede confirmarla. Si ahora España gana la final, eso no le va a dar la razón al mercado, igual que lo del lunes no se la quitó a Opta.",
-          "¿Entonces cómo agarrás a un pronosticador verdaderamente malo? Calibración, con volumen: de todas las veces que dice 60%, ¿esas cosas pasan más o menos el 60% de las veces? Ese es el examen al que este sitio se anota solo. Cada probabilidad publicada acá queda registrada en el Blog con su fecha de foto, y después de la final les voy a poner nota a todas — puntaje de Brier, sin regalar puntos. Un pronóstico que nunca se califica es puro pálpito con decimales."
+          "¿Entonces cómo agarrás a un pronosticador verdaderamente malo? Calibración, con volumen: de todas las veces que dice 60%, ¿esas cosas pasan más o menos el 60% de las veces? Ese es el examen al que este sitio se anota solo. Cada probabilidad publicada acá queda registrada en el Blog con su fecha de foto, y después de la final les voy a poner nota a todas — puntaje de Brier, sin regalar puntos. Un pronóstico que nunca se califica es puro pálpito con decimales.",
+          "Posdata, un día después: pasó de nuevo. El modelo de Opta antes del partido se inclinaba por Inglaterra en la segunda semifinal — 52,3% de avanzar — y ganó Argentina. Dos semifinales, dos favoritos por poquito que se caen (57,7% y 52,3%). Eso no es 'los modelos pifiándola dos veces': las casi-monedas caen del otro lado todo el tiempo, y que pierda un 52% casi no es información. Pero es justo el tipo de racha que hace que los títulos digan 'los modelos siguen fallando' — y por eso el párrafo de arriba insiste en calificar afirmaciones al por mayor, y no una rama dramática por vez."
         ]
       }
     }
@@ -617,7 +619,7 @@
       "en": {
         "headline": "Sources & fine print",
         "short": "Every source, plus the bias disclosure, the caveats and the open questions — one calm page.",
-        "full": "Everything on this site traces to something here — and this is also where the fine print lives: who's writing, what to keep in mind, and what's still open. Sources are grouped by reliability tier (primary and legal first, then quality journalism, data and models, academic work, and historical context), each with a line on why it matters. Where I couldn't verify a link, I say so.",
+        "full": "Everything on this site traces to something here, and this is also where the fine print lives: who's writing, what to keep in mind, and what's still open. Sources are grouped by reliability tier (primary and legal first, then quality journalism, data and models, academic work, and historical context), each with a line on why it matters. Where I couldn't verify a link, I say so.",
         "body": []
       },
       "es": {

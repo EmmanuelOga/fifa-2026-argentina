@@ -22,9 +22,11 @@ export interface TeamProb {
  *     France title/reachFinal → 0 (out Jul 14), England title/reachFinal → 0
  *     (out Jul 15), Spain and Argentina reachFinal → 1 (the final is set);
  *   - Opta's last PUBLISHED title figures for ESP/ARG, which predate the semis —
- *     Spain's 23.4% is stale-low versus the post-SF1 market (~57%). Reconcile when
- *     Opta publishes its final-stage refresh. (Its 57.7% France-to-final lean
- *     resolved to the 42.3% branch — noted honestly in the prose.)
+ *     Spain's 23.4% is stale-low versus the post-semis market (~55–60%). Reconcile
+ *     when Opta publishes its final-stage refresh. Calibration footnote for the
+ *     prose: both of Opta's slim semifinal favorites lost — France (57.7% to reach
+ *     the final, Jul 12 article) and England (52.3% to advance, Jul 15 match
+ *     preview) — so the 42.3% and 47.7% branches happened back-to-back.
  */
 export const OPTA = {
   asOf: '2026-07-15',
@@ -62,26 +64,27 @@ export const SILVER = {
 export const BOOKMAKERS = {
   asOf: '2026-07-15',
   url: 'https://www.oddschecker.com/us/soccer/world-cup',
-  source: 'DraftKings / FanDuel (via ESPN & SI)',
-  /** Post-SF1 prices (Spain odds-on after the 2–0 over France; Kalshi 57.6%).
-   *  England and France eliminated — no outright price exists, shown as a dash
-   *  with implied 0. ESP/ARG prices predate Argentina's Jul 15 semifinal win and
-   *  will have repriced — refresh on the next research run. */
+  source: 'Caesars / bet365 / Kalshi (via Sports Betting Dime, Jul 15 evening)',
+  /** Post-SF2 opening prices for the Spain–Argentina final (Jul 15 evening, after
+   *  Argentina's 2–1 over England): Caesars ESP −170 / ARG +135; bet365 −175/+125;
+   *  theScore −160/+130; Kalshi 58¢ v 43¢. England and France eliminated — no
+   *  outright price exists, shown as a dash with implied 0. With one match left,
+   *  title odds ≈ final-match odds. */
   teams: {
-    ESP: { code: 'ESP', american: '-150', implied: 0.6 },
-    ARG: { code: 'ARG', american: '+370', implied: 0.213 },
+    ESP: { code: 'ESP', american: '-170', implied: 0.63 },
+    ARG: { code: 'ARG', american: '+135', implied: 0.426 },
     ENG: { code: 'ENG', american: '—', implied: 0 },
     FRA: { code: 'FRA', american: '—', implied: 0 },
   },
 };
 
-/** Author's synthesized SPECULATIVE title ranges (0..1). Triangulates the above —
- *  post-SF1 the market and prediction markets carry most of the weight, since
- *  Opta's refresh was still pending at snapshot time. France and England resolved
- *  to 0. ESP/ARG bands predate the Jul 15 semifinal — next research run re-synthesizes. */
+/** Author's synthesized SPECULATIVE title ranges (0..1). Re-synthesized Jul 15
+ *  evening for the final-set state (one match left): overround-normalized books
+ *  land near 59/41, Kalshi near 57/43, and the Elo bracket at nudge=0 gives
+ *  ~56/44; Opta's refresh was still pending. France and England resolved to 0. */
 export const AUTHOR_RANGES: Record<string, { low: number; high: number }> = {
-  ESP: { low: 0.52, high: 0.6 },
-  ARG: { low: 0.17, high: 0.23 },
+  ESP: { low: 0.55, high: 0.6 },
+  ARG: { low: 0.4, high: 0.45 },
   ENG: { low: 0, high: 0 },
   FRA: { low: 0, high: 0 },
 };

@@ -277,5 +277,31 @@
         "detail": "El árbitro salvadoreño Iván Barton marcó el punto cuando Lucas Digne enganchó a Lamine Yamal en el área; las repeticiones dividieron opiniones — algunos analistas dijeron que Yamal buscó el contacto — y el VAR no intervino. Deschamps preguntó después si el árbitro 'tenía el nivel' para una semifinal de Mundial; Pierluigi Collina, el jefe de arbitraje de la FIFA, defendió al juez, y el exjefe de los árbitros ingleses Keith Hackett analizó las imágenes y dijo que el penal estuvo bien cobrado. España dominó el partido con claridad (más o menos 1,6 a 0,3 en xG según ESPN) y recibió un solo gol en todo el torneo. Por qué importa acá: el nodo anterior de esta línea de tiempo anticipaba que las semifinales iban a poner a prueba las hipótesis de percepción bajo las luces más brillantes. Ya llegó el primer dato — la polémica arbitral más ruidosa de la ronda cayó en un Francia–España, no en un partido de Argentina. Es justo lo que esperan las lecturas de varianza más percepción (H3/H4)."
       }
     }
+  },
+  {
+    "id": "england-argentina-semi",
+    "order": 12,
+    "date": "2026-07-15",
+    "thread": "sporting",
+    "icon": "🏟️",
+    "sources": [
+      "espn-eng-arg",
+      "aljazeera-elfath",
+      "opta-eng-arg-preview"
+    ],
+    "content": {
+      "en": {
+        "headline": "Semifinal 2: England 1–2 Argentina — the 'lucky charm' storm that fizzled",
+        "short": "Argentina come from behind to reach the final, and the match everyone pre-loaded with a referee narrative ends with no officiating controversy.",
+        "full": "Argentina beat England 2–1 in Atlanta to reach the July 19 final against Spain: Anthony Gordon on 55, then Enzo Fernández from distance on 85 and a Lautaro Martínez header from a Messi cross in stoppage time. The refereeing subplot arrived before kickoff, when US referee Ismail Elfath was dubbed 'Messi's lucky charm', and then the match gave the narrative nothing to eat.",
+        "detail": "The narrative arrived pre-loaded: Elfath, leading the first all-US crew in a World Cup semifinal with compatriots Corey Parker and Kyle Atkins (an English referee can't take an Argentina match by convention), carried a viral 'lucky charm' record around Messi's teams, including fourth-official duty at the 2022 final. What actually happened: England's goal stood after a routine offside check, no VAR intervention decided anything, live blogs grumbled mildly about early card management, and Argentina won late while dominating the ball (64% possession, roughly 1.8 to 0.5 on xG per ESPN), their first knockout win this tournament inside 90 minutes. The semifinal-eve node asked whether the officiating pattern would regress once the stakes rose. Across both semifinals it did: the round's one real firestorm was the France v Spain penalty, and Argentina's biggest match of the tournament left nothing to dispute. That's the H3/H4 branch of the test. One more honest data point: Opta's pre-match model gave England 52.3% to advance, and for the second time in two days the narrow favorite went out."
+      },
+      "es": {
+        "headline": "Semifinal 2: Inglaterra 1–2 Argentina — la tormenta del 'amuleto' que quedó en nada",
+        "short": "Argentina lo da vuelta y está en la final — y el partido que venía precargado con un relato arbitral termina sin ninguna polémica de arbitraje.",
+        "full": "Argentina le ganó 2–1 a Inglaterra en Atlanta y jugará la final del 19 de julio contra España: Anthony Gordon a los 55, y después Enzo Fernández desde afuera a los 85 y un cabezazo de Lautaro Martínez, tras centro de Messi, en el descuento. La subtrama arbitral llegó antes del pitazo inicial — al árbitro estadounidense Ismail Elfath lo bautizaron 'el amuleto de Messi' — y después el partido no le dio nada de comer al relato.",
+        "detail": "La maquinaria de la percepción venía cargada al máximo: Elfath (con sus compatriotas Corey Parker y Kyle Atkins, la primera terna toda estadounidense en una semifinal de Mundial — por convención, un árbitro inglés no puede dirigir a Argentina) llegaba con un historial viral de 'amuleto' alrededor de los equipos de Messi, incluida su tarea de cuarto árbitro en la final de 2022. Lo que pasó de verdad: el gol de Inglaterra quedó convalidado tras un chequeo de offside de rutina, ninguna intervención del VAR definió nada, los relatos en vivo apenas refunfuñaron por el manejo de tarjetas del arranque, y Argentina lo ganó sobre el final dominando la pelota (64% de posesión, más o menos 1,8 a 0,5 en xG según ESPN) — su primer triunfo del mata-mata en 90 minutos en este torneo. El nodo de la previa preguntaba si el patrón arbitral iba a volver a la media bajo las luces más brillantes. En las dos semifinales, volvió: el único incendio real de la ronda cayó en Francia–España, y el partido más grande de Argentina en el torneo no dejó ni un fallo discutido digno de título. Esa es la rama H3/H4 de la prueba. Un dato honesto más: el modelo de Opta antes del partido se inclinaba por Inglaterra — 52,3% de avanzar. El segundo favorito por poquito que se cae en dos días."
+      }
+    }
   }
 ]

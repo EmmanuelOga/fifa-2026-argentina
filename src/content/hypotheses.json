@@ -164,7 +164,9 @@
     "sources": [
       "fifa-collina-statement",
       "ifab-laws",
-      "ibtimes-refs"
+      "ibtimes-refs",
+      "espn-eng-arg",
+      "aljazeera-elfath"
     ],
     "content": {
       "en": {
@@ -176,7 +178,8 @@
           "Three straight one-goal / extra-time knockouts naturally breed 'rub of the green' stories.",
           "Correct rule-based explanations existed for the viral moments (the Cape Verde restart, the Embolo dive).",
           "Collina's on-record rejection of bias is a direct, accountable statement, not spin.",
-          "Semifinal 1 brought its own disputed penalty (Spain's opener against France) without Argentina on the pitch: the outrage goes wherever the World Cup goes."
+          "Semifinal 1 brought its own disputed penalty (Spain's opener against France) without Argentina on the pitch: the outrage goes wherever the World Cup goes.",
+          "Semifinal 2 was the cleanest test yet: a pre-loaded 'lucky charm' narrative about the referee, then a match with no disputed call worth a headline. Argentina won it late while dominating on xG. In their biggest match yet, the pattern regressed to the mean."
         ],
         "againstPoints": [
           "The penalty outlier stubbornly persists across two tournaments.",
@@ -194,7 +197,8 @@
           "Tres eliminatorias seguidas por un gol o en el alargue arman solas el relato de la 'suerte del campeón'.",
           "Los momentos virales tenían su explicación reglamentaria correcta (la reanudación ante Cabo Verde, el clavado de Embolo).",
           "Que Collina rechace el sesgo, y quede en actas, es una declaración directa y que se hace cargo, no verso.",
-          "La primera semifinal trajo su propio incendio por un penal — el discutido de España ante Francia — con Argentina bien lejos: la lupa sigue al torneo, no a una camiseta."
+          "La primera semifinal trajo su propio incendio por un penal — el discutido de España ante Francia — con Argentina bien lejos: la lupa sigue al torneo, no a una camiseta.",
+          "La segunda semifinal fue la prueba más limpia hasta ahora: un relato precargado del 'amuleto' sobre el árbitro, y después un partido sin un solo fallo discutido digno de título — Argentina lo ganó sobre el final dominando en xG. Bajo las luces más brillantes hasta acá, el patrón volvió a la media."
         ],
         "againstPoints": [
           "El dato atípico de los penales sigue ahí, cabezadura, en dos torneos.",
