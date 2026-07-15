@@ -19,7 +19,10 @@ export default defineConfig({
   site: SITE,
   base: BASE,
   trailingSlash: 'ignore',
-  build: { format: 'directory' },
+  // Never inline scripts: the CSP in public/_headers is script-src 'self' (no
+  // 'unsafe-inline'), so every script must ship as an external hashed file.
+  build: { format: 'directory', inlineStylesheets: 'never' },
+  vite: { build: { assetsInlineLimit: 0 } },
   i18n: {
     locales: ['en', 'es'],
     defaultLocale: 'en',

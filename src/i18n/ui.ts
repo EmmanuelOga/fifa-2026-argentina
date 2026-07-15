@@ -65,6 +65,7 @@ type Dict = {
     unanswered: string;
     unavailable: string;
     error: string;
+    rateLimited: string;
     sourcesLabel: string;
     youLabel: string;
     botLabel: string;
@@ -153,6 +154,8 @@ export const UI: Record<Locale, Dict> = {
       unavailable:
         'The live chat needs the Cloudflare deployment (with an API key configured). In the meantime, browse the tabs or reach out on LinkedIn.',
       error: 'Something went wrong reaching the assistant. Please try again.',
+      rateLimited:
+        'Easy there! That’s a lot of questions in a row — give it a few minutes and try again.',
       sourcesLabel: 'Sources',
       youLabel: 'You',
       botLabel: 'La Alegría',
@@ -236,6 +239,8 @@ export const UI: Record<Locale, Dict> = {
       unavailable:
         'El chat en vivo necesita el despliegue en Cloudflare (con una API key configurada). Mientras tanto, recorré las pestañas o escribime por LinkedIn.',
       error: 'Algo salió mal al contactar al asistente. Probá de nuevo.',
+      rateLimited:
+        '¡Tranquilo, che! Son muchas preguntas seguidas — esperá unos minutos y probá de nuevo.',
       sourcesLabel: 'Fuentes',
       youLabel: 'Vos',
       botLabel: 'La Alegría',

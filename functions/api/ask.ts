@@ -9,16 +9,28 @@
  * raw fetch (the appropriate choice where the npm SDK isn't bundled).
  *
  * Bindings (set in the Cloudflare Pages project — see README "Deploy"):
- *   ANTHROPIC_API_KEY  (secret)   — required; without it the endpoint returns 503
- *                                    and the UI shows a graceful fallback.
- *   CHAT_MODEL         (var)      — optional; defaults to claude-opus-4-8.
- *   QUESTIONS          (KV)       — optional; unanswered questions are logged here.
+ *   ANTHROPIC_API_KEY    (secret) — required; without it the endpoint returns 503
+ *                                   and the UI shows a graceful fallback.
+ *   TURNSTILE_SECRET_KEY (secret) — optional; when set, every request must carry a
+ *                                   valid Cloudflare Turnstile token (bot protection).
+ *   CHAT_MODEL           (var)    — optional; defaults to claude-opus-4-8.
+ *   QUESTIONS            (KV)     — optional; unanswered questions are logged here,
+ *                                   and the same namespace backs the rate limiter.
+ *
+ * Abuse guards (all skipped gracefully when their binding is absent):
+ *   - Turnstile server-side verification (needs TURNSTILE_SECRET_KEY).
+ *   - Per-IP limit:  PER_IP_HOURLY questions per rolling hour  → 429.
+ *   - Daily breaker: DAILY_LIMIT questions per UTC day, site-wide → 503
+ *     ({available:false}, which the UI renders as the graceful fallback).
+ *   KV is eventually consistent, so these are coarse caps, not exact meters —
+ *   the hard money guarantee is the Anthropic Console workspace spend limit.
  */
 // @ts-ignore - JSON import is bundled by the Pages build
 import corpus from './corpus.json';
 
 interface Env {
   ANTHROPIC_API_KEY?: string;
+  TURNSTILE_SECRET_KEY?: string;
   CHAT_MODEL?: string;
   QUESTIONS?: KVNamespace;
 }
@@ -26,6 +38,35 @@ interface Env {
 interface AskBody {
   question?: string;
   locale?: 'en' | 'es';
+  turnstileToken?: string;
+}
+
+/** Coarse abuse caps. Tune freely; the Console spend limit is the hard stop. */
+const PER_IP_HOURLY = 10;
+const DAILY_LIMIT = 100;
+
+/** Verify a Turnstile token with Cloudflare. Fail closed on invalid, open on outage. */
+async function turnstileOk(secret: string, token: string, ip: string): Promise<boolean> {
+  try {
+    const res = await fetch('https://challenges.cloudflare.com/turnstile/v0/siteverify', {
+      method: 'POST',
+      headers: { 'content-type': 'application/json' },
+      body: JSON.stringify({ secret, response: token, remoteip: ip }),
+    });
+    if (!res.ok) return true; // siteverify outage: don't take the chat down
+    const data = (await res.json()) as { success?: boolean };
+    return data.success === true;
+  } catch {
+    return true;
+  }
+}
+
+/** Increment a KV counter and report whether it exceeded `limit`. */
+async function overLimit(kv: KVNamespace, key: string, limit: number, ttl: number): Promise<boolean> {
+  const count = parseInt((await kv.get(key)) ?? '0', 10);
+  if (count >= limit) return true;
+  await kv.put(key, String(count + 1), { expirationTtl: ttl });
+  return false;
 }
 
 const json = (data: unknown, status = 200) =>
@@ -50,6 +91,29 @@ export const onRequestPost: PagesFunction<Env> = async ({ request, env }) => {
   if (!env.ANTHROPIC_API_KEY) {
     // Graceful degradation: the UI renders a fallback message + LinkedIn link.
     return json({ available: false }, 503);
+  }
+
+  const ip = request.headers.get('CF-Connecting-IP') ?? 'unknown';
+
+  // Bot gate: when Turnstile is configured, a valid token is mandatory.
+  if (env.TURNSTILE_SECRET_KEY) {
+    const token = (body.turnstileToken ?? '').trim();
+    if (!token || !(await turnstileOk(env.TURNSTILE_SECRET_KEY, token, ip))) {
+      return json({ error: 'captcha_failed' }, 403);
+    }
+  }
+
+  // Rate limits (coarse, KV-backed; skipped if the namespace isn't bound).
+  if (env.QUESTIONS) {
+    const hourBucket = new Date().toISOString().slice(0, 13); // e.g. 2026-07-15T18
+    const day = hourBucket.slice(0, 10);
+    if (await overLimit(env.QUESTIONS, `rl:ip:${ip}:${hourBucket}`, PER_IP_HOURLY, 7200)) {
+      return json({ error: 'rate_limited' }, 429);
+    }
+    if (await overLimit(env.QUESTIONS, `rl:day:${day}`, DAILY_LIMIT, 172800)) {
+      // Daily budget breaker: same graceful path as "no key configured".
+      return json({ available: false }, 503);
+    }
   }
 
   const text = (corpus as Record<string, string>)[locale];

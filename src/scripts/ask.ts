@@ -6,15 +6,44 @@
 interface Config {
   endpoint: string;
   locale: 'en' | 'es';
+  turnstileSiteKey?: string;
   labels: {
     thinking: string;
     unanswered: string;
     unavailable: string;
     error: string;
+    rateLimited: string;
     sourcesLabel: string;
     youLabel: string;
     botLabel: string;
   };
+}
+
+/** Cloudflare Turnstile global, present once its api.js has loaded. */
+declare global {
+  interface Window {
+    turnstile?: {
+      render: (el: HTMLElement, opts: Record<string, unknown>) => string;
+      getResponse: (widgetId: string) => string | undefined;
+      reset: (widgetId: string) => void;
+    };
+  }
+}
+
+/** Load Turnstile and render an interaction-only widget; resolves to its id. */
+function initTurnstile(container: HTMLElement, siteKey: string): Promise<string> {
+  return new Promise((resolve) => {
+    const script = document.createElement('script');
+    script.src = 'https://challenges.cloudflare.com/turnstile/v0/api.js?render=explicit';
+    script.async = true;
+    script.onload = () => {
+      resolve(window.turnstile!.render(container, {
+        sitekey: siteKey,
+        appearance: 'interaction-only',
+      }));
+    };
+    document.head.appendChild(script);
+  });
 }
 
 export function initAsk(): void {
@@ -29,6 +58,13 @@ function setup(root: HTMLElement): void {
   const form = root.querySelector<HTMLFormElement>('[data-form]')!;
   const input = root.querySelector<HTMLInputElement>('[data-input]')!;
   const send = root.querySelector<HTMLButtonElement>('[data-send]')!;
+
+  // Optional bot protection: widget renders only when a site key is configured.
+  let turnstileWidget: Promise<string> | undefined;
+  const turnstileEl = root.querySelector<HTMLElement>('[data-turnstile]');
+  if (cfg.turnstileSiteKey && turnstileEl) {
+    turnstileWidget = initTurnstile(turnstileEl, cfg.turnstileSiteKey);
+  }
 
   const esc = (s: string) =>
     s.replace(/[&<>"]/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' })[c]!);
@@ -50,15 +86,31 @@ function setup(root: HTMLElement): void {
     const pending = addMsg('bot', cfg.labels.thinking, 'thinking');
 
     try {
+      let turnstileToken: string | undefined;
+      if (turnstileWidget) {
+        const id = await turnstileWidget;
+        turnstileToken = window.turnstile?.getResponse(id);
+      }
+
       const res = await fetch(cfg.endpoint, {
         method: 'POST',
         headers: { 'content-type': 'application/json' },
-        body: JSON.stringify({ question, locale: cfg.locale }),
+        body: JSON.stringify({ question, locale: cfg.locale, turnstileToken }),
       });
+
+      if (turnstileWidget) {
+        // Tokens are single-use; ask Turnstile for a fresh one for the next question.
+        window.turnstile?.reset(await turnstileWidget);
+      }
 
       if (res.status === 503 || res.status === 404) {
         pending.classList.remove('thinking');
         pending.innerHTML = `<span class="who">${cfg.labels.botLabel}</span>${esc(cfg.labels.unavailable)}`;
+        return;
+      }
+      if (res.status === 429) {
+        pending.classList.remove('thinking');
+        pending.innerHTML = `<span class="who">${cfg.labels.botLabel}</span>${esc(cfg.labels.rateLimited)}`;
         return;
       }
       if (!res.ok) throw new Error(String(res.status));

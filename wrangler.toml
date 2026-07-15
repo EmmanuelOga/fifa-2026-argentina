@@ -11,12 +11,19 @@ pages_build_output_dir = "dist"
 # (or in the Pages dashboard → Settings → Environment variables, encrypted).
 # Do NOT put it here.
 
-# Optional: override the chat model (defaults to claude-opus-4-8).
-# [vars]
-# CHAT_MODEL = "claude-opus-4-8"
+# Bot protection (optional): Cloudflare Turnstile. Create a widget at
+# dash.cloudflare.com → Turnstile, paste the SITE key into src/data/meta.ts
+# (turnstileSiteKey) and set the SECRET with:
+#   wrangler pages secret put TURNSTILE_SECRET_KEY
 
-# Optional: KV namespace for logging questions the corpus can't answer.
-# Create it (`wrangler kv namespace create QUESTIONS`) then uncomment + fill the id:
-# [[kv_namespaces]]
-# binding = "QUESTIONS"
-# id = "<your-kv-namespace-id>"
+# Chat model. Sonnet 5 balances answer quality and cost for the corpus-grounded
+# Q&A (~$0.006 per cached question at intro pricing). The code default (unset)
+# is claude-opus-4-8.
+[vars]
+CHAT_MODEL = "claude-sonnet-5"
+
+# KV namespace: logs questions the corpus can't answer AND backs the chat's
+# rate limiter (per-IP hourly cap + site-wide daily breaker in ask.ts).
+[[kv_namespaces]]
+binding = "QUESTIONS"
+id = "c28393030afa4776a611c6bca60a5879"

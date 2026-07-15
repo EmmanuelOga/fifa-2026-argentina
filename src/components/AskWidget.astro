@@ -7,13 +7,19 @@
 import type { Locale } from '../lib/i18n';
 import { UI } from '../i18n/ui';
 import { withBase } from '../lib/url';
+import { meta } from '../data/meta';
 
 interface Props {
   locale: Locale;
 }
 const { locale } = Astro.props;
 const a = UI[locale].ask;
-const config = { endpoint: withBase('/api/ask'), locale, labels: a };
+const config = {
+  endpoint: withBase('/api/ask'),
+  locale,
+  turnstileSiteKey: meta.turnstileSiteKey,
+  labels: a,
+};
 const LINKEDIN = 'https://www.linkedin.com/in/emmanueloga/';
 ---
 
@@ -28,6 +34,10 @@ const LINKEDIN = 'https://www.linkedin.com/in/emmanueloga/';
       <button type="button" class="chip" data-q={q}>{q}</button>
     ))}
   </div>
+
+  {/* Turnstile mounts here when a site key is configured (interaction-only:
+      invisible unless Cloudflare decides the visitor needs a challenge). */}
+  <div class="turnstile" data-turnstile></div>
 
   <form class="ask-form" data-form>
     <input
