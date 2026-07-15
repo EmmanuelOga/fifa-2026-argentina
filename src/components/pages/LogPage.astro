@@ -3,6 +3,7 @@
  * Tab 6 — The Log / La Bitácora. A changelog of analysis re-runs, each with a
  * prediction scorecard and (once outcomes are known) how the last run fared.
  */
+import { Image } from 'astro:assets';
 import type { Locale } from '../../lib/i18n';
 import { section, updates } from '../../lib/content';
 import { longDate } from '../../lib/format';
@@ -13,7 +14,6 @@ interface Props {
 }
 const { locale } = Astro.props;
 const intro = await section('log-intro', locale);
-const openQ = await section('open-questions', locale);
 const runs = await updates();
 
 const VERDICT: Record<string, Record<Locale, string>> = {
@@ -31,10 +31,6 @@ const VERDICT: Record<string, Record<Locale, string>> = {
     <p class="lead">{intro.full}</p>
   </header>
 
-  <Callout variant="sun" icon="❓" title={openQ.headline}>
-    <ol class="oq">{openQ.body?.map((q) => <li>{q}</li>)}</ol>
-  </Callout>
-
   {
     runs.map((u) => (
       <article class="run">
@@ -45,6 +41,22 @@ const VERDICT: Record<string, Record<Locale, string>> = {
             <p class="run-date data">{longDate(locale, u.data.date)}</p>
           </div>
         </div>
+        {u.data.image && (
+          <figure class="run-photo">
+            <Image
+              src={u.data.image.src}
+              alt={u.data.image.alt[locale]}
+              widths={[480, 800, 1360]}
+              sizes="(max-width: 720px) 92vw, 680px"
+            />
+            <figcaption>
+              {u.data.image.caption[locale]}
+              <span class="photo-credit">
+                📷 <a href={u.data.image.creditUrl} target="_blank" rel="noopener">{u.data.image.credit}</a>
+              </span>
+            </figcaption>
+          </figure>
+        )}
         <p class="run-sum">{u.data.content[locale].summary}</p>
         {u.data.content[locale].body.map((p) => <p>{p}</p>)}
 
@@ -159,5 +171,28 @@ const VERDICT: Record<string, Record<Locale, string>> = {
   .archive {
     margin: var(--s-3) 0 0;
     font-weight: 600;
+  }
+  .run-photo {
+    margin: var(--s-3) 0 var(--s-4);
+  }
+  .run-photo img {
+    display: block;
+    width: 100%;
+    height: auto;
+    border-radius: var(--radius-sm);
+  }
+  .run-photo figcaption {
+    margin-top: 0.45em;
+    font-size: 0.8rem;
+    color: var(--muted);
+    line-height: 1.45;
+  }
+  .photo-credit {
+    display: block;
+    font-size: 0.72rem;
+    opacity: 0.85;
+  }
+  .run-photo figcaption a {
+    color: inherit;
   }
 </style>

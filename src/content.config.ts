@@ -135,11 +135,23 @@ const glossary = defineCollection({
    version of the site. This is what makes the analysis a living, honest record. */
 const updates = defineCollection({
   loader: file('src/content/updates.json'),
-  schema: z.object({
+  schema: ({ image }) =>
+    z.object({
     date: z.string(), // ISO
     run: z.number().int(),
     /** optional link to an archived deployment of this run. */
     archiveUrl: z.string().url().optional(),
+    /** Optional mood photo (freely licensed; credit is REQUIRED and rendered). */
+    image: z
+      .object({
+        src: image(),
+        alt: z.object({ en: z.string(), es: z.string() }),
+        /** Editorial caption shown under the photo (what it is / why it's here). */
+        caption: z.object({ en: z.string(), es: z.string() }),
+        credit: z.string(), // "Author · License · Wikimedia Commons"
+        creditUrl: z.string().url(), // source page (Commons file page)
+      })
+      .optional(),
     /** prediction scorecard rows, filled once real outcomes are known. */
     scorecard: z
       .array(

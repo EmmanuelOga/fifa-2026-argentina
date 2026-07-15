@@ -16,11 +16,22 @@ import {
   argentinaEliminated,
 } from '../../data/bracket';
 import { OPTA, BOOKMAKERS, AUTHOR_RANGES, MODEL_ORDER } from '../../data/models';
+import matchEvents from '../../data/match-events.json';
+
+type MatchEvents = {
+  espnUrl: string;
+  state: string;
+  events: { minute: string; type: string; team: string; player: string }[];
+  stats: Record<string, Record<string, string>>;
+};
+const eventsFor = (id: string): MatchEvents | undefined =>
+  (matchEvents.matches as Record<string, MatchEvents>)[id];
 import Callout from '../Callout.astro';
 import SnapshotBadge from '../SnapshotBadge.astro';
 import SourceRefs from '../SourceRefs.astro';
 import KeyTerms from '../KeyTerms.astro';
 import MonteCarloBracket from '../sims/MonteCarloBracket.astro';
+import DeepDive from '../DeepDive.astro';
 
 interface Props {
   locale: Locale;
@@ -28,6 +39,7 @@ interface Props {
 const { locale } = Astro.props;
 const intro = await section('whowins-intro', locale);
 const silverNote = await section('whowins-silver-note', locale);
+const favoriteLost = await section('whowins-favorite-lost', locale);
 const fatigue = await section('whowins-fatigue', locale);
 const eliminated = argentinaEliminated();
 const closing = await section(eliminated ? 'whowins-eliminated' : 'whowins-closing', locale);
@@ -63,14 +75,39 @@ const teamFlag = (code: string) => TEAMS[code]?.flag ?? '';
     <div class="bcol">
       <h3>{locale === 'es' ? 'Semifinales' : 'Semifinals'}</h3>
       {
-        SEMIFINALS.map((m) => (
-          <p class:list={['match', { done: !!m.result }]}>
-            <span>{teamFlag(m.home)} {teamName(m.home)}{m.result && <b class="data"> {m.result.home}</b>}</span>
-            <span class="vs">{m.result ? '–' : 'v'}</span>
-            <span>{m.result && <b class="data">{m.result.away} </b>}{teamName(m.away)} {teamFlag(m.away)}</span>
-            <span class="meta data">{m.date} · {m.venue[locale]}</span>
-          </p>
-        ))
+        SEMIFINALS.map((m) => {
+          const ev = eventsFor(m.id);
+          return (
+            <div class:list={['match', { done: !!m.result }]}>
+              <p class="match-line">
+                <span>{teamFlag(m.home)} {teamName(m.home)}{m.result && <b class="data"> {m.result.home}</b>}</span>
+                <span class="vs">{m.result ? '–' : 'v'}</span>
+                <span>{m.result && <b class="data">{m.result.away} </b>}{teamName(m.away)} {teamFlag(m.away)}</span>
+                <span class="meta data">{m.date} · {m.venue[locale]}</span>
+              </p>
+              {ev && ev.events.length > 0 && (
+                <ul class="goals">
+                  {ev.events.map((g) => (
+                    <li class="data">
+                      {g.type === 'goal' ? '⚽' : '🟥'} {g.minute} {g.player}
+                    </li>
+                  ))}
+                </ul>
+              )}
+              {ev && (
+                <p class="match-more meta">
+                  {Object.entries(ev.stats)
+                    .map(([code, s]) => `${code} ${s.possessionPct}% · ${s.totalShots} ${locale === 'es' ? 'tiros' : 'shots'}`)
+                    .join('  |  ')}
+                  {' — '}
+                  <a href={ev.espnUrl} target="_blank" rel="noopener">
+                    {locale === 'es' ? 'línea de tiempo y momentum en ESPN ↗' : 'timeline & momentum on ESPN ↗'}
+                  </a>
+                </p>
+              )}
+            </div>
+          );
+        })
       }
     </div>
     <div class="bcol">
@@ -120,12 +157,15 @@ const teamFlag = (code: string) => TEAMS[code]?.flag ?? '';
         </tbody>
       </table>
     </div>
-    <SourceRefs ids={['opta', 'oddschecker']} locale={locale} />
+    {/* Silver's model: mentioned honestly, but paywalled — footnote, not a table row. */}
+    <p class="model-note">{silverNote.full}</p>
+    <SourceRefs ids={['opta', 'oddschecker', 'silver']} locale={locale} />
   </section>
 
-  <Callout variant="sun" icon="📊" title={silverNote.headline}>
-    <p>{silverNote.full}</p>
-    <SourceRefs ids={['silver']} locale={locale} />
+  {/* France was the favorite and lost — what that does (and doesn't) say about models */}
+  <Callout variant="sky" icon="🎲" title={favoriteLost.headline}>
+    <p>{favoriteLost.full}</p>
+    {favoriteLost.body.map((para) => <p>{para}</p>)}
   </Callout>
 
   {
@@ -136,7 +176,9 @@ const teamFlag = (code: string) => TEAMS[code]?.flag ?? '';
     )
   }
 
-  <MonteCarloBracket locale={locale} />
+  <DeepDive locale={locale}>
+    <MonteCarloBracket locale={locale} />
+  </DeepDive>
 
   <Callout variant="plain" icon="🇦🇷" title={closing.headline}>
     <p class="closing">{closing.full}</p>
@@ -171,13 +213,18 @@ const teamFlag = (code: string) => TEAMS[code]?.flag ?? '';
     margin-bottom: var(--s-3);
   }
   .match {
+    font-size: 0.9rem;
+    margin: 0 0 var(--s-3);
+    line-height: 1.4;
+  }
+  /* Quarterfinal rows are plain <p class="match">; semifinal rows are a <div>
+     whose first line is .match-line. Both get the same flex layout. */
+  p.match,
+  .match-line {
     display: flex;
     flex-wrap: wrap;
     align-items: baseline;
     gap: 0.3em;
-    font-size: 0.9rem;
-    margin: 0 0 var(--s-3);
-    line-height: 1.4;
   }
   .match.done {
     color: var(--ink);
@@ -191,8 +238,34 @@ const teamFlag = (code: string) => TEAMS[code]?.flag ?? '';
     font-size: 0.72rem;
     color: var(--muted);
   }
+  .match-line {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+    gap: 0.3em;
+    margin: 0;
+  }
+  .goals {
+    list-style: none;
+    margin: 0.35em 0 0;
+    padding: 0;
+    font-size: 0.78rem;
+  }
+  .match-more {
+    margin: 0.35em 0 0;
+    font-size: 0.72rem;
+    color: var(--muted);
+  }
+  .match-more a {
+    color: inherit;
+  }
   .table-wrap {
     overflow-x: auto;
+  }
+  .model-note {
+    margin: var(--s-3) 0 0;
+    font-size: 0.82rem;
+    color: var(--muted);
   }
   table {
     width: 100%;

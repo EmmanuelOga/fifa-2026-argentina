@@ -13,6 +13,7 @@ import SourceRefs from '../SourceRefs.astro';
 import KeyTerms from '../KeyTerms.astro';
 import ThreadTag from '../ThreadTag.astro';
 import BayesExplorer from '../sims/BayesExplorer.astro';
+import DeepDive from '../DeepDive.astro';
 
 interface Props {
   locale: Locale;
@@ -101,11 +102,12 @@ const cards = await hypotheses();
     }
   </div>
 
-  <Callout variant="sky" icon="🎛️" title={bayesIntro.headline}>
-    <p>{bayesIntro.full}</p>
-  </Callout>
-
-  <BayesExplorer locale={locale} />
+  <DeepDive locale={locale}>
+    <Callout variant="sky" icon="🎛️" title={bayesIntro.headline}>
+      <p>{bayesIntro.full}</p>
+    </Callout>
+    <BayesExplorer locale={locale} />
+  </DeepDive>
 
   <Callout variant="plain" icon="🧭" title={takeaway.headline}>
     <p>{takeaway.full}</p>

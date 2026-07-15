@@ -10,6 +10,7 @@ import Callout from '../Callout.astro';
 import SourceRefs from '../SourceRefs.astro';
 import KeyTerms from '../KeyTerms.astro';
 import ConspiracySim from '../sims/ConspiracySim.astro';
+import DeepDive from '../DeepDive.astro';
 
 interface Props {
   locale: Locale;
@@ -74,11 +75,12 @@ const blocks = [
     </div>
   </section>
 
-  <Callout variant="sky" icon="🧮" title={simIntro.headline}>
-    <p>{simIntro.full}</p>
-  </Callout>
-
-  <ConspiracySim locale={locale} />
+  <DeepDive locale={locale}>
+    <Callout variant="sky" icon="🧮" title={simIntro.headline}>
+      <p>{simIntro.full}</p>
+    </Callout>
+    <ConspiracySim locale={locale} />
+  </DeepDive>
 
   <Callout variant="plain" icon="⚓" title={baserate.headline}>
     <p>{baserate.full}</p>

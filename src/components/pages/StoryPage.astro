@@ -3,10 +3,12 @@
  * Tab 1 — The Story. Intro + an expandable timeline (tap/scroll to open each
  * node) + the two-threads insight + takeaway. All from the content layer.
  */
+import { Image } from 'astro:assets';
 import type { Locale } from '../../lib/i18n';
 import { section, timeline } from '../../lib/content';
 import { longDate } from '../../lib/format';
 import Callout from '../Callout.astro';
+import maradona86 from '../../assets/photos/maradona-86-copa.jpg';
 import ThreadTag from '../ThreadTag.astro';
 import SourceRefs from '../SourceRefs.astro';
 import KeyTerms from '../KeyTerms.astro';
@@ -29,6 +31,26 @@ const events = await timeline();
   </header>
 
   <KeyTerms ids={['var', 'afa', 'ifab', 'aet']} locale={locale} />
+
+  {/* Mood-setter: where the hunger for a third star comes from. Public domain. */}
+  <figure class="story-photo">
+    <Image
+      src={maradona86}
+      alt={locale === 'es'
+        ? 'Diego Maradona levanta la Copa del Mundo en el Azteca, México 1986'
+        : 'Diego Maradona lifts the World Cup at the Azteca, Mexico 1986'}
+      widths={[420, 680]}
+      sizes="(max-width: 720px) 88vw, 420px"
+    />
+    <figcaption>
+      {locale === 'es'
+        ? 'México, 1986. Toda campaña argentina se mide contra esta foto.'
+        : 'Mexico, 1986. Every Argentina run is measured against this photo.'}
+      <span class="photo-credit">
+        📷 <a href="https://commons.wikimedia.org/wiki/File:Maradona-Mundial_86_con_la_copa.JPG" target="_blank" rel="noopener">El Gráfico · {locale === 'es' ? 'dominio público' : 'public domain'} · Wikimedia Commons</a>
+      </span>
+    </figcaption>
+  </figure>
 
   <ol class="timeline">
     {
@@ -156,5 +178,30 @@ const events = await timeline();
   .tl-full {
     font-weight: 500;
     margin-top: var(--s-3);
+  }
+  .story-photo {
+    max-width: 420px;
+    margin-inline: auto;
+  }
+  .story-photo img {
+    display: block;
+    width: 100%;
+    height: auto;
+    border-radius: var(--radius-sm);
+  }
+  .story-photo figcaption {
+    margin-top: 0.45em;
+    font-size: 0.8rem;
+    color: var(--muted);
+    line-height: 1.45;
+    text-align: center;
+  }
+  .photo-credit {
+    display: block;
+    font-size: 0.72rem;
+    opacity: 0.85;
+  }
+  .story-photo figcaption a {
+    color: inherit;
   }
 </style>

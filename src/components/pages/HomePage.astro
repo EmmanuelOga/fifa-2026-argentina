@@ -8,7 +8,7 @@ import type { Locale } from '../../lib/i18n';
 import { TAB_KEYS } from '../../lib/i18n';
 import { UI, TAB_LABEL } from '../../i18n/ui';
 import { tabPath } from '../../lib/url';
-import { section } from '../../lib/content';
+import { section, updates } from '../../lib/content';
 import Hero from '../Hero.astro';
 import Callout from '../Callout.astro';
 import Prose from '../Prose.astro';
@@ -20,6 +20,8 @@ const { locale } = Astro.props;
 const t = UI[locale];
 const bias = await section('bias-disclosure', locale);
 const caveats = await section('caveats', locale);
+// Latest Log entry feeds the one-line news banner (updates() sorts newest first).
+const latestRun = (await updates())[0];
 const twoThreads = await section('story-two-threads', locale);
 const closing = await section('closing-note', locale);
 
@@ -37,6 +39,38 @@ const tabBlurb: Record<string, { en: string; es: string }> = {
 <Hero locale={locale} />
 
 <div class="container-narrow home-body stack">
+  {latestRun && (
+    <a class="news-banner" href={tabPath(locale, 'log')}>
+      <span class="nb-tag">{locale === 'es' ? '¡Mirá la Bitácora!' : 'Check the Log!'}</span>
+      <span class="nb-text">
+        {locale === 'es' ? 'Lo último' : 'Latest'}: {latestRun.data.content[locale].title}
+      </span>
+      <span class="nb-arrow" aria-hidden="true">→</span>
+    </a>
+  )}
+
+  {/* Two audiences, two doors: casual readers vs the stats-hungry. */}
+  <div class="paths">
+    <a class="path-card" href={tabPath(locale, 'story')}>
+      <span class="pc-icon" aria-hidden="true">🧉</span>
+      <span class="pc-title">{locale === 'es' ? 'Quiero la historia' : 'Just want the story'}</span>
+      <span class="pc-blurb">
+        {locale === 'es'
+          ? 'Qué pasó, qué se dice y qué es cierto. Sin matemática.'
+          : 'What happened, what people claim, and what holds up. No math.'}
+      </span>
+    </a>
+    <a class="path-card" href={tabPath(locale, 'who-wins')}>
+      <span class="pc-icon" aria-hidden="true">📊</span>
+      <span class="pc-title">{locale === 'es' ? 'Vengo por los números' : "Here for the stats"}</span>
+      <span class="pc-blurb">
+        {locale === 'es'
+          ? 'Modelos, probabilidades, simulaciones Monte Carlo y Bayes.'
+          : 'Models, probabilities, Monte Carlo sims and Bayes.'}
+      </span>
+    </a>
+  </div>
+
   <Callout variant="sky" icon="🙋" title={bias.headline}>
     <p>{bias.full}</p>
   </Callout>
@@ -70,6 +104,73 @@ const tabBlurb: Record<string, { en: string; es: string }> = {
 </div>
 
 <style>
+  .news-banner {
+    display: flex;
+    align-items: baseline;
+    gap: var(--s-3);
+    flex-wrap: wrap;
+    padding: var(--s-3) var(--s-4);
+    border: 1px solid var(--sky);
+    border-radius: var(--radius);
+    background: var(--sky-soft);
+    text-decoration: none;
+    color: var(--ink);
+  }
+  .news-banner:hover {
+    background: color-mix(in srgb, var(--sky-soft) 70%, white);
+  }
+  .nb-tag {
+    font-family: var(--font-data);
+    font-size: 0.72rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    color: var(--sky-ink);
+    white-space: nowrap;
+  }
+  .nb-text {
+    font-size: 0.9rem;
+    flex: 1;
+    min-width: 12em;
+  }
+  .nb-arrow {
+    color: var(--sky-ink);
+  }
+  .paths {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--s-4);
+  }
+  .path-card {
+    display: grid;
+    gap: 0.35em;
+    padding: var(--s-4) var(--s-5);
+    border: 1px solid var(--line);
+    border-radius: var(--radius);
+    background: var(--surface);
+    box-shadow: var(--shadow-sm);
+    text-decoration: none;
+    color: var(--ink);
+  }
+  .path-card:hover {
+    border-color: var(--sky);
+    background: var(--sky-soft);
+  }
+  .pc-icon {
+    font-size: 1.4rem;
+  }
+  .pc-title {
+    font-weight: 700;
+  }
+  .pc-blurb {
+    font-size: 0.85rem;
+    color: var(--muted);
+  }
+  @media (max-width: 560px) {
+    .paths {
+      grid-template-columns: 1fr;
+    }
+  }
   .home-body {
     padding-block: var(--s-6) var(--s-7);
   }
