@@ -4,11 +4,11 @@
     "content": {
       "en": {
         "headline": "La Alegría",
-        "short": "A celebration of Argentina's World Cup run — with the homework done on the gossip.",
-        "full": "A joyful, honest look at Argentina's 2026 World Cup run. I'm a fan, I think Messi is the GOAT, and I'm loving every minute. People kept bringing up the gossip — favoritism, an FBI probe, corruption whispers — so instead of shrugging, I did the homework.",
+        "short": "A celebration of Argentina's World Cup run, with the homework done on the gossip.",
+        "full": "An honest fan's look at Argentina's 2026 World Cup run. I think Messi is the GOAT and I'm loving every minute. People kept bringing up the gossip (favoritism, an FBI probe, corruption whispers), so instead of shrugging I did the homework.",
         "body": [
-          "The arc here is simple: joy, then an honest look, then joy again — with a clear head. It's a celebration with footnotes, not an exposé.",
-          "Every probability on this site is a subjective estimate, labelled speculative. Every allegation is phrased as an allegation. And after all of it, I still celebrate every goal."
+          "The plan: enjoy the run, look the gossip in the eye, then keep enjoying it with a clear head. A celebration with footnotes, not an exposé.",
+          "Every probability on this site is a subjective estimate, labelled speculative; every allegation stays an allegation. After all of it, I still celebrate every goal."
         ]
       },
       "es": {
@@ -27,8 +27,8 @@
     "content": {
       "en": {
         "headline": "Bias disclosure",
-        "short": "I'm Argentinian and I want us to win. That's the lens — read accordingly.",
-        "full": "Full disclosure: I'm Argentinian, Messi is my GOAT, and I want Argentina to lift the trophy on July 19. I'm biased — what did you expect? 🇦🇷 I've tried hard to be fair here, to steelman the doubters and keep the numbers honest. But you should know the hand that's writing. Where I could be kidding myself, I've said so.",
+        "short": "I'm Argentinian and I want us to win. That's the lens; read accordingly.",
+        "full": "I'm Argentinian, Messi is my GOAT, and I want Argentina to lift the trophy on July 19. I'm biased. What did you expect? 🇦🇷 I've tried to be fair, to steelman the doubters and keep the numbers honest, but you should know whose hand is writing. Where I could be kidding myself, I've said so.",
         "body": []
       },
       "es": {
@@ -47,10 +47,10 @@
         "short": "Speculative estimates, reported (not confirmed) probes, controversy ≠ corruption.",
         "full": "A few things to hold in mind throughout:",
         "body": [
-          "All probabilities are subjective and speculative — estimates, not measured facts.",
+          "All probabilities are subjective, speculative estimates, not measured facts.",
           "The FBI probe is reported, not officially confirmed; no charges have been filed, and the AFA denies wrongdoing.",
           "Controversy ≠ corruption. Every flagged incident has a rule-based explanation on the record.",
-          "Complaints from the losing side are motivated — that doesn't make them wrong, but it's worth remembering.",
+          "Complaints from the losing side are motivated. That doesn't make them wrong, but keep it in mind.",
           "Facts move fast: the semifinals (July 14–15) may change everything.",
           "The single strongest reason to keep the match-fixing hypothesis low: no World Cup finals match has ever been proven fixed."
         ]
@@ -93,7 +93,7 @@
       "en": {
         "headline": "What actually happened",
         "short": "Three tense knockout wins, a few disputed calls, and a separate FBI money story.",
-        "full": "Argentina reached the semifinals the hard way: three knockout wins decided in tight, late, extra-time moments. Along the way came disputed calls, a coach's favoritism allegation, an appointment controversy — and, entirely separately, a reported FBI inquiry into how the AFA moved money through US banks. Two very different threads got tangled together in the noise. Let's untangle them.",
+        "full": "Argentina reached the semifinals the hard way: three knockout wins decided in tight, late, extra-time moments. Along the way came disputed calls, a coach's favoritism allegation and an appointment controversy. Entirely separately, there's a reported FBI inquiry into how the AFA moved money through US banks. Two different threads got tangled in the noise. This page pulls them apart.",
         "body": []
       },
       "es": {
@@ -110,7 +110,7 @@
       "en": {
         "headline": "Two threads, not one",
         "short": "The officiating complaints and the FBI probe are independent. Conflating them is the #1 error.",
-        "full": "Here's the key insight, and it's the thing most people get wrong: the officiating complaints and the financial investigation are two independent threads with no documented evidentiary bridge between them. The probe is about money-laundering jurisdiction — dollars through US banks, the classic FIFA-Gate theory. It is not about match outcomes. A true financial case would say nothing about whether any whistle was blown unfairly. Keep them apart.",
+        "full": "Most people get this wrong: the officiating complaints and the financial investigation are independent threads, with no documented evidence bridging them. The probe is about money-laundering jurisdiction (dollars through US banks, the classic FIFA-Gate theory), not match outcomes. A real financial case would say nothing about whether any whistle was crooked. Keep them apart.",
         "body": []
       },
       "es": {
@@ -144,7 +144,7 @@
       "en": {
         "headline": "Could it be done?",
         "short": "Feasibility of a FIFA-level fix: low-to-moderate. My rating is 3 out of 10.",
-        "full": "Set aside whether it happened — could an organizing body actually tilt a modern World Cup match undetected? My honest answer: low-to-moderate. I rate it 3 out of 10. Not zero, because selection-based nudging hides inside normal discretion. But not high, because instructed calls in 2026 run headfirst into body cams, comms records, semi-automated offside and connected-ball telemetry.",
+        "full": "Set aside whether it happened. Could an organizing body tilt a modern World Cup match undetected? My answer: low to moderate, 3 out of 10. Not zero, because selection-based nudging hides inside normal discretion. Not high either, because instructed calls in 2026 run into body cams, recorded comms, semi-automated offside and connected-ball telemetry.",
         "body": []
       },
       "es": {
@@ -161,7 +161,7 @@
       "en": {
         "headline": "How appointments actually work",
         "short": "A Referees Committee picks match-by-match from a 52-referee pool, ~3 days out. No self-officiating.",
-        "full": "FIFA's Referees Committee, chaired by Pierluigi Collina, appoints officials match-by-match, roughly three days out, from the 'Team One' pool: 52 referees, 88 assistant referees and 30 video officials drawn from all six confederations. Officials never handle their own nation's matches. There's no predetermined knockout list — it's form-based. That design is mostly a safeguard.",
+        "full": "FIFA's Referees Committee, chaired by Pierluigi Collina, appoints officials match-by-match, roughly three days out, from the 'Team One' pool: 52 referees, 88 assistant referees and 30 video officials drawn from all six confederations. Officials never handle their own nation's matches. There's no predetermined knockout list; selection follows form. That design is mostly a safeguard.",
         "body": []
       },
       "es": {
@@ -177,8 +177,8 @@
     "content": {
       "en": {
         "headline": "Where discretion concentrates",
-        "short": "The vulnerability is the small committee that assigns — and the VAR booth that decides what to review.",
-        "full": "If there's a soft spot, it's in two places: the small committee that assigns officials (the Calciopoli-style vulnerability — corrupt the designator, not the ref) and the VAR booth's discretion over what even gets reviewed. New for 2026, VAR can recommend overturning a clearly-wrong second-yellow red — the exact mechanism used on Embolo — and review attacking fouls before a restart. More discretion means more surface area for both real error and suspicion.",
+        "short": "The vulnerability is the small committee that assigns, and the VAR booth that decides what to review.",
+        "full": "If there's a soft spot, it's in two places: the small committee that assigns officials (the Calciopoli lesson: corrupt the designator, not the ref) and the VAR booth's discretion over what even gets reviewed. New for 2026, VAR can recommend overturning a clearly wrong second-yellow red, the exact mechanism used on Embolo, and can review attacking fouls before a restart. More discretion means more surface area for both real error and suspicion.",
         "body": []
       },
       "es": {
@@ -195,7 +195,7 @@
       "en": {
         "headline": "2026 makes hiding harder",
         "short": "Body cams, semi-automated offside and connected-ball data all raise the chance a fix leaks.",
-        "full": "To tilt a match by instruction today you'd need a compromised appointer plus a compliant referee and/or video official, plus silence across a multi-person booth — all of it against body cams, recorded comms, semi-automated offside and connected-ball telemetry. Every extra device and every extra person is another way for the secret to leak. That's the whole logic of the simulator below.",
+        "full": "To tilt a match by instruction today you'd need a compromised appointer, a compliant referee and/or video official, and silence across a multi-person booth, all against body cams, recorded comms, semi-automated offside and connected-ball telemetry. Every extra device and every extra person is another way for the secret to leak. That's the logic of the simulator below.",
         "body": []
       },
       "es": {
@@ -212,7 +212,7 @@
       "en": {
         "headline": "The base rate that anchors everything",
         "short": "No World Cup finals match has ever been legally proven fixed by an organizing body.",
-        "full": "Here's the anchor: no World Cup finals match has ever been legally proven fixed or referee-manipulated by an organizing body. The proven fixes in history (Lamptey, Perumal) were betting-syndicate jobs on qualifiers and friendlies — never an organizer favoring a team, never a finals match. Selection-based nudging is plausible; instructed, orchestrated finals fixing is, on the record, unprecedented.",
+        "full": "The anchor: no World Cup finals match has ever been legally proven fixed or referee-manipulated by an organizing body. The proven fixes on record (Lamptey, Perumal) were betting-syndicate jobs on qualifiers and friendlies, never an organizer favoring a team and never a finals match. Selection-based nudging is plausible. Instructed, orchestrated fixing of a finals match is, on the record, unprecedented.",
         "body": []
       },
       "es": {
@@ -228,8 +228,8 @@
     "content": {
       "en": {
         "headline": "Try it: the Conspiracy Simulator",
-        "short": "More people, more time, higher leak odds — watch how fast a big secret is expected to break.",
-        "full": "Move the sliders. The more people who must stay silent, the higher each person's yearly chance of slipping, and the longer the horizon, the faster the secret is expected to break. It's a toy version of a real published model — but the shape of the curve is the point: small, tight secrets can hold; big institutional ones don't.",
+        "short": "More people, more time, higher leak odds: watch how fast a big secret is expected to break.",
+        "full": "Move the sliders. The more people who must stay silent, the higher each person's yearly chance of slipping, and the longer the horizon, the faster the secret is expected to break. It's a toy version of a real published model, but the shape of the curve is the point: small, tight secrets can hold; big institutional ones don't.",
         "body": []
       },
       "es": {
@@ -246,7 +246,7 @@
       "en": {
         "headline": "The math",
         "short": "P(secret survives to time t) ≈ e^(−N·p·t), from Grimes (2016).",
-        "full": "The baseline is Grimes' constant-population case: the probability a secret is still intact after t years is roughly e^(−N·p·t), where N is the number of people who must stay silent and p is each person's per-year chance of exposing it. Expected leaks accumulate as N·p·t; the survival probability decays exponentially. Grimes' full model allows the group to shrink over time (people die, retire); his published correction generalizes the exponent to an integral. We use the simple form — it's an intuition pump, not a forecast.",
+        "full": "The baseline is Grimes' constant-population case: the probability a secret is still intact after t years is roughly e^(−N·p·t), where N is the number of people who must stay silent and p is each person's per-year chance of exposing it. Expected leaks accumulate as N·p·t; the survival probability decays exponentially. Grimes' full model allows the group to shrink over time (people die, retire); his published correction generalizes the exponent to an integral. We use the simple form as an intuition pump, not a forecast.",
         "body": []
       },
       "es": {
@@ -263,7 +263,7 @@
       "en": {
         "headline": "Takeaway",
         "short": "Big fixes leak. A finals-scale conspiracy is the kind the math says can't stay quiet.",
-        "full": "Big fixes leak. That's the lesson of both the history and the math: a single bribed referee might hide for a while, but a multi-person, institution-level fix of a World Cup — the kind you'd need to steer a champion — is exactly the kind the numbers say can't stay quiet for long.",
+        "full": "Big fixes leak. That's the lesson of the history and the math alike: one bribed referee might hide for a while, but steering a champion would take a multi-person, institution-level fix, and secrets that size don't stay quiet for long.",
         "body": []
       },
       "es": {
@@ -280,7 +280,7 @@
       "en": {
         "headline": "The probabilities",
         "short": "Four hypotheses, each with a speculative range and a 'what would change my mind'.",
-        "full": "Four hypotheses try to explain the noise around Argentina. Each gets a speculative range, the three best points for and against, and an honest 'what would change my mind'. These are my subjective estimates — argue with them using the Bayesian explorer below.",
+        "full": "Four hypotheses try to explain the noise around Argentina. Each gets a speculative range, the three best points for and against, and a 'what would change my mind'. These are my subjective estimates; argue with them in the Bayesian explorer below.",
         "body": []
       },
       "es": {
@@ -297,7 +297,7 @@
       "en": {
         "headline": "H1 is not H2",
         "short": "A real money case (H2) would NOT imply match-fixing (H1). This is the #1 error people make.",
-        "full": "Before the cards: the single most common mistake is to treat the financial probe (H2) and match-fixing (H1) as one claim. They are not. H2 is credible and well-sourced; H1 is unproven and, on base rates, unlikely. A grand jury indictment for moving money through US banks would tell you nothing about whether a referee's whistle was crooked. Watch the colors on this page — blue for the sporting thread, gold for the financial one — and keep them apart.",
+        "full": "Before the cards: the most common mistake is to treat the financial probe (H2) and match-fixing (H1) as one claim. They are not. H2 is credible and well-sourced; H1 is unproven and, on base rates, unlikely. A grand jury indictment for moving money through US banks would tell you nothing about whether a referee's whistle was crooked. Watch the colors on this page (blue for the sporting thread, gold for the financial one) and keep them apart.",
         "body": []
       },
       "es": {
@@ -314,7 +314,7 @@
       "en": {
         "headline": "Try it: the Bayesian Explorer",
         "short": "Set a prior and a few evidence strengths; watch the posterior update against my published range.",
-        "full": "Pick a hypothesis, set your prior, then slide the evidence strengths. The tool combines them in log-odds and shows the posterior against my published range band. Reset returns the defaults that reproduce my ranges. It's an intuition pump: the evidence is treated as independent, which it isn't fully — so this reasons about beliefs, it doesn't compute the truth.",
+        "full": "Pick a hypothesis, set your prior, then slide the evidence strengths. The tool combines them in log-odds and shows the posterior against my published range band. Reset returns the defaults that reproduce my ranges. One warning: the evidence is treated as independent, which it isn't fully, so this reasons about beliefs rather than computing the truth.",
         "body": []
       },
       "es": {
@@ -348,7 +348,7 @@
       "en": {
         "headline": "Takeaway",
         "short": "H3 + H4 together best explain the perception. A real money case wouldn't change that.",
-        "full": "Put together, soft/structural bias (H3) and plain variance plus a perception cascade (H4) are the most likely explanation of the officiating perception — not a conspiracy. The financial thread (H2) can be entirely real and still leave that conclusion standing. Deliberate FIFA-level favoritism (H1) stays low, right where the base rate keeps it.",
+        "full": "Put together, soft/structural bias (H3) and plain variance plus a perception cascade (H4) explain the officiating perception better than any conspiracy. The financial thread (H2) can be entirely real and still leave that conclusion standing. Deliberate FIFA-level favoritism (H1) stays low, where the base rate keeps it.",
         "body": []
       },
       "es": {
@@ -364,14 +364,14 @@
     "content": {
       "en": {
         "headline": "Who wins?",
-        "short": "Four teams left. The models say France; the heart says Argentina. Both can be honest.",
-        "full": "Four teams remain. To answer 'who wins' honestly I triangulate three independent sources — Opta, Nate Silver's model, and the betting market — then give my own synthesized ranges. Spoiler: the numbers favor France, and my heart favors Argentina. This tab is about holding both without lying to yourself.",
+        "short": "The final is set: Spain v Argentina. The numbers say Spain; the heart says Argentina. Both can be honest.",
+        "full": "The final is set: Spain v Argentina, July 19 at MetLife. Spain shut out France; Argentina came from behind to beat England 2–1. To answer 'who wins' I triangulate three independent sources (Opta, Nate Silver's model, the betting market), then give my own synthesized ranges. One caveat: the models and market numbers below are from before Argentina's win, so they lag the bracket; the next run refreshes them. Spoiler: the numbers favor Spain, and my heart favors Argentina. This tab is about holding both without lying to yourself.",
         "body": []
       },
       "es": {
         "headline": "¿Quién gana?",
-        "short": "Quedan cuatro. Los modelos dicen Francia; el corazón dice Argentina. Ambos pueden ser honestos.",
-        "full": "Quedan cuatro selecciones. Para responder '¿quién gana?' con honestidad triangulo tres fuentes independientes — Opta, el modelo de Nate Silver y el mercado de apuestas — y después doy mis propios rangos sintetizados. Adelanto: los números favorecen a Francia, y mi corazón favorece a Argentina. Esta pestaña es sobre sostener ambas cosas sin mentirte.",
+        "short": "Final definida: España v Argentina. Los números dicen España; el corazón dice Argentina. Ambos pueden ser honestos.",
+        "full": "La final ya está definida: España v Argentina, el 19 de julio en el MetLife. España dejó en cero a Francia; Argentina lo dio vuelta y le ganó 2–1 a Inglaterra. Para responder '¿quién gana?' triangulo tres fuentes independientes (Opta, el modelo de Nate Silver y el mercado de apuestas) y después doy mis propios rangos sintetizados. Una aclaración: los números de los modelos y del mercado de acá abajo son de antes del triunfo argentino, así que van detrás del cuadro; la próxima corrida los actualiza. Adelanto: los números favorecen a España, y mi corazón favorece a Argentina. Esta pestaña es sobre sostener ambas cosas sin mentirte.",
         "body": []
       }
     }
@@ -380,15 +380,15 @@
     "id": "whowins-silver-note",
     "content": {
       "en": {
-        "headline": "A note on the third model",
-        "short": "Silver's per-team numbers are paywalled, so we cite his method and the public market instead.",
-        "full": "Full honesty: Nate Silver's live per-team title numbers sit behind his paywall, so I can't reproduce them here. His model is Elo/SPI-style with 100,000 daily simulations, from the founder of FiveThirtyEight — a strong 2008/2012 record with notable 2016/2024 misses. Where his exact numbers would go, I use the public prediction-market figure and lean on Opta and the bookmakers as the two fully-visible quantitative anchors.",
+        "headline": "The third model",
+        "short": "Silver's model is interesting but paywalled, so it isn't in the table.",
+        "full": "Also out there: Nate Silver's 'PELE' model (Elo/SPI-style, 100,000 daily sims). Interesting, but paywalled, so its per-team numbers aren't reproduced here; the table leans on the two fully visible anchors, Opta and the market.",
         "body": []
       },
       "es": {
-        "headline": "Una nota sobre el tercer modelo",
-        "short": "Los números por selección de Silver están tras un muro de pago; citamos su método y el mercado público.",
-        "full": "Con total honestidad: los números por selección de Nate Silver están detrás de su muro de pago, así que no puedo reproducirlos acá. Su modelo es estilo Elo/SPI con 100.000 simulaciones diarias, del fundador de FiveThirtyEight — buen historial 2008/2012 con fallos notorios en 2016/2024. Donde irían sus números exactos, uso la cifra pública del mercado de predicciones y me apoyo en Opta y las casas de apuestas como los dos anclajes cuantitativos plenamente visibles.",
+        "headline": "El tercer modelo",
+        "short": "El modelo de Silver es interesante pero está tras un muro de pago; no va en la tabla.",
+        "full": "También anda dando vueltas: el modelo 'PELE' de Nate Silver (estilo Elo/SPI, 100.000 simulaciones diarias) — interesante, pero detrás de un muro de pago, así que sus números por selección no se reproducen acá y la tabla se apoya en los dos anclajes plenamente visibles: Opta y el mercado.",
         "body": []
       }
     }
@@ -399,7 +399,7 @@
       "en": {
         "headline": "The un-glamorous fade factor",
         "short": "Argentina has played three straight 120-minute matches. That's real, and it isn't a conspiracy.",
-        "full": "If Argentina fades, the boring explanation is the most likely one: three straight knockouts to 120 minutes is a lot of legs. No whistle required. It's exactly the kind of concrete, non-conspiratorial factor worth naming before reaching for anything more exotic.",
+        "full": "If Argentina fades, the boring explanation is the most likely one: three straight knockouts to 120 minutes is a lot of legs, no whistle required. It's the kind of concrete, non-conspiratorial factor worth naming before reaching for anything exotic.",
         "body": []
       },
       "es": {
@@ -411,12 +411,35 @@
     }
   },
   {
+    "id": "whowins-favorite-lost",
+    "content": {
+      "en": {
+        "headline": "Didn't the models just blow it?",
+        "short": "France was everyone's favorite and France is out. Less of a gotcha than it sounds, and the reason this site grades itself.",
+        "full": "France is out, and France was everyone's favorite. It's tempting to read that as 'the models failed', but a probability is not a promise. Opta's last pre-semifinal run gave France a 34% title chance and 57.7% to reach the final. Flip those: the same model said France would probably not win the trophy (66%) and gave better than 4-in-10 odds (42.3%) that they'd fall right here. The less likely branch happened; that's what probabilities do.",
+        "body": [
+          "The 'everyone predicted France' feeling is mostly a compression artifact. A model that says 34%, merely the biggest number in a four-team field, gets headlined as 'France will win', and the hedge dies in translation. What the numbers actually said: nobody clears 50%, France leads a tight pack. One match can't refute that claim, and it can't vindicate it either. If Spain wins the final, that won't prove the market 'right' any more than Monday proved Opta 'wrong'.",
+          "So how do you catch a genuinely bad forecaster? Calibration over volume: of all the times they say 60%, do those things happen about 60% of the time? That's the test this site signs up for. Every probability here is on the record in the Log with a snapshot date, and after the final I'll score the lot with a Brier score, no grading on a curve. A forecast you never score is just vibes with decimals."
+        ]
+      },
+      "es": {
+        "headline": "Pará: ¿no la acaban de pifiar los modelos?",
+        "short": "Francia era la favorita de todos y quedó afuera. No es el 'te agarré' que parece — y justo por eso este sitio se pone nota a sí mismo.",
+        "full": "Francia quedó afuera, y Francia era la favorita de todos. Es tentador leerlo como 'los modelos fallaron' — pero una probabilidad no es una promesa. La última corrida pre-semifinales de Opta le daba a Francia 34% de título y 57,7% de llegar a la final. Dalo vuelta: el mismo modelo decía que lo más probable era que Francia no levantara la copa (66%), y le daba más de 4 chances en 10 (42,3%) de caerse justo acá. Pasó la rama menos probable. Eso no es el modelo equivocándose; es el modelo haciendo lo que hacen las probabilidades.",
+        "body": [
+          "La sensación de que 'todos predijeron a Francia' es más que nada un artefacto de compresión. Un modelo que dice 34% — apenas el número más grande entre cuatro selecciones — termina titulado como 'Francia va a ganar', y el matiz se muere en la traducción. Lo que los números decían en realidad era otra cosa: ninguna llega al 50%; Francia encabeza un pelotón apretado. Un partido no puede refutar esa afirmación — y, para ser honestos en las dos direcciones, un partido tampoco puede confirmarla. Si ahora España gana la final, eso no le va a dar la razón al mercado, igual que lo del lunes no se la quitó a Opta.",
+          "¿Entonces cómo agarrás a un pronosticador verdaderamente malo? Calibración, con volumen: de todas las veces que dice 60%, ¿esas cosas pasan más o menos el 60% de las veces? Ese es el examen al que este sitio se anota solo. Cada probabilidad publicada acá queda registrada en la Bitácora con su fecha de foto, y después de la final les voy a poner nota a todas — puntaje de Brier, sin regalar puntos. Un pronóstico que nunca se califica es puro pálpito con decimales."
+        ]
+      }
+    }
+  },
+  {
     "id": "whowins-mc-intro",
     "content": {
       "en": {
         "headline": "Try it: the Monte Carlo bracket",
         "short": "Simulate the rest of the tournament 10,000 times from the current bracket.",
-        "full": "This runs 10,000 simulated tournaments from wherever the bracket currently sits, using an Elo-style logistic on team strengths you can adjust. There's one clearly-labelled, speculative 'bias nudge' slider that adds percentage points to Argentina's per-match win chance — set it to zero and the output converges on the clean model. Everything here is speculative; the nudge especially so.",
+        "full": "This runs 10,000 simulated tournaments from wherever the bracket currently sits, using an Elo-style logistic on team strengths you can adjust. There's one clearly labelled, speculative 'bias nudge' slider that adds percentage points to Argentina's per-match win chance; set it to zero and the output converges on the clean model. Everything here is speculative, the nudge especially.",
         "body": []
       },
       "es": {
@@ -433,7 +456,7 @@
       "en": {
         "headline": "The math",
         "short": "Each match: P(A beats B) = 1 / (1 + 10^(−(Rᴀ−Rʙ)/400)). Champions counted over 10,000 runs.",
-        "full": "Each match uses the logistic Elo formula P(A beats B) = 1 / (1 + 10^(−(Rᴀ−Rʙ)/400)), where R is a team's strength rating. A seedable pseudo-random generator draws each result, the winner advances, and we tally champions over 10,000 tournaments. The ratings are tuned so that at nudge = 0 the title odds land near the clean model. The 'bias nudge' simply adds a capped number of percentage points to Argentina's per-match win probability — a what-if, not a forecast.",
+        "full": "Each match uses the logistic Elo formula P(A beats B) = 1 / (1 + 10^(−(Rᴀ−Rʙ)/400)), where R is a team's strength rating. A seedable pseudo-random generator draws each result, the winner advances, and we tally champions over 10,000 tournaments. The ratings are tuned so that at nudge = 0 the title odds land near the clean model. The 'bias nudge' adds a capped number of percentage points to Argentina's per-match win probability. A what-if, not a forecast.",
         "body": []
       },
       "es": {
@@ -450,7 +473,7 @@
       "en": {
         "headline": "About the bias nudge",
         "short": "Soft bias ≈ +2–5pp. A strong (unproven) fix could reach ~30–45%. Presented as a what-if only.",
-        "full": "If only soft, structural bias were real (H3), it might add 2–5 percentage points to Argentina — nudging the title odds into the low-to-mid 20s. If a strong H1 somehow held — unproven, and unlikely on base rates — manipulation would show up exactly in tight knockout margins, and the odds could reach roughly 30–45%. I regard that high end as unlikely. It's here as a conditional what-if you can dial yourself, not a prediction.",
+        "full": "If only soft, structural bias were real (H3), it might add 2–5 percentage points to Argentina, nudging the title odds into the low-to-mid 20s. If a strong H1 somehow held (unproven, and unlikely on base rates), manipulation would show up in tight knockout margins and the odds could reach roughly 30–45%. I regard that high end as unlikely. It's a conditional what-if you can dial yourself, not a prediction.",
         "body": []
       },
       "es": {
@@ -465,15 +488,15 @@
     "id": "whowins-closing",
     "content": {
       "en": {
-        "headline": "The models say France. The heart says Argentina.",
+        "headline": "The numbers say Spain. The heart says Argentina.",
         "short": "Both can coexist honestly. I'll take the numbers seriously and cheer anyway.",
-        "full": "So here's where I land: the models say France, and the heart says Argentina — and both can coexist honestly. I'll take the numbers seriously, keep my hypotheses labelled, and cheer every Argentine goal like it's the last one Messi ever scores. Vamos.",
+        "full": "So here's where I land. The numbers now say Spain (they said France, and France is out, which is its own lesson about forecasts). The heart says Argentina. Both can coexist honestly. I'll take the numbers seriously, keep my hypotheses labelled, and cheer every Argentine goal like it's the last one Messi ever scores. Vamos.",
         "body": []
       },
       "es": {
-        "headline": "Los modelos dicen Francia. El corazón dice Argentina.",
+        "headline": "Los números dicen España. El corazón dice Argentina.",
         "short": "Ambos pueden convivir con honestidad. Me tomo en serio los números y aliento igual.",
-        "full": "Entonces acá quedo: los modelos dicen Francia, y el corazón dice Argentina — y ambos pueden convivir con honestidad. Me tomo en serio los números, mantengo mis hipótesis etiquetadas, y grito cada gol argentino como si fuera el último que Messi va a hacer en su vida. Vamos.",
+        "full": "Entonces acá quedo: los números ahora dicen España — los modelos decían Francia, y Francia quedó afuera, lo cual es toda una lección sobre los pronósticos — y el corazón dice Argentina. Ambos pueden convivir con honestidad. Me tomo en serio los números, mantengo mis hipótesis etiquetadas, y grito cada gol argentino como si fuera el último que Messi va a hacer en su vida. Vamos.",
         "body": []
       }
     }
@@ -482,9 +505,9 @@
     "id": "whowins-eliminated",
     "content": {
       "en": {
-        "headline": "Not our year — and still, gracias",
+        "headline": "Not our year. And still, gracias",
         "short": "Argentina is out. The joy was real, the run was ours, and the analysis stays honest.",
-        "full": "Argentina is out. It stings, because I wanted the fairytale. But the joy of this run was real and no scoreboard can take it back — and notice that a fair exit is itself evidence: the same tight margins that fed the whispers cut the other way this time. The honest version of being a fan includes the losses. Gracias, muchachos. On to the next one.",
+        "full": "Argentina is out. It stings, because I wanted the fairytale. But the joy of this run was real and no scoreboard takes it back. Notice, too, that a fair exit is itself evidence: the same tight margins that fed the whispers cut the other way this time. Being a fan honestly includes the losses. Gracias, muchachos. On to the next one.",
         "body": []
       },
       "es": {
@@ -504,7 +527,7 @@
         "full": "Three things will tell us more than any hot take:",
         "body": [
           "Does the DOJ move from a preliminary inquiry to an indictment or a cooperating witness? Watch the window after July 19.",
-          "Does any hard artifact — leaked comms, a whistleblower, an assignment-anomaly study — ever link appointments or VAR to outcomes?",
+          "Does any hard artifact (leaked comms, a whistleblower, an assignment-anomaly study) ever link appointments or VAR to outcomes?",
           "Does the officiating pattern regress under maximum semifinal and final scrutiny?"
         ]
       },
@@ -526,7 +549,7 @@
       "en": {
         "headline": "Sources",
         "short": "Grouped by reliability tier, each with a one-line 'why it matters'.",
-        "full": "Everything above traces to something here. Sources are grouped by reliability tier — primary and legal first, then quality journalism, data and models, academic work, and historical context — each with a line on why it matters. Where I couldn't verify a link, I say so.",
+        "full": "Everything above traces to something here. Sources are grouped by reliability tier (primary and legal first, then quality journalism, data and models, academic work, and historical context), each with a line on why it matters. Where I couldn't verify a link, I say so.",
         "body": []
       },
       "es": {
@@ -541,9 +564,9 @@
     "id": "sources-dig-deeper",
     "content": {
       "en": {
-        "headline": "Dig deeper — and correct me",
-        "short": "Found an error or a better source? Tell me on LinkedIn. I'll log the fix.",
-        "full": "This is a living document and I'd rather be corrected than comfortable. If you find an error, a dead link, or a stronger source, tell me on LinkedIn — real corrections get logged in the changelog with credit.",
+        "headline": "Dig deeper, and correct me",
+        "short": "Found an error or a better source? Tell me on LinkedIn and I'll log the fix.",
+        "full": "This is a living document and I'd rather be corrected than comfortable. If you find an error, a dead link, or a stronger source, tell me on LinkedIn. Real corrections get logged in the changelog with credit.",
         "body": []
       },
       "es": {
@@ -560,7 +583,7 @@
       "en": {
         "headline": "The Log",
         "short": "A living changelog: each re-run refreshes the data, scores old predictions, and archives the last version.",
-        "full": "This site is meant to be re-run. As the semifinals and final are played — and as the FBI story develops — I refresh the research, update the numbers, and grade what the last version predicted. Every entry below is one such run: what changed, how the old forecast held up, and a link to the archived version. Predictions are only honest if you keep score.",
+        "full": "This site is meant to be re-run. As the semifinals and final are played, and as the FBI story develops, I refresh the research, update the numbers, and grade what the last version predicted. Each entry below is one run: what changed, how the old forecast held up, and a link to the archived version. Predictions are only honest if you keep score.",
         "body": []
       },
       "es": {
@@ -577,7 +600,7 @@
       "en": {
         "headline": "Vamos Argentina",
         "short": "A celebration with footnotes. After all the homework, I still hope we lift it on July 19.",
-        "full": "That's the whole thing: joy, an honest look, and joy again. I did the homework so I could enjoy the tournament more, not less. The gossip deserves a fair hearing; the football deserves a full-throated cheer. On July 19, with a clear head and zero apology — vamos Argentina. 🇦🇷",
+        "full": "That's the whole thing: joy, an honest look, and joy again. I did the homework so I could enjoy the tournament more, not less. The gossip gets a fair hearing; the football gets a full-throated cheer. On July 19, with a clear head and zero apology: vamos Argentina. 🇦🇷",
         "body": []
       },
       "es": {

@@ -1,0 +1,76 @@
+{
+  "fetchedAt": "2026-07-15",
+  "source": "ESPN match pages (public JSON)",
+  "matches": {
+    "sf-fra-esp": {
+      "espnId": "760514",
+      "espnUrl": "https://www.espn.com/football/match/_/gameId/760514",
+      "state": "Full Time",
+      "completed": true,
+      "events": [
+        {
+          "minute": "22'",
+          "type": "goal",
+          "team": "Spain",
+          "player": "Mikel Oyarzabal"
+        },
+        {
+          "minute": "58'",
+          "type": "goal",
+          "team": "Spain",
+          "player": "Pedro Porro"
+        }
+      ],
+      "stats": {
+        "FRA": {
+          "possessionPct": "49.1",
+          "totalShots": "10",
+          "shotsOnTarget": "3"
+        },
+        "ESP": {
+          "possessionPct": "50.9",
+          "totalShots": "10",
+          "shotsOnTarget": "2"
+        }
+      }
+    },
+    "sf-eng-arg": {
+      "espnId": "760515",
+      "espnUrl": "https://www.espn.com/football/match/_/gameId/760515",
+      "state": "Full Time",
+      "completed": true,
+      "events": [
+        {
+          "minute": "55'",
+          "type": "goal",
+          "team": "England",
+          "player": "Anthony Gordon"
+        },
+        {
+          "minute": "85'",
+          "type": "goal",
+          "team": "Argentina",
+          "player": "Enzo Fernández"
+        },
+        {
+          "minute": "90'+2'",
+          "type": "goal",
+          "team": "Argentina",
+          "player": "Lautaro Martínez"
+        }
+      ],
+      "stats": {
+        "ENG": {
+          "possessionPct": "35.6",
+          "totalShots": "5",
+          "shotsOnTarget": "2"
+        },
+        "ARG": {
+          "possessionPct": "64.4",
+          "totalShots": "15",
+          "shotsOnTarget": "5"
+        }
+      }
+    }
+  }
+}

@@ -5,19 +5,22 @@
     "date": "2025-12-09",
     "thread": "financial",
     "icon": "🏦",
-    "sources": ["cnn-raids", "lanacion-tapia"],
+    "sources": [
+      "cnn-raids",
+      "lanacion-tapia"
+    ],
     "content": {
       "en": {
         "headline": "December 2025: raids on the AFA and clubs",
         "short": "Argentine authorities raid AFA HQ and 17 clubs in a money-laundering case.",
         "full": "Months before the World Cup, Argentine authorities carry out simultaneous raids on the AFA and 17 clubs in a domestic money-laundering case.",
-        "detail": "On December 9, 2025, around 33 simultaneous raids hit AFA headquarters, its Ezeiza complex and 17 clubs (some outlets say 18, in an overlapping case). This is a separate, domestic matter — the backdrop against which AFA president Claudio Tapia is later processed for roughly $12.7M in alleged social-security evasion (upheld on appeal in June 2026). Tapia alleges political persecution amid his feud with President Milei. No connection to match results is alleged."
+        "detail": "On December 9, 2025, around 33 simultaneous raids hit AFA headquarters, its Ezeiza complex and 17 clubs (some outlets say 18, in an overlapping case). This is a separate, domestic matter: the backdrop against which AFA president Claudio Tapia is later processed for roughly $12.7M in alleged social-security evasion (upheld on appeal in June 2026). Tapia alleges political persecution amid his feud with President Milei. Reporting notes that, as a processed defendant, Tapia needed judicial authorization to travel to the US with the squad. No connection to match results is alleged."
       },
       "es": {
         "headline": "Diciembre 2025: allanamientos a la AFA y clubes",
         "short": "La justicia argentina allana la sede de la AFA y 17 clubes en una causa por lavado.",
         "full": "Meses antes del Mundial, la justicia argentina allana en simultáneo la AFA y 17 clubes en una causa local por lavado de dinero.",
-        "detail": "El 9 de diciembre de 2025, unos 33 allanamientos simultáneos caen sobre la sede de la AFA, su predio de Ezeiza y 17 clubes (algunos medios hablan de 18, en una causa que se superpone). Es un asunto local y aparte — el telón de fondo sobre el que después procesan al presidente de la AFA, Claudio Tapia, por una presunta evasión de aportes de unos US$12,7M (ratificada en apelación en junio de 2026). Tapia habla de persecución política en medio de su pelea con el presidente Milei. Nadie alega que tenga que ver con resultados en la cancha."
+        "detail": "El 9 de diciembre de 2025, unos 33 allanamientos simultáneos caen sobre la sede de la AFA, su predio de Ezeiza y 17 clubes (algunos medios hablan de 18, en una causa que se superpone). Es un asunto local y aparte — el telón de fondo sobre el que después procesan al presidente de la AFA, Claudio Tapia, por una presunta evasión de aportes de unos US$12,7M (ratificada en apelación en junio de 2026). Tapia habla de persecución política en medio de su pelea con el presidente Milei. La prensa señala que, por estar procesado, Tapia necesitó autorización judicial para viajar a EE.UU. con el plantel. Nadie alega que tenga que ver con resultados en la cancha."
       }
     }
   },
@@ -28,12 +31,14 @@
     "dateApprox": true,
     "thread": "sporting",
     "icon": "🩹",
-    "sources": ["ifab-laws"],
+    "sources": [
+      "ifab-laws"
+    ],
     "content": {
       "en": {
         "headline": "Cape Verde: the blood-injury restart",
-        "short": "A restart after a bleeding-player stoppage goes viral — but the rule was applied correctly.",
-        "full": "Argentina's knockout win over Cape Verde produces the tournament's first viral 'robbery' clip: a restart after a bleeding player left the pitch. The catch — the referee applied the IFAB rule exactly as written.",
+        "short": "A restart after a bleeding-player stoppage goes viral, but the rule was applied correctly.",
+        "full": "Argentina's knockout win over Cape Verde produces the tournament's first viral 'robbery' clip: a restart after a bleeding player left the pitch. The catch: the referee applied the IFAB rule exactly as written.",
         "detail": "Under Law 5, a bleeding player must leave the field and can only return on the referee's signal. The stoppage and restart followed the letter of the rule. It looked unfair in a fast clip; it wasn't. (An earlier claim that the clip drew tens of millions of views could not be verified, so no number is given.)"
       },
       "es": {
@@ -50,7 +55,10 @@
     "date": "2026-07-07",
     "thread": "sporting",
     "icon": "🇪🇬",
-    "sources": ["fifa-collina-statement", "yahoo-fifa-problem"],
+    "sources": [
+      "fifa-collina-statement",
+      "yahoo-fifa-problem"
+    ],
     "content": {
       "en": {
         "headline": "Egypt: a disallowed goal and an allegation",
@@ -72,19 +80,23 @@
     "date": "2026-07-08",
     "thread": "financial",
     "icon": "🔎",
-    "sources": ["lanacion-fbi", "miami-herald", "wlrn-probe"],
+    "sources": [
+      "lanacion-fbi",
+      "miami-herald",
+      "wlrn-probe"
+    ],
     "content": {
       "en": {
         "headline": "The FBI money story breaks",
         "short": "La Nación reports an FBI/DOJ preliminary inquiry into AFA's US financial flows. No charges.",
         "full": "La Nación reports that FBI agents and federal prosecutors are taking testimony in a preliminary inquiry into how the AFA moved money through US banks and companies. The Miami Herald corroborates, citing two law-enforcement sources.",
-        "detail": "Per La Nación (Francisco Olivera and Hugo Alconada Mon), the inquiry examines $300M+ in AFA revenue routed through US institutions — including a Florida company (reported as TourProdEnter LLC) that, per La Nación, administered at least $260M with roughly $57M lacking clear economic justification. The '$260M/$57M' split is single-sourced to La Nación; most coverage cites '$300M+'. The company's operators are named in reporting as inquiry subjects — not charged. La Nación also names three federal prosecutors. The FBI's Miami office declined to comment. No US charges have been filed. This is the classic FIFA-Gate template: jurisdiction over dollars, not scorelines."
+        "detail": "Per La Nación (Francisco Olivera and Hugo Alconada Mon), the inquiry examines $300M+ in AFA revenue routed through US institutions, including a Florida company (reported as TourProdEnter LLC) that, per La Nación, administered at least $260M with roughly $57M lacking clear economic justification. Reporting since names five US banks the money moved through (Citibank, Bank of America, JPMorgan Chase, PNC and Synovus), and the Miami Herald puts the sum investigators have flagged as 'potentially irregular' at roughly $90M to date. The '$260M/$57M' split is single-sourced to La Nación; most coverage cites '$300M+'; the '$90M' is the Miami Herald's. The company's operators are named in reporting as inquiry subjects, not charged. La Nación also names three federal prosecutors. The FBI's Miami office declined to comment. No US charges have been filed. This is the classic FIFA-Gate template: jurisdiction over dollars, not scorelines."
       },
       "es": {
         "headline": "Estalla la historia del FBI y el dinero",
         "short": "La Nación publica que hay una pesquisa preliminar del FBI/DOJ sobre los movimientos de plata de la AFA en EE.UU. Sin cargos.",
         "full": "La Nación informa que agentes del FBI y fiscales federales están tomando testimonios en una pesquisa preliminar sobre cómo la AFA movió plata por bancos y empresas de EE.UU. El Miami Herald lo corrobora, con dos fuentes policiales.",
-        "detail": "Según La Nación (Francisco Olivera y Hugo Alconada Mon), la pesquisa mira más de US$300M de ingresos de la AFA que pasaron por instituciones estadounidenses — entre ellas una empresa de Florida (reportada como TourProdEnter LLC) que, según el diario, manejó al menos US$260M, con unos US$57M sin justificación económica clara. El desglose 'US$260M/US$57M' lo tiene solo La Nación; casi toda la cobertura habla de 'más de US$300M'. A los operadores de la empresa la prensa los menciona como sujetos de la pesquisa — no imputados. La Nación también nombra a tres fiscales federales. La oficina del FBI en Miami no quiso hacer comentarios. No hay cargos presentados en EE.UU. Es el molde clásico del FIFA-Gate: la jurisdicción es sobre los dólares, no sobre los marcadores."
+        "detail": "Según La Nación (Francisco Olivera y Hugo Alconada Mon), la pesquisa mira más de US$300M de ingresos de la AFA que pasaron por instituciones estadounidenses — entre ellas una empresa de Florida (reportada como TourProdEnter LLC) que, según el diario, manejó al menos US$260M, con unos US$57M sin justificación económica clara. Reportes posteriores nombran cinco bancos de EE.UU. por los que se movió la plata — Citibank, Bank of America, JPMorgan Chase, PNC y Synovus — y el Miami Herald ubica en unos US$90M el monto que los investigadores marcaron como 'potencialmente irregular' hasta ahora. El desglose 'US$260M/US$57M' lo tiene solo La Nación; casi toda la cobertura habla de 'más de US$300M'; el 'US$90M' es del Miami Herald. A los operadores de la empresa la prensa los menciona como sujetos de la pesquisa — no imputados. La Nación también nombra a tres fiscales federales. La oficina del FBI en Miami no quiso hacer comentarios. No hay cargos presentados en EE.UU. Es el molde clásico del FIFA-Gate: la jurisdicción es sobre los dólares, no sobre los marcadores."
       }
     }
   },
@@ -95,7 +107,9 @@
     "dateApprox": true,
     "thread": "sporting",
     "icon": "🧑‍⚖️",
-    "sources": ["nbcdfw-pinheiro"],
+    "sources": [
+      "nbcdfw-pinheiro"
+    ],
     "content": {
       "en": {
         "headline": "The Pinheiro appointment",
@@ -117,13 +131,15 @@
     "date": "2026-07-09",
     "thread": "sporting",
     "icon": "🇦🇷",
-    "sources": ["yahoo-fifa-problem"],
+    "sources": [
+      "yahoo-fifa-problem"
+    ],
     "content": {
       "en": {
         "headline": "An all-Argentine crew — for a rival's match",
         "short": "Facundo Tello and four compatriots officiate France–Morocco. Bad optics, wrong direction.",
-        "full": "An all-Argentine officiating crew — Facundo Tello plus four compatriots — is appointed for France–Morocco. It looks bad, but note the direction: it's a rival's match, not Argentina's.",
-        "detail": "This is the detail that cuts against the favoritism story more than for it. If FIFA were shading toward Argentina, putting an all-Argentine crew on a rival's quarterfinal is the opposite of what you'd design — you'd keep them far from anything touching Argentina's path. It's an optics own-goal, not a smoking gun."
+        "full": "An all-Argentine officiating crew (Facundo Tello plus four compatriots) is appointed for France–Morocco. It looks bad, but note the direction: it's a rival's match, not Argentina's.",
+        "detail": "This is the detail that cuts against the favoritism story more than for it. If FIFA were shading toward Argentina, putting an all-Argentine crew on a rival's quarterfinal is the opposite of what you'd design; you'd keep them far from anything touching Argentina's path. It's an optics own-goal, not a smoking gun."
       },
       "es": {
         "headline": "Una terna toda argentina — para un partido rival",
@@ -139,13 +155,18 @@
     "date": "2026-07-11",
     "thread": "sporting",
     "icon": "🇨🇭",
-    "sources": ["espn-arg-sui", "fifa-arg-sui-report", "aljazeera-arg-sui", "ifab-var-2026"],
+    "sources": [
+      "espn-arg-sui",
+      "fifa-arg-sui-report",
+      "aljazeera-arg-sui",
+      "ifab-var-2026"
+    ],
     "content": {
       "en": {
         "headline": "Switzerland 1–3 (AET): the Embolo red",
         "short": "Argentina win in extra time; Breel Embolo is sent off for simulation after a VAR review.",
-        "full": "Argentina beat Switzerland 3–1 after extra time in Kansas City. Breel Embolo is dismissed for a second yellow — simulation — after the referee is sent to the monitor, and Switzerland's Granit Xhaka is furious.",
-        "detail": "Mac Allister 10′, Ndoye 67′, Álvarez 112′, Lautaro Martínez 120+1′. Embolo went off around the 72nd minute for a second caution after a VAR-recommended review under the new 2026 protocol; replays showed a clear dive. Xhaka's reaction was that of a man who felt the game turned — he called it a decision that 'kills the game' (a paraphrase, not a verbatim quote). A red for simulation, confirmed on replay, is a defensible call; it's also exactly the kind of swing that fuels perception."
+        "full": "Argentina beat Switzerland 3–1 after extra time in Kansas City. Breel Embolo is dismissed for a second yellow (simulation) after the referee is sent to the monitor, and Switzerland's Granit Xhaka is furious.",
+        "detail": "Mac Allister 10′, Ndoye 67′, Álvarez 112′, Lautaro Martínez 120+1′. Embolo went off around the 72nd minute for a second caution after a VAR-recommended review under the new 2026 protocol; replays showed a clear dive. Xhaka's reaction was that of a man who felt the game turned; he called it a decision that 'kills the game' (a paraphrase, not a verbatim quote). A red for simulation, confirmed on replay, is a defensible call; it's also exactly the kind of swing that fuels perception."
       },
       "es": {
         "headline": "Suiza 1–3 (tras alargue): la roja a Embolo",
@@ -161,13 +182,15 @@
     "date": "2026-07-12",
     "thread": "sporting",
     "icon": "⚽",
-    "sources": ["yahoo-fifa-problem"],
+    "sources": [
+      "yahoo-fifa-problem"
+    ],
     "content": {
       "en": {
         "headline": "The penalty outlier",
         "short": "8 penalties across the 2022 + 2026 World Cups — roughly double any other nation.",
-        "full": "The stat that keeps the conversation alive: Argentina has been awarded 8 penalties across its last 12 World Cup matches (five in 2022, three in 2026) — the most of any nation in recent World Cups, roughly double the next side.",
-        "detail": "This is the strongest single number the doubters have, and it's real. Two honest caveats: Messi has missed two of the 2026 ones (vs Austria and Egypt), so 'awarded' isn't 'converted'; and the exact superlative — 'most ever over a 12-match span' — isn't cleanly sourced, so I frame it as 'most in recent World Cups.' An outlier invites scrutiny; it isn't proof of a thumb on the scale."
+        "full": "The stat that keeps the conversation alive: Argentina has been awarded 8 penalties across its last 12 World Cup matches (five in 2022, three in 2026), the most of any nation in recent World Cups and roughly double the next side.",
+        "detail": "This is the strongest single number the doubters have, and it's real. Two honest caveats: Messi has missed two of the 2026 ones (vs Austria and Egypt), so 'awarded' isn't 'converted'; and the exact superlative ('most ever over a 12-match span') isn't cleanly sourced, so I frame it as 'most in recent World Cups.' An outlier invites scrutiny; it isn't proof of a thumb on the scale."
       },
       "es": {
         "headline": "El dato atípico de los penales",
@@ -178,24 +201,80 @@
     }
   },
   {
-    "id": "semis-ahead",
+    "id": "tofoni-testimony",
     "order": 9,
+    "date": "2026-07-13",
+    "dateApprox": true,
+    "thread": "financial",
+    "icon": "🧾",
+    "sources": [
+      "lanacion-fbi",
+      "miami-herald",
+      "ap-miami-millions",
+      "snopes-probe"
+    ],
+    "content": {
+      "en": {
+        "headline": "A witness and a money trail",
+        "short": "A businessman is interviewed; reporting names five US banks and a ~$90M irregular-flow figure.",
+        "full": "More specifics surface, and they sharpen the money thread without touching the scoreboard: a businessman who once handled AFA commercial deals is reportedly interviewed by US investigators, and coverage now names the banks and a larger flagged sum.",
+        "detail": "Guillermo Tofoni, an Argentine sports businessman who previously handled AFA commercial deals and has himself accused the association of wrongdoing, reportedly gave a roughly three-hour videoconference interview to FBI agents and federal prosecutors about how the AFA structured its international commercial agreements. He is a witness, not a defendant, and no one has been charged. Reporting names five US banks in the flow (Citibank, Bank of America, JPMorgan Chase, PNC, Synovus); the Miami Herald puts the amount investigators have flagged as potentially irregular at roughly $90M to date. An AFA representative pushed back that investigative steps alone 'do not determine responsibility or guilt.' Note what this is and isn't: an active inquiry, now with an interviewed witness and named banks, and still zero connection alleged to any match result."
+      },
+      "es": {
+        "headline": "Un testigo y un rastro de plata",
+        "short": "Entrevistan a un empresario; los reportes nombran cinco bancos de EE.UU. y una cifra de ~US$90M marcada como irregular.",
+        "full": "A medida que avanza la historia aparecen más precisiones — y afilan el hilo del dinero sin tocar el marcador. A un empresario que manejó negocios comerciales de la AFA lo habrían entrevistado investigadores de EE.UU., y los reportes ponen nombre a los bancos y una cifra marcada más grande.",
+        "detail": "Guillermo Tofoni — empresario argentino del deporte que manejó negocios comerciales de la AFA y que él mismo acusó a la asociación de irregularidades — habría dado una entrevista por videoconferencia de unas tres horas a agentes del FBI y fiscales federales sobre cómo la AFA estructuró sus acuerdos comerciales internacionales. Es un testigo, no un imputado, y no hay nadie con cargos. Los reportes nombran cinco bancos de EE.UU. en el circuito (Citibank, Bank of America, JPMorgan Chase, PNC, Synovus); el Miami Herald ubica en unos US$90M el monto que los investigadores marcaron como potencialmente irregular hasta ahora. Un representante de la AFA retrucó que las medidas de investigación por sí solas 'no determinan responsabilidad ni culpa'. Ojo con lo que es y lo que no: una pesquisa activa, con un testigo y un rastro de papeles — y todavía cero conexión alegada con ningún resultado de la cancha."
+      }
+    }
+  },
+  {
+    "id": "semis-ahead",
+    "order": 10,
     "date": "2026-07-14",
     "thread": "both",
     "icon": "🏆",
-    "sources": ["opta"],
+    "sources": [
+      "opta"
+    ],
     "content": {
       "en": {
-        "headline": "What's next: the semifinals",
+        "headline": "Semifinal eve",
         "short": "France v Spain (Jul 14) and England v Argentina (Jul 15). The final is July 19.",
         "full": "Two semifinals decide the finalists: France v Spain in Dallas (July 14) and England v Argentina in Atlanta (July 15), with the final in New York/New Jersey on July 19. Maximum scrutiny now falls on every call.",
-        "detail": "This is where the perception hypotheses get tested in real time. If the officiating pattern regresses under the brightest lights, that argues for variance over conspiracy. If it doesn't, the doubters get a real data point. Either way, the football is about to be spectacular — see the 'Who wins?' tab for the numbers."
+        "detail": "This is where the perception hypotheses get tested in real time. If the officiating pattern regresses under the brightest lights, that argues for variance over conspiracy. If it doesn't, the doubters get a real data point. Team news on semifinal eve: cards were wiped after the quarterfinals, so nobody is suspended. Argentina's Messi is expected fit after an eye knock against Switzerland (he played all 120′), though Cristian Romero is a fitness doubt; England expect Declan Rice back after an illness scare (Jordan Henderson doubtful after breaking his arm celebrating the Mexico win); France eased a precautionary Mbappé knock. Either way, the football is about to be spectacular; the numbers are on the 'Who wins?' tab."
       },
       "es": {
-        "headline": "Lo que viene: las semifinales",
+        "headline": "La previa de las semifinales",
         "short": "Francia v España (14/7) e Inglaterra v Argentina (15/7). La final es el 19 de julio.",
         "full": "Dos semifinales definen a los finalistas: Francia v España en Dallas (14 de julio) e Inglaterra v Argentina en Atlanta (15 de julio), con la final en Nueva York/Nueva Jersey el 19 de julio. Ahora el máximo escrutinio cae sobre cada fallo.",
-        "detail": "Acá es donde las hipótesis de percepción se ponen a prueba en tiempo real. Si el patrón arbitral se normaliza bajo las luces más brillantes, eso juega a favor de la varianza por sobre la conspiración. Si no, los escépticos consiguen un dato real. En cualquier caso, el fútbol está por ser espectacular — mirá los números en la pestaña '¿Quién gana?'."
+        "detail": "Acá es donde las hipótesis de percepción se ponen a prueba en tiempo real. Si el patrón arbitral se normaliza bajo las luces más brillantes, eso juega a favor de la varianza por sobre la conspiración. Si no, los escépticos consiguen un dato real. Parte médico en la previa de las semis: las amarillas se borraron después de los cuartos, así que no hay suspendidos. En Argentina, Messi llega bien tras un golpe en el ojo ante Suiza (jugó los 120′), aunque Cristian Romero es duda física; Inglaterra espera recuperar a Declan Rice tras un susto por enfermedad (Jordan Henderson, en duda por una fractura en el brazo festejando el triunfo ante México); en Francia, el golpe de Mbappé quedó en una simple precaución. En cualquier caso, el fútbol está por ser espectacular — mirá los números en la pestaña '¿Quién gana?'."
+      }
+    }
+  },
+  {
+    "id": "spain-france-semi",
+    "order": 11,
+    "date": "2026-07-14",
+    "thread": "sporting",
+    "icon": "🇪🇸",
+    "sources": [
+      "espn-fra-esp",
+      "ibtimes-refs",
+      "yahoo-hackett"
+    ],
+    "content": {
+      "en": {
+        "headline": "Semifinal 1: Spain 2–0 France — and a penalty firestorm without Argentina",
+        "short": "Spain knock out the favorites, and the round's big refereeing row lands on a match with no Argentina in it.",
+        "full": "Spain beat France 2–0 in Arlington to reach the final: an Oyarzabal penalty on 22 minutes and a Pedro Porro strike on 58. The twist, for this site's purposes: that penalty (Digne on Lamine Yamal) set off the night's officiating uproar, and Argentina wasn't even playing.",
+        "detail": "Referee Iván Barton of El Salvador pointed to the spot when Lucas Digne caught Lamine Yamal in the box; replays split opinion (some analysts argued Yamal invited the contact) and VAR did not intervene. Deschamps asked afterward whether the referee 'had the level' for a World Cup semifinal; FIFA's Pierluigi Collina defended the official, and former PGMOL chief Keith Hackett analyzed the footage and called the penalty correct. Spain dominated the game itself (roughly 1.6 to 0.3 on xG per ESPN) and has conceded once all tournament. Why this matters here: the previous node said the semifinals would test the perception hypotheses, and the first data point has the round's loudest refereeing controversy attached to Spain–France, not to Argentina. That is what the variance-plus-perception readings (H3/H4) expect."
+      },
+      "es": {
+        "headline": "Semifinal 1: España 2–0 Francia — y un penal polémico sin Argentina",
+        "short": "España elimina al favorito — y el gran lío arbitral de la ronda cae en un partido donde Argentina ni jugaba.",
+        "full": "España le ganó 2–0 a Francia en Arlington y está en la final: penal de Oyarzabal a los 22 y gol de Pedro Porro a los 58. Y acá el giro para la historia de este sitio — el penal (de Digne a Lamine Yamal) desató el incendio arbitral de la semifinal, con Argentina bien lejos de la escena.",
+        "detail": "El árbitro salvadoreño Iván Barton marcó el punto cuando Lucas Digne enganchó a Lamine Yamal en el área; las repeticiones dividieron opiniones — algunos analistas dijeron que Yamal buscó el contacto — y el VAR no intervino. Deschamps preguntó después si el árbitro 'tenía el nivel' para una semifinal de Mundial; Pierluigi Collina, el jefe de arbitraje de la FIFA, defendió al juez, y el exjefe de los árbitros ingleses Keith Hackett analizó las imágenes y dijo que el penal estuvo bien cobrado. España dominó el partido con claridad (más o menos 1,6 a 0,3 en xG según ESPN) y recibió un solo gol en todo el torneo. Por qué importa acá: el nodo anterior de esta línea de tiempo anticipaba que las semifinales iban a poner a prueba las hipótesis de percepción bajo las luces más brillantes. Ya llegó el primer dato — la polémica arbitral más ruidosa de la ronda cayó en un Francia–España, no en un partido de Argentina. Es justo lo que esperan las lecturas de varianza más percepción (H3/H4)."
       }
     }
   }

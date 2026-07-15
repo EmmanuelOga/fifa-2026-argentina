@@ -6,8 +6,9 @@
  * To update after a match: fill in the relevant result, advance `state`, bump
  * meta.lastUpdated, push. That is the entire workflow.
  *
- * Snapshot as of 2026-07-12: quarterfinals complete, semifinals NOT yet played
- * (verified via ESPN/FIFA/Al Jazeera, Jul 12 2026).
+ * Snapshot as of 2026-07-15 (evening): both semifinals played. Spain 2–0 France
+ * (Jul 14); England 1–2 Argentina (Jul 15, verified vs ESPN full-time data).
+ * The final is set: Spain v Argentina, July 19, MetLife.
  */
 import type { Locale } from '../lib/i18n';
 
@@ -28,6 +29,9 @@ export interface Match {
   away: string; // team code
   date: string; // ISO
   venue: Record<Locale, string>;
+  /** ESPN gameId — lets scripts/fetch-match-timeline.mjs snapshot the goal/red
+   *  timeline + stats into src/data/match-events.json. Optional. */
+  espnId?: string;
   /** null until played. Scores in regulation+ET; `winner` names the advancing code. */
   result: { home: number; away: number; winner: string; note?: Record<Locale, string> } | null;
 }
@@ -36,7 +40,9 @@ export interface Match {
  *  straight 120-minute knockouts) already priced in as a mild penalty. */
 export const TEAMS: Record<string, Team> = {
   FRA: { code: 'FRA', name: { en: 'France', es: 'Francia' }, flag: '🇫🇷', rating: 2062 },
-  ESP: { code: 'ESP', name: { en: 'Spain', es: 'España' }, flag: '🇪🇸', rating: 2020 },
+  /** ESP bumped 2020→2045 after the semifinal shutout of France (one goal conceded
+   *  all tournament) so nudge=0 output tracks the post-SF1 clean synthesis. */
+  ESP: { code: 'ESP', name: { en: 'Spain', es: 'España' }, flag: '🇪🇸', rating: 2045 },
   ENG: { code: 'ENG', name: { en: 'England', es: 'Inglaterra' }, flag: '🏴󠁧󠁢󠁥󠁮󠁧󠁿', rating: 2009 },
   ARG: { code: 'ARG', name: { en: 'Argentina', es: 'Argentina' }, flag: '🇦🇷', rating: 2000 },
 };
@@ -90,23 +96,41 @@ export const QUARTERFINALS: Match[] = [
   },
 ];
 
-/** Semifinals — not yet played as of the snapshot. */
+/** Semifinals — SF1 played Jul 14; SF2 in progress at snapshot time (result null). */
 export const SEMIFINALS: Match[] = [
   {
     id: 'sf-fra-esp',
     home: 'FRA',
     away: 'ESP',
     date: '2026-07-14',
+    espnId: '760514',
     venue: { en: 'Dallas (Arlington)', es: 'Dallas (Arlington)' },
-    result: null,
+    result: {
+      home: 0,
+      away: 2,
+      winner: 'ESP',
+      note: {
+        en: 'Oyarzabal 22′ (pen), Porro 58′. The early penalty (Digne on Yamal) was hotly debated; Deschamps questioned the referee afterward.',
+        es: 'Oyarzabal 22′ (penal), Porro 58′. El penal tempranero (de Digne a Yamal) dio muchísimo que hablar; Deschamps cuestionó al árbitro después.',
+      },
+    },
   },
   {
     id: 'sf-eng-arg',
     home: 'ENG',
     away: 'ARG',
     date: '2026-07-15',
+    espnId: '760515',
     venue: { en: 'Atlanta', es: 'Atlanta' },
-    result: null,
+    result: {
+      home: 1,
+      away: 2,
+      winner: 'ARG',
+      note: {
+        en: 'Gordon 55′; Fernández 85′, L. Martínez 90+2′. Argentina came from behind in regulation — the first of their knockout wins not to need extra time.',
+        es: 'Gordon 55′; Fernández 85′, L. Martínez 90+2′. Argentina lo dio vuelta en los 90 — el primer triunfo del mata-mata que no necesitó alargue.',
+      },
+    },
   },
 ];
 

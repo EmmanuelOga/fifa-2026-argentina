@@ -3,27 +3,52 @@
     "id": "run-1-2026-07-12",
     "date": "2026-07-12",
     "run": 1,
+    "image": {
+      "src": "../assets/photos/festejos-ba-2022.jpg",
+      "alt": {
+        "en": "A sea of fans in sky-blue and white flooding a Buenos Aires highway during the 2022 World Cup celebrations",
+        "es": "Una marea de hinchas de celeste y blanco desbordando una autopista porteña en los festejos del Mundial 2022"
+      },
+      "caption": {
+        "en": "Buenos Aires, December 2022: the highways flooded when the third star landed. This is the joy the site is named for.",
+        "es": "Buenos Aires, diciembre de 2022: las autopistas desbordadas cuando llegó la tercera estrella — la alegría que le da nombre a este sitio."
+      },
+      "credit": "Sangianense · CC BY-SA 4.0 · Wikimedia Commons",
+      "creditUrl": "https://commons.wikimedia.org/wiki/File:Festejos_Buenos_Aires_-_Copa_del_mundo_2022_-_02.png"
+    },
     "scorecard": [
       {
-        "claim": { "en": "Champion", "es": "Campeón" },
+        "claim": {
+          "en": "Champion",
+          "es": "Campeón"
+        },
         "verdict": "pending"
       },
       {
-        "claim": { "en": "Semifinal — France v Spain", "es": "Semifinal — Francia v España" },
+        "claim": {
+          "en": "Semifinal: France v Spain",
+          "es": "Semifinal: Francia v España"
+        },
         "verdict": "pending"
       },
       {
-        "claim": { "en": "Semifinal — England v Argentina", "es": "Semifinal — Inglaterra v Argentina" },
+        "claim": {
+          "en": "Semifinal: England v Argentina",
+          "es": "Semifinal: Inglaterra v Argentina"
+        },
         "verdict": "pending"
       },
       {
-        "claim": { "en": "DOJ moves to an indictment or cooperating witness", "es": "El DOJ avanza a una imputación o a un testigo cooperante" },
+        "claim": {
+          "en": "DOJ moves to an indictment or cooperating witness",
+          "es": "El DOJ avanza a una imputación o a un testigo cooperante"
+        },
         "verdict": "pending"
       }
     ],
     "content": {
       "en": {
-        "title": "Run 1 — first build (pre-semifinals)",
+        "title": "Run 1: first build (pre-semifinals)",
         "summary": "The initial analysis, built July 12 with the quarterfinals complete and the semifinals still to play.",
         "body": [
           "This is the first pass. The bracket sits at pre-semifinals: France v Spain and England v Argentina are still to be played, so every title number here is a genuine forecast, not hindsight.",
@@ -33,13 +58,146 @@
         ]
       },
       "es": {
-        "title": "Corrida 1 — primer build (pre-semifinales)",
+        "title": "Corrida 1: primer build (pre-semifinales)",
         "summary": "El análisis inicial, armado el 12 de julio con los cuartos ya jugados y las semifinales todavía por delante.",
         "body": [
           "Esta es la primera pasada. El cuadro está en pre-semifinales: Francia v España e Inglaterra v Argentina todavía no se jugaron, así que cada número de título que ves acá es un pronóstico de verdad, no la típica sabiduría con el diario del lunes.",
           "Qué cambió la verificación de la Fase 0 respecto del borrador original: Opta se actualizó después de los cuartos (Francia 34,0%, España 23,4%, Inglaterra 21,9%, Argentina 20,6% para salir campeón); los números por selección de Nate Silver terminaron siendo pagos, así que cito su método y el mercado público en lugar de inventar una cifra; el superlativo de 'la mayor cantidad de penales en la historia' lo bajé a 'la mayor en los Mundiales recientes'; y un dato inverificable de '23M de vistas' lo saqué por completo.",
           "Sobre la historia del dinero: es real y se puede rastrear hasta La Nación y el Miami Herald, pero varios detalles (el reparto de US$260M/US$57M, los fiscales con nombre y apellido) vienen de una sola fuente, así que los atribuyo en vez de darlos por ciertos, y a las personas de la empresa de Florida las menciono por su rol, no por su nombre.",
           "Mi pronóstico principal para el marcador de arriba: los modelos dicen Francia; el corazón dice Argentina. Cuando se jueguen las semifinales, le pongo nota a esta corrida y la archivo."
+        ]
+      }
+    }
+  },
+  {
+    "id": "run-2-2026-07-14",
+    "date": "2026-07-14",
+    "run": 2,
+    "image": {
+      "src": "../assets/photos/festejo-gol-2022.jpg",
+      "alt": {
+        "en": "A fan in an Argentina shirt screams with joy at a goal during a public screening in Buenos Aires, 2022",
+        "es": "Un hincha con la camiseta argentina grita un gol en una pantalla gigante en Buenos Aires, 2022"
+      },
+      "caption": {
+        "en": "A public screening in Buenos Aires, 2022. Semifinal eve feels like this: a whole country holding its breath.",
+        "es": "Pantalla gigante en Buenos Aires, 2022. La previa de una semifinal se siente así: un país entero conteniendo la respiración."
+      },
+      "credit": "GCBA · CC BY-SA 4.0 · Wikimedia Commons",
+      "creditUrl": "https://commons.wikimedia.org/wiki/File:Festejo_de_gol_Mundial_2022.jpg"
+    },
+    "scorecard": [
+      {
+        "claim": {
+          "en": "Champion",
+          "es": "Campeón"
+        },
+        "verdict": "pending"
+      },
+      {
+        "claim": {
+          "en": "Semifinal: France v Spain",
+          "es": "Semifinal: Francia v España"
+        },
+        "verdict": "pending"
+      },
+      {
+        "claim": {
+          "en": "Semifinal: England v Argentina",
+          "es": "Semifinal: Inglaterra v Argentina"
+        },
+        "verdict": "pending"
+      },
+      {
+        "claim": {
+          "en": "DOJ moves to an indictment or cooperating witness",
+          "es": "El DOJ avanza a una imputación o a un testigo cooperante"
+        },
+        "verdict": "pending"
+      }
+    ],
+    "content": {
+      "en": {
+        "title": "Run 2: the probe deepens (still pre-semifinals)",
+        "summary": "A semifinal-eve refresh: the bracket hasn't moved, but the money thread got more concrete and more sourced.",
+        "body": [
+          "Two days on, the bracket sits where Run 1 left it: France v Spain and England v Argentina were still to be played when I refreshed, so every title number is still a forecast. I re-checked the models anyway. Opta is unchanged (France 34.0%, Spain 23.4%, England 21.9%, Argentina 20.6%) and the betting market barely drifted: France still the clear favorite, England and Spain near level, Argentina the longest odds of the four.",
+          "What moved was the financial thread. Reporting now names five US banks the money allegedly flowed through (Citibank, Bank of America, JPMorgan Chase, PNC and Synovus), and the Miami Herald puts the sum investigators have flagged as 'potentially irregular' at roughly $90M so far. Guillermo Tofoni, a businessman who once handled AFA commercial deals and has himself accused the association of wrongdoing, reportedly gave a three-hour videoconference interview to the FBI and federal prosecutors. Run 1 listed him as a possible witness; per reporting, he has now been interviewed.",
+          "The guardrails still hold: no charges have been filed, the FBI declined to comment, an AFA representative pushed back that investigative steps alone 'do not determine responsibility or guilt,' and none of this alleges any connection to a match result. So my hypothesis bands don't move: an active inquiry with a witness and a paper trail is what 'a genuine preliminary inquiry exists' (70–90%) already anticipates. The sourcing deepened; the claim didn't.",
+          "On the football: cards were wiped after the quarterfinals, so nobody is suspended for the semis. Messi is expected fit after an eye knock against Switzerland; Cristian Romero is a doubt; England expect Rice back from an illness scare; France eased a precautionary Mbappé knock. Next run grades the semifinals. The models still say France; my heart still says Argentina."
+        ]
+      },
+      "es": {
+        "title": "Corrida 2: la pesquisa se profundiza (todavía pre-semifinales)",
+        "summary": "Un repaso en la previa de las semis: el cuadro no se movió, pero el hilo del dinero se puso más concreto y mejor documentado.",
+        "body": [
+          "Dos días después, el cuadro está igual que en la Corrida 1: Francia v España e Inglaterra v Argentina todavía no se habían jugado cuando actualicé, así que cada número de título sigue siendo un pronóstico, no la sabiduría del diario del lunes. Igual volví a chequear los modelos — Opta está sin cambios (Francia 34,0%, España 23,4%, Inglaterra 21,9%, Argentina 20,6%) y el mercado casi no se movió (Francia sigue siendo la clara favorita; Inglaterra y España ahora casi parejas; Argentina, la que paga más de las cuatro).",
+          "Lo que sí se movió fue el hilo financiero — y conviene ser preciso con cómo. Los reportes ahora nombran cinco bancos de EE.UU. por los que habría pasado la plata (Citibank, Bank of America, JPMorgan Chase, PNC y Synovus), y el Miami Herald ubica en unos US$90M el monto que los investigadores marcaron como 'potencialmente irregular' hasta ahora. El empresario Guillermo Tofoni — que manejó negocios comerciales de la AFA y que él mismo acusó a la asociación de irregularidades — habría dado una entrevista por videoconferencia de tres horas al FBI y a fiscales federales. En la Corrida 1 lo mencioné como posible testigo; ahora, según los reportes, efectivamente lo entrevistaron.",
+          "Las salvaguardas siguen en pie: no hay cargos presentados, el FBI no hizo comentarios, un representante de la AFA retrucó que las medidas de investigación por sí solas 'no determinan responsabilidad ni culpa', y nada de esto alega conexión con ningún resultado de la cancha. Así que mis bandas de hipótesis no se mueven — una pesquisa activa, con un testigo y un rastro de papeles, es justo lo que 'existe una pesquisa preliminar genuina' (70–90%) ya anticipa. Lo que se profundizó son las fuentes, no la acusación.",
+          "En lo futbolístico: las amarillas se borraron después de los cuartos, así que no hay suspendidos para las semis. Messi llega bien tras un golpe en el ojo ante Suiza; Cristian Romero es duda; Inglaterra espera recuperar a Rice tras un susto por enfermedad; en Francia, el golpe de Mbappé quedó en una simple precaución. La próxima corrida le pone nota a las semifinales. Los modelos siguen diciendo Francia; el corazón sigue diciendo Argentina."
+        ]
+      }
+    }
+  },
+  {
+    "id": "run-3-2026-07-15",
+    "date": "2026-07-15",
+    "run": 3,
+    "image": {
+      "src": "../assets/photos/metlife-aerial.jpg",
+      "alt": {
+        "en": "Aerial view of MetLife Stadium in New Jersey, the venue of the July 19 final",
+        "es": "Vista aérea del estadio MetLife en Nueva Jersey, la sede de la final del 19 de julio"
+      },
+      "caption": {
+        "en": "MetLife Stadium in New Jersey, where the final kicks off on July 19.",
+        "es": "El estadio MetLife, Nueva Jersey — donde se juega la final el 19 de julio."
+      },
+      "credit": "Anthony Quintano · CC BY 2.0 · Wikimedia Commons",
+      "creditUrl": "https://commons.wikimedia.org/wiki/File:Metlife_stadium_(Aerial_view).jpg"
+    },
+    "scorecard": [
+      {
+        "claim": {
+          "en": "Champion",
+          "es": "Campeón"
+        },
+        "verdict": "pending"
+      },
+      {
+        "claim": {
+          "en": "Semifinal: England v Argentina",
+          "es": "Semifinal: Inglaterra v Argentina"
+        },
+        "verdict": "pending"
+      },
+      {
+        "claim": {
+          "en": "DOJ moves to an indictment or cooperating witness",
+          "es": "El DOJ avanza a una imputación o a un testigo cooperante"
+        },
+        "verdict": "pending"
+      }
+    ],
+    "content": {
+      "en": {
+        "title": "Run 3: Spain knock out the favorites (one semi in the books)",
+        "summary": "Spain beat France 2–0 and the market flipped to Spain as the new favorite. England v Argentina was live and scoreless when this snapshot was taken.",
+        "body": [
+          "The bracket finally moved. Spain shut out France 2–0 in Arlington (an Oyarzabal penalty on 22 minutes, a Pedro Porro goal on 58) and is in the July 19 final. I took this snapshot with the second semifinal, England v Argentina, still in progress (scoreless in the first half in Atlanta), so that result is left blank on purpose; the next run fills it in and grades the semifinal predictions.",
+          "This is the detail the site was built for: the semifinal's refereeing controversy had nothing to do with Argentina. The disputed early penalty (Digne on Lamine Yamal, replays splitting opinion on who initiated contact) had Deschamps publicly questioning whether the referee 'had the level' for a semifinal; Collina defended the official, and former referees' chief Keith Hackett called the penalty correct on review. The previous run said the semis would stress-test the perception hypotheses. Data point one points toward variance and perception cascade (H3/H4): scrutiny follows the tournament, not one team. The hypothesis bands stay put.",
+          "The numbers moved a lot, though. With France out, the market flipped to Spain (around −150 at the big US books; prediction markets near 58%), England next, Argentina still the longest shot of the three. One caveat: Opta hadn't refreshed its model when I checked, so its pre-semi Spain figure is stale; I flagged that in the tab and re-synthesized my own speculative ranges around the market (Spain 52–60%, England 21–26%, Argentina 17–23%). Worth saying plainly: the models had France at 57.7% to reach the final, and the 42.3% branch happened. There's a longer note on the Who Wins tab about what a favorite losing does and doesn't say about the models; the short version is that one match can't refute a probability, which is why the scorecard below exists.",
+          "The money thread barely moved: no charges, the FBI still isn't commenting, and the new coverage mostly syndicates what Runs 1 and 2 established. One small attributed addition: reporting notes that AFA president Tapia, processed in the separate Argentine case, needed judicial authorization to travel to the US with the squad. The numbers now say Spain; the heart, as ever, says Argentina."
+        ]
+      },
+      "es": {
+        "title": "Corrida 3: España elimina al favorito (una semi ya jugada)",
+        "summary": "España le ganó 2–0 a Francia y el mercado se dio vuelta: ahora España es la clara favorita. Inglaterra v Argentina estaba en juego, sin goles, cuando saqué esta foto.",
+        "body": [
+          "El cuadro por fin se movió. España dejó en cero a Francia en Arlington — penal de Oyarzabal a los 22 y gol de Pedro Porro a los 58 — y ya está en la final del 19 de julio. Saqué esta foto con la segunda semifinal, Inglaterra v Argentina, literalmente en juego (sin goles en el primer tiempo en Atlanta), así que ese resultado queda en blanco a propósito; la próxima corrida lo completa y le pone nota a los pronósticos de las semis.",
+          "Y acá el detalle para el que se armó este sitio: el incendio arbitral de la semifinal no tuvo nada que ver con Argentina. El penal tempranero y discutido — de Digne a Lamine Yamal, con repeticiones que dividieron opiniones sobre quién buscó el contacto — dejó a Deschamps preguntando en público si el árbitro 'tenía el nivel' para una semifinal, mientras Collina defendió al juez y el exjefe de árbitros Keith Hackett dijo, tras revisar las imágenes, que el penal estuvo bien cobrado. La corrida anterior decía que las semis iban a poner a prueba las hipótesis de percepción bajo las luces más brillantes. Llegó el primer dato, y apunta a la varianza y la cascada de percepción (H3/H4): la lupa sigue al torneo, no a una camiseta. Las bandas de las hipótesis no se mueven.",
+          "Los números, en cambio, se movieron un montón. Con Francia afuera, el mercado se dio vuelta y puso a España como clara favorita (alrededor de −150 en las casas grandes de EE.UU.; los mercados de predicción cerca del 58%), con Inglaterra después y Argentina como la que paga más de las tres. Una aclaración honesta: Opta no había actualizado su modelo cuando saqué la foto, así que su número pre-semi de España queda viejo y bajo al lado del mercado — lo dejé marcado en la pestaña y rearmé mis propios rangos especulativos alrededor del mercado (España 52–60%, Inglaterra 21–26%, Argentina 17–23%). Y vale decirlo sin vueltas: los modelos tenían a Francia con 57,7% de llegar a la final, y pasó la rama del 42,3%. Agregué una nota más larga en la pestaña ¿Quién Gana? sobre lo que la caída de una favorita dice — y no dice — de los modelos; la versión corta: un partido no puede refutar una probabilidad, y justo por eso existe la libreta de calificaciones de acá abajo.",
+          "El hilo de la plata no se movió en serio — sin cargos, el FBI sigue sin comentar, y la cobertura nueva es más que nada sindicación de lo que las Corridas 1 y 2 ya habían establecido. Una sola adición chica y atribuida: la prensa señala que el presidente de la AFA, Tapia, procesado en la causa argentina que va por separado, necesitó autorización judicial para viajar a EE.UU. con el plantel. Los números ahora dicen España; el corazón, como siempre, dice Argentina."
         ]
       }
     }

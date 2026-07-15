@@ -1,0 +1,55 @@
+{
+  "run": 2,
+  "date": "2026-07-14",
+  "bracketStage": "pre-semis",
+  "predictions": {
+    "titleProbabilities": {
+      "FRA": { "authorLow": 0.33, "authorHigh": 0.4, "opta": 0.34 },
+      "ESP": { "authorLow": 0.2, "authorHigh": 0.24, "opta": 0.234 },
+      "ENG": { "authorLow": 0.18, "authorHigh": 0.23, "opta": 0.219 },
+      "ARG": { "authorLow": 0.17, "authorHigh": 0.22, "opta": 0.206 }
+    },
+    "hypotheses": {
+      "H1_deliberate_favoritism": { "low": 0.02, "high": 0.08 },
+      "H2_inquiry_exists": { "low": 0.7, "high": 0.9 },
+      "H2_chargeable_conduct": { "low": 0.45, "high": 0.65 },
+      "H3_soft_bias_contributor": { "low": 0.35, "high": 0.55 },
+      "H4_variance_perception": { "low": 0.3, "high": 0.5 }
+    }
+  },
+  "outcomes": {
+    "note": "Semifinals not yet played as of this pass (FRA v ESP pre-kickoff Jul 14). Fill in on Run 3.",
+    "champion": null,
+    "semifinals": { "FRA_v_ESP": null, "ENG_v_ARG": null },
+    "final": null,
+    "dojMovedToIndictment": null
+  },
+  "carriedForwardFromRun1": "All Run 1 verified facts and corrections stand unchanged: Opta post-QF figures, Silver paywall note, penalty superlative softening, Cape Verde views dropped, Xhaka paraphrase, Grondona as 'Soccer Official #1', TourProdEnter $260M/$57M attributed to La Nación, Grimes/Garicano/precedent confirmations, VAR 2026 second-yellow provision.",
+  "newSinceRun1": [
+    "Bracket unchanged: still pre-semis. FRA v ESP had not kicked off at pass time; ENG v ARG is Jul 15. Opta re-verified Jul 14 — identical (34.0/23.4/21.9/20.6; reach-final 57.7/42.3/50.9/49.1).",
+    "Financial thread deepened (still allegation, no charges): TourProdEnter LLC allegedly routed AFA revenue through FIVE named US banks — Citibank, Bank of America, JPMorgan Chase, PNC Bank, Synovus.",
+    "Miami Herald reports investigators have traced ~$90M in 'potentially irregular' uses of funds to date — distinct from and larger than La Nación's $57M-unexplained figure.",
+    "Guillermo Tofoni (Argentine sports businessman, former AFA commercial handler) reportedly gave a ~3-hour videoconference interview to FBI agents + DOJ prosecutors about how AFA structured its international commercial agreements. Run 1 flagged him only as a potential witness; he has now reportedly been interviewed. Witness, not charged. Match-timing of the session conflicts across outlets → not pinned.",
+    "TourProdEnter operator described as a 'former legislator and businessman' (+ spouse) — kept by role, not name.",
+    "AFA pushback added: a representative said investigative steps alone 'do not determine responsibility or guilt' (single secondary source, kept short/attributed).",
+    "Squad news for the semis: no suspensions (cards wiped after QFs). ARG — Messi fit after an eye knock (played 120'), Romero a fitness doubt. ENG — Rice expected to start after illness, Henderson doubtful (broke arm celebrating R16). FRA — Mbappé's precautionary knock eased. ESP — no notable concerns.",
+    "Bookmaker drift (immaterial): France still clear favorite (~+140/+150); England and Spain now near-level (~+310/+340); Argentina drifted to longest (~+360/+430). Order unchanged."
+  ],
+  "dataChangesThisRun": [
+    "meta.lastUpdated -> 2026-07-14.",
+    "models.ts BOOKMAKERS refreshed asOf 2026-07-14: ESP +330->+320 (implied 0.238), ARG +400->+430 (implied 0.188); source note updated; England/Spain near-level noted. Opta + Silver blocks unchanged.",
+    "bracket.ts snapshot comment date -> 2026-07-14 (results still null; semis unplayed).",
+    "bayes.ts unchanged (bands hold).",
+    "timeline.json: fbi-report detail expanded (five banks + $90M Miami Herald); new node tofoni-testimony added (order 9); semis-ahead bumped to order 10 with squad-fitness detail.",
+    "hypotheses.json h2: forPoints strengthened with the witness interview + traced money trail; bands unchanged.",
+    "sources.json: miami-herald 'why' updated ($90M); added ap-miami-millions (Yahoo/AP) and snopes-probe."
+  ],
+  "keySources": {
+    "opta": "https://theanalyst.com/articles/world-cup-2026-semi-final-predictions-opta-supercomputer",
+    "silver": "https://www.natesilver.net/p/world-cup-2026-odds-predictions",
+    "laNacionFBI": "https://www.lanacion.com.ar/politica/agentes-del-fbi-y-fiscales-federales-toman-testimonios-para-investigar-operaciones-financieras-de-la-afa-en-estados-unidos-nid06072026/",
+    "apMiamiMillions": "https://sports.yahoo.com/articles/argentine-soccer-body-poured-millions-233709329.html",
+    "snopesProbe": "https://www.snopes.com/news/2026/07/10/fbi-fraud-case-argentina-soccer/",
+    "grimes": "https://doi.org/10.1371/journal.pone.0147905"
+  }
+}

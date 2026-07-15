@@ -1,0 +1,65 @@
+{
+  "run": 3,
+  "date": "2026-07-15",
+  "bracketStage": "one-semi",
+  "predictions": {
+    "titleProbabilities": {
+      "ESP": { "authorLow": 0.52, "authorHigh": 0.6, "opta": 0.234, "optaNote": "Opta not refreshed post-SF1 at pass time; last published Jul 12 figure, stale-low" },
+      "ENG": { "authorLow": 0.21, "authorHigh": 0.26, "opta": 0.219 },
+      "ARG": { "authorLow": 0.17, "authorHigh": 0.23, "opta": 0.206 },
+      "FRA": { "authorLow": 0, "authorHigh": 0, "opta": 0, "optaNote": "resolved to 0 by elimination Jul 14; Opta's Jul 12 article still shows 34.0" }
+    },
+    "market": {
+      "asOf": "2026-07-15",
+      "draftkings": { "ESP": "-156", "ENG": "+300", "ARG": "+400" },
+      "fanduel": { "ESP": "-150", "ENG": "+280", "ARG": "+370" },
+      "kalshi": { "ESP": 0.576, "ENG": 0.229, "ARG": 0.198 }
+    },
+    "hypotheses": {
+      "H1_deliberate_favoritism": { "low": 0.02, "high": 0.08 },
+      "H2_inquiry_exists": { "low": 0.7, "high": 0.9 },
+      "H2_chargeable_conduct": { "low": 0.45, "high": 0.65 },
+      "H3_soft_bias_contributor": { "low": 0.35, "high": 0.55 },
+      "H4_variance_perception": { "low": 0.3, "high": 0.5 }
+    }
+  },
+  "outcomes": {
+    "note": "SF1 resolved: Spain 2-0 France (Jul 14, Arlington; Oyarzabal 22' pen, Porro 58'). SF2 England v Argentina was LIVE (0-0, first half) at pass time - left null; Run 4 fills it and grades the semis scorecards.",
+    "champion": null,
+    "semifinals": { "FRA_v_ESP": "ESP 2-0", "ENG_v_ARG": null },
+    "final": null,
+    "dojMovedToIndictment": null
+  },
+  "carriedForwardFromRun2": "All Run 1-2 verified facts stand: Opta Jul 12 figures (now partially resolved by reality), Silver paywall note, penalty superlative softening, five named banks, Miami Herald ~$90M, La Nacion $260M/$57M attribution, Tofoni ~3h videoconference interview (witness, not charged), AFA pushback quote, no US charges, FBI declined comment.",
+  "newSinceRun2": [
+    "Spain 2-0 France (Jul 14): Oyarzabal 22' penalty (Digne foul on Lamine Yamal - hotly disputed, VAR did not overturn), Pedro Porro 58'. Referee Ivan Barton (El Salvador). Spain xG ~1.63 v ~0.31. France eliminated; Spain in the Jul 19 final.",
+    "The SF1 penalty produced its own officiating firestorm with Argentina uninvolved: Deschamps questioned whether the referee 'had the level' for a semifinal; Collina defended the official; ex-PGMOL chief Keith Hackett called the penalty correct. Added as timeline node + H4 forPoint: scrutiny is tournament-wide, not Argentina-specific.",
+    "Market flipped to Spain as clear favorite: DraftKings ESP -156 / ENG +300 / ARG +400; FanDuel -150/+280/+370; Kalshi 57.6/22.9/19.8. models.ts BOOKMAKERS refreshed asOf 2026-07-15; author ranges re-synthesized (ESP .52-.60, ENG .21-.26, ARG .17-.23, FRA 0).",
+    "Opta NOT refreshed post-SF1 at pass time (re-verified by fetch Jul 15); elimination-resolved zeros applied for France with comments; other teams keep last published figures flagged as pre-SF1. Opta's 57.7% France-to-final lean resolved to the 42.3% branch.",
+    "England v Argentina live at pass time (0-0 first half, Atlanta). England: Rice started despite illness doubt; three changes (Rogers, Spence, R. James); Henderson out (arm/wrist reported inconsistently - kept vague). Result deliberately left null.",
+    "Financial thread: no material movement; coverage is syndication of known facts. One attributed nugget added: Tapia (processed in the separate Argentine case) reportedly needed judicial authorization to travel to the US with the squad.",
+    "Hypothesis bands unchanged (H1 2-8, H2 70-90/45-65, H3 35-55, H4 30-50)."
+  ],
+  "dataChangesThisRun": [
+    "meta.lastUpdated -> 2026-07-15.",
+    "bracket.ts: sf-fra-esp result filled (FRA 0-2 ESP, winner ESP, bilingual note with scorers + disputed penalty); header comment -> one-semi snapshot; ESP rating 2020 -> 2045 (tuning comment).",
+    "models.ts: OPTA block France resolved to 0/0 and Spain reachFinal -> 1.0 by elimination/qualification (documented as arithmetic resolution, not model output); ESP/ENG/ARG title figures kept as last published with stale flag; BOOKMAKERS refreshed asOf 2026-07-15 (ESP -150/.600, ENG +280/.263, ARG +370/.213, FRA dash/0); AUTHOR_RANGES re-synthesized; MODEL_ORDER -> ESP, ENG, ARG, FRA.",
+    "bayes.ts unchanged (bands hold).",
+    "timeline.json: new node spain-france-semi (order 11); semis-ahead headline reframed as semifinal-eve (historical); dec-raids detail + one attributed Tapia-travel sentence.",
+    "hypotheses.json h4: new forPoint (SF1 controversy, Argentina uninvolved) + ibtimes-refs source.",
+    "sections.json: whowins-intro and whowins-closing reconciled ('models say France' -> Spain favorite, France out, Opta-refresh caveat).",
+    "sources.json: added espn-fra-esp, ibtimes-refs, yahoo-hackett (tier 2) and espn-odds (tier 3)."
+  ],
+  "keySources": {
+    "espnFraEsp": "https://www.espn.com/soccer/match/_/gameId/760514/spain-france",
+    "nprFraEsp": "https://www.npr.org/2026/07/14/nx-s1-5893692/2026-world-cup-fifa-spain-france-semifinal",
+    "ibtimesRefs": "https://www.ibtimes.co.uk/controversial-officiating-spain-france-world-cup-semifinal-1808747",
+    "hackett": "https://sports.yahoo.com/articles/great-viewing-angle-ex-refs-052000744.html",
+    "espnOdds": "https://www.espn.com/espn/betting/story/_/id/48386952/espn-soccer-futbol-world-cup-betting-odds-championship-groups",
+    "siKalshi": "https://www.si.com/betting/spain-odds-to-win-world-cup-after-advancing-to-final-spain-set-as-odds-on-favorite-01kxh918s8bq",
+    "opta": "https://theanalyst.com/articles/world-cup-2026-semi-final-predictions-opta-supercomputer",
+    "silver": "https://www.natesilver.net/p/world-cup-2026-odds-predictions",
+    "laNacionFBI": "https://www.lanacion.com.ar/politica/agentes-del-fbi-y-fiscales-federales-toman-testimonios-para-investigar-operaciones-financieras-de-la-afa-en-estados-unidos-nid06072026/",
+    "engArgLive": "https://www.nbcnews.com/sports/soccer/live-blog/england-argentina-world-cup-2026-july-15-live-updates-rcna587325"
+  }
+}

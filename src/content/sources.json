@@ -95,8 +95,8 @@
     "tier": 2,
     "url": "https://www.tampabay.com/news/florida/2026/07/11/argentine-football-association-investigation-miami-florida/",
     "content": {
-      "en": { "title": "Miami Herald — Florida firm linked to the FBI probe (via Tampa Bay Times)", "why": "Independent US corroboration citing two law-enforcement sources. Original is paywalled; linked here via syndication." },
-      "es": { "title": "Miami Herald — firma de Florida vinculada a la pesquisa del FBI (vía Tampa Bay Times)", "why": "Corroboración estadounidense independiente, con dos fuentes policiales. El original es pago; lo enlazamos vía sindicación." }
+      "en": { "title": "Miami Herald — Florida firm linked to the FBI probe (via Tampa Bay Times)", "why": "Independent US corroboration citing two law-enforcement sources; it later put the sum flagged as 'potentially irregular' at roughly $90M. Original is paywalled; linked here via syndication." },
+      "es": { "title": "Miami Herald — firma de Florida vinculada a la pesquisa del FBI (vía Tampa Bay Times)", "why": "Corroboración estadounidense independiente, con dos fuentes policiales; después ubicó en unos US$90M el monto marcado como 'potencialmente irregular'. El original es pago; lo enlazamos vía sindicación." }
     }
   },
   {
@@ -180,6 +180,56 @@
     }
   },
   {
+    "id": "ap-miami-millions",
+    "order": 30,
+    "tier": 2,
+    "url": "https://sports.yahoo.com/articles/argentine-soccer-body-poured-millions-233709329.html",
+    "content": {
+      "en": { "title": "AP / Yahoo Sports — 'Argentine soccer body has poured millions into Miami'", "why": "Wire coverage that adds the concrete detail: the five US banks in the flow, the ~$90M flagged figure, and the reported witness interview. No charges filed." },
+      "es": { "title": "AP / Yahoo Sports — 'La AFA volcó millones en Miami'", "why": "Cobertura de agencia que suma el detalle concreto: los cinco bancos de EE.UU. del circuito, la cifra de ~US$90M marcada y la entrevista al testigo. Sin cargos presentados." }
+    }
+  },
+  {
+    "id": "snopes-probe",
+    "order": 31,
+    "tier": 2,
+    "url": "https://www.snopes.com/news/2026/07/10/fbi-fraud-case-argentina-soccer/",
+    "content": {
+      "en": { "title": "Snopes — fact-check of the FBI/AFA probe reporting", "why": "Independent fact-check: the reporting is real and credible, but it's a preliminary inquiry and no charges have been filed." },
+      "es": { "title": "Snopes — verificación de los reportes sobre la pesquisa FBI/AFA", "why": "Una verificación independiente que confirma que los reportes existen y son creíbles, pero remarca los límites: es una pesquisa preliminar y no hay cargos presentados." }
+    }
+  },
+  {
+    "id": "espn-fra-esp",
+    "order": 32,
+    "tier": 2,
+    "url": "https://www.espn.com/soccer/match/_/gameId/760514/spain-france",
+    "content": {
+      "en": { "title": "ESPN — France 0–2 Spain semifinal match report", "why": "Independent record of semifinal 1: the Oyarzabal penalty, Porro's goal, the xG gap, and referee Iván Barton." },
+      "es": { "title": "ESPN — crónica de la semifinal Francia 0–2 España", "why": "Registro independiente de la primera semi: el penal de Oyarzabal, el gol de Porro, la diferencia de xG y el árbitro Iván Barton." }
+    }
+  },
+  {
+    "id": "ibtimes-refs",
+    "order": 33,
+    "tier": 2,
+    "url": "https://www.ibtimes.co.uk/controversial-officiating-spain-france-world-cup-semifinal-1808747",
+    "content": {
+      "en": { "title": "IBTimes UK — 'World Cup referees under a microscope'", "why": "Connects the Spain–France penalty debate to the Argentina-favoritism discourse — evidence that officiating scrutiny is tournament-wide, not team-specific." },
+      "es": { "title": "IBTimes UK — 'Los árbitros del Mundial bajo la lupa'", "why": "Conecta el debate por el penal de España–Francia con el discurso del favoritismo a Argentina — prueba de que la lupa arbitral es de todo el torneo, no de una camiseta." }
+    }
+  },
+  {
+    "id": "yahoo-hackett",
+    "order": 34,
+    "tier": 2,
+    "url": "https://sports.yahoo.com/articles/great-viewing-angle-ex-refs-052000744.html",
+    "content": {
+      "en": { "title": "Yahoo Sports — Keith Hackett re-analyzes the Spain penalty", "why": "A former PGMOL chief reviews the footage and calls the disputed semifinal penalty correct — the expert counterweight to the outrage clips." },
+      "es": { "title": "Yahoo Sports — Keith Hackett vuelve sobre el penal de España", "why": "Un exjefe del arbitraje inglés revisa las imágenes y dice que el penal discutido estuvo bien cobrado — el contrapeso experto a los clips de indignación." }
+    }
+  },
+  {
     "id": "opta",
     "order": 40,
     "tier": 3,
@@ -207,6 +257,16 @@
     "content": {
       "en": { "title": "Oddschecker — aggregated outright title odds", "why": "The market's view. Implied percentages include the bookmaker's overround (margin)." },
       "es": { "title": "Oddschecker — cuotas agregadas de campeón", "why": "Lo que piensa el mercado. Ojo: los porcentajes implícitos ya traen el margen (overround) de la casa." }
+    }
+  },
+  {
+    "id": "espn-odds",
+    "order": 43,
+    "tier": 3,
+    "url": "https://www.espn.com/espn/betting/story/_/id/48386952/espn-soccer-futbol-world-cup-betting-odds-championship-groups",
+    "content": {
+      "en": { "title": "ESPN Betting — championship odds after France's elimination", "why": "The market snapshot behind the Jul 15 refresh: Spain odds-on at DraftKings (−156), England +300, Argentina +400." },
+      "es": { "title": "ESPN Betting — cuotas de campeón tras la eliminación de Francia", "why": "La foto del mercado detrás de la actualización del 15/7: España pagando menos que la apuesta en DraftKings (−156), Inglaterra +300, Argentina +400." }
     }
   },
   {
