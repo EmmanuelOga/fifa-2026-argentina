@@ -31,10 +31,22 @@ const read = (p) => JSON.parse(readFileSync(join(root, p), 'utf8'));
 const sections = Object.fromEntries(read('src/content/sections.json').map((s) => [s.id, s.content]));
 const hypotheses = read('src/content/hypotheses.json');
 const UI = {
-  en: { spec: 'SPECULATIVE', tag: 'A celebration with footnotes', who: 'Who wins? (speculative)', by: 'by Emmanuel Oga' },
-  es: { spec: 'ESPECULATIVO', tag: 'Una celebración con notas al pie', who: '¿Quién gana? (especulativo)', by: 'por Emmanuel Oga' },
+  en: { spec: 'SPECULATIVE', tag: 'A celebration with footnotes', who: 'Who wins? (speculative)', by: 'by Emmanuel Oga', out: 'out' },
+  es: { spec: 'ESPECULATIVO', tag: 'Una celebración con notas al pie', who: '¿Quién gana? (especulativo)', by: 'por Emmanuel Oga', out: 'afuera' },
 };
-const AUTHOR = { FRA: [33, 40], ESP: [20, 24], ENG: [18, 23], ARG: [17, 22] };
+
+/* AUTHOR ranges + display order come from src/data/models.ts (single source of
+ * truth) — extracted textually so the video never re-ships stale numbers. */
+const modelsTs = readFileSync(join(root, 'src/data/models.ts'), 'utf8');
+const rangesBlock = modelsTs.match(/AUTHOR_RANGES[^=]*=\s*{([\s\S]*?)};/)?.[1] ?? '';
+const AUTHOR = Object.fromEntries(
+  [...rangesBlock.matchAll(/([A-Z]{3}):\s*{\s*low:\s*([\d.]+),\s*high:\s*([\d.]+)/g)].map(
+    ([, code, lo, hi]) => [code, [Math.round(lo * 100), Math.round(hi * 100)]],
+  ),
+);
+const MODEL_ORDER = modelsTs
+  .match(/MODEL_ORDER\s*=\s*\[([^\]]*)\]/)?.[1]
+  .match(/[A-Z]{3}/g) ?? ['ESP', 'ARG', 'ENG', 'FRA'];
 const NAMES = {
   en: { FRA: 'France', ESP: 'Spain', ENG: 'England', ARG: 'Argentina' },
   es: { FRA: 'Francia', ESP: 'España', ENG: 'Inglaterra', ARG: 'Argentina' },
@@ -175,10 +187,11 @@ function scene(locale) {
         ctx.font = `800 64px ${F.display}`;
         ctx.fillText(t.who, W / 2, 420);
         ctx.textAlign = 'left';
-        const order = ['FRA', 'ESP', 'ENG', 'ARG'];
-        order.forEach((code, i) => {
+        // Bar scale tracks the current favorite so post-semis numbers still fit.
+        const scaleMax = Math.max(45, ...Object.values(AUTHOR).map(([, hi]) => hi)) + 10;
+        MODEL_ORDER.forEach((code, i) => {
           const y = 620 + i * 230;
-          const [lo, hi] = AUTHOR[code];
+          const [lo, hi] = AUTHOR[code] ?? [0, 0];
           const mid = (lo + hi) / 2;
           const grow = easeOut(p * 3 - i * 0.4);
           ctx.fillStyle = COLORS.ink;
@@ -187,13 +200,15 @@ function scene(locale) {
           ctx.fillStyle = COLORS.surface2 || '#eef6fc';
           roundRect(ctx, 100, y, W - 200, 70, 35);
           ctx.fill();
-          ctx.fillStyle = code === 'ARG' ? COLORS.sun : COLORS.sky;
-          roundRect(ctx, 100, y, (W - 200) * (mid / 45) * grow, 70, 35);
-          ctx.fill();
+          if (hi > 0) {
+            ctx.fillStyle = code === 'ARG' ? COLORS.sun : COLORS.sky;
+            roundRect(ctx, 100, y, (W - 200) * (mid / scaleMax) * grow, 70, 35);
+            ctx.fill();
+          }
           ctx.fillStyle = COLORS.skyInk;
           ctx.font = `700 46px ${F.data}`;
           ctx.textAlign = 'right';
-          ctx.fillText(`${lo}–${hi}%`, W - 110, y + 52);
+          ctx.fillText(hi > 0 ? `${lo}–${hi}%` : t.out, W - 110, y + 52);
           ctx.textAlign = 'left';
         });
       },
