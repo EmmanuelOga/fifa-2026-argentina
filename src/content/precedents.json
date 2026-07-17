@@ -8,13 +8,13 @@
     "content": {
       "en": {
         "name": "Calciopoli (Italy)",
-        "summary": "Referee assignments in Serie A were manipulated by club officials. Exposed by wiretaps; Juventus were stripped of two titles and relegated.",
-        "lesson": "The one clear case of gaming the designators — and it was a domestic league, over a full season, and it still leaked."
+        "summary": "Club officials rigged Serie A referee assignments; wiretaps exposed it. Juventus lost two titles, relegated.",
+        "lesson": "The one clear case of gaming the designators, and a domestic season still leaked."
       },
       "es": {
         "name": "Calciopoli (Italia)",
-        "summary": "Dirigentes de clubes digitaron las designaciones arbitrales en la Serie A. Lo destaparon unas escuchas; a la Juventus le sacaron dos títulos y la mandaron al descenso.",
-        "lesson": "El único caso claro de haber manejado a los designadores — y eso que fue en una liga local, a lo largo de toda una temporada, y aun así se filtró."
+        "summary": "Dirigentes de clubes digitaron las designaciones arbitrales de la Serie A; lo destaparon unas escuchas. La Juventus perdió dos títulos y se fue al descenso.",
+        "lesson": "El único caso claro de haber manejado a los designadores, y aun siendo una liga local se filtró."
       }
     }
   },
@@ -27,13 +27,13 @@
     "content": {
       "en": {
         "name": "FIFA-Gate (US DOJ)",
-        "summary": "A 47-count US indictment over $150M+ in bribes routed through American banks. A Swiss banker later admitted moving $25M+ tied to the late AFA president.",
-        "lesson": "The proof that the money angle has real teeth in US courts — and the template today's reported AFA inquiry would follow."
+        "summary": "A 47-count US indictment over $150M+ in bribes through US banks; a Swiss banker admitted moving $25M+ tied to the late AFA president.",
+        "lesson": "Proof the money angle bites in US courts; the template the reported AFA inquiry follows."
       },
       "es": {
         "name": "FIFA-Gate (DOJ de EE.UU.)",
-        "summary": "Una acusación de la justicia de EE.UU. con 47 cargos por más de US$150M en sobornos que pasaron por bancos estadounidenses. Un banquero suizo admitió después haber movido más de US$25M ligados al fallecido presidente de la AFA.",
-        "lesson": "La prueba de que la vía del dinero muerde de verdad en los tribunales de EE.UU. — y el molde que seguiría la investigación que, se dice, hoy apunta a la AFA."
+        "summary": "Una acusación de EE.UU. con 47 cargos por más de US$150M en sobornos que pasaron por bancos estadounidenses; un banquero suizo admitió haber movido más de US$25M ligados al fallecido presidente de la AFA.",
+        "lesson": "La prueba de que la vía del dinero muerde en los tribunales de EE.UU.; el molde que sigue la investigación que, se dice, apunta a la AFA."
       }
     }
   },
@@ -46,12 +46,12 @@
     "content": {
       "en": {
         "name": "South Korea 2002",
-        "summary": "Refereeing decisions helped eliminate Italy and Spain as co-hosts South Korea advanced. Widely suspected of favoritism; never proven.",
-        "lesson": "The canonical 'everyone knows' case that never produced evidence. Suspicion, however widespread, is not proof."
+        "summary": "Refereeing helped eliminate Italy and Spain as co-host South Korea advanced. Suspected favoritism; never proven.",
+        "lesson": "The 'everyone knows' case with no evidence. Suspicion, however widespread, isn't proof."
       },
       "es": {
         "name": "Corea del Sur 2002",
-        "summary": "Decisiones arbitrales ayudaron a eliminar a Italia y a España mientras la coanfitriona Corea del Sur seguía avanzando. Se sospechó fuerte que hubo favoritismo, pero nunca se probó.",
+        "summary": "Decisiones arbitrales ayudaron a eliminar a Italia y España mientras la coanfitriona Corea del Sur avanzaba. Se sospechó favoritismo; nunca se probó.",
         "lesson": "El clásico 'todos lo saben' del que nunca salió una sola prueba. La sospecha, por más generalizada que esté, no es prueba."
       }
     }
@@ -65,13 +65,13 @@
     "content": {
       "en": {
         "name": "Argentina 6–0 Peru",
-        "summary": "Argentina needed to win big to reach the final and did, amid junta-era allegations of a grain shipment and a dressing-room visit. Circumstantial; never proven.",
-        "lesson": "Argentina's own most-cited ghost — an enduring allegation with no proven quid pro quo. I include it precisely because it's inconvenient for me."
+        "summary": "Argentina needed a rout to reach the final and did, amid junta-era allegations of a grain shipment and a dressing-room visit. Circumstantial; never proven.",
+        "lesson": "Argentina's most-cited ghost: an enduring allegation, no proven quid pro quo. Included because it's inconvenient for me."
       },
       "es": {
         "name": "Argentina 6–0 Perú",
         "summary": "Argentina necesitaba una goleada para meterse en la final y la consiguió, entre acusaciones de la época de la dictadura sobre un envío de granos y una visita al vestuario. Circunstancial; nunca probado.",
-        "lesson": "El fantasma más citado de la propia Argentina — una acusación que sigue viva pero sin ningún quid pro quo probado. Lo incluyo justamente porque me juega en contra."
+        "lesson": "El fantasma más citado de la propia Argentina: una acusación que sigue viva pero sin ningún quid pro quo probado. Lo incluyo porque me juega en contra."
       }
     }
   },
@@ -84,13 +84,13 @@
     "content": {
       "en": {
         "name": "Lamptey (World Cup qualifier)",
-        "summary": "A referee was banned for life, upheld by CAS, for manipulating a World Cup qualifier to fit a betting pattern.",
-        "lesson": "A real, proven fix — but a betting-syndicate job on a qualifier, not an organizer favoring a team in a finals match."
+        "summary": "A referee, banned for life (upheld by CAS), manipulated a World Cup qualifier to fit a betting pattern.",
+        "lesson": "A real, proven fix, but a betting-syndicate job on a qualifier, not an organizer steering a finals team."
       },
       "es": {
         "name": "Lamptey (eliminatoria mundialista)",
         "summary": "A un árbitro lo inhabilitaron de por vida, y el TAS lo confirmó, por manipular una eliminatoria mundialista para hacerla calzar con un patrón de apuestas.",
-        "lesson": "Un arreglo real y probado — pero laburo de una mafia de apuestas en una eliminatoria, no un organizador digitando a una selección en un partido de la fase final de un Mundial."
+        "lesson": "Un arreglo real y probado, pero laburo de una mafia de apuestas en una eliminatoria, no un organizador digitando a una selección en la fase final de un Mundial."
       }
     }
   },
@@ -103,13 +103,13 @@
     "content": {
       "en": {
         "name": "Perumal / Chaibou friendlies",
-        "summary": "A match-fixing syndicate supplied referees for pre-World-Cup friendlies, including one with fabricated penalties, for betting fraud.",
-        "lesson": "Shows what real fixing looks like: low-stakes friendlies, betting money, corrupt individuals — not a steered champion."
+        "summary": "A match-fixing syndicate supplied referees for pre-World-Cup friendlies, one with fabricated penalties, for betting fraud.",
+        "lesson": "Real fixing: low-stakes friendlies, betting money, corrupt individuals, not a steered champion."
       },
       "es": {
         "name": "Amistosos de Perumal / Chaibou",
-        "summary": "Una mafia de amaños puso los árbitros en amistosos previos al Mundial —uno de ellos con penales inventados— para estafar en las apuestas.",
-        "lesson": "Muestra cómo es un arreglo de verdad: amistosos intrascendentes, plata de apuestas, tipos corruptos — no un campeón digitado."
+        "summary": "Una mafia de amaños puso los árbitros en amistosos previos al Mundial, uno con penales inventados, para estafar en las apuestas.",
+        "lesson": "Un arreglo de verdad: amistosos intrascendentes, plata de apuestas, tipos corruptos, no un campeón digitado."
       }
     }
   }

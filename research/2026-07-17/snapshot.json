@@ -1,0 +1,114 @@
+{
+  "run": 7,
+  "date": "2026-07-17",
+  "bracketStage": "final-set",
+  "supersedes": "New dated folder for 2026-07-17 (two days before the final). The full Run 3+4+5 text is preserved in research/2026-07-15/findings.md and Run 6 in research/2026-07-16/findings.md, all in git; this folder is the Run 7 pass. No match has been played since Run 5, so the bracket is unchanged.",
+  "predictions": {
+    "titleProbabilities": {
+      "ESP": {
+        "authorLow": 0.55,
+        "authorHigh": 0.6,
+        "opta": 0.561,
+        "optaNote": "CHANGED from Run 6: Opta NOW prints an explicit Spain-v-Argentina final simulation (25,000 sims, published Jul 16): Spain ~56.05-56.31% v Argentina ~43.69-43.95% across syndication (representative .561/.439 adopted). This RETIRES the derived .569/.431 and drops the conditioning language. The printed pair sits a shade closer to Argentina than the old derivation (43.9% vs 43.1%) because Opta is now simulating the actual final rather than back-solving a pre-SF2 trophy column. Still well inside the author range."
+      },
+      "ARG": {
+        "authorLow": 0.4,
+        "authorHigh": 0.45,
+        "opta": 0.439,
+        "optaNote": "Opta's explicit final simulation, ~43.9%; with one match left, title odds = final-match odds."
+      },
+      "ENG": {
+        "authorLow": 0,
+        "authorHigh": 0,
+        "opta": 0,
+        "optaNote": "resolved to 0 by elimination Jul 15 (lost SF2 1-2 to Argentina)"
+      },
+      "FRA": {
+        "authorLow": 0,
+        "authorHigh": 0,
+        "opta": 0,
+        "optaNote": "resolved to 0 by elimination Jul 14"
+      }
+    },
+    "market": {
+      "asOf": "2026-07-17T12:00-07:00",
+      "moved": false,
+      "moveDirection": "consolidated at the Run 6 level; the two-day drift toward Spain has settled",
+      "note": "Re-checked Jul 17: the market held its Jul 16 level rather than moving further. Kalshi ~58.2c, Polymarket ~58.0c Spain; DraftKings 90-min Spain +115 unchanged. Named trophy moneylines drew no fresh re-quote; overround-normalized trophy market still ~59/41 Spain.",
+      "trophy": {
+        "caesars": { "ESP": "-170", "ARG": "+135", "note": "no fresh re-quote since Jul 15; carried" },
+        "bet365": { "ESP": "-175", "ARG": "+125", "note": "carried" },
+        "thescore": { "ESP": "-160", "ARG": "+130", "note": "carried" },
+        "fanduel": { "ESP": "-156", "ARG": "+136", "note": "carried" },
+        "kalshi": { "ESP": 0.582, "ARG": 0.41, "prev": { "ESP": 0.585, "ARG": 0.417 } },
+        "polymarket": { "ESP": 0.58, "ARG": 0.41, "prev": { "ESP": 0.584, "ARG": 0.417 } }
+      },
+      "final90min": {
+        "draftkings": { "ESP": "+115", "draw": "+200", "ARG": "+285", "note": "unchanged from Run 6" },
+        "betmgm": { "ESP": "+125", "draw": "+200", "ARG": "+250" },
+        "fanduel": { "ESP": "+130", "draw": "+195", "ARG": "+270" }
+      }
+    },
+    "anchorConvergence": {
+      "note": "Four independent anchors inside a five-point spread, all inside the unchanged author range. Opta's now-explicit final sim (~56/44) replaces the prior derivation and keeps the cluster tight.",
+      "optaExplicit": { "ESP": 0.561, "ARG": 0.439 },
+      "booksNormalized": { "ESP": 0.59, "ARG": 0.41 },
+      "kalshi": { "ESP": 0.582, "ARG": 0.41 },
+      "eloBracketNudge0": { "ESP": 0.56, "ARG": 0.44 }
+    },
+    "hypotheses": {
+      "H1_deliberate_favoritism": { "low": 0.02, "high": 0.08, "moved": false, "note": "Gains an againstPoint: the final referee is a European (UEFA) official, confederation-non-neutral toward Spain, not Argentina - the reverse of what favoritism toward Argentina would arrange." },
+      "H2_inquiry_exists": { "low": 0.7, "high": 0.9, "moved": false },
+      "H2_chargeable_conduct": { "low": 0.45, "high": 0.65, "moved": false, "note": "Quiet pass; no subpoena, indictment, or formal cooperating witness reported. Loose 'federal grand jury' syndication phrasing appears but the changeMind trigger is not met. Still pressing toward the upper half of its range without a formal step." },
+      "H3_soft_bias_contributor": { "low": 0.35, "high": 0.55, "moved": false },
+      "H4_variance_perception": { "low": 0.3, "high": 0.5, "moved": false, "note": "Gains a forPoint: the final-referee appointment (Vincic, a European for a Spain match) drew instant social-media grumbling despite being a form-based, CL-final-calibre pick - perception attaching to a neutral appointment. Band held; H4's outstanding test is the final itself." }
+    }
+  },
+  "outcomes": {
+    "note": "No match played since Run 5. Final: Spain v Argentina, Jul 19, MetLife, 3 p.m. ET. Referee now known (Vincic). Grading of Run 1-6 scorecards belongs to the score step.",
+    "champion": null,
+    "semifinals": { "FRA_v_ESP": "ESP 2-0", "ENG_v_ARG": "ARG 2-1" },
+    "final": null,
+    "finalReferee": "Slavko Vincic (Slovenia/UEFA); assistants Klancnik & Kovacic (SVN); 4th official Makhadmeh (JOR); VAR Dankert (GER); AVAR Gallo (COL); support VAR Al Marri (QAT)",
+    "dojMovedToIndictment": null
+  },
+  "carriedForwardFromRun6": "All Run 1-6 verified facts stand: Spain 2-0 France with the disputed Digne-on-Yamal penalty; England 1-2 Argentina (Gordon 55'; E. Fernandez 85', L. Martinez 90+2' from a Messi cross; ARG 64% possession, xG ~1.84 v ~0.53; referee Elfath, no controversy of substance); market flip to Spain; five named banks; Miami Herald ~$90M; La Nacion $260M/$57M attribution; Tofoni ~3h videoconference (witness, not charged); the Jul 14 'from inside' inward turn (former AFA insiders, informal videoconferences, three named prosecutors across DC/SDFL, 'cuevas' mechanism, Toviggino>Tapia perceived focus); domestic 'mansion' case hearing set Aug 12; the multi-million-signature expulsion petition and Collina/Scaloni rebuttals; Tapia travel-authorization nugget; no US charges; FBI declines comment; no suspensions for the final; author ranges ESP 55-60 / ARG 40-45.",
+  "newSinceRun6": [
+    "FINAL REFEREE APPOINTED (biggest item): FIFA named Slavko Vincic (Slovenia/UEFA) for the Jul 19 final, announced Jul 17. First Slovenian, 23rd person to referee a men's WC final. Crew: assistants Klancnik & Kovacic (SVN), 4th official Makhadmeh (JOR), reserve AR Al-Kalaf (JOR), VAR Dankert (GER), AVAR Gallo (COL), support VAR Al Marri (QAT). This CONTRADICTS Run 6's 'neutral field' reasoning: the operative FIFA pattern is European refs for finals OUTSIDE Europe, so a UEFA official was always plausible; tipped frontrunner Faghani (Iran) did NOT get it. Editorial read: a European ref for a Spain-Argentina final is confederation-non-neutral toward SPAIN, not Argentina - cuts AGAINST H1, and is fresh H4 perception fuel (instant social-media grumbling) despite being a form-based, CL-final-calibre pick. Context: lands amid FIFA-UEFA friction (Infantino-Ceferin, suspended Balogun ban). Vincic history: only prior Argentina match was their 2022 shock loss to Saudi Arabia; refereed Spain several times unbeaten; Real Madrid criticised an April CL red (Bellingham 'a joke'), Mourinho praised him. Added timeline node final-referee (order 15), sources fifa-final-referee + espn-vincic, H1 againstPoint + H4 forPoint. H1 and H4 bands HELD.",
+    "OPTA NOW PRINTS AN EXPLICIT FINAL PAIR (closes a Run 6 open item): direct Spain-v-Argentina simulation (25,000 sims, Jul 16): Spain ~56.05-56.31% v Argentina ~43.69-43.95% (representative .561/.439). Retires the derived .569/.431 and drops the conditioning language. Slightly closer to Argentina than the derivation (43.9 vs 43.1) - Opta simulating the actual final, not back-solving a trophy column. Still inside the author range. models.ts OPTA updated (asOf Jul 16, teams .561/.439, comment rewritten, publishedPostSF1 kept); whowins-intro prose updated both locales.",
+    "MARKET CONSOLIDATED, not moved: Kalshi ~58.2, Polymarket ~58.0 Spain (flat vs Run 6's ~58.5/58.4); DraftKings 90-min Spain +115 unchanged. Named trophy lines carried; ~59/41 normalized. BOOKMAKERS.asOf -> 2026-07-17. AUTHOR_RANGES unchanged.",
+    "MONEY THREAD QUIET: no verified movement since the Jul 14 inward turn. Syndication of the established corpus; some loose 'federal grand jury' phrasing but no subpoena/indictment/formal cooperating witness reported. H2 changeMind trigger NOT met; bands HELD. No new financial timeline node this pass.",
+    "SQUAD reconfirmed two days out: Spain's Yamal (thigh strapping) & Porro (muscle overload) trained apart again but expected fit, expected to rejoin full training from Friday; neither serious. Argentina clean; Messi leads Golden Boot on 8. Predicted XIs are previews, not adopted.",
+    "SILVER still paywalled: final preview exists (Spain 13-1 goal diff, long unbeaten run noted; Argentina's late England comeback praised) but per-team title split behind the paywall. Methodology + market reference retained."
+  ],
+  "dataChangesThisRun": [
+    "meta.lastUpdated 2026-07-16 -> 2026-07-17.",
+    "bracket.ts unchanged (no match played since Run 5).",
+    "models.ts: OPTA now explicit - asOf -> 2026-07-16, teams ESP .561/ARG .439 (was derived .569/.431), doc comment rewritten to record the explicit final sim and retire the conditioning language; publishedPostSF1 kept for provenance. BOOKMAKERS asOf -> 2026-07-17, comment records market consolidation (Kalshi ~58.2, DraftKings +115). AUTHOR_RANGES values UNCHANGED; comment updated to cite Opta's explicit pair.",
+    "bayes.ts unchanged (config; bands hold).",
+    "timeline.json: added final-referee (order 15, sporting, Jul 17).",
+    "hypotheses.json: H1 gains an againstPoint (final ref is UEFA, non-neutral toward Spain) + source espn-vincic; H4 gains a forPoint (referee-appointment perception fuel) + source fifa-final-referee. All bands UNCHANGED.",
+    "sources.json: added fifa-final-referee (tier 1, order 96), espn-vincic (tier 2, order 97).",
+    "sections.json: whowins-intro updated both locales - Opta now prints the explicit matchup (~56/44), conditioning/arithmetic language removed.",
+    "updates.json NOT edited (Log handled via .update-pending-log.json).",
+    ".update-pending-log.json written: recommend true, Log run 5 (id run-5-2026-07-17)."
+  ],
+  "openForNextRun": [
+    "The Jul 19 final resolves the champion, H4's regression test, whether the final passes without a major officiating controversy (with Vincic now known), and Tapia's travel-bond return date - all in one weekend; the score step then grades Runs 1-7.",
+    "Grade the Run 4 Log entry's 'neutral field / Faghani favourite' structural claim as a MISS once scoring runs (FIFA picked a European, Vincic).",
+    "Replace the paywalled Silver PELE per-team split with a printed number if Silver publishes one.",
+    "Watch the money thread for the first formal step (subpoena/indictment/cooperating witness) that would move H2's secondary band.",
+    "If Opta publishes a most-likely scoreline or updated final sim before kickoff, refresh the .561/.439 figure."
+  ],
+  "keySources": {
+    "fifaFinalReferee": "https://inside.fifa.com/refereeing/news/slavko-vincic-world-cup-2026-final-referee-spain-argentina",
+    "espnVincic": "https://www.espn.com/soccer/story/_/id/49382615/who-slavko-vincic-spain-vs-argentina-referee-world-cup-final-real-madrid-jose-mourinho-jude-bellingham",
+    "abcVincicEuropean": "https://abcnews.com/Sports/wireStory/slovenian-slavko-vini-referee-world-cup-fifa-134842037",
+    "optaExplicitFinal": "https://zamin.uz/en/sport/212676-opta-final-favoritini-aytdi-farq-unchalik-katta-emas.html",
+    "mezhaOptaFinal": "https://mezha.net/eng/bukvy/595b3025_opta_simulations_favor/",
+    "espnYamalPorro": "https://www.espn.com/soccer/story/_/id/49378610/spain-lamine-yamal-pedro-porro-train-apart-fit-argentina-world-cup-final",
+    "espnFinalOdds": "https://www.espn.com/soccer/story/_/id/49370934/fifa-world-cup-final-argentina-vs-spain-need-know-predictions-odds",
+    "defirateMarkets": "https://defirate.com/prediction-markets/world-cup-odds/",
+    "natesilver": "https://www.natesilver.net/p/world-cup-2026-odds-predictions"
+  }
+}

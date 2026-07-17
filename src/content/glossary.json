@@ -2,120 +2,120 @@
   {
     "id": "var",
     "content": {
-      "en": { "term": "VAR", "def": "Video Assistant Referee — officials in a booth who review clear and obvious errors on goals, penalties, red cards and mistaken identity.", "learnMore": "https://www.theifab.com/laws/latest/video-assistant-referee-var-protocol/" },
-      "es": { "term": "VAR", "def": "Árbitro Asistente de Video — oficiales que, desde una cabina, revisan errores claros y manifiestos en goles, penales, rojas e identidad equivocada.", "learnMore": "https://www.theifab.com/laws/latest/video-assistant-referee-var-protocol/" }
+      "en": { "term": "VAR", "def": "Video Assistant Referee. Reviews clear, obvious errors on goals, penalties, red cards, mistaken identity.", "learnMore": "https://www.theifab.com/laws/latest/video-assistant-referee-var-protocol/" },
+      "es": { "term": "VAR", "def": "Árbitro Asistente de Video. Revisa errores claros y manifiestos en goles, penales, rojas e identidad equivocada.", "learnMore": "https://www.theifab.com/laws/latest/video-assistant-referee-var-protocol/" }
     }
   },
   {
     "id": "afa",
     "content": {
-      "en": { "term": "AFA", "def": "Asociación del Fútbol Argentino — Argentina's football federation, led by Claudio Tapia." },
+      "en": { "term": "AFA", "def": "Asociación del Fútbol Argentino, led by Claudio Tapia." },
       "es": { "term": "AFA", "def": "Asociación del Fútbol Argentino, presidida por Claudio Tapia." }
     }
   },
   {
     "id": "doj",
     "content": {
-      "en": { "term": "DOJ", "def": "The US Department of Justice — the federal body that would bring any US charges." },
-      "es": { "term": "DOJ", "def": "El Departamento de Justicia de EE.UU., que presentaría eventuales cargos federales." }
+      "en": { "term": "DOJ", "def": "US Department of Justice; brings any US charges." },
+      "es": { "term": "DOJ", "def": "Departamento de Justicia de EE.UU.; presenta los eventuales cargos federales." }
     }
   },
   {
     "id": "edny",
     "content": {
-      "en": { "term": "EDNY", "def": "Eastern District of New York — the federal prosecutors' office that ran the 2015 FIFA-Gate case." },
-      "es": { "term": "EDNY", "def": "Distrito Este de Nueva York — la fiscalía federal que llevó el caso FIFA-Gate de 2015." }
+      "en": { "term": "EDNY", "def": "Eastern District of New York. Federal prosecutors of the 2015 FIFA-Gate case." },
+      "es": { "term": "EDNY", "def": "Distrito Este de Nueva York. La fiscalía federal del caso FIFA-Gate de 2015." }
     }
   },
   {
     "id": "ifab",
     "content": {
-      "en": { "term": "IFAB", "def": "The International Football Association Board — the body that writes and amends the Laws of the Game.", "learnMore": "https://www.theifab.com/" },
-      "es": { "term": "IFAB", "def": "La International Football Association Board — el organismo que redacta y modifica las Reglas de Juego.", "learnMore": "https://www.theifab.com/" }
+      "en": { "term": "IFAB", "def": "International Football Association Board. Writes and amends the Laws of the Game.", "learnMore": "https://www.theifab.com/" },
+      "es": { "term": "IFAB", "def": "International Football Association Board. Redacta y modifica las Reglas de Juego.", "learnMore": "https://www.theifab.com/" }
     }
   },
   {
     "id": "cas",
     "content": {
-      "en": { "term": "CAS", "def": "Court of Arbitration for Sport — sport's highest appeal court, which upheld Lamptey's lifetime ban." },
-      "es": { "term": "TAS/CAS", "def": "Tribunal Arbitral del Deporte — la máxima instancia de apelación deportiva, que confirmó la inhabilitación de Lamptey." }
+      "en": { "term": "CAS", "def": "Court of Arbitration for Sport. Sport's highest appeal court; upheld Lamptey's lifetime ban." },
+      "es": { "term": "TAS/CAS", "def": "Tribunal Arbitral del Deporte. La máxima instancia de apelación deportiva; confirmó la inhabilitación de por vida de Lamptey." }
     }
   },
   {
     "id": "xg",
     "content": {
-      "en": { "term": "xG", "def": "Expected goals — a model estimate of how likely a chance is to be scored, used to judge decisions on their merits." },
-      "es": { "term": "xG", "def": "Goles esperados — una estimación de cuán probable es que una jugada termine en gol, útil para evaluar decisiones por sus méritos." }
+      "en": { "term": "xG", "def": "Expected goals. A model estimate of a chance's scoring likelihood, to judge decisions on merit." },
+      "es": { "term": "xG", "def": "Goles esperados. Una estimación de cuán probable es que una jugada termine en gol, para evaluar decisiones por sus méritos." }
     }
   },
   {
     "id": "vmo",
     "content": {
-      "en": { "term": "VMO", "def": "Video Match Official — a referee working the VAR booth. WC2026 has a pool of 30." },
-      "es": { "term": "VMO", "def": "Oficial de Partido de Video — un árbitro que trabaja en la cabina del VAR. El Mundial 2026 cuenta con un plantel de 30." }
+      "en": { "term": "VMO", "def": "Video Match Official. A VAR-booth referee; WC2026 has 30." },
+      "es": { "term": "VMO", "def": "Oficial de Partido de Video. Un árbitro de la cabina del VAR; el Mundial 2026 tiene 30." }
     }
   },
   {
     "id": "calciopoli",
     "content": {
-      "en": { "term": "Calciopoli", "def": "The 2006 Italian scandal where referee assignments were manipulated; exposed by wiretaps, Juventus were relegated.", "learnMore": "https://en.wikipedia.org/wiki/Calciopoli" },
-      "es": { "term": "Calciopoli", "def": "El escándalo italiano de 2006 en el que se digitaron las designaciones arbitrales; lo destaparon unas escuchas y la Juventus terminó en el descenso.", "learnMore": "https://en.wikipedia.org/wiki/Calciopoli" }
+      "en": { "term": "Calciopoli", "def": "2006 Italian scandal: referee assignments manipulated, exposed by wiretaps, Juventus relegated.", "learnMore": "https://en.wikipedia.org/wiki/Calciopoli" },
+      "es": { "term": "Calciopoli", "def": "Escándalo italiano de 2006: se digitaron las designaciones arbitrales, lo destaparon unas escuchas, la Juventus al descenso.", "learnMore": "https://en.wikipedia.org/wiki/Calciopoli" }
     }
   },
   {
     "id": "fifa-gate",
     "content": {
-      "en": { "term": "FIFA-Gate", "def": "The 2015 US case that indicted football officials for routing $150M+ in bribes through American banks.", "learnMore": "https://www.justice.gov/usao-edny/pr/nine-fifa-officials-and-five-corporate-executives-indicted-racketeering-conspiracy-and" },
-      "es": { "term": "FIFA-Gate", "def": "El caso estadounidense de 2015 que imputó a dirigentes por canalizar más de US$150M en sobornos por bancos de EE.UU.", "learnMore": "https://www.justice.gov/usao-edny/pr/nine-fifa-officials-and-five-corporate-executives-indicted-racketeering-conspiracy-and" }
+      "en": { "term": "FIFA-Gate", "def": "2015 US case indicting football officials for routing $150M+ in bribes through American banks.", "learnMore": "https://www.justice.gov/usao-edny/pr/nine-fifa-officials-and-five-corporate-executives-indicted-racketeering-conspiracy-and" },
+      "es": { "term": "FIFA-Gate", "def": "Caso estadounidense de 2015 que imputó a dirigentes por canalizar más de US$150M en sobornos por bancos de EE.UU.", "learnMore": "https://www.justice.gov/usao-edny/pr/nine-fifa-officials-and-five-corporate-executives-indicted-racketeering-conspiracy-and" }
     }
   },
   {
     "id": "overround",
     "content": {
-      "en": { "term": "overround", "def": "The bookmaker's built-in margin. It's why implied odds across all outcomes add up to more than 100%." },
+      "en": { "term": "overround", "def": "The bookmaker's built-in margin. Why implied odds across all outcomes sum to over 100%." },
       "es": { "term": "overround", "def": "El margen que la casa de apuestas ya trae incorporado. Por eso las probabilidades implícitas de todos los resultados suman más de 100%." }
     }
   },
   {
     "id": "monte-carlo",
     "content": {
-      "en": { "term": "Monte Carlo", "def": "Estimating an outcome by simulating it many thousands of times with random draws and counting how often each result occurs." },
+      "en": { "term": "Monte Carlo", "def": "Estimating an outcome by running thousands of random simulations, counting each result's frequency." },
       "es": { "term": "Monte Carlo", "def": "Estimar un resultado simulándolo miles de veces con sorteos aleatorios y contando con qué frecuencia ocurre cada desenlace." }
     }
   },
   {
     "id": "prior",
     "content": {
-      "en": { "term": "prior", "def": "In Bayesian reasoning, your belief in a claim before seeing the new evidence." },
+      "en": { "term": "prior", "def": "In Bayesian reasoning, your belief in a claim before new evidence." },
       "es": { "term": "prior", "def": "En el razonamiento bayesiano, tu creencia en una afirmación antes de ver la nueva evidencia." }
     }
   },
   {
     "id": "posterior",
     "content": {
-      "en": { "term": "posterior", "def": "Your updated belief after combining the prior with the evidence." },
+      "en": { "term": "posterior", "def": "Your updated belief after combining prior and evidence." },
       "es": { "term": "posterior", "def": "Tu creencia actualizada tras combinar el prior con la evidencia." }
     }
   },
   {
     "id": "likelihood-ratio",
     "content": {
-      "en": { "term": "likelihood ratio", "def": "How much more likely the evidence is if a claim is true vs false. Above 1 supports it; below 1 argues against." },
+      "en": { "term": "likelihood ratio", "def": "How much likelier the evidence is if a claim is true vs false; above 1 supports it, below 1 argues against." },
       "es": { "term": "razón de verosimilitud", "def": "Cuánto más probable es la evidencia si la afirmación es verdadera vs falsa. Por encima de 1 la apoya; por debajo, la contradice." }
     }
   },
   {
     "id": "elo",
     "content": {
-      "en": { "term": "Elo", "def": "A rating system that turns a strength gap between two teams into a win probability via a logistic curve." },
+      "en": { "term": "Elo", "def": "A rating that turns two teams' strength gap into a win probability via a logistic curve." },
       "es": { "term": "Elo", "def": "Un sistema de puntajes que convierte la diferencia de fuerza entre dos equipos en una probabilidad de victoria mediante una curva logística." }
     }
   },
   {
     "id": "aet",
     "content": {
-      "en": { "term": "AET", "def": "After extra time — the match went to two added 15-minute halves before being decided." },
-      "es": { "term": "tras alargue", "def": "Después del tiempo suplementario — el partido se definió tras dos períodos extra de 15 minutos." }
+      "en": { "term": "AET", "def": "After extra time: two added 15-minute halves before a result." },
+      "es": { "term": "tras alargue", "def": "Después del tiempo suplementario: dos períodos extra de 15 minutos antes del resultado." }
     }
   }
 ]

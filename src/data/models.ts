@@ -38,26 +38,28 @@ export interface TeamProb {
  * showing approximately this pair. The prose says plainly that this column is
  * Opta's model conditioned on a known result, not a figure Opta printed.
  *
- * Re-checked Jul 16 (Run 6): Opta STILL prints no explicit Spain-v-Argentina final
- * pair — its public trophy model even still frames a Spain-v-England final (ESP
- * 56.15 / ENG 23.38 / ARG 20.47), i.e. not re-simulated for the actual matchup. So
- * the derived .569/.431 stands unchanged; it remains the best read of Opta's model
- * on the final we actually have. If Opta publishes an explicit pair before Sunday,
- * Run 7 swaps in the printed figures and drops the conditioning language.
+ * UPDATE Jul 17 (Run 7): Opta HAS now published an explicit Spain-v-Argentina final
+ * simulation — the open item from Run 6 is closed. Across Jul 16 syndication of the
+ * 25,000-sim model the direct-matchup read is Spain ~56.05–56.31% v Argentina
+ * ~43.69–43.95% (representative ~56.1/43.9 used below). So the DERIVED .569/.431 is
+ * retired in favour of the printed figure, and the conditioning language is dropped.
+ * The printed pair sits a shade closer to Argentina than the old derivation
+ * (43.9% vs 43.1%), reflecting that Opta is now simulating the actual final rather
+ * than back-solving a pre-SF2 trophy column; it stays well inside the author range.
  *
  * Calibration footnote for the prose: both of Opta's slim semifinal favorites lost
  * — France (57.7% to reach the final, Jul 12) and England (52.53%) — so the 42.3%
  * and 47.47% branches happened back-to-back.
  */
 export const OPTA = {
-  asOf: '2026-07-15',
+  asOf: '2026-07-16',
   sims: 25000,
   url: 'https://theanalyst.com/articles/2026-world-cup-bracket-opta-supercomputer',
   /** Published post-SF1 refresh, kept for provenance (pre-SF2 vintage). */
   publishedPostSF1: { ESP: 0.5615, ENG: 0.2338, ARG: 0.2047, FRA: 0 },
   teams: {
-    ESP: { code: 'ESP', title: 0.569, reachFinal: 1 },
-    ARG: { code: 'ARG', title: 0.431, reachFinal: 1 },
+    ESP: { code: 'ESP', title: 0.561, reachFinal: 1 },
+    ARG: { code: 'ARG', title: 0.439, reachFinal: 1 },
     ENG: { code: 'ENG', title: 0, reachFinal: 0 },
     FRA: { code: 'FRA', title: 0, reachFinal: 0 },
   } satisfies Record<string, TeamProb>,
@@ -84,17 +86,18 @@ export const SILVER = {
  * Spain is favored everywhere and the price is a two-horse market. Implied %
  * includes the bookmaker's overround (margin), so the implied numbers sum to >100%.
  *
- * Re-checked again Jul 16 (Run 6): a small drift TOWARD Spain, still well inside the
- * range. Prediction markets ticked up (Kalshi ~57.7¢ → ~58.5¢ Spain, Polymarket
- * ~58.4¢) and DraftKings shortened Spain's 90-minute three-way price (+125 → +115,
- * ARG +260 → +285). The named trophy lines below (Caesars −170, bet365 −175,
- * theScore −160) drew no fresh re-quote, so they're carried as unchanged; the
- * overround-normalized trophy market is still ~59/41 Spain. (Run 5 note, still true:
- * late Jul 15 the market had not moved — FanDuel ESP −156 / ARG +136, Kalshi
- * 57.7¢/42.4¢, ~59/41 normalized.) The headline table keeps Caesars for continuity.
+ * Re-checked again Jul 17 (Run 7): the market has consolidated rather than moved.
+ * Prediction markets held their Jul 16 level (Kalshi ~58.2¢, Polymarket ~58.0¢
+ * Spain — essentially flat vs the ~58.5/58.4 of the day before) and DraftKings kept
+ * Spain's 90-minute three-way at +115 (ARG +285). The named trophy lines below
+ * (Caesars −170, bet365 −175, theScore −160) still drew no fresh re-quote, carried
+ * as unchanged; the overround-normalized trophy market is still ~59/41 Spain. So the
+ * two-day drift toward Spain has settled — the price is stable two days out. (Run 6
+ * note: Jul 16 saw Kalshi ~57.7¢ → ~58.5¢ and DraftKings +125 → +115.) The headline
+ * table keeps Caesars for continuity.
  */
 export const BOOKMAKERS = {
-  asOf: '2026-07-16',
+  asOf: '2026-07-17',
   url: 'https://www.oddschecker.com/us/soccer/world-cup',
   source: 'Caesars / bet365 / Kalshi (via Sports Betting Dime, Jul 15 evening)',
   /** Post-SF2 opening prices for the Spain–Argentina final (Jul 15 evening, after
@@ -112,12 +115,13 @@ export const BOOKMAKERS = {
 
 /** Author's synthesized SPECULATIVE title ranges (0..1). Held at the Run 4 values
  *  for the final-set state (one match left). Run 5 was the first pass where all the
- *  anchors agreed rather than one being stale; Run 6 (Jul 16) re-checked and the
- *  small drift toward Spain (Kalshi ~58.5, DraftKings 90-min +115) stays inside the
- *  spread. Overround-normalized books land near 59/41, Kalshi ~58/42, the Elo
- *  bracket at nudge=0 ~56/44, and Opta (conditioned on the final matchup, see above)
- *  ~57/43 — still four independent anchors inside a five-point band, all inside the
- *  published range, so no reason to move it. France and England resolved to 0. */
+ *  anchors agreed rather than one being stale; Run 7 (Jul 17) re-checked with the
+ *  market now stable (Kalshi ~58.2, DraftKings 90-min +115) and Opta now printing an
+ *  EXPLICIT final simulation (~56.1/43.9, see above) rather than a derivation.
+ *  Overround-normalized books land near 59/41, Kalshi ~58/42, the Elo bracket at
+ *  nudge=0 ~56/44, and Opta's explicit pair ~56/44 — still four independent anchors
+ *  inside a five-point band, all inside the published range, so no reason to move it.
+ *  France and England resolved to 0. */
 export const AUTHOR_RANGES: Record<string, { low: number; high: number }> = {
   ESP: { low: 0.55, high: 0.6 },
   ARG: { low: 0.4, high: 0.45 },
