@@ -62,11 +62,25 @@ asides), not compression — left as a future option, not a bug.
 
 ## Backlog
 
-- Optional deeper cut: trim redundant for/against points and repeated analytical asides
-  in the fact-dense files to approach 25% (editorial, changes substance).
+_Empty — the last optional item (the deeper editorial cut on the fact-dense files) was
+executed and closed on 2026-07-17. See Done._
 
 ## Done
 
+- **Deeper editorial cut on the fact-dense files** (2026-07-17) — executed the optional
+  redundancy trim across `sections`, `hypotheses`, `timeline`, `precedents`: removed the
+  dead duplicate `whowins-mc-intro` section (unreferenced leftover of the rendered
+  `whowins-sim-intro`), collapsed H4's 7 `forPoints` to the 4 strongest — which also
+  fixes the site's own "three best points" framing in `prob-intro` — folded away a
+  thrice-stated "one branch can't prove a forecast" aside in `whowins-favorite-lost`, and
+  de-duplicated the twice-listed five-bank enumeration in the timeline. Result: **EN
+  −1.7% (9471→9308), ES −1.5% (11595→11416)** on top of the earlier ~17%, with grammar
+  issues down (EN 72→69, ES 104→100) and long sentences held at 12; no fact, hedge, or
+  H1↔H2 distinction dropped. The finding: genuine, guardrail-safe redundancy in these
+  files was only ~1.5–2%. The remaining gap to the 25% target is documented football
+  facts and mandatory hedges the editorial guardrails and CONTENT RULE forbid cutting —
+  so the substance floor the earlier work identified is now empirically confirmed, and
+  the backlog is clear.
 - **Chat: mid-word truncation fix** (2026-07-17) — `/api/ask` long answers hit
   `max_tokens` and, though the earlier salvage kept them leak-free, ended
   mid-word. Raised the ceiling 2048 → 4096 and added `tidyTruncated()` to cut

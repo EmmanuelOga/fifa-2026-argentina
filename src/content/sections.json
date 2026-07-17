@@ -486,9 +486,9 @@
         "short": "France was everyone's favorite and France is out. Less of a gotcha than it sounds, and the reason this site grades itself.",
         "full": "France is out, and France was everyone's favorite. Tempting to read as 'the models failed', but a probability isn't a promise. Opta's last pre-semifinal run gave France 34% to win the title and 57.7% to reach the final. Flip those: 66% they wouldn't win, and better than 4-in-10 (42.3%) they'd fall here. The less likely branch happened; that's what probabilities do.",
         "body": [
-          "The 'everyone predicted France' feeling is a compression artifact: a model saying 34%, just the biggest number in a four-team field where nobody clears 50%, gets headlined 'France will win', and the hedge dies in translation. One match can't refute that, or vindicate it: if Spain wins, that won't prove the market 'right' any more than Monday proved Opta 'wrong'.",
-          "How do you catch a bad forecaster? Calibration over volume: of all the times they say 60%, does it happen 60% of the time? That's the test here. Every probability is on the record with a snapshot date, and after the final I'll score them all with a Brier score, no curve. A forecast you never score is just vibes with decimals.",
-          "Postscript, a day later: Opta's pre-match model leaned England in semifinal 2, 52.3% to advance, and Argentina won. Two slim favorites down, not the models 'blowing it twice': near-coin-flips land the other way all the time, and a 52% call losing is barely information. But it's the kind of run headlined 'the models keep failing', which is why I score claims in bulk, not one dramatic branch at a time."
+          "The 'everyone predicted France' feeling is a compression artifact: a model saying 34%, just the biggest number in a four-team field where nobody clears 50%, gets headlined 'France will win', and the hedge dies in translation.",
+          "How do you catch a bad forecaster? Calibration over volume: of all the times they say 60%, does it happen 60% of the time? Every probability here is on the record with a snapshot date, and after the final I'll score them all with a Brier score, no curve. A forecast you never score is just vibes with decimals.",
+          "Postscript, a day later: Opta's pre-match model leaned England in semifinal 2, 52.3% to advance, and Argentina won. Two slim favorites down in two days isn't the models failing twice: near-coin-flips land the other way all the time, and a 52% call losing is barely information. It's why I grade claims in bulk, not one dramatic branch at a time."
         ]
       },
       "es": {
@@ -496,27 +496,10 @@
         "short": "Francia era la favorita de todos y quedó afuera. No es el 'te agarré' que parece, y por eso este sitio se pone nota a sí mismo.",
         "full": "Francia quedó afuera, y Francia era la favorita de todos. Es tentador leerlo como 'los modelos fallaron', pero una probabilidad no es una promesa. La última corrida pre-semifinales de Opta le daba a Francia 34% de título y 57,7% de llegar a la final. Dalo vuelta: 66% de que no ganara, y más de 4 en 10 (42,3%) de caerse justo acá. Pasó la rama menos probable; es lo que hacen las probabilidades.",
         "body": [
-          "La sensación de que 'todos predijeron a Francia' es un artefacto de compresión: un modelo que dice 34%, apenas el número más grande entre cuatro selecciones donde ninguna llega al 50%, termina titulado 'Francia va a ganar', y el matiz se muere en la traducción. Un partido no puede refutar eso ni confirmarlo: si España gana, no le da la razón al mercado más de lo que el lunes se la quitó a Opta.",
-          "¿Cómo agarrás a un mal pronosticador? Calibración, con volumen: de todas las veces que dice 60%, ¿pasa el 60% de las veces? Ese es el examen. Cada probabilidad queda registrada con su fecha de foto, y después de la final les pongo nota a todas con un puntaje de Brier, sin regalar puntos. Un pronóstico que nunca se califica es puro pálpito con decimales.",
-          "Posdata, un día después: el modelo de Opta antes del partido se inclinaba por Inglaterra en la segunda semifinal (52,3% de avanzar) y ganó Argentina. Dos favoritos por poquito que se caen, no los modelos 'pifiándola dos veces': las casi-monedas caen del otro lado todo el tiempo, y que pierda un 52% casi no es información. Pero es el tipo de racha titulada 'los modelos siguen fallando', y por eso califico afirmaciones al por mayor, no una rama dramática por vez."
+          "La sensación de que 'todos predijeron a Francia' es un artefacto de compresión: un modelo que dice 34%, apenas el número más grande entre cuatro selecciones donde ninguna llega al 50%, termina titulado 'Francia va a ganar', y el matiz se muere en la traducción.",
+          "¿Cómo agarrás a un mal pronosticador? Calibración, con volumen: de todas las veces que dice 60%, ¿pasa el 60% de las veces? Cada probabilidad queda registrada con su fecha de foto, y después de la final les pongo nota a todas con un puntaje de Brier, sin regalar puntos. Un pronóstico que nunca se califica es puro pálpito con decimales.",
+          "Posdata, un día después: el modelo de Opta antes del partido se inclinaba por Inglaterra en la segunda semifinal (52,3% de avanzar) y ganó Argentina. Dos favoritos por poquito que se caen en dos días no son los modelos 'pifiándola dos veces': las casi-monedas caen del otro lado todo el tiempo, y que pierda un 52% casi no es información. Por eso califico afirmaciones al por mayor, no una rama dramática por vez."
         ]
-      }
-    }
-  },
-  {
-    "id": "whowins-mc-intro",
-    "content": {
-      "en": {
-        "headline": "Try it: the Monte Carlo bracket",
-        "short": "Simulate the rest of the tournament 10,000 times from the current bracket.",
-        "full": "This runs 10,000 simulated tournaments from the current bracket, using an Elo-style logistic on team strengths you can adjust. A clearly labelled, speculative 'bias nudge' slider adds points to Argentina's per-match win chance; set it to zero and the output converges on the clean model. All speculative, the nudge especially.",
-        "body": []
-      },
-      "es": {
-        "headline": "Probalo: el cuadro Monte Carlo",
-        "short": "Simulá el resto del torneo 10.000 veces desde el cuadro actual.",
-        "full": "Esto corre 10.000 torneos simulados desde el cuadro actual, usando una logística estilo Elo sobre fuerzas de equipo que podés ajustar. Un deslizador especulativo y claramente etiquetado, el 'empujón de sesgo', suma puntos a la chance de Argentina por partido; ponelo en cero y la salida converge al modelo limpio. Todo especulativo, el empujón más que nada.",
-        "body": []
       }
     }
   },
