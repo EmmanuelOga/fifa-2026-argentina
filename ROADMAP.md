@@ -6,6 +6,11 @@ everything here is repo-internal.
 
 ## In progress
 
+_Nothing active — the last tracked item (terser prose) shipped 2026-07-17. Its
+full write-up is retained below under "Shipped detail" for the record._
+
+## Shipped detail
+
 ### Terser prose, guided by grammar linters
 
 **Goal.** The site's prose still reads long even after the `prose` (humanizer) pass.
@@ -62,6 +67,11 @@ asides), not compression — left as a future option, not a bug.
 
 ## Done
 
+- **Chat: mid-word truncation fix** (2026-07-17) — `/api/ask` long answers hit
+  `max_tokens` and, though the earlier salvage kept them leak-free, ended
+  mid-word. Raised the ceiling 2048 → 4096 and added `tidyTruncated()` to cut
+  recovered answers back to a clean sentence/bullet boundary. Verified live and
+  deployed (commit `9132f3d`).
 - **Terser prose, guided by grammar linters** (2026-07-17) — see above. Harper +
   LanguageTool + LTeX+ wired as a comparative `lint`/`postlint` gate; prose cut ~17%
   EN / ~16% ES with grammar improved, published.
