@@ -91,8 +91,33 @@ function salvageAnswer(raw: string): string | null {
       out += ch;
     }
   }
-  const trimmed = out.trim();
+  const trimmed = tidyTruncated(out.trim());
   return trimmed.length ? trimmed : null;
+}
+
+/**
+ * A recovered answer was, by definition, cut off — so it can end mid-word
+ * ("…nunca un organizador dig"). Trim back to the last complete sentence (or
+ * bullet line) so the reader gets clean prose instead of a dangling fragment.
+ * Falls back to the raw text (with an ellipsis) when no good boundary exists,
+ * so we never trim a short answer down to nothing.
+ */
+function tidyTruncated(text: string): string {
+  const t = text.replace(/\s+$/, '');
+  if (!t) return t;
+  // Last natural stop: sentence punctuation before whitespace/EOL, or a list
+  // newline. Keeping the punctuation char, drop everything the cut left dangling.
+  let cut = -1;
+  for (const s of ['. ', '.\n', '! ', '!\n', '? ', '?\n', '…', '.”', '\n- ', '\n* ']) {
+    cut = Math.max(cut, t.lastIndexOf(s));
+  }
+  // Only trust a boundary that keeps most of the answer; otherwise the recovered
+  // text is short enough that a rough end beats throwing it away.
+  if (cut >= t.length * 0.4) return t.slice(0, cut + 1).replace(/\s*[-*]\s*$/, '').trimEnd();
+  // No sentence boundary to cut back to: at least drop a half-typed final word
+  // so we never end mid-word, and flag the cut with an ellipsis.
+  const space = t.lastIndexOf(' ');
+  return (space > t.length * 0.5 ? t.slice(0, space) : t) + ' …';
 }
 
 const json = (data: unknown, status = 200) =>
@@ -184,10 +209,12 @@ export const onRequestPost: PagesFunction<Env> = async ({ request, env }) => {
       },
       body: JSON.stringify({
         model,
-        // Generous headroom: at 1024 the JSON answer could truncate mid-string,
-        // breaking the parse below and leaking the raw {"answer":"…} blob into
-        // the chat. The prompt still asks for tight answers; this is the ceiling.
-        max_tokens: 2048,
+        // Generous headroom so even a "tell me everything" answer finishes: a
+        // detailed EN/ES reply (money thread + every historical precedent) runs
+        // ~1500 tokens and truncated at 2048, ending mid-word. 4096 clears that
+        // with room to spare; tidyTruncated() is the safety net for the rest.
+        // max_tokens is a ceiling, not a charge — short answers still cost little.
+        max_tokens: 4096,
         thinking: { type: 'disabled' },
         output_config: { effort: 'low', format: { type: 'json_schema', schema } },
         system,
