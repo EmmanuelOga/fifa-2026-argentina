@@ -1,0 +1,429 @@
+<!doctype html>
+<!--
+  Video compositing stage — loaded headless by render.mjs via file://.
+  A WebGL2 "estadio de noche" shader background (floodlight cones, drifting
+  light sweep, confetti bursts, grain + vignette) under DOM overlay scenes
+  typeset with the site's real fonts and tokens. Everything is driven by
+  window.setup(DATA) + window.seek(tSeconds): no rAF, no wall clock — frames
+  are deterministic so ffmpeg gets the same movie every render.
+-->
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<style>
+  @font-face {
+    font-family: 'Archivo Variable';
+    src: url('../node_modules/@fontsource-variable/archivo/files/archivo-latin-ext-wght-normal.woff2') format('woff2');
+    font-weight: 100 900;
+  }
+  @font-face {
+    font-family: 'Instrument Sans Variable';
+    src: url('../node_modules/@fontsource-variable/instrument-sans/files/instrument-sans-latin-ext-wght-normal.woff2') format('woff2');
+    font-weight: 400 700;
+  }
+  @font-face {
+    font-family: 'Space Grotesk Variable';
+    src: url('../node_modules/@fontsource-variable/space-grotesk/files/space-grotesk-latin-ext-wght-normal.woff2') format('woff2');
+    font-weight: 300 700;
+  }
+  :root {
+    --sky: #3ec1ff;
+    --sky-ink: #d9efff;
+    --sun: #ffb92e;
+    --sun-ink: #ffd685;
+    --pop: #ff5d8f;
+    --ink: #eaf4fc;
+    --muted: #8da8c0;
+    --line: #21405e;
+    --paper: #050e1c;
+    --surface: rgba(10, 23, 41, 0.78);
+    --surface-2: rgba(16, 33, 56, 0.85);
+    --display: 'Archivo Variable', sans-serif;
+    --body: 'Instrument Sans Variable', sans-serif;
+    --data: 'Space Grotesk Variable', monospace;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html, body { width: 1080px; height: 1920px; background: var(--paper); overflow: hidden; }
+  #gl { position: absolute; inset: 0; width: 1080px; height: 1920px; }
+  .overlay { position: absolute; inset: 0; color: var(--ink); }
+  .scene { position: absolute; inset: 0; display: none; }
+  .scene.active { display: block; }
+
+  /* shared bits */
+  .kicker {
+    font-family: var(--data);
+    font-weight: 600;
+    font-size: 34px;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--sky);
+  }
+  .spec {
+    display: inline-block;
+    font-family: var(--data);
+    font-weight: 700;
+    font-size: 27px;
+    letter-spacing: 0.1em;
+    color: #041220;
+    background: var(--pop);
+    padding: 8px 22px;
+    border-radius: 3px;
+  }
+  .rule { height: 10px; width: 300px; background: var(--sun); margin: 34px auto; box-shadow: 0 0 26px rgba(255, 185, 46, 0.5); }
+
+  /* 1 — hook */
+  #hook { text-align: center; padding-top: 700px; }
+  #hook .title {
+    font-family: var(--display);
+    font-weight: 800;
+    font-size: 168px;
+    letter-spacing: -0.02em;
+    color: var(--sky-ink);
+    text-shadow: 0 0 60px rgba(62, 193, 255, 0.45);
+  }
+  #hook .tag { font-family: var(--body); font-size: 48px; color: var(--ink); margin-top: 8px; }
+
+  /* 2 — final masthead */
+  #final { padding: 620px 90px 0; text-align: left; }
+  #final .headline {
+    font-family: var(--display);
+    font-weight: 800;
+    font-size: 128px;
+    line-height: 0.98;
+    text-transform: uppercase;
+    letter-spacing: -0.015em;
+    color: var(--ink);
+    text-shadow: 0 0 44px rgba(62, 193, 255, 0.35);
+  }
+  #final .match { font-family: var(--body); font-weight: 700; font-size: 54px; color: var(--sun-ink); margin-top: 44px; }
+  #final .kick { font-family: var(--body); font-size: 44px; color: var(--sky-ink); margin-top: 26px; }
+
+  /* 3 — story beats */
+  .beat { text-align: center; padding: 560px 90px 0; }
+  .beat .num {
+    font-family: var(--data); font-weight: 600; font-size: 34px; color: var(--muted); letter-spacing: 0.2em;
+  }
+  .beat h2 {
+    font-family: var(--display); font-weight: 800; font-size: 78px; line-height: 1.04;
+    color: var(--sky-ink); margin: 36px 0 44px;
+  }
+  .beat p { font-family: var(--body); font-size: 46px; line-height: 1.4; color: var(--ink); }
+
+  /* 4 — hypotheses */
+  #hypo { padding: 300px 70px 0; }
+  #hypo h2 { font-family: var(--display); font-weight: 800; font-size: 76px; color: var(--sky-ink); text-align: center; }
+  #hypo .spec-row { text-align: center; margin: 26px 0 46px; }
+  .hcard {
+    background: var(--surface);
+    border: 1px solid var(--line);
+    border-left: 12px solid var(--sky);
+    border-radius: 3px;
+    padding: 34px 40px;
+    margin-bottom: 30px;
+    backdrop-filter: blur(4px);
+  }
+  .hcard.fin { border-left-color: var(--sun); }
+  .hcard .row { display: flex; justify-content: space-between; align-items: baseline; }
+  .hcard .code { font-family: var(--data); font-weight: 700; font-size: 50px; color: var(--sky); }
+  .hcard.fin .code { color: var(--sun); }
+  .hcard .range { font-family: var(--data); font-weight: 700; font-size: 50px; color: var(--sky-ink); }
+  .hcard .name { font-family: var(--body); font-size: 40px; line-height: 1.3; color: var(--ink); margin-top: 16px; }
+
+  /* 5 — who wins */
+  #who { padding: 380px 90px 0; }
+  #who h2 { font-family: var(--display); font-weight: 800; font-size: 76px; color: var(--sky-ink); text-align: center; margin-bottom: 20px; }
+  #who .spec-row { text-align: center; margin-bottom: 70px; }
+  .bar-block { margin-bottom: 66px; }
+  .bar-block .lbl { display: flex; justify-content: space-between; font-family: var(--body); font-weight: 600; font-size: 46px; margin-bottom: 16px; }
+  .bar-block .lbl .pct { font-family: var(--data); font-weight: 700; color: var(--sky-ink); }
+  .bar-track { height: 66px; background: var(--surface-2); border: 1px solid var(--line); border-radius: 3px; overflow: hidden; }
+  .bar-fill { height: 100%; width: 0%; background: var(--sky); box-shadow: 0 0 24px rgba(62, 193, 255, 0.45); }
+  .bar-fill.gold { background: var(--sun); box-shadow: 0 0 24px rgba(255, 185, 46, 0.45); }
+
+  /* 6 — closing */
+  #close { text-align: center; padding-top: 640px; }
+  #close .vamos {
+    font-family: var(--display); font-weight: 800; font-size: 150px; line-height: 1;
+    text-transform: uppercase; color: var(--sky-ink); text-shadow: 0 0 60px rgba(62, 193, 255, 0.45);
+  }
+  #close .flag { display: inline-grid; grid-auto-flow: row; gap: 6px; width: 150px; margin: 54px 0; }
+  #close .flag span { height: 30px; background: var(--sky); }
+  #close .flag span.mid { background: #fff; position: relative; }
+  #close .flag span.mid::after {
+    content: ''; position: absolute; left: 50%; top: 50%; width: 26px; height: 26px;
+    transform: translate(-50%, -50%); border-radius: 50%; background: var(--sun);
+  }
+  #close .note { font-family: var(--body); font-size: 44px; line-height: 1.4; color: var(--ink); padding: 0 110px; }
+  #close .by { font-family: var(--body); font-weight: 500; font-size: 38px; color: var(--muted); margin-top: 60px; }
+</style>
+</head>
+<body>
+<canvas id="gl" width="1080" height="1920"></canvas>
+<div class="overlay" id="overlay"></div>
+
+<script>
+/* ── WebGL2 estadio-de-noche background ────────────────────────────────── */
+const FRAG = `#version 300 es
+precision highp float;
+uniform vec2 uRes;
+uniform float uTime;      // absolute seconds
+uniform float uConfetti;  // 0..1 confetti intensity
+uniform float uAccent;    // 0 = celeste mood, 1 = gold mood
+out vec4 fragColor;
+
+float hash(vec2 p){ return fract(sin(dot(p, vec2(127.1, 311.7))) * 43758.5453); }
+float noise(vec2 p){
+  vec2 i = floor(p), f = fract(p);
+  vec2 u = f * f * (3.0 - 2.0 * f);
+  return mix(mix(hash(i), hash(i + vec2(1, 0)), u.x),
+             mix(hash(i + vec2(0, 1)), hash(i + vec2(1, 1)), u.x), u.y);
+}
+
+// one floodlight cone from an anchor, slowly swaying
+float beam(vec2 uv, vec2 origin, float baseAng, float sway, float width){
+  vec2 d = uv - origin;
+  float ang = atan(d.x, -d.y);
+  float target = baseAng + sin(uTime * 0.35 + baseAng * 7.0) * sway;
+  float fall = smoothstep(width, 0.0, abs(ang - target));
+  return fall * smoothstep(1.6, 0.15, length(d));
+}
+
+// falling confetti layer: grid of cells, one fleck each
+float confetti(vec2 uv, float scale, float speed, float seed){
+  vec2 p = uv * scale;
+  p.y += uTime * speed;
+  vec2 cell = floor(p), f = fract(p);
+  float h = hash(cell + seed);
+  vec2 c = vec2(hash(cell + seed + 1.7), hash(cell + seed + 3.1));
+  c.x += sin(uTime * (0.6 + h) + h * 40.0) * 0.18; // flutter
+  float d = length((f - c) * vec2(1.0, 1.6));
+  float size = 0.055 + h * 0.05;
+  float spin = 0.55 + 0.45 * sin(uTime * (2.0 + h * 3.0) + h * 17.0);
+  return smoothstep(size, size * 0.35, d) * step(h, 0.5) * spin;
+}
+
+void main(){
+  vec2 uv = gl_FragCoord.xy / uRes;
+  uv.y = 1.0 - uv.y;
+  vec2 asp = vec2(uRes.x / uRes.y, 1.0);
+  vec2 p = uv * asp;
+
+  vec3 navyTop = vec3(0.016, 0.055, 0.11);
+  vec3 navyBot = vec3(0.008, 0.027, 0.06);
+  vec3 col = mix(navyTop, navyBot, uv.y);
+
+  vec3 celeste = vec3(0.243, 0.757, 1.0);
+  vec3 gold = vec3(1.0, 0.725, 0.18);
+  vec3 accent = mix(celeste, gold, uAccent);
+
+  // floodlights from above the frame
+  float b = 0.0;
+  b += beam(uv, vec2(0.12, -0.18), 0.30, 0.10, 0.55);
+  b += beam(uv, vec2(0.88, -0.18), -0.30, 0.10, 0.55);
+  col += accent * b * 0.16;
+
+  // drifting diagonal light sweep (stadium LED board feel)
+  float sweep = sin((uv.x * 1.4 - uv.y * 0.9) * 6.2831 + uTime * 0.55);
+  col += accent * smoothstep(0.86, 1.0, sweep) * 0.05;
+
+  // faint pitch arcs in the lower third
+  float arc = abs(length((uv - vec2(0.5, 1.28)) * asp) - 0.62);
+  col += celeste * smoothstep(0.012, 0.0, arc) * 0.10;
+
+  // confetti (celeste / white / gold layers)
+  float c1 = confetti(p, 7.0, 0.16, 0.0);
+  float c2 = confetti(p, 11.0, 0.24, 5.0);
+  float c3 = confetti(p, 15.0, 0.34, 9.0);
+  col += (celeste * c1 * 0.9 + vec3(0.95) * c2 * 0.7 + gold * c3 * 0.9) * uConfetti;
+
+  // grain + vignette
+  col += (noise(gl_FragCoord.xy * 0.8 + uTime * 60.0) - 0.5) * 0.035;
+  float vig = smoothstep(1.25, 0.35, length((uv - 0.5) * vec2(1.15, 1.35)));
+  col *= mix(0.72, 1.0, vig);
+
+  fragColor = vec4(col, 1.0);
+}`;
+
+const canvas = document.getElementById('gl');
+const gl = canvas.getContext('webgl2', { preserveDrawingBuffer: true, antialias: false });
+let uni = null;
+if (gl) {
+  const vs = gl.createShader(gl.VERTEX_SHADER);
+  gl.shaderSource(vs, `#version 300 es
+    void main(){ vec2 v = vec2((gl_VertexID << 1) & 2, gl_VertexID & 2);
+      gl_Position = vec4(v * 2.0 - 1.0, 0.0, 1.0); }`);
+  gl.compileShader(vs);
+  const fs = gl.createShader(gl.FRAGMENT_SHADER);
+  gl.shaderSource(fs, FRAG);
+  gl.compileShader(fs);
+  if (!gl.getShaderParameter(fs, gl.COMPILE_STATUS)) {
+    window.__shaderError = gl.getShaderInfoLog(fs);
+  }
+  const prog = gl.createProgram();
+  gl.attachShader(prog, vs);
+  gl.attachShader(prog, fs);
+  gl.linkProgram(prog);
+  gl.useProgram(prog);
+  uni = {
+    res: gl.getUniformLocation(prog, 'uRes'),
+    time: gl.getUniformLocation(prog, 'uTime'),
+    confetti: gl.getUniformLocation(prog, 'uConfetti'),
+    accent: gl.getUniformLocation(prog, 'uAccent'),
+  };
+  gl.viewport(0, 0, canvas.width, canvas.height);
+  gl.uniform2f(uni.res, canvas.width, canvas.height);
+}
+
+function drawGL(t, confetti, accent) {
+  if (!gl) return;
+  gl.uniform1f(uni.time, t);
+  gl.uniform1f(uni.confetti, confetti);
+  gl.uniform1f(uni.accent, accent);
+  gl.drawArrays(gl.TRIANGLES, 0, 3);
+}
+
+/* ── scene DOM + timeline ──────────────────────────────────────────────── */
+const easeOut = (t) => 1 - Math.pow(1 - Math.min(1, Math.max(0, t)), 3);
+const clamp01 = (t) => Math.min(1, Math.max(0, t));
+let SCENES = [];
+
+window.setup = function (D) {
+  const ov = document.getElementById('overlay');
+  const esc = (s) => s.replace(/[&<>]/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;' }[c]));
+
+  ov.innerHTML = `
+    <div class="scene" id="hook">
+      <div class="title">La Alegría</div>
+      <div class="rule"></div>
+      <div class="tag">${esc(D.tag)}</div>
+    </div>
+    <div class="scene" id="final">
+      <div class="kicker">${esc(D.finalKicker)}</div>
+      <div class="headline" style="margin-top:40px">${esc(D.finalHeadline)}</div>
+      <div class="match">${D.matchLine}</div>
+      <div class="kick">${esc(D.finalKick)}</div>
+    </div>
+    ${D.beats
+      .map(
+        (b, i) => `
+    <div class="scene beat" id="beat${i}">
+      <div class="num">${i + 1} / ${D.beats.length}</div>
+      <h2>${esc(b.headline)}</h2>
+      <p>${esc(b.short)}</p>
+    </div>`,
+      )
+      .join('')}
+    <div class="scene" id="hypo">
+      <h2>${esc(D.hypoTitle)}</h2>
+      <div class="spec-row"><span class="spec">${esc(D.spec)}</span></div>
+      ${D.hypotheses
+        .map(
+          (h) => `
+      <div class="hcard ${h.fin ? 'fin' : ''}">
+        <div class="row"><span class="code">${esc(h.code)}</span><span class="range">${esc(h.range)}</span></div>
+        <div class="name">${esc(h.name)}</div>
+      </div>`,
+        )
+        .join('')}
+    </div>
+    <div class="scene" id="who">
+      <h2>${esc(D.whoTitle)}</h2>
+      <div class="spec-row"><span class="spec">${esc(D.spec)}</span></div>
+      ${D.teams
+        .map(
+          (m) => `
+      <div class="bar-block">
+        <div class="lbl"><span>${m.flag} ${esc(m.name)}</span><span class="pct" data-pct>${esc(m.label)}</span></div>
+        <div class="bar-track"><div class="bar-fill ${m.gold ? 'gold' : ''}" data-mid="${m.mid}"></div></div>
+      </div>`,
+        )
+        .join('')}
+    </div>
+    <div class="scene" id="close">
+      <div class="vamos">Vamos<br/>Argentina</div>
+      <div class="flag"><span></span><span class="mid"></span><span></span></div>
+      <div class="note">${esc(D.closing)}</div>
+      <div class="by">${esc(D.by)}</div>
+    </div>`;
+
+  const el = (id) => document.getElementById(id);
+  const slideIn = (node, p, dy = 60) => {
+    node.style.opacity = easeOut(p * 2.2);
+    node.style.transform = `translateY(${(1 - easeOut(p * 1.6)) * dy}px)`;
+  };
+
+  SCENES = [
+    {
+      id: 'hook', dur: 3.2, accent: 0, confetti: (p) => 0.9 * easeOut(p * 2),
+      tick(p) {
+        const t = el('hook').querySelector('.title');
+        t.style.opacity = easeOut(p * 2.5);
+        t.style.letterSpacing = `${-0.02 - (1 - easeOut(p * 1.4)) * 0.06}em`;
+        slideIn(el('hook').querySelector('.tag'), clamp01(p * 1.6 - 0.25));
+      },
+    },
+    {
+      id: 'final', dur: 3.8, accent: 0.35, confetti: () => 0.25,
+      tick(p) {
+        slideIn(el('final').querySelector('.headline'), p, 90);
+        slideIn(el('final').querySelector('.match'), clamp01(p * 1.4 - 0.2));
+        slideIn(el('final').querySelector('.kick'), clamp01(p * 1.4 - 0.35));
+      },
+    },
+    ...D.beats.map((_, i) => ({
+      id: `beat${i}`, dur: 3.4, accent: i === 1 ? 0.6 : 0, confetti: () => 0.12,
+      tick(p) {
+        const s = el(`beat${i}`);
+        slideIn(s.querySelector('h2'), p, 70);
+        slideIn(s.querySelector('p'), clamp01(p * 1.3 - 0.2));
+        s.querySelector('.num').style.opacity = easeOut(p * 3);
+      },
+    })),
+    {
+      id: 'hypo', dur: 6, accent: 0.5, confetti: () => 0.08,
+      tick(p) {
+        el('hypo').querySelectorAll('.hcard').forEach((c, i) => {
+          const q = clamp01(p * 3.2 - i * 0.45);
+          c.style.opacity = easeOut(q);
+          c.style.transform = `translateX(${(1 - easeOut(q)) * (i % 2 ? 90 : -90)}px)`;
+        });
+      },
+    },
+    {
+      id: 'who', dur: 5, accent: 0.2, confetti: () => 0.1,
+      tick(p) {
+        el('who').querySelectorAll('.bar-fill').forEach((f, i) => {
+          const q = easeOut(clamp01(p * 2.6 - i * 0.35));
+          f.style.width = `${f.dataset.mid * q}%`;
+        });
+      },
+    },
+    {
+      id: 'close', dur: 4.2, accent: 0.15, confetti: (p) => easeOut(p * 1.6),
+      tick(p) {
+        slideIn(el('close').querySelector('.vamos'), p, 80);
+        slideIn(el('close').querySelector('.note'), clamp01(p * 1.5 - 0.25));
+        el('close').querySelector('.by').style.opacity = easeOut(clamp01(p * 2 - 0.6));
+      },
+    },
+  ];
+  window.__total = SCENES.reduce((a, s) => a + s.dur, 0);
+  return window.__total;
+};
+
+window.seek = function (t) {
+  let acc = 0;
+  for (const s of SCENES) {
+    if (t < acc + s.dur || s === SCENES[SCENES.length - 1]) {
+      const p = clamp01((t - acc) / s.dur);
+      document.querySelectorAll('.scene').forEach((n) => n.classList.toggle('active', n.id === s.id));
+      s.tick(p);
+      drawGL(t, s.confetti(p), s.accent);
+      return;
+    }
+    acc += s.dur;
+  }
+};
+</script>
+</body>
+</html>

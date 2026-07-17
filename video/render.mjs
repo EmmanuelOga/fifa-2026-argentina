@@ -1,41 +1,69 @@
 /**
  * Video render target — `pnpm render:video`.
  *
- * Composes selected content units (hook → the story in 3 beats → the four
- * hypotheses at a glance → who-wins snapshot → vamos closing) into a short 9:16
- * MP4, one per locale, into video/out/. Reads the SAME content layer as the site,
- * so a content edit propagates here on the next render. Speculative labels stay
- * on screen — guardrails apply to every output.
+ * Composes the content layer (hook → the-final masthead → the story in 3
+ * beats → four hypotheses → who-wins ranges → vamos closing) into a short
+ * 9:16 MP4 per locale, into video/out/. Reads the SAME content layer as the
+ * site, so a content edit propagates here on the next render. Speculative
+ * labels stay on screen — guardrails apply to every output.
  *
- * Pipeline: @napi-rs/canvas frames → ffmpeg (image2pipe → H.264 MP4). Lighter
- * than Remotion and keeps React entirely out of the site bundle.
+ * Pipeline: puppeteer-core drives the installed Chromium (Edge) rendering
+ * video/template.html — a WebGL2 "estadio de noche" shader background under
+ * DOM overlays typeset in the site's real fonts. Frames are seeked
+ * deterministically (no wall clock) and piped to ffmpeg (image2pipe → H.264).
  */
-import { createCanvas } from '@napi-rs/canvas';
+import puppeteer from 'puppeteer-core';
 import { spawn } from 'node:child_process';
-import { readFileSync, mkdirSync } from 'node:fs';
-import { fileURLToPath } from 'node:url';
+import { readFileSync, mkdirSync, existsSync } from 'node:fs';
+import { fileURLToPath, pathToFileURL } from 'node:url';
 import { dirname, join } from 'node:path';
-import { COLORS, registerFonts, roundRect, wrapText, drawConfetti } from '../scripts/brand.mjs';
 
 const here = dirname(fileURLToPath(import.meta.url));
 const root = join(here, '..');
 const outDir = join(here, 'out');
 mkdirSync(outDir, { recursive: true });
-const F = registerFonts();
 
 const W = 1080;
 const H = 1920;
 const FPS = 30;
 
+const CHROMIUM = [
+  process.env.VIDEO_BROWSER,
+  '/Applications/Google Chrome.app/Contents/MacOS/Google Chrome',
+  '/Applications/Microsoft Edge.app/Contents/MacOS/Microsoft Edge',
+].find((p) => p && existsSync(p));
+if (!CHROMIUM) {
+  console.error('No Chromium found — set VIDEO_BROWSER to a Chrome/Edge binary.');
+  process.exit(1);
+}
+
+/* ── content layer ─────────────────────────────────────────────────────── */
 const read = (p) => JSON.parse(readFileSync(join(root, p), 'utf8'));
 const sections = Object.fromEntries(read('src/content/sections.json').map((s) => [s.id, s.content]));
 const hypotheses = read('src/content/hypotheses.json');
+
 const UI = {
-  en: { spec: 'SPECULATIVE', tag: 'A celebration with footnotes', who: 'Who wins? (speculative)', by: 'by Emmanuel Oga', out: 'out' },
-  es: { spec: 'ESPECULATIVO', tag: 'Una celebración con notas al pie', who: '¿Quién gana? (especulativo)', by: 'por Emmanuel Oga', out: 'afuera' },
+  en: {
+    spec: 'SPECULATIVE',
+    tag: 'A celebration with footnotes',
+    who: 'Who wins?',
+    hypo: 'Four hypotheses',
+    by: 'by Emmanuel Oga · la alegría',
+    out: 'out',
+    finalKicker: 'The final · July 19 · MetLife',
+  },
+  es: {
+    spec: 'ESPECULATIVO',
+    tag: 'Una celebración con notas al pie',
+    who: '¿Quién gana?',
+    hypo: 'Cuatro hipótesis',
+    by: 'por Emmanuel Oga · la alegría',
+    out: 'afuera',
+    finalKicker: 'La final · 19 de julio · MetLife',
+  },
 };
 
-/* AUTHOR ranges + display order come from src/data/models.ts (single source of
+/* AUTHOR ranges + display order from src/data/models.ts (single source of
  * truth) — extracted textually so the video never re-ships stale numbers. */
 const modelsTs = readFileSync(join(root, 'src/data/models.ts'), 'utf8');
 const rangesBlock = modelsTs.match(/AUTHOR_RANGES[^=]*=\s*{([\s\S]*?)};/)?.[1] ?? '';
@@ -44,253 +72,101 @@ const AUTHOR = Object.fromEntries(
     ([, code, lo, hi]) => [code, [Math.round(lo * 100), Math.round(hi * 100)]],
   ),
 );
-const MODEL_ORDER = modelsTs
-  .match(/MODEL_ORDER\s*=\s*\[([^\]]*)\]/)?.[1]
-  .match(/[A-Z]{3}/g) ?? ['ESP', 'ARG', 'ENG', 'FRA'];
+const MODEL_ORDER = modelsTs.match(/MODEL_ORDER\s*=\s*\[([^\]]*)\]/)?.[1].match(/[A-Z]{3}/g) ?? [
+  'ESP', 'ARG', 'ENG', 'FRA',
+];
 const NAMES = {
   en: { FRA: 'France', ESP: 'Spain', ENG: 'England', ARG: 'Argentina' },
   es: { FRA: 'Francia', ESP: 'España', ENG: 'Inglaterra', ARG: 'Argentina' },
 };
+const FLAGS = { FRA: '🇫🇷', ESP: '🇪🇸', ENG: '🏴󠁧󠁢󠁥󠁮󠁧󠁿', ARG: '🇦🇷' };
 
-const easeOut = (t) => 1 - Math.pow(1 - Math.min(1, Math.max(0, t)), 3);
+/** The finalists = teams whose author range is still alive, ARG listed last. */
+const finalists = MODEL_ORDER.filter((c) => (AUTHOR[c]?.[1] ?? 0) > 0).sort((a, b) =>
+  a === 'ARG' ? 1 : b === 'ARG' ? -1 : 0,
+);
 
-/** Shared background: sunlit gradient + a settled confetti band up top. */
-function bg(ctx) {
-  const g = ctx.createLinearGradient(0, 0, 0, H);
-  g.addColorStop(0, COLORS.skySoft);
-  g.addColorStop(1, COLORS.paper);
-  ctx.fillStyle = g;
-  ctx.fillRect(0, 0, W, H);
-  ctx.fillStyle = COLORS.sky;
-  ctx.fillRect(0, 0, W, 16);
-  ctx.fillStyle = COLORS.sun;
-  ctx.fillRect(0, 16, W, 7);
-}
-
-function specPill(ctx, x, y, label) {
-  ctx.font = `600 30px ${F.data}`;
-  const w = ctx.measureText(label).width + 40;
-  ctx.fillStyle = COLORS.pop;
-  roundRect(ctx, x, y, w, 46, 23);
-  ctx.fill();
-  ctx.fillStyle = '#fff';
-  ctx.fillText(label, x + 20, y + 32);
-  return w;
-}
-
-function centeredBlock(ctx, lines, font, color, cx, startY, lh) {
-  ctx.font = font;
-  ctx.fillStyle = color;
-  ctx.textAlign = 'center';
-  lines.forEach((l, i) => ctx.fillText(l, cx, startY + i * lh));
-  ctx.textAlign = 'left';
-}
-
-// ── scenes: each returns draw(ctx, p) where p is 0..1 progress within the scene ──
-function scene(locale) {
+function sceneData(locale) {
   const t = UI[locale];
-  const S = (id, field) => sections[id][locale][field];
-
-  return [
-    // 1. Hook
-    {
-      dur: 3.5,
-      draw(ctx, p) {
-        bg(ctx);
-        drawConfetti(ctx, W, 620, 90, 11, easeOut(p * 2));
-        const a = easeOut((p - 0.05) * 3);
-        ctx.globalAlpha = a;
-        ctx.textAlign = 'center';
-        ctx.fillStyle = COLORS.skyInk;
-        ctx.font = `800 150px ${F.display}`;
-        ctx.fillText('La Alegría', W / 2, 820);
-        ctx.fillStyle = COLORS.sun;
-        roundRect(ctx, W / 2 - 160, 880, 320, 12, 6);
-        ctx.fill();
-        ctx.fillStyle = COLORS.ink;
-        ctx.font = `500 46px ${F.body}`;
-        wrapText(ctx, t.tag, 760).forEach((l, i) => ctx.fillText(l, W / 2, 990 + i * 60));
-        ctx.textAlign = 'left';
-        ctx.globalAlpha = 1;
-      },
-    },
-    // 2. Story in 3 beats
-    ...['story-intro', 'story-two-threads', 'story-takeaway'].map((id, idx) => ({
-      dur: 4,
-      draw(ctx, p) {
-        bg(ctx);
-        const a = easeOut(p * 2.5);
-        ctx.globalAlpha = a;
-        ctx.fillStyle = COLORS.muted;
-        ctx.font = `600 34px ${F.data}`;
-        ctx.textAlign = 'center';
-        ctx.fillText(`${idx + 1} / 3`, W / 2, 620);
-        ctx.fillStyle = COLORS.skyInk;
-        ctx.font = `800 66px ${F.display}`;
-        wrapText(ctx, S(id, 'headline'), 900).forEach((l, i) => ctx.fillText(l, W / 2, 760 + i * 76));
-        ctx.fillStyle = COLORS.ink;
-        ctx.font = `400 44px ${F.body}`;
-        const lines = wrapText(ctx, S(id, 'short'), 880);
-        lines.forEach((l, i) => ctx.fillText(l, W / 2, 1020 + i * 58));
-        ctx.textAlign = 'left';
-        ctx.globalAlpha = 1;
-      },
+  const S = (id, field) => sections[id]?.[locale]?.[field] ?? '';
+  return {
+    tag: t.tag,
+    spec: t.spec,
+    by: t.by,
+    finalKicker: t.finalKicker,
+    finalHeadline: S('masthead-final-set', 'headline'),
+    finalKick: S('masthead-final-set', 'short'),
+    matchLine:
+      finalists.length === 2
+        ? `${FLAGS[finalists[0]]} ${NAMES[locale][finalists[0]]} v ${NAMES[locale][finalists[1]]} ${FLAGS[finalists[1]]}`
+        : '',
+    beats: ['story-intro', 'story-two-threads', 'story-takeaway'].map((id) => ({
+      headline: S(id, 'headline'),
+      short: S(id, 'short'),
     })),
-    // 3. Four hypotheses at a glance
-    {
-      dur: 6,
-      draw(ctx, p) {
-        bg(ctx);
-        ctx.textAlign = 'center';
-        ctx.fillStyle = COLORS.skyInk;
-        ctx.font = `800 64px ${F.display}`;
-        ctx.fillText(locale === 'es' ? 'Cuatro hipótesis' : 'Four hypotheses', W / 2, 360);
-        ctx.textAlign = 'left';
-        specPill(ctx, W / 2 - 110, 400, t.spec);
-        hypotheses.forEach((h, i) => {
-          const reveal = easeOut(p * 4 - i * 0.5);
-          if (reveal <= 0) return;
-          ctx.globalAlpha = reveal;
-          const y = 560 + i * 300;
-          const col = h.thread === 'financial' ? COLORS.sun : COLORS.sky;
-          ctx.fillStyle = '#fff';
-          roundRect(ctx, 80, y, W - 160, 260, 26);
-          ctx.fill();
-          ctx.fillStyle = col;
-          roundRect(ctx, 80, y, 14, 260, 7);
-          ctx.fill();
-          ctx.fillStyle = col;
-          ctx.font = `700 54px ${F.data}`;
-          ctx.fillText(h.code, 130, y + 80);
-          ctx.fillStyle = COLORS.skyInk;
-          ctx.font = `700 52px ${F.data}`;
-          const rng = `${(h.rangeLow * 100).toFixed(0)}–${(h.rangeHigh * 100).toFixed(0)}%`;
-          ctx.textAlign = 'right';
-          ctx.fillText(rng, W - 130, y + 80);
-          ctx.textAlign = 'left';
-          ctx.fillStyle = COLORS.ink;
-          ctx.font = `500 40px ${F.body}`;
-          wrapText(ctx, h.content[locale].headline, W - 320).slice(0, 3).forEach((l, k) =>
-            ctx.fillText(l, 130, y + 150 + k * 50),
-          );
-          ctx.globalAlpha = 1;
-        });
-      },
-    },
-    // 4. Who wins snapshot
-    {
-      dur: 5,
-      draw(ctx, p) {
-        bg(ctx);
-        ctx.textAlign = 'center';
-        ctx.fillStyle = COLORS.skyInk;
-        ctx.font = `800 64px ${F.display}`;
-        ctx.fillText(t.who, W / 2, 420);
-        ctx.textAlign = 'left';
-        // Bar scale tracks the current favorite so post-semis numbers still fit.
-        const scaleMax = Math.max(45, ...Object.values(AUTHOR).map(([, hi]) => hi)) + 10;
-        MODEL_ORDER.forEach((code, i) => {
-          const y = 620 + i * 230;
-          const [lo, hi] = AUTHOR[code] ?? [0, 0];
-          const mid = (lo + hi) / 2;
-          const grow = easeOut(p * 3 - i * 0.4);
-          ctx.fillStyle = COLORS.ink;
-          ctx.font = `600 46px ${F.body}`;
-          ctx.fillText(NAMES[locale][code], 100, y - 20);
-          ctx.fillStyle = COLORS.surface2 || '#eef6fc';
-          roundRect(ctx, 100, y, W - 200, 70, 35);
-          ctx.fill();
-          if (hi > 0) {
-            ctx.fillStyle = code === 'ARG' ? COLORS.sun : COLORS.sky;
-            roundRect(ctx, 100, y, (W - 200) * (mid / scaleMax) * grow, 70, 35);
-            ctx.fill();
-          }
-          ctx.fillStyle = COLORS.skyInk;
-          ctx.font = `700 46px ${F.data}`;
-          ctx.textAlign = 'right';
-          ctx.fillText(hi > 0 ? `${lo}–${hi}%` : t.out, W - 110, y + 52);
-          ctx.textAlign = 'left';
-        });
-      },
-    },
-    // 5. Vamos closing
-    {
-      dur: 4,
-      draw(ctx, p) {
-        bg(ctx);
-        drawConfetti(ctx, W, H, 120, 23, easeOut(p * 1.5));
-        const a = easeOut(p * 2.5);
-        ctx.globalAlpha = a;
-        ctx.textAlign = 'center';
-        ctx.fillStyle = COLORS.skyInk;
-        ctx.font = `800 120px ${F.display}`;
-        ctx.fillText('Vamos', W / 2, 820);
-        ctx.fillText('Argentina', W / 2, 950);
-        // drawn flag chip
-        const fx = W / 2 - 60;
-        ctx.fillStyle = COLORS.sky;
-        roundRect(ctx, fx, 1010, 120, 82, 12);
-        ctx.fill();
-        ctx.fillStyle = '#fff';
-        ctx.fillRect(fx, 1038, 120, 26);
-        ctx.fillStyle = COLORS.sun;
-        ctx.beginPath();
-        ctx.arc(fx + 60, 1051, 13, 0, Math.PI * 2);
-        ctx.fill();
-        ctx.fillStyle = COLORS.ink;
-        ctx.font = `400 42px ${F.body}`;
-        wrapText(ctx, S('closing-note', 'short'), 820).forEach((l, i) =>
-          ctx.fillText(l, W / 2, 1180 + i * 56),
-        );
-        ctx.fillStyle = COLORS.muted;
-        ctx.font = `500 38px ${F.body}`;
-        ctx.fillText(t.by, W / 2, 1560);
-        ctx.textAlign = 'left';
-        ctx.globalAlpha = 1;
-      },
-    },
-  ];
+    hypoTitle: t.hypo,
+    hypotheses: hypotheses.map((h) => ({
+      code: h.code,
+      fin: h.thread === 'financial',
+      range: `${(h.rangeLow * 100).toFixed(0)}–${(h.rangeHigh * 100).toFixed(0)}%`,
+      name: h.content[locale].headline,
+    })),
+    whoTitle: t.who,
+    teams: MODEL_ORDER.map((code) => {
+      const [lo, hi] = AUTHOR[code] ?? [0, 0];
+      return {
+        flag: FLAGS[code],
+        name: NAMES[locale][code],
+        gold: code === 'ARG',
+        mid: hi > 0 ? (lo + hi) / 2 : 0,
+        label: hi > 0 ? `${lo}–${hi}%` : t.out,
+      };
+    }),
+    closing: S('closing-note', 'short'),
+  };
 }
 
-async function renderLocale(locale) {
-  const scenes = scene(locale);
+/* ── render ────────────────────────────────────────────────────────────── */
+async function renderLocale(page, locale) {
   const out = join(outDir, `la-alegria-${locale}.mp4`);
   const ff = spawn(
     'ffmpeg',
-    [
-      '-y',
-      '-f', 'image2pipe',
-      '-framerate', String(FPS),
-      '-i', '-',
-      '-c:v', 'libx264',
-      '-pix_fmt', 'yuv420p',
-      '-movflags', '+faststart',
-      out,
-    ],
+    ['-y', '-f', 'image2pipe', '-framerate', String(FPS), '-i', '-',
+     '-c:v', 'libx264', '-pix_fmt', 'yuv420p', '-movflags', '+faststart', out],
     { stdio: ['pipe', 'ignore', 'ignore'] },
   );
 
-  const canvas = createCanvas(W, H);
-  const ctx = canvas.getContext('2d');
-  let total = 0;
-  for (const s of scenes) {
-    const frames = Math.round(s.dur * FPS);
-    for (let i = 0; i < frames; i++) {
-      s.draw(ctx, i / frames);
-      const buf = canvas.toBuffer('image/png');
-      if (!ff.stdin.write(buf)) await new Promise((r) => ff.stdin.once('drain', r));
-      total++;
-    }
+  const total = await page.evaluate((d) => window.setup(d), sceneData(locale));
+  const shaderError = await page.evaluate(() => window.__shaderError ?? null);
+  if (shaderError) throw new Error(`shader failed to compile:\n${shaderError}`);
+
+  const frames = Math.round(total * FPS);
+  for (let i = 0; i < frames; i++) {
+    await page.evaluate((t) => window.seek(t), i / FPS);
+    const buf = await page.screenshot({ type: 'png', optimizeForSpeed: true });
+    if (!ff.stdin.write(buf)) await new Promise((r) => ff.stdin.once('drain', r));
   }
   ff.stdin.end();
   await new Promise((res, rej) => {
     ff.on('close', (code) => (code === 0 ? res() : rej(new Error(`ffmpeg exited ${code}`))));
     ff.on('error', rej);
   });
-  const secs = (total / FPS).toFixed(1);
-  console.log(`wrote ${out}  (${total} frames, ${secs}s)`);
+  console.log(`wrote ${out}  (${frames} frames, ${(frames / FPS).toFixed(1)}s)`);
 }
 
-for (const loc of ['en', 'es']) {
-  await renderLocale(loc);
+const browser = await puppeteer.launch({
+  executablePath: CHROMIUM,
+  headless: true,
+  args: ['--enable-unsafe-swiftshader', '--hide-scrollbars', '--force-color-profile=srgb'],
+});
+try {
+  const page = await browser.newPage();
+  await page.setViewport({ width: W, height: H, deviceScaleFactor: 1 });
+  await page.goto(pathToFileURL(join(here, 'template.html')).href, { waitUntil: 'networkidle0' });
+  await page.evaluate(() => document.fonts.ready);
+  for (const loc of ['en', 'es']) {
+    await renderLocale(page, loc);
+  }
+} finally {
+  await browser.close();
 }
