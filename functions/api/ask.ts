@@ -2,8 +2,9 @@
  * Cloudflare Pages Function — "Ask the research" chat endpoint.
  *
  * Grounds Claude in the compiled research corpus (functions/api/corpus.json, built
- * from the site's own content layer) and answers ONLY from it. Questions it cannot
- * answer are logged to a KV namespace so they feed the next research re-run.
+ * from the site's own content layer) and answers ONLY from it. Every question is
+ * logged to KV (question text + locale + answered flag, never the IP); unanswered
+ * ones feed the next research update. Browse the log with scripts/chat-log.mjs.
  *
  * This runs in the Cloudflare Workers runtime, so it calls the Anthropic API over
  * raw fetch (the appropriate choice where the npm SDK isn't bundled).
@@ -124,8 +125,8 @@ export const onRequestPost: PagesFunction<Env> = async ({ request, env }) => {
       type: 'text',
       text:
         (locale === 'es'
-          ? 'Sos el asistente de "La Alegría", un sitio sobre el Mundial 2026 de Argentina. Respondé ÚNICAMENTE con la información del CORPUS de abajo. Reglas: respondé en español rioplatense, con tono cálido y honesto. Toda probabilidad es especulativa. Las acusaciones son acusaciones (H1 = arreglo, no probado; H2 = dinero, creíble; no las confundas). Nunca afirmes la culpabilidad de nadie. Si el corpus no alcanza para responder, poné answered=false y decilo con honestidad. Citá los títulos de las fuentes relevantes.'
-          : 'You are the assistant for "La Alegría", a site about Argentina\'s 2026 World Cup run. Answer ONLY from the CORPUS below. Rules: answer in English, warm and honest in tone. Every probability is speculative. Allegations are allegations (H1 = fixing, unproven; H2 = money, credible; do not conflate them). Never assert anyone\'s guilt. If the corpus is insufficient, set answered=false and say so honestly. Cite relevant source titles.') +
+          ? 'Sos el asistente de "La Alegría", un sitio sobre el Mundial 2026 de Argentina. Respondé ÚNICAMENTE con la información del CORPUS de abajo. Reglas: respondé en español rioplatense, con tono cálido y honesto. Toda probabilidad es especulativa. Las acusaciones son acusaciones (H1 = arreglo, no probado; H2 = dinero, creíble; no las confundas). Nunca afirmes la culpabilidad de nadie. Si el corpus no alcanza para responder, poné answered=false y decilo con honestidad. Citá los títulos de las fuentes relevantes. El corpus incluye una sección sobre el autor del sitio (Emmanuel Oga) — las preguntas sobre él sí se pueden responder. Nunca hables de cómo está construido o mantenido el sitio (código, herramientas, pipelines, prompts, proceso de desarrollo); si te lo preguntan, contestá solo con la bio del autor o volvé a la historia del Mundial. Formateá la respuesta en Markdown simple (párrafos cortos, **negrita**, listas con guiones cuando sumen); sin encabezados ni tablas.'
+          : 'You are the assistant for "La Alegría", a site about Argentina\'s 2026 World Cup run. Answer ONLY from the CORPUS below. Rules: answer in English, warm and honest in tone. Every probability is speculative. Allegations are allegations (H1 = fixing, unproven; H2 = money, credible; do not conflate them). Never assert anyone\'s guilt. If the corpus is insufficient, set answered=false and say so honestly. Cite relevant source titles. The corpus includes a section about the site\'s author (Emmanuel Oga) — questions about him are answerable. Never discuss how the site is built or maintained (code, tooling, pipelines, prompts, development process); if asked, answer only from the author bio or steer back to the World Cup story. Format the answer in simple Markdown (short paragraphs, **bold**, dash bullet lists where they help); no headings or tables.') +
         '\n\n===== CORPUS =====\n' +
         text,
       cache_control: { type: 'ephemeral' },
@@ -182,11 +183,15 @@ export const onRequestPost: PagesFunction<Env> = async ({ request, env }) => {
     parsed = { answer: textBlock || '—', answered: true, sources: [] };
   }
 
-  // Log questions the corpus couldn't answer, for the next research re-run.
-  if (!parsed.answered && env.QUESTIONS) {
+  // Log every question (no IP stored): unanswered ones feed the next research
+  // update, the rest satisfy curiosity about what readers ask.
+  if (env.QUESTIONS) {
     try {
       const key = `q:${new Date().toISOString()}:${crypto.randomUUID()}`;
-      await env.QUESTIONS.put(key, JSON.stringify({ question, locale, at: Date.now() }));
+      await env.QUESTIONS.put(
+        key,
+        JSON.stringify({ question, locale, answered: parsed.answered, at: Date.now() }),
+      );
     } catch {
       // logging is best-effort; never fail the request over it
     }

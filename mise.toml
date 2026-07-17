@@ -60,3 +60,7 @@ run = "node scripts/update.mjs video"
 [tasks."update:scratch"]
 description = 'Bootstrap a brand-new research topic from scratch. Usage: mise run update:scratch -- "topic"'
 run = "node scripts/update.mjs scratch"
+
+[tasks."chat:log"]
+description = "Print the Ask-chat question log from KV (newest first). Pass a number or --unanswered after --"
+run = "node scripts/chat-log.mjs"
