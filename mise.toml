@@ -45,6 +45,10 @@ run = "node scripts/update.mjs log"
 description = "Spanish editorial pass only (rioplatense/voseo), merging into changed content"
 run = "node scripts/update.mjs translate"
 
+[tasks."update:lint"]
+description = "Comparative prose linter (Harper + LanguageTool over EN/ES): scorecard, long-sentence targets, word counts. Add --verify after -- for the delta-vs-baseline gate."
+run = "node scripts/lint-prose.mjs"
+
 [tasks."update:publish"]
 description = "Build the corpus + site and deploy to Cloudflare Pages"
 run = "node scripts/update.mjs build deploy"

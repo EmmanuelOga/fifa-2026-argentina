@@ -1,7 +1,7 @@
 /**
  * One command to re-run the living loop and republish.
  *
- *   node scripts/update.mjs                 # everything (additive): research → log → prose → translate → score → build → deploy
+ *   node scripts/update.mjs                 # everything (additive): research → log → lint → prose → translate → postlint → score → build → deploy
  *   node scripts/update.mjs research        # just the additive research re-run (+ log recommendation)
  *   node scripts/update.mjs prose translate # a subset, in the order you list
  *   node scripts/update.mjs scratch "topic" # bootstrap a brand-new research topic, then stop
@@ -49,10 +49,13 @@ const raw = process.argv.slice(2);
 const noDeploy = raw.includes('--no-deploy');
 const tokens = raw.filter((a) => !a.startsWith('--'));
 
-const KNOWN = ['research', 'log', 'prose', 'translate', 'timeline', 'score', 'video', 'build', 'deploy', 'publish', 'scratch'];
+const KNOWN = ['research', 'log', 'lint', 'prose', 'translate', 'postlint', 'timeline', 'score', 'video', 'build', 'deploy', 'publish', 'scratch'];
 // prose (EN de-AI/tightening pass) runs BEFORE translate so Spanish syncs from clean English.
+// lint (baseline) runs just before prose to hand it concrete grammar/long-sentence
+// targets (.prose-lint.md); postlint (verify) runs after translate to report the
+// word-count cut and whether grammar held. Both are soft — they never fail the run.
 // timeline snapshots ESPN match events for any bracket match with an espnId.
-const DEFAULT_ALL = ['research', 'log', 'prose', 'translate', 'timeline', 'score', 'build', 'deploy'];
+const DEFAULT_ALL = ['research', 'log', 'lint', 'prose', 'translate', 'postlint', 'timeline', 'score', 'build', 'deploy'];
 
 // `scratch` is special: it takes a free-text topic and runs alone.
 if (tokens[0] === 'scratch') {
@@ -230,6 +233,12 @@ function shellStep(name) {
       }
       return sh('node', ['scripts/score-predictions.mjs', snap]);
     }
+    case 'lint':
+      // Baseline: lint EN/ES prose, write .prose-lint.md targets for the prose step.
+      return sh('node', ['scripts/lint-prose.mjs']);
+    case 'postlint':
+      // Verify: re-lint and report the word-count cut + grammar delta vs baseline.
+      return sh('node', ['scripts/lint-prose.mjs', '--verify']);
     case 'timeline':
       return sh('node', ['scripts/fetch-match-timeline.mjs']);
     case 'video':

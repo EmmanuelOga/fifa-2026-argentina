@@ -25,3 +25,8 @@ functions/api/corpus.json
 
 # transient hand-off from `update` research step → `log` step (consumed each run)
 .update-pending-log.json
+
+# transient prose-linter artifacts: metrics baseline (verify delta) + guidance the
+# prose step reads. Regenerated every pipeline run by scripts/lint-prose.mjs.
+.prose-lint.json
+.prose-lint.md
