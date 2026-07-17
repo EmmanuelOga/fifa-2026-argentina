@@ -1,0 +1,118 @@
+{
+  "run": 6,
+  "date": "2026-07-16",
+  "bracketStage": "final-set",
+  "supersedes": "New dated folder for 2026-07-16 (three days before the final). The full Run 3 + Run 4 + Run 5 text is preserved in research/2026-07-15/findings.md and in git; this folder is the Run 6 pass. No match has been played since Run 5, so the bracket is unchanged.",
+  "predictions": {
+    "titleProbabilities": {
+      "ESP": {
+        "authorLow": 0.55,
+        "authorHigh": 0.6,
+        "opta": 0.569,
+        "optaNote": "UNCHANGED from Run 5, re-checked Jul 16: Opta still prints no explicit Spain-v-Argentina final pair (its public trophy model even still frames a Spain-v-England final: ESP 56.15 / ENG 23.38 / ARG 20.47). The .569 remains DERIVED from Opta's post-SF1 figures conditioned on the known SF2 result (ARG 20.47/47.47 = 43.1%, back-solves exactly). If Opta publishes an explicit pair before Sunday, Run 7 swaps in the printed figures."
+      },
+      "ARG": {
+        "authorLow": 0.4,
+        "authorHigh": 0.45,
+        "opta": 0.431,
+        "optaNote": "same derivation; with one match left, title odds = final-match odds"
+      },
+      "ENG": {
+        "authorLow": 0,
+        "authorHigh": 0,
+        "opta": 0,
+        "optaNote": "resolved to 0 by elimination Jul 15 (lost SF2 1-2 to Argentina)"
+      },
+      "FRA": {
+        "authorLow": 0,
+        "authorHigh": 0,
+        "opta": 0,
+        "optaNote": "resolved to 0 by elimination Jul 14"
+      }
+    },
+    "market": {
+      "asOf": "2026-07-16T14:00-07:00",
+      "moved": true,
+      "moveDirection": "small drift toward Spain, still inside the author range",
+      "note": "Re-checked Jul 16: prediction markets ticked up for Spain and DraftKings shortened Spain's 90-minute price. Named trophy moneylines drew no fresh re-quote; overround-normalized trophy market still ~59/41 Spain.",
+      "trophy": {
+        "caesars": { "ESP": "-170", "ARG": "+135", "note": "no fresh re-quote since Jul 15; carried" },
+        "bet365": { "ESP": "-175", "ARG": "+125", "note": "carried" },
+        "thescore": { "ESP": "-160", "ARG": "+130", "note": "carried" },
+        "fanduel": { "ESP": "-156", "ARG": "+136", "note": "carried" },
+        "kalshi": { "ESP": 0.585, "ARG": 0.417, "prev": { "ESP": 0.577, "ARG": 0.424 } },
+        "polymarket": { "ESP": 0.584, "ARG": 0.417, "newThisRun": true }
+      },
+      "final90min": {
+        "draftkings": { "ESP": "+115", "draw": "+200", "ARG": "+285", "prev": { "ESP": "+125", "ARG": "+260" } },
+        "betmgm": { "ESP": "+125", "draw": "+200", "ARG": "+250" },
+        "fanduel": { "ESP": "+130", "draw": "+190", "ARG": "+270" }
+      }
+    },
+    "anchorConvergence": {
+      "note": "Still four independent anchors inside a five-point spread, all inside the unchanged author range. Jul 16 drift toward Spain keeps them clustered.",
+      "optaConditioned": { "ESP": 0.569, "ARG": 0.431 },
+      "booksNormalized": { "ESP": 0.59, "ARG": 0.41 },
+      "kalshi": { "ESP": 0.585, "ARG": 0.417 },
+      "eloBracketNudge0": { "ESP": 0.56, "ARG": 0.44 }
+    },
+    "hypotheses": {
+      "H1_deliberate_favoritism": { "low": 0.02, "high": 0.08, "moved": false },
+      "H2_inquiry_exists": { "low": 0.7, "high": 0.9, "moved": false },
+      "H2_chargeable_conduct": { "low": 0.45, "high": 0.65, "moved": false, "note": "Pressing toward the upper half after the probe turned inward, but held: no charge, subpoena, or formal cooperating witness — the changeMind trigger is not met." },
+      "H3_soft_bias_contributor": { "low": 0.35, "high": 0.55, "moved": false },
+      "H4_variance_perception": { "low": 0.3, "high": 0.5, "moved": false, "note": "Cascade reading strengthened by the multi-million-signature petition + Collina's fresh rebuttal; band held because H4's outstanding test is the final itself." }
+    }
+  },
+  "outcomes": {
+    "note": "No match played since Run 5. Final: Spain v Argentina, Jul 19, MetLife, 3 p.m. ET. Grading of Run 1-5 scorecards belongs to the score step.",
+    "champion": null,
+    "semifinals": { "FRA_v_ESP": "ESP 2-0", "ENG_v_ARG": "ARG 2-1" },
+    "final": null,
+    "finalReferee": null,
+    "dojMovedToIndictment": null
+  },
+  "carriedForwardFromRun5": "All Run 1-5 verified facts stand: Spain 2-0 France with the disputed Digne-on-Yamal penalty; England 1-2 Argentina (Gordon 55'; E. Fernandez 85', L. Martinez 90+2' from a Messi cross; ARG 64% possession, xG ~1.84 v ~0.53; referee Elfath, no controversy of substance); market flip to Spain; Opta derived .569/.431 with publishedPostSF1 provenance; Silver paywall note; five named banks; Miami Herald ~$90M; La Nacion $260M/$57M attribution; Tofoni ~3h videoconference interview (witness, not charged); Tapia travel-authorization/travel-bond nugget; AFA pushback quote; no US charges; FBI declined comment; no suspensions for the final; author ranges ESP 55-60 / ARG 40-45.",
+  "newSinceRun5": [
+    "FINANCIAL THREAD MOVED (biggest item): La Nacion (Jul 13-14) reports the FBI/prosecutors reconstructing the scheme 'from the inside' via former AFA insiders, not just outside witnesses. A former executive president of the AFA Consejo Federal (a Toviggino lieutenant) has reportedly held several INFORMAL videoconferences with US authorities - explicitly not sworn testimony and not yet a formal cooperating witness. Three federal prosecutors named across DC and SDFL. New alleged mechanism: cash via 'cuevas'. AFA sources now cast Toviggino, not Tapia, as principal target. Still NO charges/subpoena/indictment; FBI declines comment. H2 bands HELD (changeMind trigger unmet); added timeline node fbi-from-inside, H2 forPoint, source lanacion-fbi-inside.",
+    "Separate Argentine DOMESTIC 'mansion' case (distinct from the ~$12.7M tax matter) advanced to a jurisdiction fight; hearing set Aug 12, 2026. Noted lightly.",
+    "PERCEPTION NARRATIVE CRESTED: a multi-million-signature petition demanding Argentina's expulsion (centered on the Egypt R16). Rebutted on the record - Collina ('unfounded allegations have no place in our sport'; FIFA refereeing not influenced by anyone 'not even by the FIFA president'), Scaloni (social-media amplification), and analysts noting England/Germany/Iran drew contentious VAR calls too. Added timeline node favoritism-petition, H4 forPoint, sources forbes-favoritism + football365-favoritism. H4 band HELD (outstanding test is the final).",
+    "FINAL REFEREE NOT YET APPOINTED at pass time. Matchup narrows the neutral field (no UEFA, no CONMEBOL): frontrunner Alireza Faghani (Iran/AFC). English refs (Oliver, Taylor) barred over Falklands; Wilton Sampaio (Brazil) ruled out; French crew (Letexier, Turpin) sent home by routine protocol. Structural point cutting against H1 (final officials confederation-neutral by rule). No timeline node for a non-appointment; Run 7 records the name.",
+    "MARKET drifted slightly toward Spain, still inside the range: Kalshi ~57.7 -> ~58.5, Polymarket ~58.4; DraftKings 90-min Spain +125 -> +115 (ARG +260 -> +285). Named trophy lines uncoupled/carried; ~59/41 normalized. BOOKMAKERS.asOf -> 2026-07-16. AUTHOR_RANGES unchanged.",
+    "OPTA re-checked Jul 16: still no explicit final pair (public model still frames a Spain-v-England final). Derived .569/.431 stands. Silver still paywalled.",
+    "SQUAD news: Spain's Yamal (left-thigh strapping) and Porro (hamstring/fatigue, not serious) trained apart Thursday Jul 16 - expected fit for Sunday. Argentina clean (Romero available, Paredes no concern). No suspensions either side. Predicted XIs are previews, not confirmed - not adopted.",
+    "BUILDUP (Log color): Messi (39), likely his last WC match, 8 goals tied for the lead, vs 19-year-old Yamal in their first-ever meeting; Trump to attend and present the trophy; unprecedented WC-final halftime show; ~60% shower chance with a thunderstorm/lightning DELAY risk July 19 in NJ. Attendance not officially released - omitted."
+  ],
+  "dataChangesThisRun": [
+    "meta.lastUpdated 2026-07-15 -> 2026-07-16.",
+    "bracket.ts unchanged (no match played since Run 5).",
+    "models.ts: OPTA doc comment adds the Jul 16 re-check (still no explicit final pair; derived .569/.431 stands). BOOKMAKERS asOf -> 2026-07-16, doc comment records the small drift toward Spain (Kalshi ~58.5, Polymarket ~58.4, DraftKings 90-min +115) with named trophy lines carried and ~59/41 normalized. AUTHOR_RANGES values UNCHANGED; comment notes the Jul 16 re-check stays inside the spread.",
+    "bayes.ts unchanged (config; bands hold).",
+    "timeline.json: added fbi-from-inside (order 13, financial, Jul 14) and favoritism-petition (order 14, sporting, Jul 16).",
+    "hypotheses.json: H2 gains a forPoint (probe turned inward) + source lanacion-fbi-inside; H4 gains a forPoint (petition cascade + rebuttal) + sources forbes-favoritism/football365-favoritism. All bands UNCHANGED.",
+    "sources.json: added lanacion-fbi-inside (tier 2, order 37), forbes-favoritism (tier 2, order 38), football365-favoritism (tier 2, order 39).",
+    "sections.json unchanged (whowins-intro still accurate; the small market drift stays inside the stated 55-60/40-45 range).",
+    "updates.json NOT edited (Log handled via .update-pending-log.json).",
+    ".update-pending-log.json written: recommend true, Log run 4 (id run-4-2026-07-16)."
+  ],
+  "openForNextRun": [
+    "Record the ACTUAL final referee (frontrunner Faghani) and any controversy the choice draws.",
+    "If Opta publishes an explicit post-SF2 Spain-v-Argentina pair, replace the derived .569/.431 and drop the conditioning language.",
+    "Replace paywalled Silver PELE with a printed number if Silver publishes a final preview.",
+    "The Jul 19 final resolves the champion, H4's regression test, and Tapia's travel-bond return date - all in one weekend; the score step then grades Runs 1-6.",
+    "Run-number drift persists: updates.json tops at Log run 3 (narrates research Run 4); this pass is research Run 6 and recommends Log run 4. Reconcile deliberately."
+  ],
+  "keySources": {
+    "lanacionFbiInside": "https://www.lanacion.com.ar/politica/el-fbi-busca-reconstruir-desde-adentro-como-operaba-la-afa-cita-a-exjerarquicos-y-avanza-sobre-el-nid13072026/",
+    "forbesFavoritism": "https://www.forbes.com/sites/conormurray/2026/07/15/why-some-accuse-fifa-of-favoring-argentina-ahead-of-world-cup-final/",
+    "football365Favoritism": "https://www.football365.com/news/argentina-world-cup-conspiracy-theory-referees-fifa",
+    "espnRefFinal": "https://www.espn.com/soccer/story/_/id/49333016/",
+    "espnFinalOdds": "https://www.espn.com/soccer/story/_/id/49370934/fifa-world-cup-final-argentina-vs-spain-need-know-predictions-odds",
+    "defirateMarkets": "https://defirate.com/prediction-markets/world-cup-odds/",
+    "reutersYamalPorro": "https://english.aawsat.com/sports/5296835-yamal-porro-train-apart-spain-expect-both-fit-world-cup-final",
+    "sportsmoleArg": "https://www.sportsmole.co.uk/football/argentina/world-cup-2026/injuries-and-suspensions/romero-paredes-latest-argentina-injury-suspension-list-for-world-cup-final_601316.html",
+    "washingtonTimesTrump": "https://www.washingtontimes.com/news/2026/jul/16/trump-attend-world-cup-final-white-house-says/",
+    "theanalystWhoWins": "https://theanalyst.com/articles/who-will-win-2026-fifa-world-cup-predictions-opta-supercomputer",
+    "natesilver": "https://www.natesilver.net/p/world-cup-2026-odds-predictions"
+  }
+}
