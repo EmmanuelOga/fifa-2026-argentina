@@ -30,6 +30,10 @@ way, the core rules below are mandatory.
    AI-written or padded?" Fix what you find.
 
 ## Rules
+- CONTENT RULE (see CLAUDE.md): reader-facing prose is about the World Cup story only.
+  If you spot text narrating the site itself (tabs/UI, pipeline runs, redesigns, dev
+  process, AI chat internals), remove or rewrite it around the football fact it was
+  carrying — don't add any such text.
 - Do NOT touch `es` fields, numbers, dates, URLs, ids, or any non-prose field.
 - Every "speculative"/"allegation" hedge and every attribution stays intact.
 - Keep JSON valid and matching `src/content.config.ts`.

@@ -48,7 +48,16 @@ start over.
    Recommend an entry when something a reader would care about happened — a result
    came in, odds moved materially, the probe thread moved, a hypothesis shifted, new
    sources of substance were added. Recommend *against* one for cosmetic-only changes
-   (a typo, a tiny wording fix, a rounding tweak). The file's shape:
+   (a typo, a tiny wording fix, a rounding tweak).
+
+   **CONTENT RULE (see CLAUDE.md): the entry is a football research diary, not a
+   changelog of this website.** Write only about the World Cup story: matches, players,
+   odds/models, the evidence threads, and honest grading of earlier predictions.
+   Never mention the site's tabs/pages/UI, warnings or badges shown on the site, the
+   pipeline or its runs, prompts, tooling, redesigns, or anything about how the site is
+   built or maintained. Methodology talk is fine only when it's about the football
+   analysis itself (e.g. de-margining bookmaker odds). Titles are dated diary headlines
+   about the football story — never "Run N: …". The file's shape:
 
    ```json
    {
@@ -60,8 +69,8 @@ start over.
        "run": <N>,
        "scorecard": [ { "claim": { "en": "...", "es": "..." }, "verdict": "pending|hit|miss|partial" } ],
        "content": {
-         "en": { "title": "Run <N> — ...", "summary": "...", "body": ["...", "..."] },
-         "es": { "title": "Corrida <N> — ...", "summary": "...", "body": ["...", "..."] }
+         "en": { "title": "<football-story headline>", "summary": "...", "body": ["...", "..."] },
+         "es": { "title": "<titular sobre la historia futbolera>", "summary": "...", "body": ["...", "..."] }
        }
      }
    }
