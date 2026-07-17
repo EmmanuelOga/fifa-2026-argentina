@@ -12,7 +12,6 @@ import SourceRefs from '../SourceRefs.astro';
 import KeyTerms from '../KeyTerms.astro';
 import ThreadTag from '../ThreadTag.astro';
 import BayesExplorer from '../sims/BayesExplorer.astro';
-import DeepDive from '../DeepDive.astro';
 
 interface Props {
   locale: Locale;
@@ -28,7 +27,6 @@ const cards = await hypotheses();
 
 <div class="container-narrow tab-body stack">
   <header>
-    <p class="eyebrow">{locale === 'es' ? 'Las Probabilidades' : 'The Probabilities'}</p>
     <h1>{intro.headline}</h1>
     <p class="lead">{intro.full}</p>
   </header>
@@ -100,13 +98,11 @@ const cards = await hypotheses();
     }
   </div>
 
-  <DeepDive locale={locale}>
-    <section class="block">
-      <h2>{bayesIntro.headline}</h2>
-      <p>{bayesIntro.full}</p>
-    </section>
-    <BayesExplorer locale={locale} />
-  </DeepDive>
+  <section class="block">
+    <h2>{bayesIntro.headline}</h2>
+    <p>{bayesIntro.full}</p>
+  </section>
+  <BayesExplorer locale={locale} />
 
   <section class="block">
     <h2>{takeaway.headline}</h2>

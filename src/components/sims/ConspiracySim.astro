@@ -63,10 +63,14 @@ const config = {
     </div>
   </div>
 
-  <details class="math">
+  <details class="math nerd-only">
     <summary>{UI[locale].theMath}</summary>
     <p>{math.full}</p>
   </details>
+  <p class="nerd-cta">
+    {s.nerdCta}
+    <button type="button" class="btn" data-nerd-cta>{s.nerdCtaBtn}</button>
+  </p>
 </div>
 
 <style>

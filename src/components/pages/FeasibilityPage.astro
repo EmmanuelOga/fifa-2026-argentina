@@ -9,7 +9,6 @@ import { section, precedents } from '../../lib/content';
 import SourceRefs from '../SourceRefs.astro';
 import KeyTerms from '../KeyTerms.astro';
 import ConspiracySim from '../sims/ConspiracySim.astro';
-import DeepDive from '../DeepDive.astro';
 
 interface Props {
   locale: Locale;
@@ -33,7 +32,6 @@ const blocks = [
 
 <div class="container-narrow tab-body stack">
   <header>
-    <p class="eyebrow">{locale === 'es' ? '¿Se Puede?' : 'Could It Be Done?'}</p>
     <div class="rating-row">
       <div class="rating" aria-label={locale === 'es' ? 'Factibilidad 3 de 10' : 'Feasibility 3 of 10'}>
         <span class="rating-num data">3</span><span class="rating-den data">/10</span>
@@ -74,13 +72,11 @@ const blocks = [
     </div>
   </section>
 
-  <DeepDive locale={locale}>
-    <section class="block">
-      <h2>{simIntro.headline}</h2>
-      <p>{simIntro.full}</p>
-    </section>
-    <ConspiracySim locale={locale} />
-  </DeepDive>
+  <section class="block">
+    <h2>{simIntro.headline}</h2>
+    <p>{simIntro.full}</p>
+  </section>
+  <ConspiracySim locale={locale} />
 
   <section class="block">
     <h2>{baserate.headline}</h2>

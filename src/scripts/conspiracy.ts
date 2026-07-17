@@ -74,10 +74,17 @@ function setup(root: HTMLElement): void {
     const W = canvas.width;
     const H = canvas.height;
     const pad = 26;
+    // resolve theme tokens so the canvas follows the stylesheet
+    const css = getComputedStyle(document.documentElement);
+    const token = (name: string, fallback: string) => css.getPropertyValue(name).trim() || fallback;
+    const lineCol = token('--line', '#21405e');
+    const skyCol = token('--sky', '#3ec1ff');
+    const popCol = token('--pop', '#ff5d8f');
+    const sunCol = token('--sun', '#ffb92e');
     ctx.clearRect(0, 0, W, H);
 
     // axes
-    ctx.strokeStyle = '#c7d8e6';
+    ctx.strokeStyle = lineCol;
     ctx.lineWidth = 1;
     ctx.beginPath();
     ctx.moveTo(pad, 6);
@@ -86,7 +93,9 @@ function setup(root: HTMLElement): void {
     ctx.stroke();
 
     // gridlines at 50% and 100%
-    ctx.strokeStyle = '#e3eef6';
+    ctx.save();
+    ctx.globalAlpha = 0.5;
+    ctx.strokeStyle = lineCol;
     for (const frac of [0.5, 1]) {
       const y = 6 + (H - pad - 6) * (1 - frac);
       ctx.beginPath();
@@ -94,6 +103,7 @@ function setup(root: HTMLElement): void {
       ctx.lineTo(W - 6, y);
       ctx.stroke();
     }
+    ctx.restore();
 
     const x = (t: number) => pad + (W - pad - 6) * (t / tMax);
     const y = (s: number) => 6 + (H - pad - 6) * (1 - s);
@@ -108,8 +118,11 @@ function setup(root: HTMLElement): void {
     }
     ctx.lineTo(x(tMax), y(0));
     ctx.closePath();
-    ctx.fillStyle = 'rgba(31,138,208,0.14)';
+    ctx.save();
+    ctx.globalAlpha = 0.16;
+    ctx.fillStyle = skyCol;
     ctx.fill();
+    ctx.restore();
 
     // the curve line
     ctx.beginPath();
@@ -119,13 +132,13 @@ function setup(root: HTMLElement): void {
       const py = y(grimesSurvival(n, p, t));
       i === 0 ? ctx.moveTo(px, py) : ctx.lineTo(px, py);
     }
-    ctx.strokeStyle = '#1f8ad0';
+    ctx.strokeStyle = skyCol;
     ctx.lineWidth = 2.5;
     ctx.stroke();
 
     // marker at t
     const s = grimesSurvival(n, p, tMax);
-    ctx.fillStyle = s < 0.5 ? '#e5496b' : '#f2a51c';
+    ctx.fillStyle = s < 0.5 ? popCol : sunCol;
     ctx.beginPath();
     ctx.arc(x(tMax), y(s), 4.5, 0, Math.PI * 2);
     ctx.fill();

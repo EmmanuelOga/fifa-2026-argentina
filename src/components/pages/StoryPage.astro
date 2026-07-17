@@ -24,7 +24,6 @@ const events = await timeline();
 
 <div class="container-narrow tab-body stack">
   <header>
-    <p class="eyebrow">{locale === 'es' ? 'La Historia' : 'The Story'}</p>
     <h1>{intro.headline}</h1>
     <p class="lead">{intro.full}</p>
   </header>
@@ -132,10 +131,10 @@ const events = await timeline();
     z-index: 1;
   }
   .tl-item.sporting .tl-dot {
-    border-color: color-mix(in srgb, var(--sky) 55%, white);
+    border-color: color-mix(in srgb, var(--sky) 60%, transparent);
   }
   .tl-item.financial .tl-dot {
-    border-color: color-mix(in srgb, var(--sun) 60%, white);
+    border-color: color-mix(in srgb, var(--sun) 65%, transparent);
   }
   details {
     background: var(--surface);

@@ -12,18 +12,18 @@ const here = dirname(fileURLToPath(import.meta.url));
 const fontDir = join(here, '..', 'assets', 'fonts');
 
 export const COLORS = {
-  sky: '#1f8ad0',
-  skyInk: '#0b4a76',
-  skySoft: '#d6ecfa',
-  sun: '#f2a51c',
-  sunInk: '#9a6205',
-  sunSoft: '#fbe6ba',
-  pop: '#e5496b',
-  ink: '#16273a',
-  muted: '#55697c',
-  paper: '#f3f9fd',
-  surface: '#ffffff',
-  line: '#d9e6f0',
+  sky: '#3ec1ff',
+  skyInk: '#d9efff',
+  skySoft: '#0d2438', // dark celeste-tinted wash (canvas needs solids, not rgba)
+  sun: '#ffb92e',
+  sunInk: '#ffd685',
+  sunSoft: '#2b2210', // dark gold-tinted wash
+  pop: '#ff5d8f',
+  ink: '#eaf4fc',
+  muted: '#8da8c0',
+  paper: '#050e1c',
+  surface: '#0a1729',
+  line: '#21405e',
   white: '#ffffff',
 };
 

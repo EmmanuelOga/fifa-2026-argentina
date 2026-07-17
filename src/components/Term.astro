@@ -73,8 +73,9 @@ const hasSlot = Astro.slots.has('default');
     transform: translateX(-50%);
     width: max-content;
     max-width: min(20rem, 78vw);
-    background: var(--ink);
-    color: #eef6fc;
+    background: var(--surface-2);
+    color: var(--ink);
+    border: 1px solid var(--line);
     border-radius: var(--radius-sm);
     padding: 0.7em 0.85em;
     box-shadow: var(--shadow-lg);
@@ -92,7 +93,7 @@ const hasSlot = Astro.slots.has('default');
     left: 50%;
     transform: translateX(-50%);
     border: 6px solid transparent;
-    border-top-color: var(--ink);
+    border-top-color: var(--surface-2);
   }
   .tip-term {
     display: block;
@@ -110,7 +111,7 @@ const hasSlot = Astro.slots.has('default');
   .tip-more {
     display: inline-block;
     margin-top: 0.45em;
-    color: var(--sky-soft);
+    color: var(--sky);
     font-weight: 600;
   }
 </style>

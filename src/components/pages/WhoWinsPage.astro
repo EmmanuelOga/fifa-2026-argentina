@@ -31,7 +31,6 @@ import SnapshotBadge from '../SnapshotBadge.astro';
 import SourceRefs from '../SourceRefs.astro';
 import KeyTerms from '../KeyTerms.astro';
 import MonteCarloBracket from '../sims/MonteCarloBracket.astro';
-import DeepDive from '../DeepDive.astro';
 
 interface Props {
   locale: Locale;
@@ -40,6 +39,7 @@ const { locale } = Astro.props;
 const intro = await section('whowins-intro', locale);
 const favoriteLost = await section('whowins-favorite-lost', locale);
 const fatigue = await section('whowins-fatigue', locale);
+const simIntro = await section('whowins-sim-intro', locale);
 const eliminated = argentinaEliminated();
 const closing = await section(eliminated ? 'whowins-eliminated' : 'whowins-closing', locale);
 
@@ -49,7 +49,6 @@ const teamFlag = (code: string) => TEAMS[code]?.flag ?? '';
 
 <div class="container-narrow tab-body stack">
   <header>
-    <p class="eyebrow">{locale === 'es' ? '¿Quién Gana?' : 'Who Wins?'}</p>
     <h1>{intro.headline}</h1>
     <p class="lead">{intro.full}</p>
     <p><SnapshotBadge locale={locale} /></p>
@@ -165,7 +164,7 @@ const teamFlag = (code: string) => TEAMS[code]?.flag ?? '';
         {locale === 'es' ? 'más en la letra chica' : 'more in the fine print'}
       </a>.
     </p>
-    <SourceRefs ids={['opta', 'oddschecker', 'silver']} locale={locale} />
+    <SourceRefs ids={['opta', 'tnt-opta-postsf1', 'oddschecker', 'silver']} locale={locale} />
   </section>
 
   {/* France was the favorite and lost — what that does (and doesn't) say about models */}
@@ -184,9 +183,11 @@ const teamFlag = (code: string) => TEAMS[code]?.flag ?? '';
     )
   }
 
-  <DeepDive locale={locale}>
-    <MonteCarloBracket locale={locale} />
-  </DeepDive>
+  <section class="block sim-intro">
+    <h2>{simIntro.headline}</h2>
+    <p>{simIntro.full}</p>
+  </section>
+  <MonteCarloBracket locale={locale} />
 
   <section class="block">
     <h2>{closing.headline}</h2>
@@ -300,7 +301,7 @@ const teamFlag = (code: string) => TEAMS[code]?.flag ?? '';
     color: var(--muted);
   }
   tr.arg td {
-    background: color-mix(in srgb, var(--sky-soft) 40%, white);
+    background: var(--sky-soft);
     font-weight: 600;
   }
   .closing {

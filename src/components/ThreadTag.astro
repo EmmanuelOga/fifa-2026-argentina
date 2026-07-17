@@ -40,7 +40,7 @@ const t = UI[locale];
     text-transform: uppercase;
     color: var(--muted);
     border: 1px solid var(--line);
-    border-radius: 999px;
+    border-radius: var(--radius-sm);
     padding: 0.2em 0.6em;
     background: var(--surface);
   }
@@ -57,9 +57,9 @@ const t = UI[locale];
     background: var(--sun);
   }
   .ttag.sporting {
-    border-color: color-mix(in srgb, var(--sky) 40%, white);
+    border-color: color-mix(in srgb, var(--sky) 45%, transparent);
   }
   .ttag.financial {
-    border-color: color-mix(in srgb, var(--sun) 45%, white);
+    border-color: color-mix(in srgb, var(--sun) 50%, transparent);
   }
 </style>

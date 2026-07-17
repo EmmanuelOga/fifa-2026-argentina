@@ -83,11 +83,15 @@ const config = { numLocale: HTML_LANG[locale], labels: s, models };
     </div>
   </div>
 
-  <details class="math">
+  <details class="math nerd-only">
     <summary>{UI[locale].theMath} — Bayes</summary>
     <p>{how.full}</p>
     <p class="assump">{assumption.full}</p>
   </details>
+  <p class="nerd-cta">
+    {s.nerdCta}
+    <button type="button" class="btn" data-nerd-cta>{s.nerdCtaBtn}</button>
+  </p>
 </div>
 
 <style>
@@ -187,14 +191,14 @@ const config = { numLocale: HTML_LANG[locale], labels: s, models };
     position: relative;
     height: 34px;
     background: var(--surface-2);
-    border-radius: 999px;
+    border-radius: var(--radius-sm);
     border: 1px solid var(--line);
   }
   .band-range {
     position: absolute;
     top: 0;
     bottom: 0;
-    background: color-mix(in srgb, var(--sun-soft) 80%, white);
+    background: var(--sun-soft);
     border-left: 2px solid var(--sun);
     border-right: 2px solid var(--sun);
   }
@@ -203,8 +207,9 @@ const config = { numLocale: HTML_LANG[locale], labels: s, models };
     top: -5px;
     bottom: -5px;
     width: 3px;
-    background: var(--sky-ink);
+    background: var(--sky);
     border-radius: 2px;
+    box-shadow: var(--glow-sky);
     transition: left 0.25s ease;
   }
   .band-label {

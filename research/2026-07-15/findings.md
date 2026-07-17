@@ -172,3 +172,145 @@ Runs 1–3 carries forward; nothing was removed and no hedge was softened.
 - Attendance figure for the Atlanta semifinal not confirmed at pass time — omitted.
 - Grading of Run 1–3 scorecards (semifinal claims now resolvable) is deliberately
   left to the score step, per the pipeline's division of labor.
+
+---
+
+# Verification findings — Run 5 (2026-07-15, late pass, same day)
+
+Third pass of the day, ~5 hours after Run 4, four days out from the final. Run 4's
+exact findings/snapshot are preserved in git (commit f5a8623); this section extends
+the file additively and the snapshot below now reflects Run 5. No match has been
+played since Run 4 — the value of this pass is that it **closes the one item Run 4
+explicitly deferred to it** ("Opta post-semis title refresh still unpublished at
+pass time… Run 5 reconciles"). It does.
+
+## The big mover: Opta had refreshed after all — the stale flag comes off
+
+Run 4 checked Opta's **main semi-final article**, found it unmoved from Jul 12, and
+flagged `models.ts` as carrying stale-low figures (Spain 23.4%). That was true of
+the article — but the **supercomputer's bracket had re-run after Spain 2–0 France**,
+and the refreshed set was published by **TNT Sports (Jul 14–15, post-SF1, pre-SF2)**:
+
+| Team | Opta title (post-SF1 refresh) |
+|---|---|
+| Spain | **56.15%** |
+| England | **23.38%** |
+| Argentina | **20.47%** |
+| France | 0 (eliminated) |
+
+Sum: **100.00%**. Plus **England 52.53%** to beat Argentina → **Argentina 47.47%**
+to reach the final. Run 4's own `52.3%` came from Opta's *match preview*, a
+slightly different artifact; both are real and both are cited.
+
+### Why the published numbers can't be shown as-is, and what we show instead
+
+That vintage predates SF2. Argentina's 20.47% is a *title* number that still priced
+in a **47.47% chance of merely reaching the final** — and they are now in it. Pairing
+20.47% with a "reach final: 100%" cell would render something visibly incoherent, and
+England's 23.38% belongs to a team that is out.
+
+So the table conditions Opta's own figures on the known result — division, not
+invention:
+
+```
+ARG title | in the final = 20.47 / 47.47 = 43.12%   →   ESP = 56.88%
+```
+
+This **back-solves exactly**, which is why the arithmetic is trustworthy rather than
+convenient:
+
+```
+ENG 23.38 / 52.53          ⇒ Spain beats England 55.49% of the time
+55.49%×52.53 + 56.88%×47.47 = 56.15  ✓  (Opta's published Spain number)
+```
+
+Adopted in `models.ts` as **ESP .569 / ARG .431**, with the published post-SF1 set
+retained alongside it (`publishedPostSF1`) for provenance. The prose says plainly
+that this column is Opta's model conditioned on a result Opta hadn't seen — *not* a
+number Opta printed. Same discipline as the Silver paywall note: no inventing, no
+laundering a derivation into a citation.
+
+### What it means: for the first time, the anchors agree
+
+| Anchor | Spain | Argentina |
+|---|---|---|
+| Opta (conditioned) | ~56.9 | ~43.1 |
+| Books (overround-normalized) | ~59 | ~41 |
+| Kalshi | 57.7 | 42.4 |
+| Elo bracket, nudge=0 | ~56 | ~44 |
+| **Author range (unchanged)** | **55–60** | **40–45** |
+
+Four independent anchors inside a five-point spread, all inside the published range.
+Run 4 set that range with Opta stale and one anchor missing; Opta arriving late and
+landing inside it is corroboration, not a reason to move. **AUTHOR_RANGES unchanged.**
+
+## Market — re-checked, did NOT move
+
+- **FanDuel** (new book this pass): trophy **ESP −156 / ARG +136**; 90-min ESP +130
+  / draw +190 / ARG +270. **Kalshi unchanged** at 57.7¢/42.4¢.
+- Normalizing the overround out: FanDuel **59.0/41.0**, Caesars **59.7/40.3** — the
+  same market Run 4 recorded. `BOOKMAKERS.teams` keeps Caesars for continuity; the
+  re-check is recorded in the doc comment.
+- **Correction to a search-level misread this pass:** a first-pass search summary
+  attributed "−136" to BetMGM, implying a sharp move toward Argentina. Fetching the
+  source showed **−136 is Kalshi**, not BetMGM, and Kalshi was already in Run 4's
+  snapshot. There was no move. Logged because it nearly became a wrong headline.
+
+## Financial thread — re-searched, still no material movement
+
+- Re-verified against Rio Times (Jul 9, fetched): **$260M** through TourProdEnter
+  LLC, **$57M** without clear economic purpose, **AR$19bn (~$13M)** domestic case,
+  three unnamed federal prosecutors, **no US charges**, FBI still not commenting.
+  Argentine domestic case at indictment stage; AFA disputes it. All already in the
+  corpus. **H2 bands unchanged.**
+- Rio Times independently describes TourProdEnter's owner **by role** ("a former
+  legislator and businessman") **and does not name him** — matching this site's own
+  editorial rule from Run 1. Good convergent check on the naming discipline.
+- **Not adopted:** a "**more than $300M**" framing (Latin Times / Yahoo syndication)
+  and a version naming the LLC's owner. Both sources returned 403/404 on fetch, the
+  $300M figure appears in no source I could open, and naming the owner would break
+  the role-not-name rule. Excluded rather than hedged.
+- Key date unchanged, now four days out: after the Jul 19 final, Tapia is due back
+  in Argentina under his travel bond.
+
+## Squad news for the final — checked, mostly NOT adopted
+
+- **No suspensions** either side (carried from Run 4; re-confirmed).
+- A FanDuel preview listed Spain's **Yeremy Pino "still out"** and "**unbeaten in 36
+  straight**". **Neither adopted.** ESPN and Sports Mole report Pino's tests showed
+  an **AC sprain, not a fracture**, and that he was **fit for the France semi** — the
+  betting-page blurb is stale. The 36-match streak is uncorroborated in anything I
+  could open; tournament-level facts that *are* solid (Spain conceded once in seven
+  matches, first final since 2010) were already implied by existing content.
+- **Rodri fit**, **Yamal fit** — corroborated, but not a change worth a content edit.
+- Net: no squad edits. Recorded here so the next run doesn't re-chase it.
+
+## Hypothesis bands — unchanged
+
+- H1 2–8%, H2 70–90% / 45–65%, H3 35–55%, H4 30–50% all hold. Nothing happened
+  since Run 4 that touches them; the final remains the outstanding test for H4.
+
+## Known limitations (carried + updated)
+
+- **Opta staleness: RESOLVED** (was the headline limitation of Runs 3–4).
+- **New:** the Opta title column is now a **derivation**, not a printed figure.
+  Disclosed in `models.ts`, in `whowins-intro` prose, and in the source `why`.
+  If Opta publishes an explicit post-SF2 pair, Run 6 should replace the derived
+  numbers with the printed ones and drop the conditioning language.
+- **New:** `theanalyst.com`'s bracket widget is **JS-rendered**, so its live
+  post-SF2 percentages are not machine-readable here; TNT Sports is
+  **region-blocked** from this vantage, so its figures were extracted via multiple
+  independent search-result snippets rather than a direct read. They are treated as
+  solid because they **sum to 100.00 and back-solve exactly** — but the URL was not
+  opened directly. Flagged honestly; a reader outside the block can open it.
+- Silver per-team numbers paywalled (carried).
+- Miami Herald original paywalled (carried).
+- "Both assists Messi" still not adopted (outlets disagree).
+- Attendance for the Atlanta semifinal still unconfirmed — still omitted.
+- Grading of prior scorecards still belongs to the score step.
+- **Run-number drift (flagged for the pipeline, not fixed here):** research runs and
+  Log runs are off by one. `updates.json` tops out at **Log run 3**, whose entry
+  narrates Run 4's research (research Run 3 was superseded same-day and never got
+  its own entry). Per PROMPT ("the newest `updates` entry gives the current run
+  number"), the pending recommendation below is numbered **Log run 4** while this
+  research pass is **Run 5**. Worth reconciling deliberately rather than by drift.

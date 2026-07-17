@@ -1,8 +1,9 @@
 ---
 /**
- * Sticky header: brand + byline, the tab nav (routes), and a language toggle
- * that swaps to the equivalent page in the other locale. On mobile the tab nav
- * becomes a horizontally-scrollable pill bar usable at 360px.
+ * Sticky header: brand + byline, the tab nav (routes), a language toggle that
+ * swaps to the equivalent page in the other locale, and the nerd-mode switch
+ * (see scripts/nerd.ts — reveals .nerd-only extras and opens sim math). On
+ * mobile the tab nav becomes a horizontally-scrollable bar usable at 360px.
  */
 import { TAB_KEYS, otherLocale, type Locale, type TabKey } from '../lib/i18n';
 import { tabPath, homePath } from '../lib/url';
@@ -31,9 +32,20 @@ const toggleHref = current ? tabPath(other, current) : homePath(other);
       </span>
     </a>
 
-    <a class="lang-toggle" href={toggleHref} hreflang={other === 'es' ? 'es-AR' : 'en'} rel="alternate">
-      <span aria-hidden="true">🌐</span> {t.switchTo}
-    </a>
+    <div class="switches">
+      <button
+        type="button"
+        class="nerd-toggle"
+        data-nerd-toggle
+        aria-pressed="false"
+        title={t.nerdHint}
+      >
+        <span aria-hidden="true">🤓</span> {t.nerdMode}
+      </button>
+      <a class="lang-toggle" href={toggleHref} hreflang={other === 'es' ? 'es-AR' : 'en'} rel="alternate">
+        <span aria-hidden="true">🌐</span> {t.switchTo}
+      </a>
+    </div>
   </div>
 
   <nav class="tabs container" aria-label={t.primaryNav}>
@@ -61,8 +73,8 @@ const toggleHref = current ? tabPath(other, current) : homePath(other);
     position: sticky;
     top: 0;
     z-index: 50;
-    background: color-mix(in srgb, var(--paper) 88%, white);
-    backdrop-filter: saturate(1.4) blur(10px);
+    background: rgba(5, 14, 28, 0.82);
+    backdrop-filter: saturate(1.3) blur(12px);
     border-bottom: 1px solid var(--line);
   }
   .bar {
@@ -87,11 +99,12 @@ const toggleHref = current ? tabPath(other, current) : homePath(other);
   }
   .brand-mark .stripe {
     height: 5px;
-    border-radius: 2px;
     background: var(--sky);
+    box-shadow: var(--glow-sky);
   }
   .brand-mark .stripe.sun {
     background: var(--sun);
+    box-shadow: var(--glow-sun);
   }
   .brand-name {
     display: block;
@@ -107,26 +120,50 @@ const toggleHref = current ? tabPath(other, current) : homePath(other);
     font-size: 0.74rem;
     color: var(--muted);
   }
-  @media (max-width: 460px) {
+  @media (max-width: 560px) {
     .brand-tag {
       display: none;
     }
   }
-  .lang-toggle {
+  .switches {
+    display: flex;
+    align-items: center;
+    gap: var(--s-2);
     flex: none;
-    font-family: var(--font-body);
+  }
+  .lang-toggle,
+  .nerd-toggle {
+    font-family: var(--font-data);
     font-weight: 600;
-    font-size: 0.85rem;
+    font-size: 0.78rem;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
     text-decoration: none;
+    cursor: pointer;
     color: var(--sky-ink);
     border: 1px solid var(--line);
-    background: var(--surface);
-    padding: 0.45em 0.85em;
-    border-radius: 999px;
+    background: transparent;
+    padding: 0.45em 0.8em;
+    border-radius: var(--radius-sm);
+    transition: border-color 0.12s ease, background 0.12s ease, box-shadow 0.12s ease;
   }
-  .lang-toggle:hover {
+  .lang-toggle:hover,
+  .nerd-toggle:hover {
     border-color: var(--sky);
     background: var(--sky-soft);
+    box-shadow: var(--glow-sky);
+  }
+  .nerd-toggle[aria-pressed='true'] {
+    border-color: var(--sun);
+    background: var(--sun-soft);
+    color: var(--sun-ink);
+    box-shadow: var(--glow-sun);
+  }
+  @media (max-width: 420px) {
+    .nerd-toggle {
+      font-size: 0.7rem;
+      padding: 0.45em 0.55em;
+    }
   }
   .tabs {
     overflow-x: auto;
@@ -138,22 +175,22 @@ const toggleHref = current ? tabPath(other, current) : homePath(other);
   }
   .tabs ul {
     display: flex;
-    gap: var(--s-2);
+    gap: var(--s-1);
     list-style: none;
     margin: 0;
-    padding: 0 0 var(--s-3);
+    padding: 0;
   }
   .tab {
     display: inline-block;
     white-space: nowrap;
     text-decoration: none;
-    font-family: var(--font-body);
+    font-family: var(--font-data);
     font-weight: 600;
-    font-size: 0.92rem;
+    font-size: 0.84rem;
+    letter-spacing: 0.03em;
     color: var(--muted);
-    padding: 0.5em 0.95em;
-    border-radius: 999px;
-    border: 1px solid transparent;
+    padding: 0.55em 0.9em 0.7em;
+    border-bottom: 2px solid transparent;
     transition: color 0.12s ease, background 0.12s ease, border-color 0.12s ease;
   }
   .tab:hover {
@@ -161,9 +198,9 @@ const toggleHref = current ? tabPath(other, current) : homePath(other);
     background: var(--sky-soft);
   }
   .tab.active {
-    color: white;
-    background: var(--sky);
-    border-color: var(--sky);
+    color: var(--sky);
+    border-bottom-color: var(--sky);
+    text-shadow: 0 0 14px rgba(62, 193, 255, 0.55);
   }
   .tab .short {
     display: none;
@@ -177,3 +214,8 @@ const toggleHref = current ? tabPath(other, current) : homePath(other);
     }
   }
 </style>
+
+<script>
+  import { initNerdMode } from '../scripts/nerd';
+  initNerdMode();
+</script>

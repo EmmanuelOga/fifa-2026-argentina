@@ -156,7 +156,7 @@ function setup(root: HTMLElement): void {
           <div class="bar-adj ${nudgePp > 0 && t.code === 'ARG' ? 'nudged' : ''}" style="width:${(a * 100).toFixed(1)}%"></div>
         </div>
         <div class="bar-vals">
-          <span><span class="swatch" style="background:color-mix(in srgb,var(--sky) 30%,white)"></span>${cfg.labels.clean} ${pct.format(c)}</span>
+          <span><span class="swatch" style="background:color-mix(in srgb,var(--sky) 30%,var(--surface-2))"></span>${cfg.labels.clean} ${pct.format(c)}</span>
           <span><span class="swatch" style="background:${nudgePp > 0 && t.code === 'ARG' ? 'var(--pop)' : 'var(--sky)'}"></span>${cfg.labels.adjusted} ${pct.format(a)}</span>
         </div>`;
       barsHost.appendChild(row);

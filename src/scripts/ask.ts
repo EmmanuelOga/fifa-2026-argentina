@@ -1,8 +1,13 @@
 /**
- * Client runtime for the Ask-the-research chat. Posts questions to the Pages
- * Function and renders answers with citations. Handles the endpoint being
- * unavailable (503/404 — e.g. GitHub Pages fallback) with a graceful message.
+ * Client runtime for the Ask-the-research chat. A small explicit state machine
+ * (idle ⇄ pending) drives the UI: while a question is in flight the input,
+ * send button and suggestion chips are disabled and an animated typing
+ * indicator holds the answer's place. Answers render as sanitized Markdown
+ * (see markdown.ts); citations render as source chips. Handles the endpoint
+ * being unavailable (503/404 — e.g. a static-only deploy) gracefully.
  */
+import { renderMarkdown, escapeHtml } from './markdown';
+
 interface Config {
   endpoint: string;
   locale: 'en' | 'es';
@@ -58,6 +63,7 @@ function setup(root: HTMLElement): void {
   const form = root.querySelector<HTMLFormElement>('[data-form]')!;
   const input = root.querySelector<HTMLInputElement>('[data-input]')!;
   const send = root.querySelector<HTMLButtonElement>('[data-send]')!;
+  const chips = Array.from(root.querySelectorAll<HTMLButtonElement>('.chip'));
 
   // Optional bot protection: widget renders only when a site key is configured.
   let turnstileWidget: Promise<string> | undefined;
@@ -66,24 +72,44 @@ function setup(root: HTMLElement): void {
     turnstileWidget = initTurnstile(turnstileEl, cfg.turnstileSiteKey);
   }
 
-  const esc = (s: string) =>
-    s.replace(/[&<>"]/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' })[c]!);
+  let state: 'idle' | 'pending' = 'idle';
 
-  const addMsg = (who: 'you' | 'bot', text: string, cls = '') => {
+  const setState = (next: 'idle' | 'pending') => {
+    state = next;
+    const busy = next === 'pending';
+    input.disabled = busy;
+    send.disabled = busy;
+    chips.forEach((c) => (c.disabled = busy));
+    root.classList.toggle('busy', busy);
+    if (!busy) input.focus();
+  };
+
+  const label = (who: 'you' | 'bot') =>
+    `<span class="who">${who === 'you' ? cfg.labels.youLabel : cfg.labels.botLabel}</span>`;
+
+  const addMsg = (who: 'you' | 'bot', html: string, cls = '') => {
     const el = document.createElement('div');
     el.className = `msg ${who} ${cls}`.trim();
-    const label = who === 'you' ? cfg.labels.youLabel : cfg.labels.botLabel;
-    el.innerHTML = `<span class="who">${label}</span>${esc(text)}`;
+    el.innerHTML = `${label(who)}<div class="msg-body">${html}</div>`;
     log.appendChild(el);
     el.scrollIntoView({ block: 'nearest' });
     return el;
   };
 
+  const finish = (pending: HTMLElement, html: string) => {
+    pending.classList.remove('thinking');
+    pending.innerHTML = `${label('bot')}<div class="msg-body">${html}</div>`;
+    pending.scrollIntoView({ block: 'nearest' });
+  };
+
+  const thinkingHtml = `<span class="dots" aria-hidden="true"><i></i><i></i><i></i></span> ${escapeHtml(cfg.labels.thinking)}`;
+
   async function ask(question: string): Promise<void> {
-    addMsg('you', question);
+    if (state === 'pending') return;
+    setState('pending');
+    addMsg('you', `<p>${escapeHtml(question)}</p>`);
     input.value = '';
-    send.disabled = true;
-    const pending = addMsg('bot', cfg.labels.thinking, 'thinking');
+    const pending = addMsg('bot', thinkingHtml, 'thinking');
 
     try {
       let turnstileToken: string | undefined;
@@ -104,13 +130,11 @@ function setup(root: HTMLElement): void {
       }
 
       if (res.status === 503 || res.status === 404) {
-        pending.classList.remove('thinking');
-        pending.innerHTML = `<span class="who">${cfg.labels.botLabel}</span>${esc(cfg.labels.unavailable)}`;
+        finish(pending, `<p>${escapeHtml(cfg.labels.unavailable)}</p>`);
         return;
       }
       if (res.status === 429) {
-        pending.classList.remove('thinking');
-        pending.innerHTML = `<span class="who">${cfg.labels.botLabel}</span>${esc(cfg.labels.rateLimited)}`;
+        finish(pending, `<p>${escapeHtml(cfg.labels.rateLimited)}</p>`);
         return;
       }
       if (!res.ok) throw new Error(String(res.status));
@@ -121,23 +145,25 @@ function setup(root: HTMLElement): void {
         answered?: boolean;
         sources?: string[];
       };
-      pending.classList.remove('thinking');
 
       if (data.available === false) {
-        pending.innerHTML = `<span class="who">${cfg.labels.botLabel}</span>${esc(cfg.labels.unavailable)}`;
+        finish(pending, `<p>${escapeHtml(cfg.labels.unavailable)}</p>`);
         return;
       }
-      const answer = data.answered ? data.answer || '' : cfg.labels.unanswered;
-      let html = `<span class="who">${cfg.labels.botLabel}</span>${esc(answer)}`;
+
+      let html = data.answered
+        ? renderMarkdown(data.answer || '')
+        : `<p>${escapeHtml(cfg.labels.unanswered)}</p>`;
       if (data.answered && data.sources && data.sources.length) {
-        html += `<div class="srcs">${cfg.labels.sourcesLabel}: ${data.sources.map(esc).join(' · ')}</div>`;
+        html += `<div class="srcs"><span class="srcs-label">${escapeHtml(cfg.labels.sourcesLabel)}</span>${data.sources
+          .map((s) => `<span class="src-chip">${escapeHtml(s)}</span>`)
+          .join('')}</div>`;
       }
-      pending.innerHTML = html;
+      finish(pending, html);
     } catch {
-      pending.classList.remove('thinking');
-      pending.innerHTML = `<span class="who">${cfg.labels.botLabel}</span>${esc(cfg.labels.error)}`;
+      finish(pending, `<p>${escapeHtml(cfg.labels.error)}</p>`);
     } finally {
-      send.disabled = false;
+      setState('idle');
     }
   }
 
@@ -146,10 +172,9 @@ function setup(root: HTMLElement): void {
     const q = input.value.trim();
     if (q) ask(q);
   });
-  root.querySelectorAll<HTMLButtonElement>('.chip').forEach((chip) =>
+  chips.forEach((chip) =>
     chip.addEventListener('click', () => {
-      const q = chip.dataset.q!;
-      if (!send.disabled) ask(q);
+      ask(chip.dataset.q!);
     }),
   );
 }

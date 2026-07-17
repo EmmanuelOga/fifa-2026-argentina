@@ -1,28 +1,77 @@
 {
-  "run": 4,
+  "run": 5,
   "date": "2026-07-15",
   "bracketStage": "final-set",
-  "supersedes": "Run 3 (same day, mid-SF2 snapshot). Run 3's exact findings.md/snapshot.json are preserved in git at commit 399ec52; findings.md in this folder keeps the full Run 3 text with the Run 4 section appended.",
+  "supersedes": "Run 4 (same day, post-SF2 evening snapshot). Run 3's exact findings.md/snapshot.json are preserved in git at commit 399ec52 and Run 4's at commit f5a8623; findings.md in this folder keeps the full Run 3 + Run 4 text with the Run 5 section appended.",
   "predictions": {
     "titleProbabilities": {
-      "ESP": { "authorLow": 0.55, "authorHigh": 0.6, "opta": 0.234, "optaNote": "Opta post-semis refresh still unpublished at pass time; last published Jul 12 figure, stale-low" },
-      "ARG": { "authorLow": 0.4, "authorHigh": 0.45, "opta": 0.206, "optaNote": "same staleness caveat; with one match left, title odds = final-match odds" },
-      "ENG": { "authorLow": 0, "authorHigh": 0, "opta": 0, "optaNote": "resolved to 0 by elimination Jul 15 (lost SF2 1-2 to Argentina)" },
-      "FRA": { "authorLow": 0, "authorHigh": 0, "opta": 0, "optaNote": "resolved to 0 by elimination Jul 14" }
+      "ESP": {
+        "authorLow": 0.55,
+        "authorHigh": 0.6,
+        "opta": 0.569,
+        "optaNote": "DERIVED, not printed by Opta: Opta's post-SF1 refresh (TNT Sports, Jul 14-15, pre-SF2) published ESP 56.15 / ENG 23.38 / ARG 20.47 (sums to 100.00) with ENG 52.53% to beat ARG. Conditioning on the known SF2 result gives ARG 20.47/47.47 = 43.1% and ESP 56.9%. Back-solves exactly (23.38/52.53 => ESP beats ENG 55.49%; 55.49*0.5253 + 56.88*0.4747 = 56.15). Run 4's stale-low 0.234 is retired."
+      },
+      "ARG": {
+        "authorLow": 0.4,
+        "authorHigh": 0.45,
+        "opta": 0.431,
+        "optaNote": "same derivation; with one match left, title odds = final-match odds"
+      },
+      "ENG": {
+        "authorLow": 0,
+        "authorHigh": 0,
+        "opta": 0,
+        "optaNote": "resolved to 0 by elimination Jul 15 (lost SF2 1-2 to Argentina); Opta's pre-SF2 refresh had ENG at 23.38%"
+      },
+      "FRA": {
+        "authorLow": 0,
+        "authorHigh": 0,
+        "opta": 0,
+        "optaNote": "resolved to 0 by elimination Jul 14"
+      }
+    },
+    "optaPublishedPostSF1": {
+      "asOf": "2026-07-14/15",
+      "vintage": "post-SF1, pre-SF2",
+      "source": "TNT Sports (region-blocked from this vantage; figures extracted via multiple independent search-result snippets, trusted because they sum to 100.00 and back-solve exactly)",
+      "ESP": 0.5615,
+      "ENG": 0.2338,
+      "ARG": 0.2047,
+      "FRA": 0,
+      "engToBeatArg": 0.5253
     },
     "market": {
-      "asOf": "2026-07-15T17:00-04:00",
+      "asOf": "2026-07-15T22:45-04:00",
+      "moved": false,
+      "note": "Re-checked late Jul 15: no material movement since Run 4. Overround-normalized, every book lands ~59/41.",
       "trophy": {
         "caesars": { "ESP": "-170", "ARG": "+135" },
         "bet365": { "ESP": "-175", "ARG": "+125" },
         "thescore": { "ESP": "-160", "ARG": "+130" },
-        "kalshi": { "ESP": 0.58, "ARG": 0.43 }
+        "fanduel": { "ESP": "-156", "ARG": "+136", "newThisRun": true },
+        "kalshi": { "ESP": 0.577, "ARG": 0.424 }
       },
-      "final90min": { "betmgm": { "ESP": "+125", "draw": "+200", "ARG": "+250", "over25": "+135", "under25": "-150" } }
+      "final90min": {
+        "betmgm": { "ESP": "+125", "draw": "+200", "ARG": "+250", "over25": "+135", "under25": "-150" },
+        "fanduel": { "ESP": "+130", "draw": "+190", "ARG": "+270" }
+      },
+      "correction": "A first-pass search summary attributed '-136' to BetMGM, implying a sharp move to Argentina. Fetching the source showed -136 is KALSHI, already in Run 4's snapshot. No move occurred."
+    },
+    "anchorConvergence": {
+      "note": "First pass where all anchors are fresh simultaneously. Four independent anchors inside a five-point spread, all inside the unchanged author range.",
+      "optaConditioned": { "ESP": 0.569, "ARG": 0.431 },
+      "booksNormalized": { "ESP": 0.59, "ARG": 0.41 },
+      "kalshi": { "ESP": 0.577, "ARG": 0.424 },
+      "eloBracketNudge0": { "ESP": 0.56, "ARG": 0.44 }
     },
     "optaMatchCalls": {
       "sf1_FRA_v_ESP": { "favored": "FRA", "p": 0.577, "outcome": "ESP won - 42.3% branch" },
-      "sf2_ENG_v_ARG": { "favored": "ENG", "p": 0.523, "outcome": "ARG won - 47.7% branch", "source": "Opta match preview Jul 15; 90-min split ENG 37.3 / draw 30.7 / ARG 32.0" }
+      "sf2_ENG_v_ARG": {
+        "favored": "ENG",
+        "p": 0.523,
+        "outcome": "ARG won - 47.7% branch",
+        "source": "Opta match preview Jul 15; 90-min split ENG 37.3 / draw 30.7 / ARG 32.0. The post-SF1 bracket refresh carried a slightly different 52.53% for the same call - both real, different artifacts."
+      }
     },
     "hypotheses": {
       "H1_deliberate_favoritism": { "low": 0.02, "high": 0.08 },
@@ -33,41 +82,48 @@
     }
   },
   "outcomes": {
-    "note": "Both semifinals resolved. SF2: England 1-2 Argentina (Jul 15, Atlanta; Gordon 55'; E. Fernandez 85', L. Martinez 90+2' from a Messi cross; ARG 64% possession, xG ~1.84 v ~0.53; referee Ismail Elfath, USA - no officiating controversy of substance). Final: Spain v Argentina, Jul 19, MetLife. Grading of Run 1-3 scorecards belongs to the score step.",
+    "note": "No match played since Run 4. Final: Spain v Argentina, Jul 19, MetLife, 3 p.m. ET. Grading of Run 1-4 scorecards belongs to the score step.",
     "champion": null,
     "semifinals": { "FRA_v_ESP": "ESP 2-0", "ENG_v_ARG": "ARG 2-1" },
     "final": null,
     "dojMovedToIndictment": null
   },
-  "carriedForwardFromRun3": "All Run 1-3 verified facts stand: Spain 2-0 France with the disputed Digne-on-Yamal penalty (Deschamps/Collina/Hackett), market flip to Spain, Opta Jul 12 figures partially resolved by reality, Silver paywall note, penalty superlative softening, five named banks, Miami Herald ~$90M, La Nacion $260M/$57M attribution, Tofoni ~3h videoconference interview (witness, not charged), Tapia travel-authorization nugget, AFA pushback quote, no US charges, FBI declined comment.",
-  "newSinceRun3": [
-    "England 1-2 Argentina (Jul 15, Atlanta): Gordon 55'; Enzo Fernandez 85' from distance, Lautaro Martinez 90+2' header from a Messi cross. ARG dominated (64% possession, xG ~1.84 v ~0.53 per ESPN). First Argentina knockout win of the run inside 90 minutes. Final set: Spain v Argentina, Jul 19, MetLife, 3 p.m. ET.",
-    "The pre-match officiating storm fizzled: US referee Ismail Elfath was dubbed 'Messi's lucky charm' (2022-final fourth official, viral 4-0 record around Messi teams) and led the first all-US crew in a WC semifinal - then the match produced no disputed call worth a headline (Gordon's goal stood after a routine offside check). Added as timeline node england-argentina-semi + H4 forPoint: under the brightest lights so far, the pattern regressed.",
-    "Opta's SF2 preview (Jul 15) leaned England (52.3% to advance; 90-min ENG 37.3 / draw 30.7 / ARG 32.0) - the 47.7% branch happened. Both Opta slim semifinal favorites lost (57.7%, 52.3%); added as a calibration postscript to the whowins-favorite-lost section.",
-    "Final opening prices (Jul 15 evening): Caesars ESP -170 / ARG +135, bet365 -175/+125, theScore -160/+130, Kalshi 58c/43c, BetMGM 90-min ESP +125/draw +200/ARG +250. BOOKMAKERS refreshed; author ranges re-synthesized to ESP 0.55-0.60 / ARG 0.40-0.45.",
-    "No suspensions for the final on either side (yellows wiped post-QF, no reds in the semis); Spain has one extra rest day (semi Jul 14 v Jul 15) - added to the fatigue section. Messi: 8 goals (tied lead), 6th World Cup, first competitive international meeting with Lamine Yamal.",
-    "Financial thread: no material movement (re-searched); Daily Star's ~19bn pesos (~$13M) domestic-case figure consistent with the published ~$12.7M. Key date now four days out: Tapia must return to Argentina after the Jul 19 final under his travel bond.",
-    "Hypothesis bands unchanged (H1 2-8, H2 70-90/45-65, H3 35-55, H4 30-50); H4 gains its second semifinal forPoint."
+  "carriedForwardFromRun4": "All Run 1-4 verified facts stand: Spain 2-0 France with the disputed Digne-on-Yamal penalty; England 1-2 Argentina (Gordon 55'; E. Fernandez 85', L. Martinez 90+2' from a Messi cross; ARG 64% possession, xG ~1.84 v ~0.53; referee Elfath, no controversy of substance); market flip to Spain; Silver paywall note; penalty superlative softening; five named banks; Miami Herald ~$90M; La Nacion $260M/$57M attribution; Tofoni ~3h videoconference interview (witness, not charged); Tapia travel-authorization nugget; AFA pushback quote; no US charges; FBI declined comment; no suspensions for the final.",
+  "newSinceRun4": [
+    "RESOLVED Run 4's deferred item: Opta HAD refreshed post-SF1 - the main semi-final article never moved, but the bracket re-ran and TNT Sports published the set (ESP 56.15 / ENG 23.38 / ARG 20.47, sums to 100.00; ENG 52.53% to beat ARG). Run 4 checked the article and reasonably concluded 'not refreshed'; the refresh lived elsewhere.",
+    "Because that vintage predates SF2, the published ARG 20.47% still priced a 47.47% chance of merely reaching the final. models.ts now carries Opta's numbers CONDITIONED on the known result: ESP .569 / ARG .431 (20.47/47.47 = 43.1%). Verified by exact back-solve. Disclosed as a derivation in models.ts, whowins-intro prose, and the source 'why' - never presented as a figure Opta printed.",
+    "First pass where every anchor is fresh at once, and they agree: Opta ~57/43, books ~59/41, Kalshi 57.7/42.4, Elo bracket ~56/44 - all inside the unchanged author range 55-60 / 40-45. Corroboration, so AUTHOR_RANGES held rather than nudged.",
+    "Market re-checked and did NOT move. FanDuel added as a new book (-156/+136 trophy; 90-min +130/+190/+270); Kalshi unchanged. Caught and logged a near-miss: a search summary attributed '-136' to BetMGM implying a move to Argentina; the source shows -136 is Kalshi.",
+    "Financial thread re-searched: no movement. Rio Times (Jul 9) re-verified the corpus and independently describes TourProdEnter's owner by role without naming him, converging with this site's Run 1 editorial rule. A '$300M' framing and an owner-naming version were NOT adopted (sources 403/404; $300M unverifiable in anything openable; naming breaks the role-not-name rule).",
+    "Final squad news chased and mostly NOT adopted: a FanDuel preview claimed Pino 'still out' and Spain 'unbeaten in 36 straight'. ESPN/Sports Mole show Pino's tests were an AC sprain (not a fracture) and he was fit for the France semi - the betting blurb is stale. Streak uncorroborated. No squad edits; recorded so Run 6 doesn't re-chase it.",
+    "Hypothesis bands unchanged (H1 2-8, H2 70-90/45-65, H3 35-55, H4 30-50). Nothing since Run 4 touches them; the final is H4's outstanding test."
   ],
   "dataChangesThisRun": [
-    "meta.lastUpdated already 2026-07-15 - unchanged (same-day pass).",
-    "bracket.ts unchanged (SF2 result was already filled and ESPN-verified at 14:10 local; ESP 2045 v ARG 2000 already yields ~56/44 at nudge=0 from the final-set state).",
-    "models.ts: BOOKMAKERS refreshed to post-SF2 final prices (Caesars -170/.630, +135/.426; comment lists bet365/theScore/Kalshi and the BetMGM 90-min line); AUTHOR_RANGES -> ESP .55-.60 / ARG .40-.45; OPTA comment extended with the two resolved semifinal branches (57.7%, 52.3%).",
+    "meta.lastUpdated stays 2026-07-15 (same-day pass; already correct).",
+    "bracket.ts unchanged (no match played since Run 4).",
+    "models.ts: OPTA retired the stale Jul 12 figures -> ESP .569 / ARG .431 (derived, documented); added publishedPostSF1 {ESP .5615, ENG .2338, ARG .2047, FRA 0} for provenance; url now points at the live bracket article; doc comment carries the full derivation + back-solve. BOOKMAKERS doc comment fixed (it still described France as 'the clear favorite everywhere' - stale) and records the no-move re-check + FanDuel. AUTHOR_RANGES values UNCHANGED; comment rewritten to note four fresh agreeing anchors.",
     "bayes.ts unchanged (bands hold).",
-    "timeline.json: new node england-argentina-semi (order 12).",
-    "hypotheses.json h4: new forPoint (SF2 clean under maximum scrutiny) + espn-eng-arg, aljazeera-elfath sources.",
-    "sections.json: whowins-intro (market now fresh, Opta-only caveat, 55-60/40-45 spoiler); whowins-favorite-lost (calibration postscript: both slim favorites lost); whowins-fatigue (streak broken in 90, Spain's extra rest day).",
-    "sources.json: added espn-eng-arg, aljazeera-elfath (tier 2), opta-eng-arg-preview, sbd-final-odds (tier 3)."
+    "timeline.json unchanged (no real-world event since Run 4).",
+    "hypotheses.json unchanged.",
+    "sections.json: whowins-intro (en+es) - replaced the now-false 'Opta hadn't published a post-semifinal refresh' caveat with the reconciliation, including the plain-language disclosure that the Opta column is a conditioned derivation.",
+    "sources.json: added tnt-opta-postsf1 (tier 3, order 46).",
+    "WhoWinsPage.astro: added 'tnt-opta-postsf1' to the models-table SourceRefs so the new claim traces to its source (one-line citation wiring)."
+  ],
+  "openForNextRun": [
+    "If Opta publishes an explicit post-SF2 pair, replace the derived .569/.431 with the printed figures and drop the conditioning language from models.ts + whowins-intro.",
+    "Run-number drift: updates.json tops out at Log run 3 (which narrates research Run 4). Pending recommendation is numbered Log run 4 while research is Run 5. Reconcile deliberately.",
+    "The Jul 19 final resolves the champion, H4's regression test, and the Tapia travel-bond return date - all in one weekend."
   ],
   "keySources": {
-    "espnEngArg": "https://www.espn.com/soccer/match/_/gameId/760515/argentina-england",
-    "cbsEngArg": "https://www.cbsnews.com/news/argentina-beats-england-world-cup-final/",
-    "nprEngArg": "https://www.npr.org/2026/07/15/nx-s1-5893895/2026-world-cup-fifa-argentina-england-semifinal",
-    "aljazeeraElfath": "https://www.aljazeera.com/sports/2026/7/14/fifa-world-cup-meet-ismail-elfath-referee-for-england-argentina-semifinal",
+    "tntOptaPostSF1": "https://www.tntsports.co.uk/football/world-cup/2026/opta-supercomputer-france-spain-england-argentina_sto23318876/story.shtml",
+    "optaBracket": "https://theanalyst.com/articles/2026-world-cup-bracket-opta-supercomputer",
     "optaEngArgPreview": "https://theanalyst.com/articles/england-vs-argentina-prediction-world-cup-2026-match-preview",
-    "sbdFinalOdds": "https://www.sportsbettingdime.com/news/soccer/spain-vs-odds-world-cup-final-opening-moneyline-total/",
-    "foxFinalKnow": "https://www.foxsports.com/stories/soccer/spain-vs-england-argentina-confirmed-world-cup-final-heres-what-know",
     "opta": "https://theanalyst.com/articles/world-cup-2026-semi-final-predictions-opta-supercomputer",
+    "fanduelFinal": "https://www.fanduel.com/research/spain-vs-argentina-world-cup-final-prediction-odds-preview-lineups-and-best-bets",
+    "sbdFinalOdds": "https://www.sportsbettingdime.com/news/soccer/spain-vs-odds-world-cup-final-opening-moneyline-total/",
+    "riotimesAfa": "https://www.riotimesonline.com/fbi-afa-investigation-tourprodenter-tapia-world-cup-2026/",
+    "espnPino": "https://www.espn.com/soccer/story/_/id/49193963/spain-2026-world-cup-injury-yeremy-pino-nico-williams",
+    "espnEngArg": "https://www.espn.com/soccer/match/_/gameId/760515/argentina-england",
     "silver": "https://www.natesilver.net/p/world-cup-2026-odds-predictions",
     "laNacionFBI": "https://www.lanacion.com.ar/politica/agentes-del-fbi-y-fiscales-federales-toman-testimonios-para-investigar-operaciones-financieras-de-la-afa-en-estados-unidos-nid06072026/"
   }
