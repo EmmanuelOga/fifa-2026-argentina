@@ -4,8 +4,11 @@
  *   2. Silver Bulletin "PELE" model (Elo/SPI-style; live per-team numbers paywalled)
  *   3. Bookmaker outright odds (market-implied, incl. overround)
  *
- * All figures verified as of the snapshot date. Author's synthesized ranges
- * triangulate the three and are labelled SPECULATIVE everywhere they render.
+ * All figures verified as of the snapshot date, with one disclosed exception: the
+ * Opta title column is currently DERIVED from Opta's published figures rather than
+ * printed by Opta (see the OPTA block for the arithmetic and why). Author's
+ * synthesized ranges triangulate the three and are labelled SPECULATIVE everywhere
+ * they render.
  */
 
 export interface TeamProb {
@@ -15,26 +18,46 @@ export interface TeamProb {
 }
 
 /**
- * Opta / The Analyst supercomputer — 25,000 sims, last published post-quarterfinals
- * (Jul 12). Opta had NOT refreshed after semifinal 1 as of the Jul 15 snapshot
- * (re-verified by fetch), so two kinds of numbers coexist here:
- *   - elimination/qualification RESOLUTIONS (arithmetic facts, not model outputs):
- *     France title/reachFinal → 0 (out Jul 14), England title/reachFinal → 0
- *     (out Jul 15), Spain and Argentina reachFinal → 1 (the final is set);
- *   - Opta's last PUBLISHED title figures for ESP/ARG, which predate the semis —
- *     Spain's 23.4% is stale-low versus the post-semis market (~55–60%). Reconcile
- *     when Opta publishes its final-stage refresh. Calibration footnote for the
- *     prose: both of Opta's slim semifinal favorites lost — France (57.7% to reach
- *     the final, Jul 12 article) and England (52.3% to advance, Jul 15 match
- *     preview) — so the 42.3% and 47.7% branches happened back-to-back.
+ * Opta / The Analyst supercomputer — 25,000 sims. Run 4 flagged Opta's figures as
+ * stale (the Jul 12 post-quarterfinal run had Spain at 23.4%); Run 5 reconciles.
+ *
+ * Opta DID refresh after semifinal 1 — the main semi-final article never moved,
+ * but the supercomputer's bracket re-ran and the refreshed set was published by
+ * TNT Sports (Jul 14–15, after Spain 2–0 France, before England v Argentina):
+ *     Spain 56.15% · England 23.38% · Argentina 20.47% · France 0 (sums to 100.0)
+ *     England 52.53% to beat Argentina → Argentina 47.47% to reach the final.
+ *
+ * That vintage predates SF2, so it can't be shown as-is: Argentina's 20.47%
+ * assumed a 47.47% chance of merely REACHING the final, and they are now in it.
+ * The figures below therefore condition Opta's own published numbers on the known
+ * SF2 result — division, not invention:
+ *     ARG title | in the final = 20.47 / 47.47 = 43.1%  →  ESP = 56.9%
+ * It back-solves exactly, which is why we trust the arithmetic: ENG 23.38 / 52.53
+ * ⇒ Spain beats England 55.5% of the time; 55.5%×52.53 + 56.9%×47.47 = 56.15 ✓.
+ * Opta's live bracket widget (JS-rendered, not machine-readable for us) should be
+ * showing approximately this pair. The prose says plainly that this column is
+ * Opta's model conditioned on a known result, not a figure Opta printed.
+ *
+ * Re-checked Jul 16 (Run 6): Opta STILL prints no explicit Spain-v-Argentina final
+ * pair — its public trophy model even still frames a Spain-v-England final (ESP
+ * 56.15 / ENG 23.38 / ARG 20.47), i.e. not re-simulated for the actual matchup. So
+ * the derived .569/.431 stands unchanged; it remains the best read of Opta's model
+ * on the final we actually have. If Opta publishes an explicit pair before Sunday,
+ * Run 7 swaps in the printed figures and drops the conditioning language.
+ *
+ * Calibration footnote for the prose: both of Opta's slim semifinal favorites lost
+ * — France (57.7% to reach the final, Jul 12) and England (52.53%) — so the 42.3%
+ * and 47.47% branches happened back-to-back.
  */
 export const OPTA = {
   asOf: '2026-07-15',
   sims: 25000,
-  url: 'https://theanalyst.com/articles/world-cup-2026-semi-final-predictions-opta-supercomputer',
+  url: 'https://theanalyst.com/articles/2026-world-cup-bracket-opta-supercomputer',
+  /** Published post-SF1 refresh, kept for provenance (pre-SF2 vintage). */
+  publishedPostSF1: { ESP: 0.5615, ENG: 0.2338, ARG: 0.2047, FRA: 0 },
   teams: {
-    ESP: { code: 'ESP', title: 0.234, reachFinal: 1 },
-    ARG: { code: 'ARG', title: 0.206, reachFinal: 1 },
+    ESP: { code: 'ESP', title: 0.569, reachFinal: 1 },
+    ARG: { code: 'ARG', title: 0.431, reachFinal: 1 },
     ENG: { code: 'ENG', title: 0, reachFinal: 0 },
     FRA: { code: 'FRA', title: 0, reachFinal: 0 },
   } satisfies Record<string, TeamProb>,
@@ -57,12 +80,21 @@ export const SILVER = {
 };
 
 /**
- * Bookmaker outright odds. American odds vary book-to-book; France is the clear
- * favorite everywhere, the other three tightly bunched. Implied % includes the
- * bookmaker's overround (margin), so the four implied numbers sum to >100%.
+ * Bookmaker outright odds. American odds vary book-to-book. With the final set,
+ * Spain is favored everywhere and the price is a two-horse market. Implied %
+ * includes the bookmaker's overround (margin), so the implied numbers sum to >100%.
+ *
+ * Re-checked again Jul 16 (Run 6): a small drift TOWARD Spain, still well inside the
+ * range. Prediction markets ticked up (Kalshi ~57.7¢ → ~58.5¢ Spain, Polymarket
+ * ~58.4¢) and DraftKings shortened Spain's 90-minute three-way price (+125 → +115,
+ * ARG +260 → +285). The named trophy lines below (Caesars −170, bet365 −175,
+ * theScore −160) drew no fresh re-quote, so they're carried as unchanged; the
+ * overround-normalized trophy market is still ~59/41 Spain. (Run 5 note, still true:
+ * late Jul 15 the market had not moved — FanDuel ESP −156 / ARG +136, Kalshi
+ * 57.7¢/42.4¢, ~59/41 normalized.) The headline table keeps Caesars for continuity.
  */
 export const BOOKMAKERS = {
-  asOf: '2026-07-15',
+  asOf: '2026-07-16',
   url: 'https://www.oddschecker.com/us/soccer/world-cup',
   source: 'Caesars / bet365 / Kalshi (via Sports Betting Dime, Jul 15 evening)',
   /** Post-SF2 opening prices for the Spain–Argentina final (Jul 15 evening, after
@@ -78,10 +110,14 @@ export const BOOKMAKERS = {
   },
 };
 
-/** Author's synthesized SPECULATIVE title ranges (0..1). Re-synthesized Jul 15
- *  evening for the final-set state (one match left): overround-normalized books
- *  land near 59/41, Kalshi near 57/43, and the Elo bracket at nudge=0 gives
- *  ~56/44; Opta's refresh was still pending. France and England resolved to 0. */
+/** Author's synthesized SPECULATIVE title ranges (0..1). Held at the Run 4 values
+ *  for the final-set state (one match left). Run 5 was the first pass where all the
+ *  anchors agreed rather than one being stale; Run 6 (Jul 16) re-checked and the
+ *  small drift toward Spain (Kalshi ~58.5, DraftKings 90-min +115) stays inside the
+ *  spread. Overround-normalized books land near 59/41, Kalshi ~58/42, the Elo
+ *  bracket at nudge=0 ~56/44, and Opta (conditioned on the final matchup, see above)
+ *  ~57/43 — still four independent anchors inside a five-point band, all inside the
+ *  published range, so no reason to move it. France and England resolved to 0. */
 export const AUTHOR_RANGES: Record<string, { low: number; high: number }> = {
   ESP: { low: 0.55, high: 0.6 },
   ARG: { low: 0.4, high: 0.45 },

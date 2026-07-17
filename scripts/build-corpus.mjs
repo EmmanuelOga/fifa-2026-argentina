@@ -1,12 +1,14 @@
 /**
- * Compiles the content layer + research findings into a compact bilingual text
+ * Compiles the reader-facing content layer into a compact bilingual text
  * corpus that the /api/ask Cloudflare Pages Function grounds its answers in.
+ * Only reader-facing content goes in (CLAUDE.md content rule): research/
+ * findings.md is pipeline-internal and must NOT be compiled into the corpus.
  * Runs before `astro build` (see package.json). Output: functions/api/corpus.json
  *
  * This keeps the chat answering from the SAME single source of truth as the site,
  * so a content edit propagates to the assistant on the next build.
  */
-import { readFileSync, writeFileSync, mkdirSync, readdirSync } from 'node:fs';
+import { readFileSync, writeFileSync, mkdirSync, readdirSync, existsSync } from 'node:fs';
 import { fileURLToPath } from 'node:url';
 import { dirname, join } from 'node:path';
 
@@ -14,19 +16,21 @@ const here = dirname(fileURLToPath(import.meta.url));
 const root = join(here, '..');
 const read = (p) => JSON.parse(readFileSync(join(root, p), 'utf8'));
 
-/** Newest dated research folder — so a fresh `update:research` run flows into the build. */
+/** Newest dated research folder WITH a snapshot — so a fresh `update:research`
+ * run flows into the build, but a folder still being written doesn't break it. */
 const latestResearch = readdirSync(join(root, 'research'))
   .filter((d) => /^\d{4}-\d{2}-\d{2}$/.test(d))
   .sort()
-  .at(-1);
+  .reverse()
+  .find((d) => existsSync(join(root, 'research', d, 'snapshot.json')));
 
 const sections = read('src/content/sections.json');
+const author = read('src/content/author.json');
 const timeline = read('src/content/timeline.json');
 const hypotheses = read('src/content/hypotheses.json');
 const precedents = read('src/content/precedents.json');
 const sources = read('src/content/sources.json');
 const updates = read('src/content/updates.json');
-const findings = readFileSync(join(root, `research/${latestResearch}/findings.md`), 'utf8');
 const snapshot = read(`research/${latestResearch}/snapshot.json`);
 
 function buildLocale(loc) {
@@ -62,9 +66,17 @@ function buildLocale(loc) {
     out.push(`### ${c.name} (${p.year}, ${p.tag})\n${c.summary}\nLESSON: ${c.lesson}`);
   }
 
-  out.push('\n## KEY NUMBERS (who wins, as of snapshot)');
+  out.push('\n## KEY NUMBERS (who wins, as of snapshot — all SPECULATIVE)');
+  const title = snapshot.predictions?.titleProbabilities ?? {};
+  const alive = Object.entries(title).filter(([, v]) => (v.authorHigh ?? 0) > 0);
   out.push(
-    'Opta title: France 34.0%, Spain 23.4%, England 21.9%, Argentina 20.6%. Author synthesized ranges: France 33–40%, Spain 20–24%, England 18–23%, Argentina 17–22%. Bookmakers: France +140 favorite. Silver Bulletin per-team numbers are paywalled.',
+    alive
+      .map(
+        ([team, v]) =>
+          `${team}: author range ${(v.authorLow * 100).toFixed(0)}–${(v.authorHigh * 100).toFixed(0)}%` +
+          (v.opta ? `, Opta-derived ${(v.opta * 100).toFixed(1)}%` : ''),
+      )
+      .join('. ') + '. Silver Bulletin per-team numbers are paywalled.',
   );
 
   out.push('\n## SOURCES');
@@ -73,14 +85,14 @@ function buildLocale(loc) {
     out.push(`- ${c.title}${s.url ? ` <${s.url}>` : ' (link unverified)'} — ${c.why}`);
   }
 
-  out.push('\n## RE-RUN LOG');
+  out.push('\n## ANALYSIS DIARY (dated blog posts, oldest first)');
   for (const u of updates) {
     const c = u.content[loc];
-    out.push(`### ${c.title}\n${c.summary}\n${c.body.join('\n')}`);
+    out.push(`### [${u.date}] ${c.title}\n${c.summary}\n${c.body.join('\n')}`);
   }
 
-  out.push('\n## VERIFICATION NOTES / CORRECTIONS (internal, English)');
-  out.push(findings);
+  out.push('\n## ABOUT THE AUTHOR (Emmanuel Oga)');
+  out.push(author[loc]);
 
   return out.join('\n');
 }

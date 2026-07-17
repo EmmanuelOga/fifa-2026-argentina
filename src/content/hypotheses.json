@@ -61,6 +61,7 @@
     "thread": "financial",
     "sources": [
       "lanacion-fbi",
+      "lanacion-fbi-inside",
       "miami-herald",
       "doj-fifagate-2015",
       "doj-arzuaga",
@@ -76,6 +77,7 @@
         "forPoints": [
           "La Nación plus Miami Herald sourcing — a newspaper of record and independent US corroboration.",
           "Specific, deepening detail (a Florida company, five named US banks, a reported three-hour witness interview) plus a perfect FIFA-Gate jurisdictional fit.",
+          "The probe has reportedly turned inward, reaching former AFA insiders and naming federal prosecutors across two US districts: a deepening inquiry, even if still short of any charge.",
           "Tapia's separate Argentine charges and the December 2025 raids show real regulatory heat."
         ],
         "againstPoints": [
@@ -94,6 +96,7 @@
         "forPoints": [
           "Lo firman La Nación y el Miami Herald — un diario de referencia más corroboración estadounidense independiente.",
           "Detalle concreto que se profundiza — una empresa de Florida, cinco bancos de EE.UU. con nombre, una entrevista de unas tres horas a un testigo — más un encaje jurisdiccional perfecto con el FIFA-Gate.",
+          "La pesquisa habría mirado hacia adentro — llegando a exdirigentes de la AFA y con fiscales federales de dos distritos de EE.UU. con nombre — una investigación que se profundiza, aun sin ningún cargo.",
           "Los cargos que Tapia ya tiene por separado en Argentina y los allanamientos de diciembre de 2025 muestran presión real."
         ],
         "againstPoints": [
@@ -166,7 +169,9 @@
       "ifab-laws",
       "ibtimes-refs",
       "espn-eng-arg",
-      "aljazeera-elfath"
+      "aljazeera-elfath",
+      "forbes-favoritism",
+      "football365-favoritism"
     ],
     "content": {
       "en": {
@@ -179,7 +184,8 @@
           "Correct rule-based explanations existed for the viral moments (the Cape Verde restart, the Embolo dive).",
           "Collina's on-record rejection of bias is a direct, accountable statement, not spin.",
           "Semifinal 1 brought its own disputed penalty (Spain's opener against France) without Argentina on the pitch: the outrage goes wherever the World Cup goes.",
-          "Semifinal 2 was the cleanest test yet: a pre-loaded 'lucky charm' narrative about the referee, then a match with no disputed call worth a headline. Argentina won it late while dominating on xG. In their biggest match yet, the pattern regressed to the mean."
+          "Semifinal 2 was the cleanest test yet: a pre-loaded 'lucky charm' narrative about the referee, then a match with no disputed call worth a headline. Argentina won it late while dominating on xG. In their biggest match yet, the pattern regressed to the mean.",
+          "By final week the narrative had crested into a petition to expel Argentina with millions of signatures, a textbook perception cascade, even as FIFA's Collina again called the bias claims unfounded and analysts noted England, Germany and Iran drew contentious VAR calls of their own."
         ],
         "againstPoints": [
           "The penalty outlier stubbornly persists across two tournaments.",
@@ -198,7 +204,8 @@
           "Los momentos virales tenían su explicación reglamentaria correcta (la reanudación ante Cabo Verde, el clavado de Embolo).",
           "Que Collina rechace el sesgo, y quede en actas, es una declaración directa y que se hace cargo, no verso.",
           "La primera semifinal trajo su propio incendio por un penal — el discutido de España ante Francia — con Argentina bien lejos: la lupa sigue al torneo, no a una camiseta.",
-          "La segunda semifinal fue la prueba más limpia hasta ahora: un relato precargado del 'amuleto' sobre el árbitro, y después un partido sin un solo fallo discutido digno de título — Argentina lo ganó sobre el final dominando en xG. Bajo las luces más brillantes hasta acá, el patrón volvió a la media."
+          "La segunda semifinal fue la prueba más limpia hasta ahora: un relato precargado del 'amuleto' sobre el árbitro, y después un partido sin un solo fallo discutido digno de título — Argentina lo ganó sobre el final dominando en xG. Bajo las luces más brillantes hasta acá, el patrón volvió a la media.",
+          "En la semana de la final el relato llegó a su pico — una petición con millones de firmas para expulsar a Argentina, el manual de la cascada de percepción — mientras Collina, desde la FIFA, volvía a llamar infundadas las acusaciones y varios analistas remarcaban que Inglaterra, Alemania e Irán también se comieron sus propios fallos discutidos del VAR."
         ],
         "againstPoints": [
           "El dato atípico de los penales sigue ahí, cabezadura, en dos torneos.",

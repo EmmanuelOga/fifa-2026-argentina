@@ -1,5 +1,5 @@
 {
-  "fetchedAt": "2026-07-15",
+  "fetchedAt": "2026-07-17",
   "source": "ESPN match pages (public JSON)",
   "matches": {
     "sf-fra-esp": {
@@ -61,12 +61,12 @@
       ],
       "stats": {
         "ENG": {
-          "possessionPct": "35.7",
+          "possessionPct": "35.8",
           "totalShots": "5",
           "shotsOnTarget": "2"
         },
         "ARG": {
-          "possessionPct": "64.3",
+          "possessionPct": "64.2",
           "totalShots": "15",
           "shotsOnTarget": "5"
         }

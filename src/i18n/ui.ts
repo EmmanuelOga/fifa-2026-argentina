@@ -33,6 +33,8 @@ type Dict = {
   skipToContent: string;
   primaryNav: string;
   switchTo: string;
+  nerdMode: string;
+  nerdHint: string;
   snapshotAs: string;
   speculative: string;
   forLabel: string;
@@ -74,6 +76,8 @@ type Dict = {
     reset: string;
     presets: string;
     speculativeToy: string;
+    nerdCta: string;
+    nerdCtaBtn: string;
     // conspiracy
     peopleSilent: string;
     leakChance: string;
@@ -114,6 +118,8 @@ export const UI: Record<Locale, Dict> = {
     skipToContent: 'Skip to content',
     primaryNav: 'Primary',
     switchTo: 'Español',
+    nerdMode: 'Nerd mode',
+    nerdHint: 'Reveal the priors, likelihood ratios and the full math everywhere.',
     snapshotAs: 'Snapshot as of',
     speculative: 'Speculative',
     forLabel: 'For',
@@ -148,11 +154,11 @@ export const UI: Record<Locale, Dict> = {
         'Was the Embolo red card correct?',
       ],
       disclaimer:
-        'Answers come only from this site’s compiled research and are opinion/analysis, not reporting. Every probability is speculative.',
+        'Answers come only from this site’s compiled research and are opinion/analysis, not reporting. Every probability is speculative. Questions are logged anonymously to improve the research.',
       unanswered:
-        'I couldn’t answer that from the research on this site. I’ve logged the question for the next re-run — thanks for the nudge.',
+        'I couldn’t answer that from the research on this site. I’ve noted the question so it can be covered in a future update — thanks for the nudge.',
       unavailable:
-        'The live chat needs the Cloudflare deployment (with an API key configured). In the meantime, browse the tabs or reach out on LinkedIn.',
+        'The live chat isn’t available right now. In the meantime, browse the tabs or reach out on LinkedIn.',
       error: 'Something went wrong reaching the assistant. Please try again.',
       rateLimited:
         'Easy there! That’s a lot of questions in a row — give it a few minutes and try again.',
@@ -164,6 +170,8 @@ export const UI: Record<Locale, Dict> = {
       reset: 'Reset',
       presets: 'Presets',
       speculativeToy: 'Speculative — an intuition pump, not a forecast.',
+      nerdCta: 'Curious how this actually works — the formulas, the priors, the assumptions?',
+      nerdCtaBtn: 'Turn on nerd mode 🤓',
       peopleSilent: 'People who must stay silent',
       leakChance: 'Each person’s yearly chance of exposing it',
       years: 'Years the secret must hold',
@@ -199,6 +207,8 @@ export const UI: Record<Locale, Dict> = {
     skipToContent: 'Saltar al contenido',
     primaryNav: 'Principal',
     switchTo: 'English',
+    nerdMode: 'Modo nerd',
+    nerdHint: 'Mostrá los priors, los likelihood ratios y toda la matemática.',
     snapshotAs: 'Foto al',
     speculative: 'Especulativo',
     forLabel: 'A favor',
@@ -233,11 +243,11 @@ export const UI: Record<Locale, Dict> = {
         '¿Estuvo bien la roja a Embolo?',
       ],
       disclaimer:
-        'Las respuestas salen solo de la investigación compilada de este sitio y son opinión/análisis, no periodismo. Toda probabilidad es especulativa.',
+        'Las respuestas salen solo de la investigación compilada de este sitio y son opinión/análisis, no periodismo. Toda probabilidad es especulativa. Las preguntas se guardan de forma anónima para mejorar la investigación.',
       unanswered:
-        'No pude responder eso con la investigación de este sitio. Registré la pregunta para la próxima re-corrida — gracias por el empujón.',
+        'No pude responder eso con la investigación de este sitio. Anoté la pregunta para cubrirla en una próxima actualización — gracias por el empujón.',
       unavailable:
-        'El chat en vivo necesita el despliegue en Cloudflare (con una API key configurada). Mientras tanto, recorré las pestañas o escribime por LinkedIn.',
+        'El chat en vivo no está disponible por ahora. Mientras tanto, recorré las pestañas o escribime por LinkedIn.',
       error: 'Algo salió mal al contactar al asistente. Probá de nuevo.',
       rateLimited:
         '¡Tranquilo, che! Son muchas preguntas seguidas — esperá unos minutos y probá de nuevo.',
@@ -249,6 +259,8 @@ export const UI: Record<Locale, Dict> = {
       reset: 'Reiniciar',
       presets: 'Preajustes',
       speculativeToy: 'Especulativo — un empujón a la intuición, no un pronóstico.',
+      nerdCta: '¿Querés ver cómo funciona de verdad — las fórmulas, los priors, los supuestos?',
+      nerdCtaBtn: 'Activar modo nerd 🤓',
       peopleSilent: 'Personas que deben callar',
       leakChance: 'Chance anual de que cada una lo exponga',
       years: 'Años que el secreto debe aguantar',

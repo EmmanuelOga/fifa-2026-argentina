@@ -5,8 +5,14 @@
     "tier": 1,
     "url": "https://inside.fifa.com/refereeing/media-releases/fifa-world-cup-2026-match-referees-appointed",
     "content": {
-      "en": { "title": "FIFA — Match officials appointed for the 2026 World Cup", "why": "The official 'Team One' pool: 52 referees, 88 assistants, 30 video officials. Establishes how appointments actually work." },
-      "es": { "title": "FIFA — Designación de árbitros para el Mundial 2026", "why": "El plantel oficial 'Team One': 52 árbitros, 88 asistentes, 30 oficiales de video. Acá se ve cómo funcionan de verdad las designaciones." }
+      "en": {
+        "title": "FIFA — Match officials appointed for the 2026 World Cup",
+        "why": "The official 'Team One' pool: 52 referees, 88 assistants, 30 video officials. Establishes how appointments actually work."
+      },
+      "es": {
+        "title": "FIFA — Designación de árbitros para el Mundial 2026",
+        "why": "El plantel oficial 'Team One': 52 árbitros, 88 asistentes, 30 oficiales de video. Acá se ve cómo funcionan de verdad las designaciones."
+      }
     }
   },
   {
@@ -15,8 +21,14 @@
     "tier": 1,
     "url": "https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/articles/argentina-switzerland-match-report-highlights",
     "content": {
-      "en": { "title": "FIFA — Argentina v Switzerland official match report", "why": "Primary record of the quarterfinal scoreline, goals and the Embolo dismissal." },
-      "es": { "title": "FIFA — Informe oficial del partido Argentina v Suiza", "why": "La fuente primaria del resultado, los goles y la expulsión de Embolo en el cuarto de final." }
+      "en": {
+        "title": "FIFA — Argentina v Switzerland official match report",
+        "why": "Primary record of the quarterfinal scoreline, goals and the Embolo dismissal."
+      },
+      "es": {
+        "title": "FIFA — Informe oficial del partido Argentina v Suiza",
+        "why": "La fuente primaria del resultado, los goles y la expulsión de Embolo en el cuarto de final."
+      }
     }
   },
   {
@@ -25,8 +37,14 @@
     "tier": 1,
     "unverified": true,
     "content": {
-      "en": { "title": "FIFA / Collina — rejection of the Egypt bias allegations", "why": "FIFA's refereeing chief publicly rejected the favoritism claims. On-record integrity statement (locate via FIFA media releases / wire reports)." },
-      "es": { "title": "FIFA / Collina — rechazo a las acusaciones de favoritismo de Egipto", "why": "El jefe de arbitraje de la FIFA rechazó las acusaciones en público. Declaración de integridad en actas (buscala en los comunicados de FIFA o en cables de agencias)." }
+      "en": {
+        "title": "FIFA / Collina — rejection of the Egypt bias allegations",
+        "why": "FIFA's refereeing chief publicly rejected the favoritism claims. On-record integrity statement (locate via FIFA media releases / wire reports)."
+      },
+      "es": {
+        "title": "FIFA / Collina — rechazo a las acusaciones de favoritismo de Egipto",
+        "why": "El jefe de arbitraje de la FIFA rechazó las acusaciones en público. Declaración de integridad en actas (buscala en los comunicados de FIFA o en cables de agencias)."
+      }
     }
   },
   {
@@ -35,8 +53,14 @@
     "tier": 1,
     "url": "https://www.theifab.com/laws/latest/the-referee/",
     "content": {
-      "en": { "title": "IFAB — Laws of the Game, Law 5 (bleeding player)", "why": "The bleeding-player rule that the viral Cape Verde restart correctly applied." },
-      "es": { "title": "IFAB — Reglas de Juego, Regla 5 (jugador sangrando)", "why": "La regla del jugador que sangra, bien aplicada en esa reanudación ante Cabo Verde que se hizo viral." }
+      "en": {
+        "title": "IFAB — Laws of the Game, Law 5 (bleeding player)",
+        "why": "The bleeding-player rule that the viral Cape Verde restart correctly applied."
+      },
+      "es": {
+        "title": "IFAB — Reglas de Juego, Regla 5 (jugador sangrando)",
+        "why": "La regla del jugador que sangra, bien aplicada en esa reanudación ante Cabo Verde que se hizo viral."
+      }
     }
   },
   {
@@ -45,8 +69,14 @@
     "tier": 1,
     "url": "https://inside.fifa.com/media-releases/ifab-introduces-further-measures-improve-match-flow-player-behaviour",
     "content": {
-      "en": { "title": "IFAB — 2026/27 protocol changes (second-yellow VAR review)", "why": "The new provision letting VAR flag a clearly-wrong second-caution red — the exact mechanism used on Embolo. Narrow scope." },
-      "es": { "title": "IFAB — Cambios de protocolo 2026/27 (revisión VAR de segunda amarilla)", "why": "La nueva norma que deja al VAR marcar una segunda amarilla claramente errónea: justo el mecanismo que se usó con Embolo. Alcance bien acotado." }
+      "en": {
+        "title": "IFAB — 2026/27 protocol changes (second-yellow VAR review)",
+        "why": "The new provision letting VAR flag a clearly-wrong second-caution red — the exact mechanism used on Embolo. Narrow scope."
+      },
+      "es": {
+        "title": "IFAB — Cambios de protocolo 2026/27 (revisión VAR de segunda amarilla)",
+        "why": "La nueva norma que deja al VAR marcar una segunda amarilla claramente errónea: justo el mecanismo que se usó con Embolo. Alcance bien acotado."
+      }
     }
   },
   {
@@ -55,8 +85,14 @@
     "tier": 1,
     "url": "https://www.justice.gov/usao-edny/pr/nine-fifa-officials-and-five-corporate-executives-indicted-racketeering-conspiracy-and",
     "content": {
-      "en": { "title": "US DOJ (EDNY) — 2015 FIFA racketeering indictment", "why": "The FIFA-Gate template: $150M+ in bribes routed through US banks. Why the money angle has real jurisdictional teeth." },
-      "es": { "title": "Departamento de Justicia de EE.UU. (EDNY) — imputación FIFA-Gate 2015", "why": "El molde del FIFA-Gate: más de US$150M en sobornos que pasaron por bancos de EE.UU. Por eso la vía del dinero tiene jurisdicción de verdad." }
+      "en": {
+        "title": "US DOJ (EDNY) — 2015 FIFA racketeering indictment",
+        "why": "The FIFA-Gate template: $150M+ in bribes routed through US banks. Why the money angle has real jurisdictional teeth."
+      },
+      "es": {
+        "title": "Departamento de Justicia de EE.UU. (EDNY) — imputación FIFA-Gate 2015",
+        "why": "El molde del FIFA-Gate: más de US$150M en sobornos que pasaron por bancos de EE.UU. Por eso la vía del dinero tiene jurisdicción de verdad."
+      }
     }
   },
   {
@@ -65,8 +101,14 @@
     "tier": 1,
     "url": "https://www.justice.gov/usao-edny/pr/former-managing-director-swiss-bank-pleads-guilty-money-laundering-charge-connection",
     "content": {
-      "en": { "title": "US DOJ — Jorge Arzuaga guilty plea", "why": "Banker admitted moving $25M+ for 'Soccer Official #1' — identified in reporting as the late AFA president Julio Grondona (never charged)." },
-      "es": { "title": "Departamento de Justicia de EE.UU. — declaración de culpabilidad de Jorge Arzuaga", "why": "Un banquero admitió haber movido más de US$25M para el 'Directivo de Fútbol N.º 1', que la prensa identificó con el fallecido Julio Grondona (nunca imputado)." }
+      "en": {
+        "title": "US DOJ — Jorge Arzuaga guilty plea",
+        "why": "Banker admitted moving $25M+ for 'Soccer Official #1' — identified in reporting as the late AFA president Julio Grondona (never charged)."
+      },
+      "es": {
+        "title": "Departamento de Justicia de EE.UU. — declaración de culpabilidad de Jorge Arzuaga",
+        "why": "Un banquero admitió haber movido más de US$25M para el 'Directivo de Fútbol N.º 1', que la prensa identificó con el fallecido Julio Grondona (nunca imputado)."
+      }
     }
   },
   {
@@ -75,8 +117,14 @@
     "tier": 1,
     "url": "https://inside.fifa.com/legal/football-regulatory/media-releases/fifa-statement-on-cas-decision-relating-to-match-official-joseph-odart-2926374",
     "content": {
-      "en": { "title": "CAS 2017/A/5173 — Lamptey lifetime ban upheld", "why": "A referee proven to have manipulated a World Cup qualifier — a real fix, and a betting job, not an organizer favoring a team." },
-      "es": { "title": "TAS 2017/A/5173 — se confirma la inhabilitación de por vida a Lamptey", "why": "Un árbitro que quedó probado manipulando una eliminatoria mundialista: un arreglo real, ligado a las apuestas, no un organizador favoreciendo a una selección." }
+      "en": {
+        "title": "CAS 2017/A/5173 — Lamptey lifetime ban upheld",
+        "why": "A referee proven to have manipulated a World Cup qualifier — a real fix, and a betting job, not an organizer favoring a team."
+      },
+      "es": {
+        "title": "TAS 2017/A/5173 — se confirma la inhabilitación de por vida a Lamptey",
+        "why": "Un árbitro que quedó probado manipulando una eliminatoria mundialista: un arreglo real, ligado a las apuestas, no un organizador favoreciendo a una selección."
+      }
     }
   },
   {
@@ -85,8 +133,14 @@
     "tier": 2,
     "url": "https://www.lanacion.com.ar/politica/agentes-del-fbi-y-fiscales-federales-toman-testimonios-para-investigar-operaciones-financieras-de-la-afa-en-estados-unidos-nid06072026/",
     "content": {
-      "en": { "title": "La Nación (Olivera & Alconada Mon) — the FBI/AFA report", "why": "The origin point of the story. Newspaper of record; Alconada Mon has a strong AFA/FIFA investigative track record. The single strongest-sourced thread." },
-      "es": { "title": "La Nación (Olivera y Alconada Mon) — la nota sobre el FBI y la AFA", "why": "Donde arranca todo. Diario de referencia; Alconada Mon tiene un largo camino investigando a la AFA y la FIFA. El hilo mejor documentado de todos." }
+      "en": {
+        "title": "La Nación (Olivera & Alconada Mon) — the FBI/AFA report",
+        "why": "The origin point of the story. Newspaper of record; Alconada Mon has a strong AFA/FIFA investigative track record. The single strongest-sourced thread."
+      },
+      "es": {
+        "title": "La Nación (Olivera y Alconada Mon) — la nota sobre el FBI y la AFA",
+        "why": "Donde arranca todo. Diario de referencia; Alconada Mon tiene un largo camino investigando a la AFA y la FIFA. El hilo mejor documentado de todos."
+      }
     }
   },
   {
@@ -95,8 +149,14 @@
     "tier": 2,
     "url": "https://www.tampabay.com/news/florida/2026/07/11/argentine-football-association-investigation-miami-florida/",
     "content": {
-      "en": { "title": "Miami Herald — Florida firm linked to the FBI probe (via Tampa Bay Times)", "why": "Independent US corroboration citing two law-enforcement sources; it later put the sum flagged as 'potentially irregular' at roughly $90M. Original is paywalled; linked here via syndication." },
-      "es": { "title": "Miami Herald — firma de Florida vinculada a la pesquisa del FBI (vía Tampa Bay Times)", "why": "Corroboración estadounidense independiente, con dos fuentes policiales; después ubicó en unos US$90M el monto marcado como 'potencialmente irregular'. El original es pago; lo enlazamos vía sindicación." }
+      "en": {
+        "title": "Miami Herald — Florida firm linked to the FBI probe (via Tampa Bay Times)",
+        "why": "Independent US corroboration citing two law-enforcement sources; it later put the sum flagged as 'potentially irregular' at roughly $90M. Original is paywalled; linked here via syndication."
+      },
+      "es": {
+        "title": "Miami Herald — firma de Florida vinculada a la pesquisa del FBI (vía Tampa Bay Times)",
+        "why": "Corroboración estadounidense independiente, con dos fuentes policiales; después ubicó en unos US$90M el monto marcado como 'potencialmente irregular'. El original es pago; lo enlazamos vía sindicación."
+      }
     }
   },
   {
@@ -105,8 +165,14 @@
     "tier": 2,
     "url": "https://www.lanacion.com.ar/politica/confirmaron-los-procesamientos-de-tapia-toviggino-y-la-afa-por-evasion-de-impuestos-nid26062026/",
     "content": {
-      "en": { "title": "La Nación — Tapia processing upheld on appeal (Argentine case)", "why": "The best-documented, court-record part of the story: the domestic ~$12.7M social-security case, distinct from the US inquiry." },
-      "es": { "title": "La Nación — se confirma el procesamiento de Tapia en apelación (causa argentina)", "why": "La parte mejor documentada, la que tiene expediente: la causa local por ~US$12,7M en aportes, que no es lo mismo que la pesquisa en EE.UU." }
+      "en": {
+        "title": "La Nación — Tapia processing upheld on appeal (Argentine case)",
+        "why": "The best-documented, court-record part of the story: the domestic ~$12.7M social-security case, distinct from the US inquiry."
+      },
+      "es": {
+        "title": "La Nación — se confirma el procesamiento de Tapia en apelación (causa argentina)",
+        "why": "La parte mejor documentada, la que tiene expediente: la causa local por ~US$12,7M en aportes, que no es lo mismo que la pesquisa en EE.UU."
+      }
     }
   },
   {
@@ -115,8 +181,14 @@
     "tier": 2,
     "url": "https://www.cnn.com/2025/12/09/americas/argentina-football-raid-latam-intl",
     "content": {
-      "en": { "title": "CNN — December 2025 raids on AFA and clubs", "why": "Confirms the Dec 9 2025 raids on AFA HQ and 17 clubs in a separate money-laundering case." },
-      "es": { "title": "CNN — allanamientos de diciembre de 2025 a la AFA y clubes", "why": "Confirma los allanamientos del 9/12/2025 a la sede de la AFA y a 17 clubes, en otra causa por lavado." }
+      "en": {
+        "title": "CNN — December 2025 raids on AFA and clubs",
+        "why": "Confirms the Dec 9 2025 raids on AFA HQ and 17 clubs in a separate money-laundering case."
+      },
+      "es": {
+        "title": "CNN — allanamientos de diciembre de 2025 a la AFA y clubes",
+        "why": "Confirma los allanamientos del 9/12/2025 a la sede de la AFA y a 17 clubes, en otra causa por lavado."
+      }
     }
   },
   {
@@ -125,8 +197,14 @@
     "tier": 2,
     "url": "https://www.wlrn.org/americas/2026-07-11/federal-probe-centers-on-argentine-soccer-federation-for-alleged-money-laundering-in-miami",
     "content": {
-      "en": { "title": "WLRN — federal probe centers on AFA (FBI declined comment)", "why": "US public-radio summary; confirms the FBI Miami Field Office declined to comment and that no charges exist." },
-      "es": { "title": "WLRN — la pesquisa federal se centra en la AFA (el FBI no hizo comentarios)", "why": "Resumen de la radio pública de EE.UU.; confirma que la oficina del FBI en Miami no quiso comentar y que no hay cargos." }
+      "en": {
+        "title": "WLRN — federal probe centers on AFA (FBI declined comment)",
+        "why": "US public-radio summary; confirms the FBI Miami Field Office declined to comment and that no charges exist."
+      },
+      "es": {
+        "title": "WLRN — la pesquisa federal se centra en la AFA (el FBI no hizo comentarios)",
+        "why": "Resumen de la radio pública de EE.UU.; confirma que la oficina del FBI en Miami no quiso comentar y que no hay cargos."
+      }
     }
   },
   {
@@ -135,8 +213,14 @@
     "tier": 2,
     "url": "https://www.cbssports.com/soccer/news/fbi-investigates-argentina-football-association-alleged-money-laundering-in-u-s-2026/",
     "content": {
-      "en": { "title": "CBS Sports — explainer on the FBI/AFA probe", "why": "A clear general-audience summary of the reported inquiry and its limits." },
-      "es": { "title": "CBS Sports — explicación de la pesquisa FBI/AFA", "why": "Un resumen claro, para público general, de lo que se reportó y de hasta dónde llega." }
+      "en": {
+        "title": "CBS Sports — explainer on the FBI/AFA probe",
+        "why": "A clear general-audience summary of the reported inquiry and its limits."
+      },
+      "es": {
+        "title": "CBS Sports — explicación de la pesquisa FBI/AFA",
+        "why": "Un resumen claro, para público general, de lo que se reportó y de hasta dónde llega."
+      }
     }
   },
   {
@@ -145,8 +229,14 @@
     "tier": 2,
     "url": "https://www.nbcdfw.com/world-cup/referee-with-controversial-history-on-argentina-switzerland-2026-fifa-world-cup-match/4047663/",
     "content": {
-      "en": { "title": "NBC DFW — the Pinheiro appointment scrutiny", "why": "Context on why the quarterfinal referee's appointment drew debate." },
-      "es": { "title": "NBC DFW — el escrutinio a la designación de Pinheiro", "why": "El contexto de por qué la designación del árbitro del cuarto de final dio tanto que hablar." }
+      "en": {
+        "title": "NBC DFW — the Pinheiro appointment scrutiny",
+        "why": "Context on why the quarterfinal referee's appointment drew debate."
+      },
+      "es": {
+        "title": "NBC DFW — el escrutinio a la designación de Pinheiro",
+        "why": "El contexto de por qué la designación del árbitro del cuarto de final dio tanto que hablar."
+      }
     }
   },
   {
@@ -155,8 +245,14 @@
     "tier": 2,
     "url": "https://sports.yahoo.com/articles/fifa-argentina-problem-why-fans-203519501.html",
     "content": {
-      "en": { "title": "Yahoo Sports — 'FIFA's Argentina Problem'", "why": "Represents the perception side: why many fans and pundits raised eyebrows, fairly summarized." },
-      "es": { "title": "Yahoo Sports — 'El problema de la FIFA con Argentina'", "why": "El lado de la percepción: por qué a tantos hinchas y analistas se les levantó la ceja, contado sin mala leche." }
+      "en": {
+        "title": "Yahoo Sports — 'FIFA's Argentina Problem'",
+        "why": "Represents the perception side: why many fans and pundits raised eyebrows, fairly summarized."
+      },
+      "es": {
+        "title": "Yahoo Sports — 'El problema de la FIFA con Argentina'",
+        "why": "El lado de la percepción: por qué a tantos hinchas y analistas se les levantó la ceja, contado sin mala leche."
+      }
     }
   },
   {
@@ -165,8 +261,14 @@
     "tier": 2,
     "url": "https://www.espn.com/soccer/match/_/gameId/760513/switzerland-argentina",
     "content": {
-      "en": { "title": "ESPN — Argentina 3–1 Switzerland match report", "why": "Independent match record and detail on the Embolo red card." },
-      "es": { "title": "ESPN — crónica de Argentina 3–1 Suiza", "why": "Un registro independiente del partido, con el detalle de la roja a Embolo." }
+      "en": {
+        "title": "ESPN — Argentina 3–1 Switzerland match report",
+        "why": "Independent match record and detail on the Embolo red card."
+      },
+      "es": {
+        "title": "ESPN — crónica de Argentina 3–1 Suiza",
+        "why": "Un registro independiente del partido, con el detalle de la roja a Embolo."
+      }
     }
   },
   {
@@ -175,8 +277,14 @@
     "tier": 2,
     "url": "https://www.aljazeera.com/sports/2026/7/12/argentina-defeat-switzerland-to-set-up-england-semifinal-at-world-cup-2026",
     "content": {
-      "en": { "title": "Al Jazeera — Argentina beat Switzerland, set up England semifinal", "why": "Neutral international coverage confirming the result and the semifinal draw." },
-      "es": { "title": "Al Jazeera — Argentina vence a Suiza y jugará la semi con Inglaterra", "why": "Cobertura internacional neutral que confirma el resultado y el cruce de semis." }
+      "en": {
+        "title": "Al Jazeera — Argentina beat Switzerland, set up England semifinal",
+        "why": "Neutral international coverage confirming the result and the semifinal draw."
+      },
+      "es": {
+        "title": "Al Jazeera — Argentina vence a Suiza y jugará la semi con Inglaterra",
+        "why": "Cobertura internacional neutral que confirma el resultado y el cruce de semis."
+      }
     }
   },
   {
@@ -185,8 +293,14 @@
     "tier": 2,
     "url": "https://sports.yahoo.com/articles/argentine-soccer-body-poured-millions-233709329.html",
     "content": {
-      "en": { "title": "AP / Yahoo Sports — 'Argentine soccer body has poured millions into Miami'", "why": "Wire coverage that adds the concrete detail: the five US banks in the flow, the ~$90M flagged figure, and the reported witness interview. No charges filed." },
-      "es": { "title": "AP / Yahoo Sports — 'La AFA volcó millones en Miami'", "why": "Cobertura de agencia que suma el detalle concreto: los cinco bancos de EE.UU. del circuito, la cifra de ~US$90M marcada y la entrevista al testigo. Sin cargos presentados." }
+      "en": {
+        "title": "AP / Yahoo Sports — 'Argentine soccer body has poured millions into Miami'",
+        "why": "Wire coverage that adds the concrete detail: the five US banks in the flow, the ~$90M flagged figure, and the reported witness interview. No charges filed."
+      },
+      "es": {
+        "title": "AP / Yahoo Sports — 'La AFA volcó millones en Miami'",
+        "why": "Cobertura de agencia que suma el detalle concreto: los cinco bancos de EE.UU. del circuito, la cifra de ~US$90M marcada y la entrevista al testigo. Sin cargos presentados."
+      }
     }
   },
   {
@@ -195,8 +309,14 @@
     "tier": 2,
     "url": "https://www.snopes.com/news/2026/07/10/fbi-fraud-case-argentina-soccer/",
     "content": {
-      "en": { "title": "Snopes — fact-check of the FBI/AFA probe reporting", "why": "Independent fact-check: the reporting is real and credible, but it's a preliminary inquiry and no charges have been filed." },
-      "es": { "title": "Snopes — verificación de los reportes sobre la pesquisa FBI/AFA", "why": "Una verificación independiente que confirma que los reportes existen y son creíbles, pero remarca los límites: es una pesquisa preliminar y no hay cargos presentados." }
+      "en": {
+        "title": "Snopes — fact-check of the FBI/AFA probe reporting",
+        "why": "Independent fact-check: the reporting is real and credible, but it's a preliminary inquiry and no charges have been filed."
+      },
+      "es": {
+        "title": "Snopes — verificación de los reportes sobre la pesquisa FBI/AFA",
+        "why": "Una verificación independiente que confirma que los reportes existen y son creíbles, pero remarca los límites: es una pesquisa preliminar y no hay cargos presentados."
+      }
     }
   },
   {
@@ -205,8 +325,14 @@
     "tier": 2,
     "url": "https://www.espn.com/soccer/match/_/gameId/760514/spain-france",
     "content": {
-      "en": { "title": "ESPN — France 0–2 Spain semifinal match report", "why": "Independent record of semifinal 1: the Oyarzabal penalty, Porro's goal, the xG gap, and referee Iván Barton." },
-      "es": { "title": "ESPN — crónica de la semifinal Francia 0–2 España", "why": "Registro independiente de la primera semi: el penal de Oyarzabal, el gol de Porro, la diferencia de xG y el árbitro Iván Barton." }
+      "en": {
+        "title": "ESPN — France 0–2 Spain semifinal match report",
+        "why": "Independent record of semifinal 1: the Oyarzabal penalty, Porro's goal, the xG gap, and referee Iván Barton."
+      },
+      "es": {
+        "title": "ESPN — crónica de la semifinal Francia 0–2 España",
+        "why": "Registro independiente de la primera semi: el penal de Oyarzabal, el gol de Porro, la diferencia de xG y el árbitro Iván Barton."
+      }
     }
   },
   {
@@ -215,8 +341,14 @@
     "tier": 2,
     "url": "https://www.ibtimes.co.uk/controversial-officiating-spain-france-world-cup-semifinal-1808747",
     "content": {
-      "en": { "title": "IBTimes UK — 'World Cup referees under a microscope'", "why": "Connects the Spain–France penalty debate to the Argentina-favoritism discourse — evidence that officiating scrutiny is tournament-wide, not team-specific." },
-      "es": { "title": "IBTimes UK — 'Los árbitros del Mundial bajo la lupa'", "why": "Conecta el debate por el penal de España–Francia con el discurso del favoritismo a Argentina — prueba de que la lupa arbitral es de todo el torneo, no de una camiseta." }
+      "en": {
+        "title": "IBTimes UK — 'World Cup referees under a microscope'",
+        "why": "Connects the Spain–France penalty debate to the Argentina-favoritism discourse — evidence that officiating scrutiny is tournament-wide, not team-specific."
+      },
+      "es": {
+        "title": "IBTimes UK — 'Los árbitros del Mundial bajo la lupa'",
+        "why": "Conecta el debate por el penal de España–Francia con el discurso del favoritismo a Argentina — prueba de que la lupa arbitral es de todo el torneo, no de una camiseta."
+      }
     }
   },
   {
@@ -225,8 +357,14 @@
     "tier": 2,
     "url": "https://sports.yahoo.com/articles/great-viewing-angle-ex-refs-052000744.html",
     "content": {
-      "en": { "title": "Yahoo Sports — Keith Hackett re-analyzes the Spain penalty", "why": "A former PGMOL chief reviews the footage and calls the disputed semifinal penalty correct — the expert counterweight to the outrage clips." },
-      "es": { "title": "Yahoo Sports — Keith Hackett vuelve sobre el penal de España", "why": "Un exjefe del arbitraje inglés revisa las imágenes y dice que el penal discutido estuvo bien cobrado — el contrapeso experto a los clips de indignación." }
+      "en": {
+        "title": "Yahoo Sports — Keith Hackett re-analyzes the Spain penalty",
+        "why": "A former PGMOL chief reviews the footage and calls the disputed semifinal penalty correct — the expert counterweight to the outrage clips."
+      },
+      "es": {
+        "title": "Yahoo Sports — Keith Hackett vuelve sobre el penal de España",
+        "why": "Un exjefe del arbitraje inglés revisa las imágenes y dice que el penal discutido estuvo bien cobrado — el contrapeso experto a los clips de indignación."
+      }
     }
   },
   {
@@ -235,8 +373,14 @@
     "tier": 2,
     "url": "https://www.espn.com/soccer/match/_/gameId/760515/argentina-england",
     "content": {
-      "en": { "title": "ESPN — England 1–2 Argentina semifinal match report", "why": "Independent record of semifinal 2: Gordon's opener, the Fernández and Martínez comeback, referee Ismail Elfath, and the xG gap (1.84 v 0.53)." },
-      "es": { "title": "ESPN — crónica de la semifinal Inglaterra 1–2 Argentina", "why": "Registro independiente de la segunda semi: el gol de Gordon, la remontada de Fernández y Martínez, el árbitro Ismail Elfath y la diferencia de xG (1,84 a 0,53)." }
+      "en": {
+        "title": "ESPN — England 1–2 Argentina semifinal match report",
+        "why": "Independent record of semifinal 2: Gordon's opener, the Fernández and Martínez comeback, referee Ismail Elfath, and the xG gap (1.84 v 0.53)."
+      },
+      "es": {
+        "title": "ESPN — crónica de la semifinal Inglaterra 1–2 Argentina",
+        "why": "Registro independiente de la segunda semi: el gol de Gordon, la remontada de Fernández y Martínez, el árbitro Ismail Elfath y la diferencia de xG (1,84 a 0,53)."
+      }
     }
   },
   {
@@ -245,8 +389,62 @@
     "tier": 2,
     "url": "https://www.aljazeera.com/sports/2026/7/14/fifa-world-cup-meet-ismail-elfath-referee-for-england-argentina-semifinal",
     "content": {
-      "en": { "title": "Al Jazeera — meet Ismail Elfath, the semifinal referee", "why": "Documents the pre-match 'Messi's lucky charm' narrative around the US referee — the perception storm that preceded a match with no officiating firestorm." },
-      "es": { "title": "Al Jazeera — quién es Ismail Elfath, el árbitro de la semifinal", "why": "Documenta el relato previo del 'amuleto de Messi' alrededor del árbitro estadounidense — la tormenta de percepción que precedió a un partido sin incendio arbitral." }
+      "en": {
+        "title": "Al Jazeera — meet Ismail Elfath, the semifinal referee",
+        "why": "Documents the pre-match 'Messi's lucky charm' narrative around the US referee — the perception storm that preceded a match with no officiating firestorm."
+      },
+      "es": {
+        "title": "Al Jazeera — quién es Ismail Elfath, el árbitro de la semifinal",
+        "why": "Documenta el relato previo del 'amuleto de Messi' alrededor del árbitro estadounidense — la tormenta de percepción que precedió a un partido sin incendio arbitral."
+      }
+    }
+  },
+  {
+    "id": "lanacion-fbi-inside",
+    "order": 37,
+    "tier": 2,
+    "url": "https://www.lanacion.com.ar/politica/el-fbi-busca-reconstruir-desde-adentro-como-operaba-la-afa-cita-a-exjerarquicos-y-avanza-sobre-el-nid13072026/",
+    "content": {
+      "en": {
+        "title": "La Nación — the FBI moves to reconstruct the AFA money circuit 'from the inside'",
+        "why": "The Jul 13–14 follow-up that moved the story: US investigators reaching former AFA insiders, three named federal prosecutors, an alleged 'cuevas' cash mechanism. Still no charges — the direction changed, not the legal status."
+      },
+      "es": {
+        "title": "La Nación — el FBI busca reconstruir el circuito de la AFA 'desde adentro'",
+        "why": "La continuación del 13–14 de julio que movió la historia: investigadores de EE.UU. llegando a exdirigentes de la AFA, tres fiscales federales con nombre, un presunto mecanismo de 'cuevas'. Todavía sin cargos — cambió la dirección, no el estatus legal."
+      }
+    }
+  },
+  {
+    "id": "forbes-favoritism",
+    "order": 38,
+    "tier": 2,
+    "url": "https://www.forbes.com/sites/conormurray/2026/07/15/why-some-accuse-fifa-of-favoring-argentina-ahead-of-world-cup-final/",
+    "content": {
+      "en": {
+        "title": "Forbes — 'Why Some Accuse FIFA Of Favoring Argentina'",
+        "why": "A fair summary of the final-week favoritism narrative and the multi-million-signature petition, centered on the Egypt match — the perception side, reported without endorsing it."
+      },
+      "es": {
+        "title": "Forbes — 'Por qué algunos acusan a la FIFA de favorecer a Argentina'",
+        "why": "Un resumen honesto del relato del favoritismo en la semana de la final y de la petición con millones de firmas, centrada en el partido con Egipto — el lado de la percepción, contado sin comprarlo."
+      }
+    }
+  },
+  {
+    "id": "football365-favoritism",
+    "order": 39,
+    "tier": 2,
+    "url": "https://www.football365.com/news/argentina-world-cup-conspiracy-theory-referees-fifa",
+    "content": {
+      "en": {
+        "title": "Football365 — the Argentina 'conspiracy' rebutted",
+        "why": "The counterweight: no egregious errors of the kind that draw a PGMOL apology, and England, Germany and Iran all suffered contentious VAR calls too — evidence the scrutiny is tournament-wide, not Argentina-specific."
+      },
+      "es": {
+        "title": "Football365 — la 'conspiración' de Argentina, rebatida",
+        "why": "El contrapeso: no hubo errores flagrantes de los que provocan una disculpa del PGMOL, y también Inglaterra, Alemania e Irán se comieron fallos discutidos del VAR — prueba de que la lupa es de todo el torneo, no solo de Argentina."
+      }
     }
   },
   {
@@ -255,8 +453,14 @@
     "tier": 3,
     "url": "https://theanalyst.com/articles/world-cup-2026-semi-final-predictions-opta-supercomputer",
     "content": {
-      "en": { "title": "Opta / The Analyst — 2026 supercomputer predictions", "why": "25,000-simulation model, refreshed post-quarterfinals. One of three independent 'who wins' anchors." },
-      "es": { "title": "Opta / The Analyst — predicciones de la supercomputadora 2026", "why": "Modelo de 25.000 simulaciones, actualizado después de los cuartos. Uno de los tres anclajes independientes del '¿quién gana?'." }
+      "en": {
+        "title": "Opta / The Analyst — 2026 supercomputer predictions",
+        "why": "25,000-simulation model, refreshed post-quarterfinals. One of three independent 'who wins' anchors."
+      },
+      "es": {
+        "title": "Opta / The Analyst — predicciones de la supercomputadora 2026",
+        "why": "Modelo de 25.000 simulaciones, actualizado después de los cuartos. Uno de los tres anclajes independientes del '¿quién gana?'."
+      }
     }
   },
   {
@@ -265,8 +469,14 @@
     "tier": 3,
     "url": "https://www.natesilver.net/p/world-cup-2026-odds-predictions",
     "content": {
-      "en": { "title": "Silver Bulletin — Nate Silver's World Cup model", "why": "An Elo/SPI-style model (100k sims, updated daily) from FiveThirtyEight's founder. Strong 2008/2012 record, notable 2016/2024 misses; live per-team numbers are paywalled." },
-      "es": { "title": "Silver Bulletin — el modelo mundialista de Nate Silver", "why": "Modelo estilo Elo/SPI (100k simulaciones, actualizado a diario) del fundador de FiveThirtyEight. Buen historial en 2008 y 2012, papelones sonados en 2016 y 2024; los números por selección son pagos." }
+      "en": {
+        "title": "Silver Bulletin — Nate Silver's World Cup model",
+        "why": "An Elo/SPI-style model (100k sims, updated daily) from FiveThirtyEight's founder. Strong 2008/2012 record, notable 2016/2024 misses; live per-team numbers are paywalled."
+      },
+      "es": {
+        "title": "Silver Bulletin — el modelo mundialista de Nate Silver",
+        "why": "Modelo estilo Elo/SPI (100k simulaciones, actualizado a diario) del fundador de FiveThirtyEight. Buen historial en 2008 y 2012, papelones sonados en 2016 y 2024; los números por selección son pagos."
+      }
     }
   },
   {
@@ -275,8 +485,14 @@
     "tier": 3,
     "url": "https://www.oddschecker.com/us/soccer/world-cup",
     "content": {
-      "en": { "title": "Oddschecker — aggregated outright title odds", "why": "The market's view. Implied percentages include the bookmaker's overround (margin)." },
-      "es": { "title": "Oddschecker — cuotas agregadas de campeón", "why": "Lo que piensa el mercado. Ojo: los porcentajes implícitos ya traen el margen (overround) de la casa." }
+      "en": {
+        "title": "Oddschecker — aggregated outright title odds",
+        "why": "The market's view. Implied percentages include the bookmaker's overround (margin)."
+      },
+      "es": {
+        "title": "Oddschecker — cuotas agregadas de campeón",
+        "why": "Lo que piensa el mercado. Ojo: los porcentajes implícitos ya traen el margen (overround) de la casa."
+      }
     }
   },
   {
@@ -285,8 +501,14 @@
     "tier": 3,
     "url": "https://www.espn.com/espn/betting/story/_/id/48386952/espn-soccer-futbol-world-cup-betting-odds-championship-groups",
     "content": {
-      "en": { "title": "ESPN Betting — championship odds after France's elimination", "why": "The market snapshot behind the Jul 15 refresh: Spain odds-on at DraftKings (−156), England +300, Argentina +400." },
-      "es": { "title": "ESPN Betting — cuotas de campeón tras la eliminación de Francia", "why": "La foto del mercado detrás de la actualización del 15/7: España pagando menos que la apuesta en DraftKings (−156), Inglaterra +300, Argentina +400." }
+      "en": {
+        "title": "ESPN Betting — championship odds after France's elimination",
+        "why": "The market snapshot behind the Jul 15 refresh: Spain odds-on at DraftKings (−156), England +300, Argentina +400."
+      },
+      "es": {
+        "title": "ESPN Betting — cuotas de campeón tras la eliminación de Francia",
+        "why": "La foto del mercado detrás de la actualización del 15/7: España pagando menos que la apuesta en DraftKings (−156), Inglaterra +300, Argentina +400."
+      }
     }
   },
   {
@@ -295,8 +517,14 @@
     "tier": 3,
     "url": "https://theanalyst.com/articles/england-vs-argentina-prediction-world-cup-2026-match-preview",
     "content": {
-      "en": { "title": "Opta / The Analyst — England v Argentina match preview", "why": "Opta's Jul 15 pre-match numbers: England to advance in 52.3% of simulations. The 47.7% branch happened — the second slim favorite to fall in two days." },
-      "es": { "title": "Opta / The Analyst — la previa de Inglaterra v Argentina", "why": "Los números de Opta del 15/7 antes del partido: Inglaterra avanzaba en el 52,3% de las simulaciones. Pasó la rama del 47,7% — el segundo favorito por poquito que se cae en dos días." }
+      "en": {
+        "title": "Opta / The Analyst — England v Argentina match preview",
+        "why": "Opta's Jul 15 pre-match numbers: England to advance in 52.3% of simulations. The 47.7% branch happened — the second slim favorite to fall in two days."
+      },
+      "es": {
+        "title": "Opta / The Analyst — la previa de Inglaterra v Argentina",
+        "why": "Los números de Opta del 15/7 antes del partido: Inglaterra avanzaba en el 52,3% de las simulaciones. Pasó la rama del 47,7% — el segundo favorito por poquito que se cae en dos días."
+      }
     }
   },
   {
@@ -305,8 +533,30 @@
     "tier": 3,
     "url": "https://www.sportsbettingdime.com/news/soccer/spain-vs-odds-world-cup-final-opening-moneyline-total/",
     "content": {
-      "en": { "title": "Sports Betting Dime — Spain v Argentina final opening odds", "why": "The post-semifinal market snapshot (Jul 15 evening): Spain around −160/−175 to lift the trophy, Argentina +125/+135; Kalshi 58¢ v 43¢." },
-      "es": { "title": "Sports Betting Dime — cuotas de apertura de la final España v Argentina", "why": "La foto del mercado tras las semis (15/7 a la noche): España alrededor de −160/−175 para levantar la copa, Argentina +125/+135; Kalshi 58¢ contra 43¢." }
+      "en": {
+        "title": "Sports Betting Dime — Spain v Argentina final opening odds",
+        "why": "The post-semifinal market snapshot (Jul 15 evening): Spain around −160/−175 to lift the trophy, Argentina +125/+135; Kalshi 58¢ v 43¢."
+      },
+      "es": {
+        "title": "Sports Betting Dime — cuotas de apertura de la final España v Argentina",
+        "why": "La foto del mercado tras las semis (15/7 a la noche): España alrededor de −160/−175 para levantar la copa, Argentina +125/+135; Kalshi 58¢ contra 43¢."
+      }
+    }
+  },
+  {
+    "id": "tnt-opta-postsf1",
+    "order": 46,
+    "tier": 3,
+    "url": "https://www.tntsports.co.uk/football/world-cup/2026/opta-supercomputer-france-spain-england-argentina_sto23318876/story.shtml",
+    "content": {
+      "en": {
+        "title": "TNT Sports — Opta's supercomputer refresh after Spain beat France",
+        "why": "The refresh Opta's own semi-final article never got: Spain 56.15%, England 23.38%, Argentina 20.47% (sums to 100), with England 52.53% to beat Argentina. Published before the England match, so these get conditioned on Argentina actually getting through."
+      },
+      "es": {
+        "title": "TNT Sports — la actualización de la supercomputadora de Opta tras el España-Francia",
+        "why": "La actualización que el propio artículo de semifinales de Opta nunca recibió: España 56,15%, Inglaterra 23,38%, Argentina 20,47% (suman 100), con Inglaterra 52,53% de ganarle a Argentina. Se publicó antes del partido con Inglaterra, así que esos números se condicionan a que Argentina efectivamente pasara."
+      }
     }
   },
   {
@@ -315,8 +565,14 @@
     "tier": 4,
     "url": "https://direct.mit.edu/rest/article/87/2/208/57539",
     "content": {
-      "en": { "title": "Garicano, Palacios-Huerta & Prendergast (2005) — 'Favoritism Under Social Pressure'", "why": "The classic finding: ~2× the injury time when the home side trails by one vs leads by one, across ~750 La Liga matches. The empirical backbone of H3." },
-      "es": { "title": "Garicano, Palacios-Huerta y Prendergast (2005) — 'Favoritism Under Social Pressure'", "why": "El hallazgo clásico: ~2× de tiempo de descuento cuando el local va perdiendo por uno que cuando gana por uno, sobre ~750 partidos de La Liga. La columna empírica de H3." }
+      "en": {
+        "title": "Garicano, Palacios-Huerta & Prendergast (2005) — 'Favoritism Under Social Pressure'",
+        "why": "The classic finding: ~2× the injury time when the home side trails by one vs leads by one, across ~750 La Liga matches. The empirical backbone of H3."
+      },
+      "es": {
+        "title": "Garicano, Palacios-Huerta y Prendergast (2005) — 'Favoritism Under Social Pressure'",
+        "why": "El hallazgo clásico: ~2× de tiempo de descuento cuando el local va perdiendo por uno que cuando gana por uno, sobre ~750 partidos de La Liga. La columna empírica de H3."
+      }
     }
   },
   {
@@ -325,8 +581,14 @@
     "tier": 4,
     "url": "https://doi.org/10.1371/journal.pone.0147905",
     "content": {
-      "en": { "title": "Grimes (2016) — 'On the Viability of Conspiratorial Beliefs' (PLOS ONE)", "why": "The math behind the Conspiracy Simulator: big secrets leak, and the more people and the more time, the faster." },
-      "es": { "title": "Grimes (2016) — 'On the Viability of Conspiratorial Beliefs' (PLOS ONE)", "why": "La matemática detrás del Simulador de Conspiraciones: los secretos grandes se terminan filtrando, y cuanta más gente y más tiempo, más rápido." }
+      "en": {
+        "title": "Grimes (2016) — 'On the Viability of Conspiratorial Beliefs' (PLOS ONE)",
+        "why": "The math behind the Conspiracy Simulator: big secrets leak, and the more people and the more time, the faster."
+      },
+      "es": {
+        "title": "Grimes (2016) — 'On the Viability of Conspiratorial Beliefs' (PLOS ONE)",
+        "why": "La matemática detrás del Simulador de Conspiraciones: los secretos grandes se terminan filtrando, y cuanta más gente y más tiempo, más rápido."
+      }
     }
   },
   {
@@ -335,8 +597,14 @@
     "tier": 4,
     "url": "https://doi.org/10.1371/journal.pone.0151003",
     "content": {
-      "en": { "title": "Grimes (2016) — published correction", "why": "Generalizes the model to a time-varying population; conclusions unchanged. We use the constant-population special case." },
-      "es": { "title": "Grimes (2016) — corrección publicada", "why": "Generaliza el modelo a una población que varía en el tiempo; las conclusiones no se mueven. Nosotros usamos el caso particular de población constante." }
+      "en": {
+        "title": "Grimes (2016) — published correction",
+        "why": "Generalizes the model to a time-varying population; conclusions unchanged. We use the constant-population special case."
+      },
+      "es": {
+        "title": "Grimes (2016) — corrección publicada",
+        "why": "Generaliza el modelo a una población que varía en el tiempo; las conclusiones no se mueven. Nosotros usamos el caso particular de población constante."
+      }
     }
   },
   {
@@ -345,8 +613,14 @@
     "tier": 4,
     "url": "https://doi.org/10.3389/fspor.2020.00019",
     "content": {
-      "en": { "title": "Erikstad & Johansen (2020) — favoritism toward successful teams", "why": "Evidence that referees can shade toward high-status sides — supports the soft-bias hypothesis." },
-      "es": { "title": "Erikstad y Johansen (2020) — favoritismo hacia equipos exitosos", "why": "Evidencia de que los árbitros pueden tirar para el lado de los equipos de alto estatus: le da sustento a la hipótesis del sesgo blando." }
+      "en": {
+        "title": "Erikstad & Johansen (2020) — favoritism toward successful teams",
+        "why": "Evidence that referees can shade toward high-status sides — supports the soft-bias hypothesis."
+      },
+      "es": {
+        "title": "Erikstad y Johansen (2020) — favoritismo hacia equipos exitosos",
+        "why": "Evidencia de que los árbitros pueden tirar para el lado de los equipos de alto estatus: le da sustento a la hipótesis del sesgo blando."
+      }
     }
   },
   {
@@ -355,8 +629,14 @@
     "tier": 4,
     "url": "https://doi.org/10.3389/fpsyg.2018.02637",
     "content": {
-      "en": { "title": "Morgulev et al. (2018) — a null result on referee bias", "why": "The honest counterweight: not every study finds star-team bias. Included so H3 isn't cherry-picked." },
-      "es": { "title": "Morgulev et al. (2018) — un resultado nulo sobre el sesgo arbitral", "why": "El contrapeso honesto: no todos los estudios encuentran sesgo pro-estrella. Lo incluimos para no quedarnos con la parte que nos conviene de H3." }
+      "en": {
+        "title": "Morgulev et al. (2018) — a null result on referee bias",
+        "why": "The honest counterweight: not every study finds star-team bias. Included so H3 isn't cherry-picked."
+      },
+      "es": {
+        "title": "Morgulev et al. (2018) — un resultado nulo sobre el sesgo arbitral",
+        "why": "El contrapeso honesto: no todos los estudios encuentran sesgo pro-estrella. Lo incluimos para no quedarnos con la parte que nos conviene de H3."
+      }
     }
   },
   {
@@ -365,8 +645,14 @@
     "tier": 5,
     "url": "https://en.wikipedia.org/wiki/Argentina_v_Peru_(1978_FIFA_World_Cup)",
     "content": {
-      "en": { "title": "Argentina 6–0 Peru (1978) — the enduring allegation", "why": "The most cited 'suspicious' Argentina match: junta-era circumstantial suspicion, never proven." },
-      "es": { "title": "Argentina 6–0 Perú (1978) — la sospecha que perdura", "why": "El partido 'sospechoso' de Argentina más citado de todos: sospechas circunstanciales de la época de la dictadura, nunca probadas." }
+      "en": {
+        "title": "Argentina 6–0 Peru (1978) — the enduring allegation",
+        "why": "The most cited 'suspicious' Argentina match: junta-era circumstantial suspicion, never proven."
+      },
+      "es": {
+        "title": "Argentina 6–0 Perú (1978) — la sospecha que perdura",
+        "why": "El partido 'sospechoso' de Argentina más citado de todos: sospechas circunstanciales de la época de la dictadura, nunca probadas."
+      }
     }
   },
   {
@@ -375,8 +661,14 @@
     "tier": 5,
     "url": "https://en.wikipedia.org/wiki/Calciopoli",
     "content": {
-      "en": { "title": "Calciopoli (2006) — referee-assignment manipulation", "why": "The clearest real case of designators being gamed. Domestic league, and it still leaked (wiretaps)." },
-      "es": { "title": "Calciopoli (2006) — manipulación de designaciones arbitrales", "why": "El caso real más nítido de designadores manipulados. Y ojo: liga local, y aun así se filtró (por las escuchas)." }
+      "en": {
+        "title": "Calciopoli (2006) — referee-assignment manipulation",
+        "why": "The clearest real case of designators being gamed. Domestic league, and it still leaked (wiretaps)."
+      },
+      "es": {
+        "title": "Calciopoli (2006) — manipulación de designaciones arbitrales",
+        "why": "El caso real más nítido de designadores manipulados. Y ojo: liga local, y aun así se filtró (por las escuchas)."
+      }
     }
   },
   {
@@ -385,8 +677,14 @@
     "tier": 5,
     "url": "https://www.beinsports.com/en-us/soccer/fifa-world-cup-2026/articles/south-korea-2002-the-refereeing-decisions-that-eliminated-italy-and-spain-2026-06-04",
     "content": {
-      "en": { "title": "South Korea 2002 — the decisions that knocked out Italy and Spain", "why": "Widely suspected officiating, never proven — a lesson in why suspicion isn't evidence." },
-      "es": { "title": "Corea del Sur 2002 — los fallos que eliminaron a Italia y España", "why": "Arbitraje muy sospechado, nunca probado: la mejor lección de que sospecha no es prueba." }
+      "en": {
+        "title": "South Korea 2002 — the decisions that knocked out Italy and Spain",
+        "why": "Widely suspected officiating, never proven — a lesson in why suspicion isn't evidence."
+      },
+      "es": {
+        "title": "Corea del Sur 2002 — los fallos que eliminaron a Italia y España",
+        "why": "Arbitraje muy sospechado, nunca probado: la mejor lección de que sospecha no es prueba."
+      }
     }
   },
   {
@@ -395,8 +693,14 @@
     "tier": 5,
     "url": "https://edition.cnn.com/2014/08/28/sport/football/match-fixing-wilson-raj-perumal-referee-corruption",
     "content": {
-      "en": { "title": "Wilson Raj Perumal — how real fixes actually happened", "why": "Proven fixes were betting-syndicate jobs on friendlies, never an organizer favoring a team in a finals match." },
-      "es": { "title": "Wilson Raj Perumal — cómo ocurrieron los arreglos reales", "why": "Los arreglos que se probaron fueron cosa de mafias de apuestas en amistosos, nunca un organizador favoreciendo a una selección en un partido de fase final." }
+      "en": {
+        "title": "Wilson Raj Perumal — how real fixes actually happened",
+        "why": "Proven fixes were betting-syndicate jobs on friendlies, never an organizer favoring a team in a finals match."
+      },
+      "es": {
+        "title": "Wilson Raj Perumal — cómo ocurrieron los arreglos reales",
+        "why": "Los arreglos que se probaron fueron cosa de mafias de apuestas en amistosos, nunca un organizador favoreciendo a una selección en un partido de fase final."
+      }
     }
   },
   {
@@ -405,8 +709,14 @@
     "tier": 2,
     "url": "https://www.sfbayareafwc26.com/bay-area-events",
     "content": {
-      "en": { "title": "SF Bay Area Host Committee — fan zones & watch parties", "why": "The official Bay Area events hub for the July 19 final watch parties (Yerba Buena, Ferry Building, Thrive City, North Beach, Pride House at KQED). Verified 2026-07-15." },
-      "es": { "title": "Comité anfitrión del Área de la Bahía — fan zones y watch parties", "why": "El hub oficial de eventos del Área de la Bahía para las watch parties de la final del 19 de julio (Yerba Buena, Ferry Building, Thrive City, North Beach, Pride House en KQED). Verificado el 15-07-2026." }
+      "en": {
+        "title": "SF Bay Area Host Committee — fan zones & watch parties",
+        "why": "The official Bay Area events hub for the July 19 final watch parties (Yerba Buena, Ferry Building, Thrive City, North Beach, Pride House at KQED). Verified 2026-07-15."
+      },
+      "es": {
+        "title": "Comité anfitrión del Área de la Bahía — fan zones y watch parties",
+        "why": "El hub oficial de eventos del Área de la Bahía para las watch parties de la final del 19 de julio (Yerba Buena, Ferry Building, Thrive City, North Beach, Pride House en KQED). Verificado el 15-07-2026."
+      }
     }
   },
   {
@@ -415,8 +725,14 @@
     "tier": 2,
     "url": "https://www.sftravel.com/article/your-guide-to-fifa-world-cup-2026-watch-parties-san-francisco",
     "content": {
-      "en": { "title": "SF Travel — guide to World Cup watch parties in San Francisco", "why": "The city tourism board's guide; confirms the final-day venues are free and open to the public." },
-      "es": { "title": "SF Travel — guía de watch parties del Mundial en San Francisco", "why": "La guía del ente de turismo de la ciudad; confirma que las sedes del día de la final son gratuitas y abiertas a todos." }
+      "en": {
+        "title": "SF Travel — guide to World Cup watch parties in San Francisco",
+        "why": "The city tourism board's guide; confirms the final-day venues are free and open to the public."
+      },
+      "es": {
+        "title": "SF Travel — guía de watch parties del Mundial en San Francisco",
+        "why": "La guía del ente de turismo de la ciudad; confirma que las sedes del día de la final son gratuitas y abiertas a todos."
+      }
     }
   },
   {
@@ -425,8 +741,62 @@
     "tier": 2,
     "url": "https://missionlocal.org/2026/06/san-francisco-world-cup-viewing-guide-map/",
     "content": {
-      "en": { "title": "Mission Local — San Francisco World Cup viewing guide & map", "why": "Independent local journalism mapping ~55 bars plus the official final venues across the city." },
-      "es": { "title": "Mission Local — guía y mapa para ver el Mundial en San Francisco", "why": "Periodismo local independiente que mapea ~55 bares y las sedes oficiales de la final en toda la ciudad." }
+      "en": {
+        "title": "Mission Local — San Francisco World Cup viewing guide & map",
+        "why": "Independent local journalism mapping ~55 bars plus the official final venues across the city."
+      },
+      "es": {
+        "title": "Mission Local — guía y mapa para ver el Mundial en San Francisco",
+        "why": "Periodismo local independiente que mapea ~55 bares y las sedes oficiales de la final en toda la ciudad."
+      }
+    }
+  },
+  {
+    "id": "ba-fan-fest-oficial",
+    "order": 93,
+    "tier": 2,
+    "url": "https://linda.buenosaires.gob.ar/eventos/buenos-aires-fan-fest",
+    "content": {
+      "en": {
+        "title": "Buenos Aires Fan Fest — official event page (Plaza Seeber)",
+        "why": "The city's official page for the Fan Fest: free entry, giant screen at Plaza Seeber (Palermo), open July 18–19 with the final broadcast at 4 PM. Verified 2026-07-16."
+      },
+      "es": {
+        "title": "Buenos Aires Fan Fest — página oficial del evento (Plaza Seeber)",
+        "why": "La página oficial de la Ciudad para el Fan Fest: entrada libre y gratuita, pantalla gigante en Plaza Seeber (Palermo), abierto el 18 y 19 de julio con la final a las 16:00. Verificado el 16-07-2026."
+      }
+    }
+  },
+  {
+    "id": "ba-ciudad-fan-fest",
+    "order": 94,
+    "tier": 2,
+    "url": "https://buenosaires.gob.ar/gcaba_historico/noticias/la-ciudad-empieza-vivir-el-mundial-con-un-mega-fan-fest-pantallas-gigantes",
+    "content": {
+      "en": {
+        "title": "Buenos Aires City — mega Fan Fest and neighborhood giant screens",
+        "why": "The city government's announcement of the World Cup program: Plaza Seeber's 15,000-person Fan Fest plus 'Modo Hincha' screens in the neighborhoods (Obelisco, Parque Los Andes), all free, running through the July 19 final."
+      },
+      "es": {
+        "title": "Ciudad de Buenos Aires — mega Fan Fest y pantallas gigantes barriales",
+        "why": "El anuncio del Gobierno de la Ciudad del programa mundialista: el Fan Fest de Plaza Seeber para 15.000 personas más las pantallas de 'Modo Hincha' en los barrios (Obelisco, Parque Los Andes), todo gratuito, hasta la final del 19 de julio."
+      }
+    }
+  },
+  {
+    "id": "ba-fan-fest-prensa",
+    "order": 95,
+    "tier": 2,
+    "url": "https://www.minutouno.com/sociedad/donde-estaran-los-fan-fest-ver-el-partido-argentina-vs-inglaterra-n6299453",
+    "content": {
+      "en": {
+        "title": "Minuto Uno — where the Fan Fests screen Argentina's knockout matches",
+        "why": "Independent press confirming the knockout-stage venues: Plaza Seeber (noon–8 PM) and Parque Los Andes in Chacarita (from 2 PM), with 200,000+ attendees across the tournament so far."
+      },
+      "es": {
+        "title": "Minuto Uno — dónde están los Fan Fest para ver a la Selección",
+        "why": "Prensa independiente que confirma las sedes del mata-mata: Plaza Seeber (de 12 a 20) y Parque Los Andes en Chacarita (desde las 14), con más de 200.000 asistentes en lo que va del torneo."
+      }
     }
   }
 ]
