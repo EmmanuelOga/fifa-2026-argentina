@@ -4,7 +4,7 @@
  * toggle, main, footer. Tabs are routes that share this layout, so each is
  * deep-linkable. hreflang alternates + es-AR lang attributes are emitted here.
  */
-import '@fontsource-variable/bricolage-grotesque';
+import '@fontsource-variable/archivo';
 import '@fontsource-variable/instrument-sans';
 import '@fontsource-variable/space-grotesk';
 import '../styles/global.css';
@@ -65,7 +65,7 @@ const fullTitle = tab ? `${title} — La Alegría` : title;
     <meta name="twitter:description" content={description} />
     <meta name="twitter:image" content={ogImage} />
 
-    <meta name="theme-color" content="#1f8ad0" />
+    <meta name="theme-color" content="#050e1c" />
     <link rel="icon" href={withBase('/favicon.svg')} type="image/svg+xml" />
     <Analytics />
   </head>
@@ -77,14 +77,19 @@ const fullTitle = tab ? `${title} — La Alegría` : title;
     </main>
     <Footer locale={locale} />
 
+    <script>
+      import { initHeadingAnchors } from '../scripts/heading-anchors';
+      initHeadingAnchors();
+    </script>
+
     <style>
       .skip-link {
         position: absolute;
         left: var(--s-4);
         top: -4rem;
         z-index: 100;
-        background: var(--sky-ink);
-        color: white;
+        background: var(--sky);
+        color: #041220;
         padding: 0.6em 1em;
         border-radius: 0 0 var(--radius-sm) var(--radius-sm);
         text-decoration: none;
@@ -92,7 +97,7 @@ const fullTitle = tab ? `${title} — La Alegría` : title;
       }
       .skip-link:focus {
         top: 0;
-        color: white;
+        color: #041220;
       }
       main {
         display: block;

@@ -25,14 +25,12 @@ const VERDICT: Record<string, Record<Locale, string>> = {
 
 <div class="container-narrow tab-body stack">
   <header>
-    <p class="eyebrow">Blog</p>
     <h1>{intro.headline}</h1>
-    <p class="lead">{intro.full}</p>
   </header>
 
   {
     runs.map((u) => (
-      <article class="run">
+      <article class="run" id={u.id}>
         <div class="run-head">
           <span class="run-badge data">#{u.data.run}</span>
           <div>
@@ -87,10 +85,7 @@ const VERDICT: Record<string, Record<Locale, string>> = {
 
 <style>
   .tab-body {
-    padding-block: var(--s-6) var(--s-7);
-  }
-  .lead {
-    font-size: var(--step-1);
+    padding-block: var(--s-5) var(--s-7);
   }
   .oq {
     margin: 0;
@@ -99,11 +94,11 @@ const VERDICT: Record<string, Record<Locale, string>> = {
     gap: var(--s-2);
   }
   .run {
-    background: var(--surface);
+    background: linear-gradient(180deg, rgba(62, 193, 255, 0.04), transparent 40%) var(--surface);
     border: 1px solid var(--line);
+    border-left: 3px solid var(--sky);
     border-radius: var(--radius);
     padding: var(--s-5);
-    box-shadow: var(--shadow-sm);
   }
   .run-head {
     display: flex;
@@ -117,10 +112,11 @@ const VERDICT: Record<string, Record<Locale, string>> = {
     height: 2.4em;
     display: grid;
     place-items: center;
-    border-radius: 50%;
+    border-radius: var(--radius-sm);
     background: var(--sky);
-    color: white;
+    color: #041220;
     font-weight: 700;
+    box-shadow: var(--glow-sky);
   }
   .run-head h2 {
     font-size: var(--step-1);

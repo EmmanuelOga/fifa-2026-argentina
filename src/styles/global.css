@@ -1,34 +1,36 @@
 /*
  * La Alegría — design tokens + base styles.
  *
- * Direction: papelitos / sunlit celebration. Albiceleste sky-blue and white,
- * golden confetti, one festive coral pop. Luminous and festive with a clear head
- * — deliberately NOT noir, NOT an "investigation board", and NOT any of the three
- * generic AI defaults (cream+serif+terracotta / near-black+acid-green / broadsheet).
+ * Direction: "estadio de noche" — a night-match broadcast look. Deep navy
+ * floodlit dark, albiceleste neon celeste + white, one golden sun accent.
+ * Inspired by modern athlete/F1 sites (sharp edges, hairline borders, glow
+ * micro-accents, expanded grotesque display type) — NOT rounded-card pastel,
+ * and NOT the generic near-black+acid-green template. The flag does the work:
+ * celeste + white carry the identity, gold is the sun.
  *
- * The two thread colors do real work: sky = the sporting/perception thread,
- * gold = the financial thread. They keep H1 (fixing) visually distinct from H2
- * (money) everywhere on the site.
+ * The two thread colors still do real work: sky = the sporting/perception
+ * thread, gold = the financial thread. They keep H1 (fixing) visually distinct
+ * from H2 (money) everywhere on the site.
  */
 
 :root {
   /* — palette (4 named brand colors + neutrals) — */
-  --sky: #1f8ad0;          /* celeste, vibrant */
-  --sky-ink: #0b4a76;      /* deep sky for headings on light */
-  --sky-soft: #d6ecfa;     /* wash */
-  --sun: #f2a51c;          /* golden confetti / sun */
-  --sun-ink: #9a6205;      /* deep gold for text */
-  --sun-soft: #fbe6ba;     /* wash */
-  --pop: #e5496b;          /* festive coral (murals) — used sparingly */
-  --pop-soft: #fbdbe3;
+  --sky: #3ec1ff;          /* neon celeste — the flag stripe, electrified */
+  --sky-ink: #d9efff;      /* icy celeste-white for headings on dark */
+  --sky-soft: rgba(62, 193, 255, 0.14);  /* wash / hover */
+  --sun: #ffb92e;          /* the golden sun */
+  --sun-ink: #ffd685;      /* light gold for text on dark */
+  --sun-soft: rgba(255, 185, 46, 0.14);
+  --pop: #ff5d8f;          /* festive flare (used sparingly) */
+  --pop-soft: rgba(255, 93, 143, 0.14);
 
   /* neutrals */
-  --ink: #16273a;          /* body text, warm navy (not black) */
-  --muted: #55697c;        /* secondary text */
-  --line: #d9e6f0;         /* hairlines/borders */
-  --paper: #f3f9fd;        /* page background, faint sky tint */
-  --surface: #ffffff;      /* card surface */
-  --surface-2: #eef6fc;    /* alt surface */
+  --ink: #eaf4fc;          /* body text, floodlit white */
+  --muted: #8da8c0;        /* secondary text */
+  --line: #21405e;         /* hairlines/borders, celeste-tinted */
+  --paper: #050e1c;        /* page background, night navy */
+  --surface: #0a1729;      /* card surface */
+  --surface-2: #102138;    /* alt surface */
 
   /* thread semantics */
   --thread-sporting: var(--sky);
@@ -39,7 +41,7 @@
   --thread-financial-soft: var(--sun-soft);
 
   /* — type — */
-  --font-display: 'Bricolage Grotesque Variable', 'Bricolage Grotesque', system-ui, sans-serif;
+  --font-display: 'Archivo Variable', 'Archivo', system-ui, sans-serif;
   --font-body: 'Instrument Sans Variable', 'Instrument Sans', system-ui, sans-serif;
   --font-data: 'Space Grotesk Variable', 'Space Grotesk', ui-monospace, monospace;
 
@@ -60,16 +62,20 @@
   --s-7: 3rem;
   --s-8: 4.5rem;
 
-  /* — shape — */
-  --radius: 14px;
-  --radius-sm: 9px;
-  --radius-lg: 22px;
-  --shadow-sm: 0 1px 2px rgba(16, 39, 58, 0.06), 0 2px 8px rgba(16, 39, 58, 0.05);
-  --shadow: 0 6px 22px rgba(11, 74, 118, 0.1), 0 2px 6px rgba(16, 39, 58, 0.06);
-  --shadow-lg: 0 18px 50px rgba(11, 74, 118, 0.16);
+  /* — shape: sharp broadcast panels, not rounded cards — */
+  --radius: 3px;
+  --radius-sm: 2px;
+  --radius-lg: 5px;
+  --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.35);
+  --shadow: 0 8px 28px rgba(0, 0, 0, 0.45);
+  --shadow-lg: 0 18px 60px rgba(0, 0, 0, 0.55);
+  --glow-sky: 0 0 18px rgba(62, 193, 255, 0.28);
+  --glow-sun: 0 0 18px rgba(255, 185, 46, 0.25);
 
   --container: 68rem;
   --container-narrow: 46rem;
+
+  color-scheme: dark;
 }
 
 *,
@@ -81,6 +87,48 @@
 html {
   scroll-behavior: smooth;
   -webkit-text-size-adjust: 100%;
+}
+
+/* Anchored deep links (e.g. /#san-francisco) land clear of the sticky header. */
+[id] {
+  scroll-margin-top: 5.5rem;
+}
+
+/* Copy-the-anchor buttons appended to main h2s by scripts/heading-anchors.ts
+   (runtime-injected DOM, so styled here, not in component scopes). */
+.anchor-copy {
+  font: inherit;
+  font-size: 0.55em;
+  line-height: 1;
+  cursor: pointer;
+  vertical-align: middle;
+  margin-left: 0.6em;
+  padding: 0.25em 0.4em;
+  color: var(--muted);
+  background: transparent;
+  border: 1px solid transparent;
+  border-radius: var(--radius-sm);
+  opacity: 0;
+  transition: opacity 0.12s ease, border-color 0.12s ease, color 0.12s ease;
+}
+h2:hover .anchor-copy,
+.anchor-copy:focus-visible,
+.anchor-copy.copied {
+  opacity: 1;
+}
+.anchor-copy:hover {
+  color: var(--sky);
+  border-color: var(--line);
+}
+.anchor-copy.copied {
+  color: var(--sun);
+  border-color: var(--sun);
+}
+/* No hover on touch screens — keep the buttons visible there. */
+@media (hover: none) {
+  .anchor-copy {
+    opacity: 0.6;
+  }
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -96,13 +144,17 @@ body {
   line-height: 1.62;
   color: var(--ink);
   background: var(--paper);
-  /* subtle sunlit gradient + faint confetti dots, all CSS, no images */
+  /* stadium floodlights: celeste + gold halos over night navy, all CSS */
   background-image:
-    radial-gradient(1200px 600px at 82% -8%, rgba(242, 165, 28, 0.1), transparent 60%),
-    radial-gradient(1000px 520px at 8% -6%, rgba(31, 138, 208, 0.12), transparent 62%);
+    radial-gradient(1200px 620px at 82% -10%, rgba(255, 185, 46, 0.07), transparent 60%),
+    radial-gradient(1100px 560px at 10% -8%, rgba(62, 193, 255, 0.1), transparent 62%);
   background-attachment: fixed;
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
+}
+
+::selection {
+  background: rgba(62, 193, 255, 0.35);
 }
 
 h1,
@@ -110,10 +162,10 @@ h2,
 h3,
 h4 {
   font-family: var(--font-display);
-  font-weight: 700;
-  line-height: 1.08;
+  font-weight: 800;
+  line-height: 1.06;
   color: var(--sky-ink);
-  letter-spacing: -0.015em;
+  letter-spacing: -0.01em;
   margin: 0 0 var(--s-4);
   text-wrap: balance;
 }
@@ -144,13 +196,14 @@ a:hover {
 
 strong {
   font-weight: 600;
+  color: var(--sky-ink);
 }
 
 /* accessible focus everywhere */
 :focus-visible {
-  outline: 3px solid var(--sun);
+  outline: 2px solid var(--sun);
   outline-offset: 2px;
-  border-radius: 4px;
+  border-radius: var(--radius-sm);
 }
 
 img,
@@ -192,8 +245,9 @@ canvas {
 }
 
 /* — shared surface bits — */
+/* Broadcast panel: sharp corners, hairline border, faint top sheen. */
 .card {
-  background: var(--surface);
+  background: linear-gradient(180deg, rgba(62, 193, 255, 0.05), transparent 42%) var(--surface);
   border: 1px solid var(--line);
   border-radius: var(--radius);
   box-shadow: var(--shadow-sm);
@@ -203,13 +257,13 @@ canvas {
 .eyebrow {
   font-family: var(--font-data);
   text-transform: uppercase;
-  letter-spacing: 0.14em;
+  letter-spacing: 0.18em;
   font-size: var(--step--1);
   font-weight: 600;
-  color: var(--muted);
+  color: var(--sky);
 }
 
-/* speculative pill — reused wherever a number is a subjective estimate */
+/* speculative tag — reused wherever a number is a subjective estimate */
 .spec {
   display: inline-flex;
   align-items: center;
@@ -221,36 +275,148 @@ canvas {
   text-transform: uppercase;
   color: var(--pop);
   background: var(--pop-soft);
-  border: 1px solid color-mix(in srgb, var(--pop) 30%, white);
-  border-radius: 999px;
+  border: 1px solid rgba(255, 93, 143, 0.4);
+  border-radius: var(--radius-sm);
   padding: 0.15em 0.6em;
   white-space: nowrap;
 }
 
-/* generic button */
+/* generic button — angular, kit-number typography */
 .btn {
-  font-family: var(--font-body);
+  font-family: var(--font-data);
   font-weight: 600;
-  font-size: var(--step--1);
+  font-size: 0.8rem;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
   border: 1px solid var(--line);
-  background: var(--surface);
+  background: var(--surface-2);
   color: var(--sky-ink);
-  border-radius: 999px;
-  padding: 0.5em 1em;
+  border-radius: var(--radius-sm);
+  padding: 0.55em 1em;
   cursor: pointer;
-  transition: transform 0.12s ease, background 0.12s ease, border-color 0.12s ease;
+  transition: transform 0.12s ease, background 0.12s ease, border-color 0.12s ease, box-shadow 0.12s ease;
 }
 .btn:hover {
   border-color: var(--sky);
   background: var(--sky-soft);
+  box-shadow: var(--glow-sky);
 }
 .btn:active {
   transform: translateY(1px);
 }
 .btn[aria-pressed='true'] {
   background: var(--sky);
-  color: white;
+  color: #041220;
   border-color: var(--sky);
+}
+
+/* — sim runtime internals —
+ * These nodes are injected by scripts/bayes.ts and scripts/montecarlo.ts, so
+ * Astro's scoped component styles can't reach them; they live here instead. */
+.sim .ctrl {
+  display: grid;
+  gap: var(--s-2);
+}
+.sim .ctrl-label {
+  font-size: 0.88rem;
+  font-weight: 500;
+}
+.sim .ctrl-label b {
+  color: var(--sky-ink);
+}
+.sim .ev-scale {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.7rem;
+  color: var(--muted);
+  font-family: var(--font-data);
+}
+.sim .str-row {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  gap: 0.6em;
+  align-items: center;
+  font-size: 0.86rem;
+}
+.sim .bar-row {
+  display: grid;
+  gap: 0.3em;
+}
+.sim .bar-top {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+.sim .bar-track {
+  position: relative;
+  height: 26px;
+  background: var(--surface-2);
+  border-radius: var(--radius-sm);
+  overflow: hidden;
+}
+.sim .bar-clean,
+.sim .bar-adj {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  border-radius: var(--radius-sm);
+  transition: width 0.5s cubic-bezier(0.22, 1, 0.36, 1);
+}
+.sim .bar-clean {
+  background: color-mix(in srgb, var(--sky) 30%, var(--surface-2));
+}
+.sim .bar-adj {
+  background: var(--sky);
+  opacity: 0.9;
+  height: 10px;
+  top: 8px;
+}
+.sim .bar-adj.nudged {
+  background: var(--pop);
+}
+.sim .bar-vals {
+  display: flex;
+  gap: 0.8em;
+  font-size: 0.78rem;
+  color: var(--muted);
+  font-family: var(--font-data);
+}
+.sim .swatch {
+  display: inline-block;
+  width: 0.7em;
+  height: 0.7em;
+  border-radius: 2px;
+  vertical-align: middle;
+  margin-right: 0.3em;
+}
+.sim input[type='range'] {
+  width: 100%;
+  accent-color: var(--sky);
+}
+
+/* — nerd mode —
+ * The site is two-in-one: the same pages serve the casual reader and the stats
+ * nerd. `data-nerd` on <html> (persisted in localStorage, toggled in the
+ * header) reveals .nerd-only extras and auto-opens each sim's "The math".
+ * .nerd-cta invitations render only while nerd mode is off. */
+html:not([data-nerd]) .nerd-only {
+  display: none;
+}
+html[data-nerd] .nerd-cta {
+  display: none;
+}
+.nerd-cta {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--s-3);
+  font-size: 0.9rem;
+  color: var(--muted);
+  border-top: 1px dashed var(--line);
+  padding-top: var(--s-3);
+  margin: var(--s-4) 0 0;
 }
 
 @media (prefers-reduced-motion: reduce) {
