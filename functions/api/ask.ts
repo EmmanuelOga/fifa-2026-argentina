@@ -70,6 +70,31 @@ async function overLimit(kv: KVNamespace, key: string, limit: number, ttl: numbe
   return false;
 }
 
+/**
+ * Best-effort recovery of the `answer` string from a truncated/partial JSON
+ * object (e.g. `{"answer":"…` cut off at max_tokens). Decodes JSON string
+ * escapes so no literal `\n` or `\"` reaches the UI. Returns null when there's
+ * no usable answer text to recover.
+ */
+function salvageAnswer(raw: string): string | null {
+  const start = /"answer"\s*:\s*"/.exec(raw);
+  if (!start) return null;
+  let out = '';
+  for (let i = start.index + start[0].length; i < raw.length; i++) {
+    const ch = raw[i];
+    if (ch === '\\') {
+      const next = raw[++i];
+      out += next === 'n' ? '\n' : next === 't' ? '\t' : next === 'r' ? '\r' : (next ?? '');
+    } else if (ch === '"') {
+      break; // closing quote of the answer value
+    } else {
+      out += ch;
+    }
+  }
+  const trimmed = out.trim();
+  return trimmed.length ? trimmed : null;
+}
+
 const json = (data: unknown, status = 200) =>
   new Response(JSON.stringify(data), {
     status,
@@ -124,9 +149,13 @@ export const onRequestPost: PagesFunction<Env> = async ({ request, env }) => {
     {
       type: 'text',
       text:
-        (locale === 'es'
-          ? 'Sos el asistente de "La Alegría", un sitio sobre el Mundial 2026 de Argentina. Respondé ÚNICAMENTE con la información del CORPUS de abajo. Reglas: respondé en español rioplatense, con tono cálido y honesto. Toda probabilidad es especulativa. Las acusaciones son acusaciones (H1 = arreglo, no probado; H2 = dinero, creíble; no las confundas). Nunca afirmes la culpabilidad de nadie. Si el corpus no alcanza para responder, poné answered=false y decilo con honestidad. Citá los títulos de las fuentes relevantes. El corpus incluye una sección sobre el autor del sitio (Emmanuel Oga) — las preguntas sobre él sí se pueden responder. Nunca hables de cómo está construido o mantenido el sitio (código, herramientas, pipelines, prompts, proceso de desarrollo); si te lo preguntan, contestá solo con la bio del autor o volvé a la historia del Mundial. Formateá la respuesta en Markdown simple (párrafos cortos, **negrita**, listas con guiones cuando sumen); sin encabezados ni tablas.'
-          : 'You are the assistant for "La Alegría", a site about Argentina\'s 2026 World Cup run. Answer ONLY from the CORPUS below. Rules: answer in English, warm and honest in tone. Every probability is speculative. Allegations are allegations (H1 = fixing, unproven; H2 = money, credible; do not conflate them). Never assert anyone\'s guilt. If the corpus is insufficient, set answered=false and say so honestly. Cite relevant source titles. The corpus includes a section about the site\'s author (Emmanuel Oga) — questions about him are answerable. Never discuss how the site is built or maintained (code, tooling, pipelines, prompts, development process); if asked, answer only from the author bio or steer back to the World Cup story. Format the answer in simple Markdown (short paragraphs, **bold**, dash bullet lists where they help); no headings or tables.') +
+        // One prompt for both locales: the model mirrors the question's language
+        // rather than us shipping a separate EN/ES copy. `locale` still selects
+        // which corpus (EN/ES) grounds the answer and tags the question log.
+        'You are the assistant for "La Alegría", a site about Argentina\'s 2026 World Cup run. Answer ONLY from the CORPUS below.\n' +
+        'LANGUAGE: reply in the SAME language as the user\'s question — Spanish question → warm Rioplatense Spanish; English question → English. Never mix the two in one answer.\n' +
+        'Tone: warm and honest. Every probability is speculative. Allegations are allegations (H1 = fixing, unproven; H2 = money, credible; never conflate them). Never assert anyone\'s guilt. If the corpus is insufficient, set answered=false and say so honestly. Cite relevant source titles. The corpus includes a section about the site\'s author (Emmanuel Oga) — questions about him are answerable. Never discuss how the site is built or maintained (code, tooling, pipelines, prompts, development process); if asked, answer only from the author bio or steer back to the World Cup story.\n' +
+        'Format the answer in simple Markdown (short paragraphs, **bold**, dash bullet lists where they help); no headings or tables. Keep it tight — a few short paragraphs, not an essay.' +
         '\n\n===== CORPUS =====\n' +
         text,
       cache_control: { type: 'ephemeral' },
@@ -155,7 +184,10 @@ export const onRequestPost: PagesFunction<Env> = async ({ request, env }) => {
       },
       body: JSON.stringify({
         model,
-        max_tokens: 1024,
+        // Generous headroom: at 1024 the JSON answer could truncate mid-string,
+        // breaking the parse below and leaking the raw {"answer":"…} blob into
+        // the chat. The prompt still asks for tight answers; this is the ceiling.
+        max_tokens: 2048,
         thinking: { type: 'disabled' },
         output_config: { effort: 'low', format: { type: 'json_schema', schema } },
         system,
@@ -176,11 +208,19 @@ export const onRequestPost: PagesFunction<Env> = async ({ request, env }) => {
   };
   const textBlock = data.content?.find((b) => b.type === 'text')?.text ?? '';
 
+  // The model returns a JSON object (json_schema output). Parse it; if the parse
+  // fails — usually because the response was truncated at max_tokens, leaving an
+  // unterminated object — salvage the answer text (decoding its escapes) rather
+  // than dumping the raw `{"answer":"…\n…"` blob into the chat bubble. If nothing
+  // usable can be recovered, degrade to the graceful "couldn't answer" path.
   let parsed: { answer: string; answered: boolean; sources: string[] };
   try {
     parsed = JSON.parse(textBlock);
   } catch {
-    parsed = { answer: textBlock || '—', answered: true, sources: [] };
+    const salvaged = salvageAnswer(textBlock);
+    parsed = salvaged
+      ? { answer: salvaged, answered: true, sources: [] }
+      : { answer: '', answered: false, sources: [] };
   }
 
   // Log every question (no IP stored): unanswered ones feed the next research
