@@ -505,8 +505,8 @@ const tabBlurb: Record<string, { en: string; es: string }> = {
   }
   /* Leaflet injects its DOM at runtime, so scoped styles miss it — go :global. */
   .sf-map :global(.leaflet-tile-pane) {
-    /* night-mode the default light map tiles so the map sits in the theme */
-    filter: invert(0.9) hue-rotate(185deg) saturate(0.8) brightness(0.95);
+    /* theme-aware tile treatment: night-moded in dark, untouched in light */
+    filter: var(--map-filter);
   }
   .sf-map :global(.leaflet-container) {
     width: 100%;
@@ -524,7 +524,7 @@ const tabBlurb: Record<string, { en: string; es: string }> = {
     color: var(--muted);
   }
   .sf-map :global(.leaflet-control-attribution) {
-    background: rgba(5, 14, 28, 0.75);
+    background: var(--veil);
     color: var(--muted);
   }
   .sf-map :global(.leaflet-control-attribution a) {

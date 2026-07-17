@@ -75,7 +75,47 @@
   --container: 68rem;
   --container-narrow: 46rem;
 
+  /* translucent chrome (header bar, map attribution) tinted to the page */
+  --veil: rgba(5, 14, 28, 0.82);
+  /* OSM tiles are light — night-mode them to sit in the dark theme */
+  --map-filter: invert(0.9) hue-rotate(185deg) saturate(0.8) brightness(0.95);
+
   color-scheme: dark;
+}
+
+/*
+ * Day mode ("estadio de día") — same albiceleste identity on paper-white.
+ * Accents darken so text/chip contrast holds; washes and glows soften.
+ * Toggled by scripts/theme.ts stamping data-theme on <html>; dark stays the
+ * default brand look.
+ */
+:root[data-theme='light'] {
+  --sky: #0087d6;
+  --sky-ink: #0d3a5c;
+  --sky-soft: rgba(0, 135, 214, 0.1);
+  --sun: #e09200;
+  --sun-ink: #7a5200;
+  --sun-soft: rgba(224, 146, 0, 0.12);
+  --pop: #d61f60;
+  --pop-soft: rgba(214, 31, 96, 0.1);
+
+  --ink: #12293f;
+  --muted: #52708c;
+  --line: #c9dcec;
+  --paper: #f4f9fd;
+  --surface: #ffffff;
+  --surface-2: #e8f2fa;
+
+  --shadow-sm: 0 1px 2px rgba(16, 42, 67, 0.1);
+  --shadow: 0 8px 28px rgba(16, 42, 67, 0.14);
+  --shadow-lg: 0 18px 60px rgba(16, 42, 67, 0.18);
+  --glow-sky: 0 0 18px rgba(0, 135, 214, 0.22);
+  --glow-sun: 0 0 18px rgba(224, 146, 0, 0.2);
+
+  --veil: rgba(244, 249, 253, 0.85);
+  --map-filter: none;
+
+  color-scheme: light;
 }
 
 *,

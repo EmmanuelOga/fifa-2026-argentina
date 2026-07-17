@@ -35,6 +35,16 @@ const toggleHref = current ? tabPath(other, current) : homePath(other);
     <div class="switches">
       <button
         type="button"
+        class="theme-toggle"
+        data-theme-toggle
+        aria-pressed="false"
+        title={t.themeHint}
+        aria-label={t.themeHint}
+      >
+        <span aria-hidden="true" data-theme-icon>☀️</span>
+      </button>
+      <button
+        type="button"
         class="nerd-toggle"
         data-nerd-toggle
         aria-pressed="false"
@@ -73,7 +83,7 @@ const toggleHref = current ? tabPath(other, current) : homePath(other);
     position: sticky;
     top: 0;
     z-index: 50;
-    background: rgba(5, 14, 28, 0.82);
+    background: var(--veil);
     backdrop-filter: saturate(1.3) blur(12px);
     border-bottom: 1px solid var(--line);
   }
@@ -132,7 +142,8 @@ const toggleHref = current ? tabPath(other, current) : homePath(other);
     flex: none;
   }
   .lang-toggle,
-  .nerd-toggle {
+  .nerd-toggle,
+  .theme-toggle {
     font-family: var(--font-data);
     font-weight: 600;
     font-size: 0.78rem;
@@ -148,7 +159,8 @@ const toggleHref = current ? tabPath(other, current) : homePath(other);
     transition: border-color 0.12s ease, background 0.12s ease, box-shadow 0.12s ease;
   }
   .lang-toggle:hover,
-  .nerd-toggle:hover {
+  .nerd-toggle:hover,
+  .theme-toggle:hover {
     border-color: var(--sky);
     background: var(--sky-soft);
     box-shadow: var(--glow-sky);
@@ -217,5 +229,7 @@ const toggleHref = current ? tabPath(other, current) : homePath(other);
 
 <script>
   import { initNerdMode } from '../scripts/nerd';
+  import { initTheme } from '../scripts/theme';
   initNerdMode();
+  initTheme();
 </script>

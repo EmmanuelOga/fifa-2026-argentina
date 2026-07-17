@@ -67,6 +67,12 @@ const fullTitle = tab ? `${title} — La Alegría` : title;
 
     <meta name="theme-color" content="#050e1c" />
     <link rel="icon" href={withBase('/favicon.svg')} type="image/svg+xml" />
+    {/* Apply the stored theme before first paint. Content is verbatim and
+        hash-allowed in the CSP (public/_headers) — editing it means recomputing
+        the sha256 there. scripts/theme.ts owns the toggle afterwards. */}
+    <script
+      is:inline
+    >try{if(localStorage.getItem('la-alegria-theme')==='light')document.documentElement.setAttribute('data-theme','light')}catch(e){}</script>
     <Analytics />
   </head>
   <body>

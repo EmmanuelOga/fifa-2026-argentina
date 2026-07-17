@@ -35,6 +35,7 @@ type Dict = {
   switchTo: string;
   nerdMode: string;
   nerdHint: string;
+  themeHint: string;
   snapshotAs: string;
   speculative: string;
   forLabel: string;
@@ -120,6 +121,7 @@ export const UI: Record<Locale, Dict> = {
     switchTo: 'Español',
     nerdMode: 'Nerd mode',
     nerdHint: 'Reveal the priors, likelihood ratios and the full math everywhere.',
+    themeHint: 'Switch between night and day mode',
     snapshotAs: 'Snapshot as of',
     speculative: 'Speculative',
     forLabel: 'For',
@@ -209,6 +211,7 @@ export const UI: Record<Locale, Dict> = {
     switchTo: 'English',
     nerdMode: 'Modo nerd',
     nerdHint: 'Mostrá los priors, los likelihood ratios y toda la matemática.',
+    themeHint: 'Cambiar entre modo noche y modo día',
     snapshotAs: 'Foto al',
     speculative: 'Especulativo',
     forLabel: 'A favor',
