@@ -12,9 +12,9 @@
     "content": {
       "en": {
         "headline": "December 2025: raids on the AFA and clubs",
-        "short": "Argentine authorities raid AFA HQ and 17 clubs in a money-laundering case.",
-        "full": "Months before the World Cup, Argentine authorities raid the AFA and 17 clubs in a domestic money-laundering case.",
-        "detail": "On December 9, 2025, some 33 simultaneous raids hit AFA headquarters, its Ezeiza complex and 17 clubs (some say 18, an overlapping case). A separate domestic matter, backdrop to AFA president Claudio Tapia later being processed for roughly $12.7M in alleged social-security evasion (upheld on appeal, June 2026). Tapia alleges political persecution in his feud with President Milei; being processed, he needed judicial sign-off to travel to the US with the squad. No link to match results is alleged."
+        "short": "Authorities raid AFA HQ and 17 clubs in a money-laundering case.",
+        "full": "Months before the World Cup, a domestic money-laundering case hits the AFA and 17 clubs.",
+        "detail": "December 9, 2025: 33 raids on AFA HQ, Ezeiza and 17 clubs. Backdrop to president Claudio Tapia's later processing over ~$12.7M in alleged social-security evasion, upheld on appeal June 2026. He calls it political persecution in his feud with President Milei; processed, he needed a judge's OK to travel with the squad. No link to results alleged."
       },
       "es": {
         "headline": "Diciembre 2025: allanamientos a la AFA y clubes",
@@ -37,13 +37,13 @@
     "content": {
       "en": {
         "headline": "Cape Verde: the blood-injury restart",
-        "short": "A restart after a bleeding-player stoppage goes viral, but the rule was applied correctly.",
-        "full": "Argentina's win over Cape Verde produces the tournament's first viral 'robbery' clip: a bleeding-player restart that the referee, in fact, handled by the IFAB book.",
-        "detail": "Under Law 5, a bleeding player must leave the field and return only on the referee's signal. The restart followed it to the letter: unfair in a fast clip, fine in fact. (A claimed tens of millions of views couldn't be verified, so no number is given.)"
+        "short": "A bleeding-player restart goes viral, but the rule was applied correctly.",
+        "full": "Argentina's Cape Verde win brings the tournament's first viral 'robbery' clip: a bleeding-player restart the referee handled by the book.",
+        "detail": "Under Law 5, a bleeding player must leave and return only on the referee's signal. The restart followed it: unfair in a fast clip, correct in fact. (Claimed tens-of-millions views couldn't be verified, so no number.)"
       },
       "es": {
         "headline": "Cabo Verde: la reanudación por sangrado",
-        "short": "Se hace viral una reanudación después de que saliera un jugador que sangraba, pero la regla se aplicó bien.",
+        "short": "Se hace viral una reanudación por un jugador que sangraba, pero la regla se aplicó bien.",
         "full": "El triunfo de Argentina sobre Cabo Verde deja el primer clip viral de 'robo' del torneo: una reanudación por un jugador que sangraba que, en los hechos, el árbitro manejó según el libro de IFAB.",
         "detail": "Por la Regla 5, un jugador que sangra tiene que salir de la cancha y recién puede volver cuando el árbitro le da la señal. La reanudación siguió la letra de la regla: injusta en un clip rápido, correcta en los hechos. (Circuló una cifra de decenas de millones de vistas; no se pudo verificar, así que no damos ninguna.)"
       }
@@ -63,14 +63,14 @@
       "en": {
         "headline": "Egypt: a disallowed goal and an allegation",
         "short": "A VAR-disallowed Egypt goal; coach Hossam Hassan alleges favoritism; Collina rejects it.",
-        "full": "In Atlanta's Round of 16, VAR disallows an Egypt goal; coach Hossam Hassan alleges favoritism, and FIFA's Pierluigi Collina publicly rejects it.",
-        "detail": "The goal was disallowed for a build-up foul by Marwan Attia on Lisandro Martínez. Hassan's post-match remarks included an unsubstantiated claim that officials wanted Messi to shine. On the record, Collina called such bias allegations unfounded, with no place in the sport. The call has a defensible rule-based reading; the allegation remains an allegation."
+        "full": "In Atlanta's Round of 16, VAR disallows an Egypt goal; coach Hossam Hassan alleges favoritism, FIFA's Pierluigi Collina rejects it.",
+        "detail": "The goal fell for a build-up foul by Marwan Attia on Lisandro Martínez. Hassan claimed, without substantiation, that officials wanted Messi to shine; Collina, on record, called bias allegations unfounded. A defensible call; the allegation stays an allegation."
       },
       "es": {
         "headline": "Egipto: un gol anulado y una acusación",
         "short": "Un gol de Egipto anulado por el VAR; el DT Hossam Hassan alega favoritismo; Collina lo rechaza.",
-        "full": "En los octavos en Atlanta, el VAR anula un gol de Egipto; el DT Hossam Hassan alega favoritismo y Pierluigi Collina, de la FIFA, lo rechaza en público.",
-        "detail": "El gol anulado vino de una falta de Marwan Attia sobre Lisandro Martínez en la jugada previa. Entre los dichos de Hassan tras el partido hubo una afirmación sin sustento: que se buscaba que Messi brillara en el torneo. Collina, en actas, calificó de infundadas esas acusaciones de sesgo y dijo que no tienen lugar en el deporte. Hay una lectura reglamentaria defendible del fallo; la acusación sigue siendo una acusación."
+        "full": "En los octavos en Atlanta, el VAR anula un gol de Egipto; el DT Hossam Hassan alega favoritismo y Pierluigi Collina, de la FIFA, lo rechaza.",
+        "detail": "El gol se cayó por una falta de Marwan Attia sobre Lisandro Martínez en la jugada previa. Hassan después afirmó, sin sustento, que se buscaba que Messi brillara. Collina, en actas, calificó de infundadas las acusaciones de sesgo. Hay una lectura reglamentaria defendible del fallo; la acusación sigue siendo una acusación."
       }
     }
   },
@@ -89,8 +89,8 @@
       "en": {
         "headline": "The FBI money story breaks",
         "short": "La Nación reports an FBI/DOJ preliminary inquiry into AFA's US financial flows. No charges.",
-        "full": "La Nación reports FBI agents and prosecutors taking testimony in a preliminary inquiry into how the AFA moved money through US banks and companies; the Miami Herald corroborates, citing two law-enforcement sources.",
-        "detail": "Per La Nación (Francisco Olivera and Hugo Alconada Mon), the inquiry examines $300M+ in AFA revenue routed through US institutions, among them a Florida company (reported as TourProdEnter LLC) that reportedly handled at least $260M, roughly $57M without clear economic justification. Reporting names five US banks in the flow (Citibank, Bank of America, JPMorgan Chase, PNC and Synovus); the Miami Herald puts the sum flagged 'potentially irregular' at roughly $90M to date. The '$260M/$57M' split is only La Nación's; most coverage cites '$300M+'; the '$90M' is the Herald's. The company's operators are named as inquiry subjects, not charged; La Nación also names three federal prosecutors. The FBI's Miami office declined comment; no US charges have been filed. Classic FIFA-Gate template: jurisdiction over dollars, not scorelines."
+        "full": "La Nación reports a preliminary FBI and prosecutor inquiry into AFA money flows through US banks and companies, testimony already taken; the Miami Herald corroborates, citing two law-enforcement sources.",
+        "detail": "Per La Nación (Olivera and Alconada Mon), the inquiry examines $300M+ in AFA revenue routed through US institutions. Among them: a Florida company (reported as TourProdEnter LLC) said to have handled $260M+, ~$57M of it economically unexplained. Five US banks are named: Citibank, Bank of America, JPMorgan Chase, PNC, Synovus. The Miami Herald puts the sum flagged 'potentially irregular' at ~$90M. The company's operators are subjects, not charged; La Nación names three federal prosecutors. The FBI's Miami office declined comment; no US charges. Classic FIFA-Gate: dollars, not scorelines."
       },
       "es": {
         "headline": "Estalla la historia del FBI y el dinero",
@@ -114,14 +114,14 @@
       "en": {
         "headline": "The Pinheiro appointment",
         "short": "FIFA names João Pinheiro for the quarterfinal despite fresh Champions League baggage.",
-        "full": "FIFA appoints João Pinheiro for the Argentina quarterfinal, days after debate over a controversial handball reversal he made in a Bayern–PSG Champions League semifinal.",
-        "detail": "A controversy-fresh referee for a high-stakes Argentina match was an optics problem, not evidence: recent notoriety isn't proof of a plan. Appointments come roughly three days out, on form."
+        "full": "FIFA appoints João Pinheiro for the Argentina quarterfinal, days after debate over a handball reversal he made in a Bayern v PSG Champions League semifinal.",
+        "detail": "Bad optics, not evidence. Appointments come ~three days out, on form."
       },
       "es": {
         "headline": "La designación de Pinheiro",
         "short": "La FIFA nombra a João Pinheiro para el cuarto de final pese a una polémica reciente en la Champions.",
-        "full": "La FIFA designa a João Pinheiro para el cuarto de final de Argentina, días después del debate por una polémica revisión de una mano suya en una semifinal Bayern–PSG de la Champions.",
-        "detail": "Poner a un árbitro con una polémica fresca en un partido de alto voltaje de Argentina fue un problema de óptica, no una prueba: que venga de una polémica reciente no prueba que haya un plan. Las designaciones se hacen unos tres días antes, por rendimiento."
+        "full": "La FIFA designa a João Pinheiro para el cuarto de final de Argentina, días después del debate por una revisión de mano suya en una semifinal Bayern–PSG de la Champions.",
+        "detail": "Es mala óptica, no una prueba: que venga de una polémica reciente no prueba que haya un plan. Las designaciones se hacen unos tres días antes, por rendimiento."
       }
     }
   },
@@ -136,10 +136,10 @@
     ],
     "content": {
       "en": {
-        "headline": "An all-Argentine crew — for a rival's match",
+        "headline": "An all-Argentine crew, for a rival's match",
         "short": "Facundo Tello and four compatriots officiate France–Morocco. Bad optics, wrong direction.",
-        "full": "An all-Argentine officiating crew (Facundo Tello plus four compatriots) is appointed for France–Morocco. It looks bad, but note the direction: a rival's match, not Argentina's.",
-        "detail": "This cuts against the favoritism story: an all-Argentine crew on a rival's quarterfinal is the opposite of what shading toward Argentina would design. An optics own-goal, not a smoking gun."
+        "full": "An all-Argentine crew (Facundo Tello plus four compatriots) works France v Morocco: a rival's match, not Argentina's.",
+        "detail": "Cuts against the favoritism story: you wouldn't put an all-Argentine crew on a rival's quarterfinal."
       },
       "es": {
         "headline": "Una terna toda argentina, para un partido rival",
@@ -164,9 +164,9 @@
     "content": {
       "en": {
         "headline": "Switzerland 1–3 (AET): the Embolo red",
-        "short": "Argentina win in extra time; Breel Embolo is sent off for simulation after a VAR review.",
-        "full": "Argentina beat Switzerland 3–1 after extra time in Kansas City. Breel Embolo is sent off for a second yellow (simulation) after the referee visits the monitor; Granit Xhaka is furious.",
-        "detail": "Mac Allister 10′, Ndoye 67′, Álvarez 112′, Lautaro Martínez 120+1′. Embolo went off near the 72nd minute for a second caution after a VAR-recommended review under the new 2026 protocol; replays showed a clear dive. Xhaka called it a decision that 'kills the game' (paraphrase, not verbatim). A red for simulation, confirmed on replay, is defensible, and just the swing that fuels perception."
+        "short": "Argentina wins in extra time; Breel Embolo is sent off for simulation after a VAR review.",
+        "full": "Argentina beats Switzerland 3–1 after extra time in Kansas City. Breel Embolo goes off for a second yellow (simulation) after a monitor review; Granit Xhaka is furious.",
+        "detail": "Mac Allister 10′, Ndoye 67′, Álvarez 112′, Lautaro Martínez 120+1′. Embolo's second yellow came near the 72nd after a VAR-recommended review (new 2026 protocol); replays showed a clear dive. Xhaka called it a decision that 'kills the game' (paraphrase). A red for simulation confirmed on replay is defensible."
       },
       "es": {
         "headline": "Suiza 1–3 (tras alargue): la roja a Embolo",
@@ -188,15 +188,15 @@
     "content": {
       "en": {
         "headline": "The penalty outlier",
-        "short": "8 penalties across the 2022 + 2026 World Cups — roughly double any other nation.",
-        "full": "The stat that keeps the conversation alive: Argentina has been awarded 8 penalties across its last 12 World Cup matches (five in 2022, three in 2026), the most of any nation in recent World Cups, roughly double the next side.",
-        "detail": "The strongest single number the doubters have, and it's real. Two caveats: Messi missed two of the 2026 ones (vs Austria and Egypt), so 'awarded' isn't 'converted'; and the exact superlative ('most ever over a 12-match span') isn't cleanly sourced, so I say 'most in recent World Cups.' An outlier invites scrutiny; it isn't proof of a thumb on the scale."
+        "short": "8 penalties across the 2022 + 2026 World Cups, roughly double any other nation.",
+        "full": "Argentina has been awarded 8 penalties in its last 12 World Cup matches (five in 2022, three in 2026): the most of any nation in recent World Cups, roughly double the next side.",
+        "detail": "The doubters' strongest number, and it's real. Two caveats. Messi missed two of the 2026 ones (vs Austria and Egypt), so 'awarded' isn't 'converted'. And 'most ever over a 12-match span' isn't cleanly sourced, so I say 'most in recent World Cups.' An outlier invites scrutiny; it proves nothing."
       },
       "es": {
         "headline": "El dato atípico de los penales",
         "short": "8 penales entre los Mundiales 2022 y 2026, casi el doble que cualquier otra selección.",
-        "full": "El dato que mantiene viva la charla: a Argentina le cobraron 8 penales en sus últimos 12 partidos de Mundial (cinco en 2022, tres en 2026), la mayor cantidad de cualquier selección en los Mundiales recientes, casi el doble que el siguiente.",
-        "detail": "Es el número más fuerte que tienen los escépticos, y es real. Dos aclaraciones: Messi erró dos de los de 2026 (vs Austria y Egipto), así que 'cobrado' no es 'convertido'; y el superlativo exacto ('la mayor cantidad en un tramo de 12 partidos en la historia') no tiene fuente limpia, así que lo planteo como 'la mayor en los Mundiales recientes'. Un dato atípico invita al escrutinio; no es prueba de un pulgar en la balanza."
+        "full": "A Argentina le cobraron 8 penales en sus últimos 12 partidos de Mundial (cinco en 2022, tres en 2026): la mayor cantidad de cualquier selección en los Mundiales recientes, casi el doble que el siguiente.",
+        "detail": "Es el número más fuerte que tienen los escépticos, y es real. Dos aclaraciones. Messi erró dos de los de 2026 (vs Austria y Egipto), así que 'cobrado' no es 'convertido'. Y el superlativo exacto ('la mayor cantidad en un tramo de 12 partidos en la historia') no tiene fuente limpia, así que lo planteo como 'la mayor en los Mundiales recientes'. Un dato atípico invita al escrutinio; no prueba nada."
       }
     }
   },
@@ -217,14 +217,14 @@
       "en": {
         "headline": "A witness and a money trail",
         "short": "A businessman is interviewed; reporting names five US banks and a ~$90M irregular-flow figure.",
-        "full": "More specifics sharpen the money thread without touching the scoreboard: a businessman who once handled AFA commercial deals is reportedly interviewed by US investigators, and coverage now names the banks and a larger flagged sum.",
-        "detail": "Guillermo Tofoni, an Argentine sports businessman who once handled AFA commercial deals and has himself accused the association of wrongdoing, reportedly gave a roughly three-hour video interview to FBI agents and federal prosecutors about how the AFA structured its international commercial agreements. He's a witness, not a defendant, and no one has been charged. Reporting names the same five US banks in the flow; the Miami Herald puts the sum flagged potentially irregular at roughly $90M to date. An AFA representative pushed back that investigative steps alone 'do not determine responsibility or guilt.' What it is and isn't: an active inquiry, now with a witness and named banks, still with zero connection alleged to any match result."
+        "full": "The money thread sharpens without touching the scoreboard: investigators reportedly interview a businessman who handled AFA commercial deals, and coverage now names the banks and a bigger flagged sum.",
+        "detail": "Guillermo Tofoni, an Argentine sports businessman who handled AFA commercial deals and has himself accused it of wrongdoing, reportedly gave a ~three-hour video interview to FBI agents and federal prosecutors. He's a witness, not a defendant; nobody's charged. Reporting names the same five US banks; the Miami Herald puts the potentially irregular sum at ~$90M. An AFA rep said investigative steps alone 'do not determine responsibility or guilt.' Still no alleged link to a match result."
       },
       "es": {
         "headline": "Un testigo y un rastro de plata",
         "short": "Entrevistan a un empresario; los reportes nombran cinco bancos de EE.UU. y una cifra de ~US$90M marcada como irregular.",
-        "full": "Más precisiones afilan el hilo del dinero sin tocar el marcador: a un empresario que manejó negocios comerciales de la AFA lo habrían entrevistado investigadores de EE.UU., y los reportes ahora ponen nombre a los bancos y una cifra marcada más grande.",
-        "detail": "Guillermo Tofoni, empresario argentino del deporte que manejó negocios comerciales de la AFA y que él mismo acusó a la asociación de irregularidades, habría dado una entrevista por videoconferencia de unas tres horas a agentes del FBI y fiscales federales sobre cómo la AFA estructuró sus acuerdos comerciales internacionales. Es un testigo, no un imputado, y no hay nadie con cargos. Los reportes nombran los mismos cinco bancos de EE.UU. en el circuito; el Miami Herald ubica en unos US$90M el monto marcado como potencialmente irregular hasta ahora. Un representante de la AFA retrucó que las medidas de investigación por sí solas 'no determinan responsabilidad ni culpa'. Lo que es y lo que no: una pesquisa activa, ahora con un testigo y bancos con nombre, y todavía cero conexión alegada con ningún resultado de la cancha."
+        "full": "El hilo del dinero se afila sin tocar el marcador: investigadores de EE.UU. habrían entrevistado a un empresario que manejó negocios comerciales de la AFA, y los reportes ahora ponen nombre a los bancos y a una cifra marcada más grande.",
+        "detail": "Guillermo Tofoni, empresario argentino del deporte que manejó negocios comerciales de la AFA y que él mismo acusó a la asociación de irregularidades, habría dado una entrevista por videoconferencia de unas tres horas a agentes del FBI y fiscales federales sobre cómo la AFA estructuró sus acuerdos comerciales internacionales. Es un testigo, no un imputado, y no hay nadie con cargos. Los reportes nombran los mismos cinco bancos de EE.UU.; el Miami Herald ubica en unos US$90M el monto potencialmente irregular hasta ahora. Un representante de la AFA retrucó que las medidas de investigación por sí solas 'no determinan responsabilidad ni culpa'. Una pesquisa activa, con un testigo y bancos con nombre, y todavía ninguna conexión alegada con ningún resultado de la cancha."
       }
     }
   },
@@ -241,14 +241,14 @@
       "en": {
         "headline": "Semifinal eve",
         "short": "France v Spain (Jul 14) and England v Argentina (Jul 15). The final is July 19.",
-        "full": "Two semifinals decide the finalists: France v Spain in Dallas (July 14) and England v Argentina in Atlanta (July 15); the final is in New York/New Jersey on July 19. Now maximum scrutiny falls on every call.",
-        "detail": "The semifinals test the perception hypotheses live: regression under the brightest lights favors variance over conspiracy; if not, the doubters get a real data point. Cards were wiped after the quarterfinals, so nobody is suspended. Messi is expected fit after an eye knock against Switzerland (he played all 120′), though Cristian Romero is a fitness doubt. England expect Declan Rice back after an illness scare (Jordan Henderson doubtful after breaking his arm celebrating the Mexico win). France eased a precautionary Mbappé knock. The football's about to be spectacular; the numbers say the rest."
+        "full": "Two semifinals decide the finalists: France v Spain in Dallas (July 14), England v Argentina in Atlanta (July 15). The final is in New York/New Jersey on July 19.",
+        "detail": "The semifinals put the thesis under the brightest lights: variance, or a real data point for the doubters. Cards were wiped after the quarterfinals, so nobody's suspended. Messi is fit after an eye knock against Switzerland (he played all 120′); Cristian Romero is a doubt. England expect Declan Rice back from illness; Jordan Henderson is doubtful after breaking his arm celebrating against Mexico. France eased a precautionary Mbappé knock."
       },
       "es": {
         "headline": "La previa de las semifinales",
         "short": "Francia v España (14/7) e Inglaterra v Argentina (15/7). La final es el 19 de julio.",
         "full": "Dos semifinales definen a los finalistas: Francia v España en Dallas (14 de julio) e Inglaterra v Argentina en Atlanta (15 de julio), con la final en Nueva York/Nueva Jersey el 19 de julio. Ahora el máximo escrutinio cae sobre cada fallo.",
-        "detail": "Las semifinales ponen a prueba las hipótesis de percepción en tiempo real: si el patrón se normaliza bajo las luces más brillantes, juega a favor de la varianza por sobre la conspiración; si no, los escépticos consiguen un dato real. Las amarillas se borraron después de los cuartos, así que no hay suspendidos. Messi llega bien tras un golpe en el ojo ante Suiza (jugó los 120′), aunque Cristian Romero es duda física. Inglaterra espera recuperar a Declan Rice tras un susto por enfermedad (Jordan Henderson, en duda por una fractura en el brazo festejando el triunfo ante México). Francia manejó con precaución un golpe de Mbappé. El fútbol está por ser espectacular; los números dicen el resto."
+        "detail": "Las semifinales ponen a prueba las hipótesis de percepción en tiempo real: si el patrón se normaliza bajo las luces más brillantes, juega a favor de la varianza por sobre la conspiración; si no, los escépticos consiguen un dato real. Las amarillas se borraron después de los cuartos, así que no hay suspendidos. Messi llega bien tras un golpe en el ojo ante Suiza (jugó los 120′); Cristian Romero es duda. Inglaterra espera recuperar a Declan Rice tras una enfermedad, con Jordan Henderson en duda por una fractura en el brazo festejando ante México. Francia manejó con precaución un golpe de Mbappé."
       }
     }
   },
@@ -265,15 +265,15 @@
     ],
     "content": {
       "en": {
-        "headline": "Semifinal 1: Spain 2–0 France — and a penalty firestorm without Argentina",
-        "short": "Spain knock out the favorites, and the round's big refereeing row lands on a match without Argentina.",
-        "full": "Spain beat France 2–0 in Arlington to reach the final: an Oyarzabal penalty on 22, a Pedro Porro strike on 58. The twist: that penalty (Digne on Lamine Yamal) set off the night's officiating uproar, and Argentina wasn't even playing.",
-        "detail": "Referee Iván Barton of El Salvador pointed to the spot when Lucas Digne caught Lamine Yamal in the box; replays split opinion (some said Yamal invited the contact) and VAR didn't intervene. Deschamps asked whether Barton 'had the level' for a World Cup semifinal; FIFA's Pierluigi Collina defended him, and former PGMOL chief Keith Hackett called the penalty correct. Spain dominated (roughly 1.6 to 0.3 on xG per ESPN) and has conceded once all tournament. The round's loudest refereeing controversy landed on Spain–France, not Argentina, just what the variance-plus-perception readings (H3/H4) expect."
+        "headline": "Semifinal 1: Spain 2–0 France, a penalty firestorm without Argentina",
+        "short": "Spain knocks out the favorites, and the round's big refereeing row lands on a match without Argentina.",
+        "full": "Spain beats France 2–0 in Arlington to reach the final: an Oyarzabal penalty on 22, a Pedro Porro strike on 58. That penalty (Digne on Lamine Yamal) set off the night's officiating uproar, and Argentina wasn't even playing.",
+        "detail": "Salvadoran referee Iván Barton gave the spot-kick when Lucas Digne caught Lamine Yamal; replays split (some said Yamal invited the contact) and VAR stayed out. Deschamps questioned whether Barton 'had the level'; Collina defended him, and ex-PGMOL chief Keith Hackett called the penalty correct. Spain dominated (~1.6 to 0.3 on xG per ESPN) and has conceded once all tournament. The round's loudest refereeing row landed on Spain v France, not Argentina."
       },
       "es": {
         "headline": "Semifinal 1: España 2–0 Francia, y un penal polémico sin Argentina",
         "short": "España elimina al favorito, y el gran lío arbitral de la ronda cae en un partido donde Argentina ni jugaba.",
-        "full": "España le ganó 2–0 a Francia en Arlington y está en la final: penal de Oyarzabal a los 22, gol de Pedro Porro a los 58. El giro: ese penal (Digne sobre Lamine Yamal) desató el escándalo arbitral de la noche, y Argentina ni jugaba.",
+        "full": "España le ganó 2–0 a Francia en Arlington y está en la final: penal de Oyarzabal a los 22, gol de Pedro Porro a los 58. Ese penal (Digne sobre Lamine Yamal) desató el escándalo arbitral de la noche, y Argentina ni jugaba.",
         "detail": "El árbitro salvadoreño Iván Barton marcó el punto cuando Lucas Digne enganchó a Lamine Yamal en el área; las repeticiones dividieron opiniones (algunos dijeron que Yamal buscó el contacto) y el VAR no intervino. Deschamps preguntó si Barton 'tenía el nivel' para una semifinal de Mundial; Pierluigi Collina, de la FIFA, lo defendió, y el exjefe de los árbitros ingleses Keith Hackett dijo que el penal estuvo bien cobrado. España dominó (más o menos 1,6 a 0,3 en xG según ESPN) y recibió un solo gol en todo el torneo. La polémica arbitral más ruidosa de la ronda cayó en un España–Francia, no en un partido de Argentina: justo lo que esperan las lecturas de varianza más percepción (H3/H4)."
       }
     }
@@ -291,16 +291,16 @@
     ],
     "content": {
       "en": {
-        "headline": "Semifinal 2: England 1–2 Argentina — the 'lucky charm' storm that fizzled",
-        "short": "Argentina come from behind to reach the final; the match pre-loaded with a referee narrative ends with no controversy.",
-        "full": "Argentina beat England 2–1 in Atlanta to reach the July 19 final against Spain: Gordon on 55, Enzo Fernández from distance on 85, and a Lautaro Martínez header off a Messi cross in stoppage time. The refereeing subplot arrived before kickoff, when US referee Ismail Elfath was dubbed 'Messi's lucky charm'; the match then gave it nothing.",
-        "detail": "Elfath led the first all-US crew in a World Cup semifinal, with compatriots Corey Parker and Kyle Atkins; by convention an English referee can't take an Argentina match. His viral 'lucky charm' record around Messi's teams includes fourth-official duty at the 2022 final. The match gave it nothing: England's goal stood on a routine offside check, no VAR call decided anything, and Argentina won late while dominating the ball (64% possession, roughly 1.8 to 0.5 on xG per ESPN), their first knockout win this tournament inside 90 minutes. The stakes rose and the pattern didn't return: the round's one firestorm was the France v Spain penalty, and Argentina's biggest match left nothing to dispute, the H3/H4 branch of the test. Opta gave England 52.3% to advance, and for the second day running the narrow favorite went out."
+        "headline": "Semifinal 2: England 1–2 Argentina, the 'lucky charm' storm that fizzled",
+        "short": "Argentina comes from behind to reach the final; a match pre-loaded with a referee narrative ends with no controversy.",
+        "full": "Argentina beats England 2–1 in Atlanta to reach the July 19 final against Spain: Gordon on 55, Enzo Fernández from distance on 85, a Lautaro Martínez header off a Messi cross in stoppage time. The refereeing subplot came before kickoff: US referee Ismail Elfath, dubbed 'Messi's lucky charm.' The match gave it nothing.",
+        "detail": "Elfath led the first all-US crew in a World Cup semifinal, with Corey Parker and Kyle Atkins; by convention no English referee can take an Argentina match. The 'lucky charm' tag comes from his fourth-official duty at the 2022 final. England's goal stood on a routine offside check, no VAR call decided anything, and Argentina won late while dominating the ball (64% possession, ~1.8 to 0.5 on xG per ESPN). It was Argentina's first knockout win inside 90 minutes this tournament. Opta gave England 52.3% to advance; for the second day running the narrow favorite went out."
       },
       "es": {
         "headline": "Semifinal 2: Inglaterra 1–2 Argentina, la tormenta del 'amuleto' que quedó en nada",
         "short": "Argentina lo da vuelta y está en la final; el partido que venía precargado con un relato arbitral termina sin ninguna polémica.",
         "full": "Argentina le ganó 2–1 a Inglaterra en Atlanta y jugará la final del 19 de julio contra España: Gordon a los 55, Enzo Fernández desde afuera a los 85 y un cabezazo de Lautaro Martínez, tras centro de Messi, en el descuento. La subtrama arbitral llegó antes del pitazo inicial, cuando al árbitro estadounidense Ismail Elfath lo bautizaron 'el amuleto de Messi'; después el partido no le dio nada.",
-        "detail": "Elfath encabezó la primera terna toda estadounidense en una semifinal de Mundial, con sus compatriotas Corey Parker y Kyle Atkins; por convención, un árbitro inglés no puede dirigir a Argentina. Su historial viral de 'amuleto' alrededor de los equipos de Messi incluye su tarea de cuarto árbitro en la final de 2022. El partido no le dio nada: el gol de Inglaterra quedó convalidado tras un chequeo de offside de rutina, ninguna intervención del VAR definió nada, y Argentina lo ganó sobre el final dominando la pelota (64% de posesión, más o menos 1,8 a 0,5 en xG según ESPN), su primer triunfo del mata-mata en 90 minutos en este torneo. Subió la apuesta y el patrón no volvió: el único incendio de la ronda fue el penal de Francia v España, y el partido más grande de Argentina no dejó nada para discutir. Esa es la rama H3/H4 de la prueba. Opta le daba a Inglaterra un 52,3% de avanzar, y por segundo día seguido cayó el favorito por poco."
+        "detail": "Elfath encabezó la primera terna toda estadounidense en una semifinal de Mundial, con Corey Parker y Kyle Atkins; por convención, un árbitro inglés no puede dirigir a Argentina. El mote de 'amuleto' viene de su tarea de cuarto árbitro en la final de 2022. Después el gol de Inglaterra quedó convalidado tras un chequeo de offside de rutina, ninguna intervención del VAR definió nada, y Argentina lo ganó sobre el final dominando la pelota (64% de posesión, más o menos 1,8 a 0,5 en xG según ESPN), su primer triunfo del mata-mata en 90 minutos en este torneo. El partido más grande de Argentina no dejó nada para discutir: esa es la rama H3/H4 de la prueba. Opta le daba a Inglaterra un 52,3% de avanzar, y por segundo día seguido cayó el favorito por poco."
       }
     }
   },
@@ -319,14 +319,14 @@
       "en": {
         "headline": "The money probe turns inward",
         "short": "Reporting says US investigators are now reconstructing the scheme 'from the inside' via former AFA officials.",
-        "full": "The most concrete movement on the financial thread yet: La Nación reports FBI agents and prosecutors are no longer only interviewing outside witnesses but reaching former AFA insiders to reconstruct the money circuit. Still no charges.",
-        "detail": "Per La Nación (Jul 13–14), the inquiry names a former executive president of the AFA Consejo Federal, described as a lieutenant of treasurer Pablo Toviggino, who reportedly held several videoconferences with US authorities, framed as informal dialogues, not sworn testimony, and not (yet) formal cooperation. La Nación also names three federal prosecutors across Washington DC and the Southern District of Florida, and adds a new alleged mechanism: cash moved to Argentina through informal currency traders ('cuevas'). AFA sources in the Argentine press now cast Toviggino, not president Tapia, as the probe's main focus. All of it is alleged and unproven: no US charge, subpoena or indictment reported, and the FBI still declines to comment. The change is direction, not legal status: from outside witnesses toward insider reconstruction. Separately, an Argentine 'mansion' case (distinct from the ~$12.7M tax matter) advanced to a jurisdiction fight, hearing set for August 12."
+        "full": "La Nación reports FBI agents and prosecutors reaching former AFA insiders, not just outside witnesses, to reconstruct the money circuit. Still no charges.",
+        "detail": "Per La Nación (Jul 13–14), the inquiry names a former executive president of the AFA Consejo Federal, called a lieutenant of treasurer Pablo Toviggino. He reportedly held several videoconferences with US authorities, framed as informal dialogues: not sworn testimony, not yet formal cooperation. La Nación names three federal prosecutors across Washington DC and the Southern District of Florida, and adds an alleged new mechanism: cash moved to Argentina through informal currency traders ('cuevas'). AFA sources now put Toviggino, not Tapia, at the center. All alleged and unproven: no US charge, subpoena or indictment reported, FBI still declines comment. Separately, an Argentine 'mansion' case (distinct from the ~$12.7M tax matter) advanced to a jurisdiction fight, hearing August 12."
       },
       "es": {
         "headline": "La pesquisa del dinero mira hacia adentro",
         "short": "Los reportes dicen que los investigadores de EE.UU. ahora reconstruyen la maniobra 'desde adentro', vía exdirigentes de la AFA.",
-        "full": "El movimiento más concreto del hilo financiero desde que estalló: La Nación informa que agentes del FBI y fiscales federales ya no solo entrevistan a testigos de afuera sino que llegan a exdirigentes de la AFA para reconstruir el circuito del dinero. Todavía sin cargos.",
-        "detail": "Según La Nación (13–14 de julio), la pesquisa nombra a un expresidente ejecutivo del Consejo Federal de la AFA, descrito como lugarteniente del tesorero Pablo Toviggino, que habría tenido varias videoconferencias con autoridades de EE.UU., planteadas como diálogos informales, no como testimonio bajo juramento, y todavía no como cooperación formal. La Nación también nombra a tres fiscales federales entre Washington DC y el Distrito Sur de Florida, y suma un mecanismo nuevo alegado: plata movida a la Argentina por medio de 'cuevas' de cambio informal. Fuentes de la AFA citadas por la prensa argentina ahora ubican a Toviggino, no al presidente Tapia, como el foco principal de la pesquisa. Todo esto es alegado y no probado: no hay cargos, ni citación, ni imputación reportada en EE.UU., y el FBI sigue sin hacer comentarios. Lo que cambia es la dirección, de testigos de afuera hacia reconstruir desde adentro, no el estatus legal. Aparte, una causa local por una 'mansión' (distinta de la de evasión por ~US$12,7M) avanzó a una disputa de competencia, con audiencia fijada para el 12 de agosto."
+        "full": "El movimiento más concreto del hilo financiero hasta ahora: La Nación informa que agentes del FBI y fiscales federales llegan a exdirigentes de la AFA, no solo a testigos de afuera, para reconstruir el circuito del dinero. Todavía sin cargos.",
+        "detail": "Según La Nación (13–14 de julio), la pesquisa nombra a un expresidente ejecutivo del Consejo Federal de la AFA, descrito como lugarteniente del tesorero Pablo Toviggino, que habría tenido varias videoconferencias con autoridades de EE.UU., planteadas como diálogos informales, no como testimonio bajo juramento, y todavía no como cooperación formal. La Nación también nombra a tres fiscales federales entre Washington DC y el Distrito Sur de Florida, y suma un mecanismo nuevo alegado: plata movida a la Argentina por medio de 'cuevas' de cambio informal. Fuentes de la AFA citadas por la prensa argentina ahora ubican a Toviggino, no al presidente Tapia, como el foco principal de la pesquisa. Todo esto es alegado y no probado: no hay cargos, ni citación, ni imputación reportada en EE.UU., y el FBI sigue sin hacer comentarios. Lo que cambia es la dirección, no el estatus legal. Aparte, una causa local por una 'mansión' (distinta de la de evasión por ~US$12,7M) avanzó a una disputa de competencia, con audiencia fijada para el 12 de agosto."
       }
     }
   },
@@ -346,14 +346,14 @@
       "en": {
         "headline": "The narrative peaks, and FIFA rebuts it",
         "short": "A petition demanding Argentina's expulsion tops millions of signatures; Collina again calls the bias claims unfounded.",
-        "full": "On final week the favoritism narrative peaks, an online petition with millions of signatures demanding Argentina be thrown out, while on-record authorities and much of the analysis push the other way, toward tournament-wide VAR variance.",
-        "detail": "The petition, several million signatures strong on the eve of the final, centered on the Egypt Round-of-16 match (a disallowed goal, contested non-calls). It measures perception, not evidence. The authoritative reads cut the other way: FIFA refereeing chief Pierluigi Collina said again that 'unfounded allegations have no place in our sport' and that nobody can claim FIFA refereeing is influenced by anyone, 'not even by the FIFA president.' Scaloni called the claims social-media amplification, and analysts noted England, Germany and Iran all absorbed contentious VAR calls too: the scrutiny is universal, not Argentina-only. The round's loudest controversy went for Spain (the France-semifinal penalty), and Argentina's own semifinal was clean. A petition this size is what a perception cascade looks like, not evidence of a thumb on the scale."
+        "full": "In final week the favoritism narrative peaks: a petition with millions of signatures demands Argentina be thrown out, while on-record authorities and analysis point the other way, to tournament-wide VAR variance.",
+        "detail": "The petition, several million signatures on the eve of the final, centered on the Egypt Round-of-16 match (a disallowed goal, contested non-calls). FIFA refereeing chief Pierluigi Collina said again that 'unfounded allegations have no place in our sport,' and that nobody can claim FIFA refereeing is influenced by anyone, 'not even by the FIFA president.' Scaloni called it social-media amplification. Analysts noted England, Germany and Iran absorbed contentious VAR calls too. A petition this size measures perception, not evidence."
       },
       "es": {
         "headline": "El relato llega a su pico, y la FIFA lo rebate",
         "short": "Una petición que pide la expulsión de Argentina supera los millones de firmas; Collina vuelve a calificar de infundadas las acusaciones de sesgo.",
         "full": "En la semana de la final, el relato del favoritismo llega a su punto más ruidoso, una petición online con millones de firmas que pide que echen a Argentina, mientras las autoridades en actas y buena parte del análisis empujan para el otro lado: la varianza del VAR en todo el torneo.",
-        "detail": "La petición, con varios millones de firmas en la previa de la final, se centró en el partido de octavos con Egipto (un gol anulado, jugadas no cobradas discutidas). Mide percepción, no evidencia. Las lecturas con autoridad cortan para el otro lado: el jefe de arbitraje de la FIFA, Pierluigi Collina, volvió a decir que 'las acusaciones infundadas no tienen lugar en nuestro deporte' y que nadie puede afirmar que el arbitraje de la FIFA esté influido por alguien, 'ni siquiera por el presidente de la FIFA'. Scaloni descartó las acusaciones como amplificación de redes, y varios analistas remarcaron que Inglaterra, Alemania e Irán también se comieron fallos discutidos del VAR: la lupa es de todos, no solo de Argentina. El incendio más ruidoso de la ronda fue a favor de España (el penal de la semi con Francia), y la propia semifinal de Argentina fue limpia. Una petición de este tamaño es lo que parece una cascada de percepción, no prueba de un pulgar en la balanza."
+        "detail": "La petición, con varios millones de firmas en la previa de la final, se centró en el partido de octavos con Egipto (un gol anulado, jugadas no cobradas discutidas). Las autoridades cortan para el otro lado. El jefe de arbitraje de la FIFA, Pierluigi Collina, volvió a decir que 'las acusaciones infundadas no tienen lugar en nuestro deporte' y que nadie puede afirmar que el arbitraje de la FIFA esté influido por alguien, 'ni siquiera por el presidente de la FIFA'. Scaloni descartó las acusaciones como amplificación de redes. Varios analistas remarcaron que Inglaterra, Alemania e Irán también se comieron fallos discutidos del VAR: la lupa es de todos. Una petición de este tamaño mide percepción, no evidencia."
       }
     }
   },
@@ -371,14 +371,193 @@
       "en": {
         "headline": "The final referee: a European for Spain v Argentina",
         "short": "FIFA appoints Slovenia's Slavko Vinčić: not the tipped neutral, and a UEFA official for a Spain final.",
-        "full": "FIFA names Slovenian referee Slavko Vinčić for the July 19 final, two days out, a surprise on two counts: he isn't the 'fully neutral' Asian name most had tipped, and he's a European official for a final featuring Spain, the opposite of the confederation-neutral pick most assumed.",
-        "detail": "Vinčić, 46, is the first Slovenian and 23rd person to referee a men's World Cup final. His crew: assistants Tomaž Klančnik and Andraž Kovačič (Slovenia), fourth official Adham Makhadmeh (Jordan), Bastian Dankert (Germany) on VAR, Nicolás Gallo (Colombia) as AVAR. FIFA usually gives finals outside Europe to European referees, so a UEFA official was always plausible, and tipped frontrunner Alireza Faghani (Iran) missed out. A European for a Spain–Argentina final is non-neutral toward Spain, not Argentina, the reverse of what the favoritism narrative wants, and it lands amid open FIFA–UEFA friction (the Infantino–Ceferin feud, a suspended Balogun ban): fresh fuel for perception, not evidence. Vinčić's only prior Argentina match was their 2022 opening loss to Saudi Arabia; he has refereed Spain several times without them losing. Real Madrid criticized a red card he gave in an April Champions League tie (Jude Bellingham called it 'a joke'); José Mourinho has praised his work. A Champions League final on the CV is the form-based profile these appointments reward; the noise around him is perception, not proof."
+        "full": "FIFA names Slovenian referee Slavko Vinčić for the July 19 final, two days out. A surprise twice over: not the 'fully neutral' Asian name most tipped, and a European for a Spain final.",
+        "detail": "Vinčić, 46, is the first Slovenian and 23rd person to referee a men's World Cup final. His crew: assistants Tomaž Klančnik and Andraž Kovačič (Slovenia), fourth official Adham Makhadmeh (Jordan), Bastian Dankert (Germany) on VAR, Nicolás Gallo (Colombia) as AVAR. FIFA usually gives finals outside Europe to European referees, so a UEFA name was plausible; the tipped frontrunner, Iran's Alireza Faghani, missed out. A European for a Spain v Argentina final is non-neutral toward Spain, not Argentina, the reverse of what the favoritism narrative wants, amid open FIFA-UEFA friction (the Infantino-Ceferin feud, a suspended Balogun ban). Fuel for perception, not evidence. Vinčić's only prior Argentina match was the 2022 opening loss to Saudi Arabia; he refereed Spain several times without a defeat. Real Madrid slammed a red he gave in an April Champions League tie (Bellingham called it 'a joke'); Mourinho praised his work. A Champions League final is on his CV, the form these appointments reward."
       },
       "es": {
         "headline": "El árbitro de la final: un europeo para España v Argentina",
         "short": "La FIFA designa al esloveno Slavko Vinčić: no el neutral que se descontaba, y un juez de la UEFA para un partido con España adentro.",
         "full": "La FIFA nombra al árbitro esloveno Slavko Vinčić para la final del 19 de julio, a dos días del partido. Sorprende por dos motivos: no es el nombre asiático 'plenamente neutral' que casi todos daban por hecho, y es un juez europeo para una final con España, lo contrario de la designación neutral por confederación que casi todos suponían.",
-        "detail": "Vinčić, de 46 años, es el primer esloveno y la 23.ª persona en dirigir una final de Mundial masculino. Su terna: los asistentes Tomaž Klančnik y Andraž Kovačič (Eslovenia), el cuarto árbitro Adham Makhadmeh (Jordania), Bastian Dankert (Alemania) en el VAR y Nicolás Gallo (Colombia) como AVAR. La FIFA suele darles a árbitros europeos las finales jugadas fuera de Europa, así que un juez de la UEFA siempre fue plausible, y el favorito que se descontaba, el iraní Alireza Faghani, no quedó. Un europeo para una final España–Argentina es no-neutral hacia España, no hacia Argentina, lo contrario de lo que querría el relato del favoritismo, y cae en medio de una fricción abierta FIFA–UEFA (la pelea Infantino–Ceferin, una sanción a Balogun que quedó en suspenso): combustible fresco para la percepción, no prueba. El único partido de Argentina que Vinčić dirigió fue la derrota inaugural de 2022 ante Arabia Saudita; arbitró a España varias veces sin que perdiera. El Real Madrid criticó una roja suya en una llave de la Champions de abril (Jude Bellingham la llamó 'un chiste'); José Mourinho elogió su trabajo. Una final de Champions en el currículum es el perfil por rendimiento que premian estas designaciones; el ruido alrededor es percepción, no prueba."
+        "detail": "Vinčić, de 46 años, es el primer esloveno y la 23.ª persona en dirigir una final de Mundial masculino. Su terna: los asistentes Tomaž Klančnik y Andraž Kovačič (Eslovenia), el cuarto árbitro Adham Makhadmeh (Jordania), Bastian Dankert (Alemania) en el VAR y Nicolás Gallo (Colombia) como AVAR. La FIFA suele darles a árbitros europeos las finales jugadas fuera de Europa, así que un juez de la UEFA siempre fue plausible, y el favorito que se descontaba, el iraní Alireza Faghani, no quedó. Un europeo para una final España–Argentina es no-neutral hacia España, no hacia Argentina, lo contrario de lo que querría el relato del favoritismo, y cae en medio de una fricción abierta FIFA–UEFA (la pelea Infantino–Ceferin, una sanción a Balogun que quedó en suspenso). Combustible para la percepción, no prueba. El único partido de Argentina que Vinčić dirigió fue la derrota inaugural de 2022 ante Arabia Saudita; arbitró a España varias veces sin que perdiera. El Real Madrid criticó una roja suya en una llave de la Champions de abril (Jude Bellingham la llamó 'un chiste'); José Mourinho elogió su trabajo. Una final de Champions en el currículum es el perfil por rendimiento que premian estas designaciones."
+      }
+    }
+  },
+  {
+    "id": "malvinas-banner",
+    "order": 16,
+    "date": "2026-07-16",
+    "thread": "sporting",
+    "icon": "🏴",
+    "sources": [
+      "aljazeera-malvinas-probe",
+      "thehill-malvinas-whitehouse"
+    ],
+    "content": {
+      "en": {
+        "headline": "A banner after the England semifinal, and FIFA opens a case",
+        "short": "Argentina's players celebrated beating England with a 'Las Malvinas son Argentinas' banner. FIFA's disciplinary bodies are now reviewing it.",
+        "full": "After beating England 2–1, several Argentina players unfurled a 'Las Malvinas son Argentinas' banner (the Falklands are Argentine). A day later FIFA's disciplinary bodies were reviewing it under the rule barring political messages; by the weekend the row had reached the British government and the White House.",
+        "detail": "Article 34.3 bars political messages before, during or after a match; the committee is assessing the match reports first. Precedent: in 2014 the AFA was fined 30,000 Swiss francs (about $37,000) after its players held up an identical banner before a friendly against Slovenia. So the realistic range runs from a warning to a fine, nothing touching the final. UK Business Secretary Peter Kyle called the display 'entirely inappropriate.' Andrew Giuliani, who runs the White House's World Cup task force, defended the players on First Amendment grounds. Commentators reported Trump was 'reexamining' his position on the islands. FIFA opening a disciplinary case against a finalist three days before the final is not how you shield a team."
+      },
+      "es": {
+        "headline": "Una bandera después de la semi con Inglaterra, y la FIFA abre expediente",
+        "short": "Los jugadores argentinos festejaron el triunfo ante Inglaterra con una bandera de 'Las Malvinas son Argentinas'. Los órganos disciplinarios de la FIFA la están revisando.",
+        "full": "Después del 2–1 a Inglaterra, varios jugadores argentinos desplegaron una bandera con la leyenda 'Las Malvinas son Argentinas'. Un día después la FIFA dijo que sus órganos disciplinarios independientes la estaban revisando bajo la norma que prohíbe los mensajes políticos; para el fin de semana el asunto ya había llegado al gobierno británico y a la Casa Blanca.",
+        "detail": "El artículo 34.3 del reglamento del torneo prohíbe mensajes o consignas políticas antes, durante o después de un partido, y la comisión está analizando las actas antes de decidir si actúa. Hay un antecedente directo: en 2014 multaron a la AFA con 30.000 francos suizos (unos 37.000 dólares) después de que sus jugadores levantaran una bandera idéntica antes de un amistoso con Eslovenia. Así que el rango realista va de un apercibimiento a una multa, nada que toque la final. El secretario de Negocios británico, Peter Kyle, calificó el gesto de 'absolutamente inapropiado' y dijo que la política tiene que estar separada del fútbol. Andrew Giuliani, que dirige el equipo de trabajo de la Casa Blanca para el Mundial, defendió a los jugadores invocando la Primera Enmienda, y algunos comentaristas contaron que Trump estaba 'reexaminando' su postura sobre las islas. Dos cosas que conviene separar: una bandera de festejo se volvió tema diplomático en menos de 48 horas, y la FIFA le abrió un expediente disciplinario a una finalista tres días antes de la final, que no es la manera de proteger a un equipo."
+      }
+    }
+  },
+  {
+    "id": "final-day-teams",
+    "order": 17,
+    "date": "2026-07-19",
+    "thread": "sporting",
+    "icon": "📋",
+    "sources": [
+      "espn-final-lineups",
+      "opta-final-preview",
+      "fortune-prediction-market-record",
+      "espn-final-tickets"
+    ],
+    "content": {
+      "en": {
+        "headline": "Final day: Scaloni changes three, De la Fuente changes none",
+        "short": "Messi becomes the first man to start three World Cup finals. Spain names the same eleven that beat France; Argentina makes three changes.",
+        "full": "Luis de la Fuente repeats the eleven that shut out France. Lionel Scaloni makes three changes from the England semifinal: Rodrigo De Paul, Nico González and Gonzalo Montiel in; Giuliano Simeone, Leandro Paredes and Nahuel Molina to the bench. Messi becomes the first player to start three World Cup finals and the oldest outfield player in one.",
+        "detail": "Spain lines up 4-2-3-1: Unai Simón; Porro, Cubarsí, Laporte, Cucurella; Rodri, Fabián Ruiz, Olmo; Yamal, Oyarzabal, Baena. Lamine Yamal (thigh strapping in training) and Pedro Porro (a muscle overload) both start. Argentina goes 4-4-2: Emiliano Martínez; Montiel, Romero, Lisandro Martínez, Tagliafico; Mac Allister, De Paul, Enzo Fernández, Nico González; Messi and Julián Álvarez, so the Álvarez-or-Lautaro call falls to Álvarez. The scale: the largest prediction market ever run. Kalshi's contract on Spain against Argentina passed $1.27 billion, and Polymarket's winner market has cleared $4 billion since opening July 2025, more than its own 2024 US presidential market. The cheapest way in on Saturday morning was $6,411.25 on FIFA's resale site, gone by lunchtime; last-minute seats ran $10,000 to $60,000."
+      },
+      "es": {
+        "headline": "Día de final: Scaloni mueve tres, De la Fuente no mueve nada",
+        "short": "Messi se convierte en el primer futbolista en ser titular en tres finales de Mundial. España repite el equipo que le ganó a Francia; Argentina hace tres cambios.",
+        "full": "Luis de la Fuente repite el once que dejó en cero a Francia. Lionel Scaloni hace tres cambios respecto de la semi con Inglaterra: entran Rodrigo De Paul, Nico González y Gonzalo Montiel, y van al banco Giuliano Simeone, Leandro Paredes y Nahuel Molina. Messi pasa a ser el primer futbolista titular en tres finales de Mundial y el jugador de campo más veterano en jugar una.",
+        "detail": "España forma con un 4-2-3-1: Unai Simón; Porro, Cubarsí, Laporte, Cucurella; Rodri, Fabián Ruiz, Olmo; Yamal, Oyarzabal, Baena. Se cierra el parte físico: Lamine Yamal, que venía entrenando con el muslo vendado, y Pedro Porro, que arrastraba una sobrecarga muscular, son los dos titulares. Argentina va con un 4-4-2: Emiliano Martínez; Montiel, Romero, Lisandro Martínez, Tagliafico; Mac Allister, De Paul, Enzo Fernández, Nico González; Messi y Julián Álvarez, así que la duda Álvarez o Lautaro se resuelve por Álvarez. Dos números dan la escala. Es el mercado de predicción más grande de la historia: el contrato de Kalshi sobre España contra Argentina superó los 1.270 millones de dólares, y el mercado de campeón del Mundial en Polymarket pasó los 4.000 millones desde que abrió en julio de 2025, más que su propio mercado presidencial estadounidense de 2024. Lo más barato para entrar al estadio el sábado a la mañana costaba 6.411,25 dólares en la reventa oficial de la FIFA, y ya no estaba al mediodía; las entradas de último momento iban de 10.000 a 60.000 dólares."
+      }
+    }
+  },
+  {
+    "id": "tapia-final-box",
+    "order": 18,
+    "date": "2026-07-19",
+    "thread": "financial",
+    "icon": "🎩",
+    "sources": [
+      "lanacion-tapia-eeuu"
+    ],
+    "content": {
+      "en": {
+        "headline": "The AFA president watches the final from the main box",
+        "short": "Claudio Tapia travelled on judicial authorization, was received at Trump Tower with Infantino on Friday, and will be in the main box for the final.",
+        "full": "Claudio Tapia, whose federation's US operations are the subject of the reported FBI and DOJ inquiry, spends the final weekend in the main box. He travelled on judicial authorization despite the open Argentine proceedings, was received at Trump Tower with Gianni Infantino on Friday, and steps onto the pitch when the final ends.",
+        "detail": "No US charges have been filed against the AFA, Tapia or treasurer Pablo Toviggino; the reported inquiry stays preliminary; the FBI still declines comment; the domestic Argentine case has an August 12 hearing. Tapia sits in the main box with FIFA and CONMEBOL officials and the Spanish federation's leadership, and Trump, who FIFA disclosed received $15,000 in tickets from Infantino, is expected to present the trophy. An official under investigation in world football's most photographed room is a striking image, not a fact about the case."
+      },
+      "es": {
+        "headline": "El presidente de la AFA ve la final desde el palco principal",
+        "short": "Claudio Tapia viajó con autorización judicial, lo recibieron en la Trump Tower junto a Infantino el viernes y estará en el palco principal de la final.",
+        "full": "Claudio Tapia, cuya federación tiene sus operaciones financieras en Estados Unidos en el centro de la pesquisa que se le reporta al FBI y al Departamento de Justicia, pasa el fin de semana de la final en el palco principal. Viajó con autorización judicial pese a las causas abiertas en la Argentina, estuvo entre los dirigentes recibidos en la Trump Tower junto a Gianni Infantino el viernes y va a pisar el campo de juego cuando termine la final.",
+        "detail": "No hay imputaciones en Estados Unidos contra la AFA, ni contra Tapia ni contra el tesorero Pablo Toviggino, la pesquisa que se reporta sigue siendo preliminar y el FBI mantiene su negativa a comentar; la causa local en la Argentina tiene audiencia fijada para el 12 de agosto. Lo que aporta el fin de semana es cercanía, no evidencia. Se informa que Tapia está en el palco principal con dirigentes de la FIFA y la Conmebol y la conducción de la federación española, y que Trump, de quien la FIFA declaró que había recibido entradas por 15.000 dólares de manos de Infantino, entregaría el trofeo. La Nación lo dice bien: Tapia está cerca de Trump y por ahora lejos de los tribunales argentinos. Un dirigente investigado parado en la sala más fotografiada del fútbol mundial es una imagen fuerte, no un dato sobre la investigación."
+      }
+    }
+  },
+  {
+    "id": "final-result",
+    "order": 19,
+    "date": "2026-07-19",
+    "thread": "sporting",
+    "icon": "🏆",
+    "sources": [
+      "espn-final-report",
+      "npr-spain-champion",
+      "athlon-final-awards",
+      "nbc-officiating-red"
+    ],
+    "content": {
+      "en": {
+        "headline": "The final: Spain 1–0 Argentina, and the red card that went the other way",
+        "short": "Spain won the World Cup in extra time. The tournament's cleanest officiating test produced no pro-Argentina call; the decisive red went against them.",
+        "full": "Spain beat Argentina 1–0 after extra time at MetLife to win the 2026 World Cup, their second title. Ferran Torres scored on 106′ off a Nico Williams header. Argentina, down to ten after Enzo Fernández was sent off in stoppage time, did not manage a shot on target in regulation. Watched for a favoritism twist, it delivered the opposite: every close call cut against Argentina.",
+        "detail": "Torres, the player of the match, settled it six minutes into extra time. By then Argentina were a man down: Enzo Fernández, booked for dissent, went off on 90+3′ for a reckless challenge on Pau Cubarsí, and ESPN's review judged the second yellow deserved. The only calls that arguably favored Argentina were two disallowed Spain goals: a Nico Williams effort chalked off for a Merino foul on Otamendi, and a Torres offside. Ex-PGMOL chief Keith Hackett thought VAR should have restored the Williams goal. A tournament built on the claim that officials shield Argentina ended, under the sharpest scrutiny of all, with no call going its way. Spain became the first nation to hold the men's and women's World Cups at once (women's, 2023) and the first champion to concede only one goal across a tournament, anchored by Cubarsí and Aymeric Laporte. The awards went almost entirely to Spain: Rodri the Golden Ball ahead of Messi (Silver) and Mbappé (Bronze), Unai Simón the Golden Glove, Cubarsí the best young player. Mbappé took the Golden Boot with 10 goals to Messi's 8. Messi, 39, left in tears with a runners-up medal in likely his last World Cup match, the second man after Cafu to play three finals and the first to start all three."
+      },
+      "es": {
+        "headline": "La final: España 1–0 Argentina, y la roja fue para el otro lado",
+        "short": "España gana el Mundial en el alargue. La prueba arbitral más limpia del torneo no dejó ni un fallo a favor de Argentina: la roja decisiva fue en contra.",
+        "full": "España le ganó 1–0 a Argentina tras el alargue en el MetLife y se quedó con el Mundial 2026, su segundo título. Ferran Torres marcó a los 106′ tras un cabezazo de Nico Williams. Argentina, con diez por la expulsión de Enzo Fernández en el descuento, no remató al arco en los 90. El partido que todos miraban esperando un giro de favoritismo dejó lo contrario: cada jugada al filo cayó en contra de Argentina.",
+        "detail": "Torres, la figura del partido, lo definió a los seis minutos del alargue. Para entonces Argentina jugaba con uno menos: Enzo Fernández, amonestado por protestar, fue expulsado a los 90+3′ por una patada temeraria a Pau Cubarsí, y la revisión arbitral de ESPN dio la segunda amarilla por bien cobrada. Los únicos fallos que podrían haber ayudado a Argentina fueron dos goles anulados a España (uno de Nico Williams por una falta de Merino a Otamendi, que el exjefe del PGMOL Keith Hackett creía que el VAR debía haber convalidado, más un offside de Torres), así que un torneo montado sobre la idea de que los árbitros protegen a Argentina terminó con el escrutinio más filoso de todos sin dejar un solo fallo a su favor. España se convirtió en la primera nación en tener a la vez el Mundial masculino y el femenino (el femenino, 2023) y en el primer campeón que recibió un solo gol en todo un torneo, con Cubarsí y Aymeric Laporte de pilares. Los premios individuales fueron casi todos para España: Rodri el Balón de Oro por delante de Messi (Plata) y Mbappé (Bronce), Unai Simón el Guante de Oro, Cubarsí el mejor juvenil. Mbappé se llevó la Bota de Oro con 10 goles frente a los 8 de Messi. Messi, de 39, se fue de la cancha llorando con la medalla de subcampeón en lo que sería su último partido de Mundial: el segundo, tras Cafu, en jugar tres finales, y el primero en ser titular en las tres."
+      }
+    }
+  },
+  {
+    "id": "final-brawl",
+    "order": 20,
+    "date": "2026-07-19",
+    "thread": "sporting",
+    "icon": "🥊",
+    "sources": [
+      "yahoo-final-brawl",
+      "yahoo-red-rescinded"
+    ],
+    "content": {
+      "en": {
+        "headline": "A brawl at the whistle, and a second FIFA case",
+        "short": "Argentina's players skipped Spain's trophy lift and a post-match scuffle drew a red; FIFA named a prosecutor, and the red was later rescinded.",
+        "full": "At the whistle, Nahuel Molina appeared to swing at Rodri, and Leandro Paredes grabbed Eric García by the throat and wrestled Gavi to the ground before a straight red. Argentina's players turned away from Spain's celebration. A day later FIFA made it formal, appointing a Disciplinary and Ethics Prosecutor, and quietly erased Paredes' red card from the record.",
+        "detail": "A second FIFA disciplinary matter atop the still-open Malvinas-banner case, and like the banner it's perception with no refereeing in it: the flashpoint was players and staff, not a call. On July 20 FIFA appointed a Disciplinary and Ethics Prosecutor to investigate potential breaches of its disciplinary code. Coverage also names Molina and assistant coach Roberto Ayala, seen striking Dani Olmo; players, staff and the AFA itself could face suspensions or fines. The twist: Paredes' straight red was rescinded, wiped from the official record, with FIFA clarifying no disciplinary measure had actually been imposed on the night. Whatever sanction comes will flow from the retrospective inquiry, not the card. The throat-grab and the snubbed trophy lift are on video, and any sanction is a fine-or-ban matter that changes nothing about the result."
+      },
+      "es": {
+        "headline": "Una trifulca en el pitazo, y un segundo expediente de la FIFA",
+        "short": "Los jugadores argentinos no participaron del festejo español y un cruce tras el partido terminó en roja; la FIFA nombró un fiscal, y la roja después se anuló.",
+        "full": "La final terminó en un cruce dentro del campo. Tras el pitazo, Nahuel Molina habría tirado un golpe a Rodri, Leandro Paredes agarró del cuello a Eric García y tiró al piso a Gavi y vio la roja directa, y los jugadores argentinos se dieron vuelta en vez de sumarse al festejo de España. Un día después la FIFA lo hizo formal: designó un Fiscal Disciplinario y de Ética, y de paso borró del acta la roja de Paredes.",
+        "detail": "Suma un segundo expediente disciplinario de la FIFA sobre la todavía abierta causa de la bandera de Malvinas, y como la bandera es un asunto de percepción sin nada de arbitraje: el foco del lío fueron jugadores y cuerpos técnicos, no un fallo. El 20 de julio la FIFA designó un Fiscal Disciplinario y de Ética para investigar posibles infracciones a su código; la cobertura también nombra a Molina y al ayudante de campo Roberto Ayala, captado golpeando a Dani Olmo, y tanto jugadores como cuerpo técnico y la propia AFA podrían recibir suspensiones o multas. El giro: la roja directa a Paredes se anuló, borrada del acta oficial (la FIFA aclaró que esa noche no se había impuesto ninguna medida disciplinaria), así que cualquier sanción va a salir de la pesquisa retrospectiva, no de la tarjeta. El agarrón del cuello y el desaire al festejo quedaron filmados, y cualquier sanción es cosa de multa o suspensión que no cambia nada del resultado."
+      }
+    }
+  },
+  {
+    "id": "squad-returns",
+    "order": 21,
+    "date": "2026-07-20",
+    "thread": "sporting",
+    "icon": "✈️",
+    "sources": [
+      "infobae-squad-return",
+      "ambito-scaloni",
+      "nbc-messi-future"
+    ],
+    "content": {
+      "en": {
+        "headline": "The day after: a crowd at Ezeiza, and two open questions",
+        "short": "The runners-up fly home to a warm reception; Scaloni signals a December exit and Messi leaves his future open.",
+        "full": "Argentina's squad landed at Ezeiza on July 20 to a crowd that turned out despite the defeat. Messi and Rodrigo De Paul stayed in the US. Scaloni said he will see out his contract to December 'and then probably step away'; Messi announced nothing.",
+        "detail": "Tapia, Scaloni and Otamendi came down the steps first; there was a protocol reception and no celebration. The two questions that will define the next cycle are now officially open. Scaloni, under contract to December 2026, said 'hasta diciembre sigo y después seguramente corte' (I'm here to December, then I'll probably stop) and added he still has to talk it over with the AFA president. Messi, 39, made no announcement and neither did the AFA. TyC Sports reported the final was not his last international match, and his pre-final farewell letter and 'The Last Tango' boots read as a goodbye to World Cups, not necessarily the shirt. One roster note with teeth: Enzo Fernández's red card carries over. Under FIFA's World Cup rules, a suspension that can't be served at the tournament transfers to Argentina's next official match."
+      },
+      "es": {
+        "headline": "El día después: multitud en Ezeiza y dos preguntas abiertas",
+        "short": "El subcampeón vuelve a casa con un recibimiento cálido; Scaloni insinúa su salida en diciembre y Messi deja su futuro abierto.",
+        "full": "El plantel argentino aterrizó en Ezeiza el 20 de julio y una multitud fue a recibirlo pese a la derrota. Messi y Rodrigo De Paul se quedaron en Estados Unidos. Scaloni dijo que cumple su contrato hasta diciembre 'y después seguramente corte'; Messi no anunció nada.",
+        "detail": "Tapia, Scaloni y Otamendi bajaron primero del avión; hubo recepción protocolar y ningún festejo. Las dos preguntas que van a definir el próximo ciclo quedaron oficialmente abiertas. Scaloni, con contrato hasta diciembre de 2026, dijo 'hasta diciembre sigo y después seguramente corte', y agregó que todavía lo tiene que hablar con el presidente de la AFA. Messi, de 39, no anunció nada, y la AFA tampoco; TyC Sports reportó que la final no fue su último partido con la Selección, y la carta de despedida previa a la final y los botines 'The Last Tango' se leen como un adiós a los Mundiales, no necesariamente a la camiseta. Un dato de plantel con filo: la roja de Enzo Fernández se arrastra; por el reglamento de la FIFA para el Mundial, una suspensión que no se puede cumplir en el torneo pasa al siguiente partido oficial de Argentina."
+      }
+    }
+  },
+  {
+    "id": "tapia-returns",
+    "order": 22,
+    "date": "2026-07-20",
+    "thread": "financial",
+    "icon": "⚖️",
+    "sources": [
+      "infobae-tapia-return",
+      "elespanol-casacion"
+    ],
+    "content": {
+      "en": {
+        "headline": "Tapia comes home: the tournament pause ends, the cases don't",
+        "short": "The AFA president returned as his travel bond required, to a domestic case that just reset and a US inquiry that hasn't moved.",
+        "full": "Claudio Tapia flew home with the squad on July 20: judge Diego Amarante's travel authorization obliged him to be back before July 21. He returns to the domestic withholdings case in which he is already processed, a jurisdiction fight that just bounced backward, and the reported US inquiry, still preliminary, still without charges.",
+        "detail": "Infobae frames the return as three storm fronts. The domestic front: Tapia stands processed, without preventive detention, over roughly AR$20 billion (~US$13M; reported earlier as ~US$12.7M) in allegedly withheld taxes and pension contributions. Treasurer Pablo Toviggino and other officials are processed too, with multimillion asset freezes. The separate 'mansion' laundering thread moved backward procedurally: the Cámara Federal de Casación annulled the ruling that had fixed the case in Zárate-Campana, so venue must be re-decided between San Martín and Comodoro Py. El Español's headline captures the split: the FBI advances while the Argentine case regresses amid judicial maneuvering. The US front: still a preliminary inquiry, no charges, no formal accusation of Tapia, the FBI still declining comment. Infobae adds one new reported figure, more than US$13.5M through PNC alone in under a year, inside the $300M+ total. The political front: the feud with President Milei, parked during the tournament, resumes. The August 12 hearing reported earlier had been the next fixed date on the domestic calendar."
+      },
+      "es": {
+        "headline": "Vuelve Tapia: se termina la pausa del Mundial, las causas no",
+        "short": "El presidente de la AFA volvió como le exigía su caución de viaje, a una causa local que acaba de retroceder y a una pesquisa en EE.UU. que no se movió.",
+        "full": "Claudio Tapia volvió con el plantel el 20 de julio: la autorización de viaje del juez Diego Amarante lo obligaba a estar de vuelta antes del 21. Vuelve a la causa local por retenciones en la que ya está procesado, a una disputa de competencia que acaba de retroceder y a la pesquisa reportada en EE.UU., todavía preliminar y sin cargos.",
+        "detail": "Infobae describe el regreso como tres frentes de tormenta. El frente local: Tapia está procesado, sin prisión preventiva, por unos 20.000 millones de pesos (~US$13M; el asunto reportado antes como ~US$12,7M) en retenciones de impuestos y aportes previsionales presuntamente no depositados; el tesorero Pablo Toviggino y otros dirigentes también están procesados, con embargos millonarios. El hilo aparte de la 'mansión' retrocedió en lo procesal: la Cámara Federal de Casación anuló la resolución que había fijado la causa en Zárate-Campana, así que la competencia se tiene que definir de nuevo entre San Martín y Comodoro Py. El título de El Español resume el contraste: el FBI avanza mientras la causa argentina retrocede entre maniobras y peleas de jueces. El frente de EE.UU.: sigue siendo una pesquisa preliminar, sin cargos, sin acusación formal contra Tapia y con el FBI sin comentar; Infobae agrega una cifra nueva reportada, más de US$13,5 millones solo por PNC en menos de un año, dentro del total de más de US$300M. El frente político: la pelea con el presidente Milei, congelada durante el torneo, se reanuda. La audiencia del 12 de agosto reportada antes venía siendo la próxima fecha fija del calendario local."
       }
     }
   }

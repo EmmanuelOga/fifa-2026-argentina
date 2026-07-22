@@ -4,37 +4,41 @@
     "order": 1,
     "code": "H1",
     "rangeLow": 0.02,
-    "rangeHigh": 0.08,
+    "rangeHigh": 0.06,
     "thread": "sporting",
     "sources": [
       "yahoo-fifa-problem",
       "nbcdfw-pinheiro",
       "cnn-perumal",
-      "espn-vincic"
+      "espn-vincic",
+      "aljazeera-malvinas-probe",
+      "nbc-officiating-red"
     ],
     "content": {
       "en": {
-        "headline": "Deliberate FIFA-level officiating favoritism",
-        "short": "That an organizing body is steering matches toward Argentina on purpose.",
-        "full": "The strong version: FIFA-level actors deliberately favoring Argentina via appointments and calls. On base rates and detectability, unlikely.",
-        "rangeCaption": "speculative probability this is happening",
+        "headline": "Deliberate FIFA officiating favoritism",
+        "short": "An organizer steers matches to Argentina on purpose.",
+        "full": "Appointments and calls bent Argentina's way on purpose. Too big to hide, unlikely.",
+        "rangeCaption": "speculative probability it's real",
         "forPoints": [
-          "The penalty outlier: 8 in two World Cups, roughly double any other side.",
-          "Pinheiro's appointment and a nearby all-Argentine crew were, at minimum, bad optics.",
-          "A Messi farewell has huge commercial value: a motive, if you want one."
+          "8 penalties in two World Cups, ~2× anyone else.",
+          "Pinheiro's appointment, a nearby all-Argentine crew: bad optics.",
+          "Messi's farewell is commercially huge: motive."
         ],
         "againstPoints": [
-          "No proven finals precedent, ever: a punishing base rate.",
-          "Each flagged call has a rule-based explanation on the record.",
+          "No proven finals precedent, ever: punishing base rate.",
+          "Every flagged call has a documented rule-based explanation.",
           "The all-Argentine crew worked a rival's match, not Argentina's.",
-          "The final's referee is European (UEFA), non-neutral toward Spain, not Argentina."
+          "Final ref is European (UEFA): non-neutral toward Spain, not Argentina.",
+          "FIFA opened a Malvinas-banner case on Argentina three days pre-final: not protective.",
+          "Cleanest test disconfirmed it: in the final the decisive red hit Argentina (VAR-upheld), only flagged errors hit Spain, Argentina lost 1–0."
         ],
-        "changeMind": "Leaked comms, a VMO or appointer whistleblower, or a study linking appointments to outcomes would move this sharply up."
+        "changeMind": "Leaked comms, a VMO or appointer whistleblower, or a study tying appointments to outcomes moves this up."
       },
       "es": {
         "headline": "Favoritismo arbitral deliberado desde la FIFA",
         "short": "Que un ente organizador esté digitando partidos a favor de Argentina, a propósito.",
-        "full": "La versión fuerte: actores dentro de la FIFA favoreciendo a Argentina adrede, con designaciones y fallos. Por tasas base y lo detectable que sería, improbable.",
+        "full": "La versión fuerte: designaciones y fallos torcidos a propósito para el lado de Argentina. Demasiado grande para taparlo, e improbable.",
         "rangeCaption": "probabilidad especulativa de que esté pasando",
         "forPoints": [
           "El dato de los penales: 8 en dos Mundiales, casi el doble que cualquier otra selección.",
@@ -45,7 +49,9 @@
           "Cero precedentes probados en una fase final, jamás: la tasa base no perdona.",
           "Cada jugada marcada tiene una explicación reglamentaria, y quedó en actas.",
           "La terna toda argentina terminó dirigiendo a un rival, no a Argentina.",
-          "El árbitro de la final es europeo (UEFA): no-neutral hacia España, no hacia Argentina."
+          "El árbitro de la final es europeo (UEFA): no-neutral hacia España, no hacia Argentina.",
+          "La FIFA le abrió expediente disciplinario a Argentina por la bandera de Malvinas tres días antes de la final: no es lo que hace un organismo que la protege.",
+          "La prueba más limpia lo desmintió: en la final, bajo el máximo escrutinio, la roja decisiva fue contra Argentina (confirmada por el VAR) y los únicos errores señalados fueron contra España, y Argentina perdió 1–0. Un plan para digitar el título terminó para el otro lado."
         ],
         "changeMind": "Comunicaciones filtradas, un denunciante desde el VAR o las designaciones, o un estudio que ligue designaciones con resultados moverían esto bien para arriba."
       }
@@ -72,33 +78,33 @@
     ],
     "content": {
       "en": {
-        "headline": "AFA financial corruption (the money thread)",
-        "short": "That a genuine US federal inquiry exists and might produce charges.",
-        "full": "The credible thread, in two parts: a genuine preliminary inquiry exists, and (separately, lower) chargeable US conduct is eventually established. Nothing about match outcomes.",
+        "headline": "AFA financial corruption (money thread)",
+        "short": "A real US federal inquiry exists and might produce charges.",
+        "full": "The credible thread, none touching match outcomes: a real inquiry, then (less likely) charges.",
         "rangeCaption": "that a genuine preliminary inquiry exists",
-        "secondaryCaption": "that chargeable US conduct is eventually established",
+        "secondaryCaption": "that chargeable US conduct is established",
         "forPoints": [
-          "La Nación plus the Miami Herald: a paper of record and independent US corroboration.",
-          "Deepening detail: a Florida company, five named US banks, a reported three-hour witness interview, a perfect FIFA-Gate jurisdictional fit.",
-          "The probe reportedly turned inward to former AFA insiders, naming federal prosecutors in two US districts: still short of any charge.",
-          "Tapia's separate Argentine charges and the December 2025 raids show real heat."
+          "La Nación plus the Miami Herald: independent US corroboration.",
+          "A Florida company, five named US banks, a reported three-hour witness interview, a clean FIFA-Gate fit.",
+          "Probe reportedly turned to ex-AFA insiders; prosecutors in two US districts. No charge yet.",
+          "Tapia's separate Argentine charges and December 2025 raids: real heat."
         ],
         "againstPoints": [
-          "No charges filed, and the FBI declined to comment.",
-          "Key financial specifics are single-sourced or rest on anonymous law-enforcement sources.",
-          "The AFA denies wrongdoing and frames the domestic cases as political persecution."
+          "No charges filed; the FBI declined to comment.",
+          "Financial specifics are single-sourced or from anonymous law-enforcement leaks.",
+          "The AFA denies wrongdoing, calls the domestic cases political persecution."
         ],
-        "changeMind": "A grand jury subpoena, indictment, or cooperating witness would raise the second number; a documented AFA rebuttal of the money trail would lower both."
+        "changeMind": "A grand jury subpoena, indictment or cooperating witness raises the second number; a documented AFA rebuttal lowers both."
       },
       "es": {
         "headline": "Corrupción financiera en la AFA (el hilo del dinero)",
-        "short": "Que exista de verdad una pesquisa federal en EE.UU., y que, con el tiempo, termine en cargos.",
-        "full": "El hilo creíble, en dos partes: que exista una pesquisa preliminar genuina y (por separado, más abajo) que termine estableciéndose conducta imputable en EE.UU. Nada sobre resultados de partidos.",
+        "short": "Que exista de verdad una pesquisa federal en EE.UU. y que pueda terminar en cargos.",
+        "full": "El hilo creíble, y nada de esto toca resultados de partidos: una pesquisa real y después (menos probable) cargos reales.",
         "rangeCaption": "que exista una pesquisa preliminar genuina",
         "secondaryCaption": "que termine estableciéndose conducta imputable en EE.UU.",
         "forPoints": [
           "La Nación más el Miami Herald: un diario de referencia y corroboración estadounidense independiente.",
-          "Detalle que se profundiza: una empresa de Florida, cinco bancos de EE.UU. con nombre, una entrevista reportada de tres horas a un testigo, un encaje jurisdiccional perfecto con el FIFA-Gate.",
+          "Detalle que se profundiza: una empresa de Florida, cinco bancos de EE.UU. con nombre, una entrevista reportada de tres horas a un testigo, un encaje limpio con el FIFA-Gate.",
           "La pesquisa habría mirado hacia adentro, hacia exdirigentes de la AFA, con fiscales federales de dos distritos de EE.UU. nombrados: todavía sin ningún cargo.",
           "Los cargos que Tapia ya tiene por separado en Argentina y los allanamientos de diciembre de 2025 muestran presión real."
         ],
@@ -126,25 +132,25 @@
     "content": {
       "en": {
         "headline": "Soft / structural bias (no conspiracy)",
-        "short": "That referees unconsciously shade toward star teams: real, no plan required.",
-        "full": "The quiet, well-studied one: under crowd and status pressure, referees unconsciously shade toward high-profile sides. No conspiracy, just human bias. Material, I think.",
-        "rangeCaption": "as a material contributor to the perception",
+        "short": "Referees unconsciously shade toward star teams: real.",
+        "full": "Crowd and status pressure, no conspiracy, just human bias. Material, I think.",
+        "rangeCaption": "as a real driver of the perception",
         "forPoints": [
-          "Peer-reviewed status-bias literature: Garicano et al. found ~2× injury time favoring home sides under pressure.",
+          "Status bias: Garicano et al. found ~2× injury time favoring home sides under pressure.",
           "Argentina fits the champion-with-a-megastar profile that draws deference (cf. Erikstad & Johansen).",
           "VAR-era penalty inflation gives borderline calls more chances to break one way."
         ],
         "againstPoints": [
-          "Some studies find null results (e.g. Morgulev et al. in basketball): not universal.",
-          "Argentina's key calls each have defensible, specific rule-based explanations.",
+          "Some studies find nulls (Morgulev et al. in basketball).",
+          "Each disputed Argentina call has a rule-based defense.",
           "The rival-crew assignment doesn't fit systematic shading toward Argentina."
         ],
-        "changeMind": "An xG-adjusted study of Argentina's calls versus peers, testing whether they draw more marginal ones, would sharpen this."
+        "changeMind": "An xG-adjusted study of whether Argentina draws more marginal calls than peers would sharpen this."
       },
       "es": {
         "headline": "Sesgo blando / estructural (sin conspiración)",
         "short": "Que los árbitros, sin darse cuenta, se inclinen hacia los equipos estrella: real, sin plan detrás.",
-        "full": "La silenciosa y bien estudiada: con la presión del público y del estatus, los árbitros se inclinan sin querer hacia los equipos de alto perfil. Sin conspiración, puro sesgo humano. Me parece que pesa.",
+        "full": "La silenciosa y bien estudiada: presión del público y del estatus, sin conspiración, puro sesgo humano. Me parece que pesa.",
         "rangeCaption": "como factor que pesa de verdad en la percepción",
         "forPoints": [
           "Literatura revisada por pares sobre sesgo de estatus: Garicano et al. encontraron ~2× de tiempo añadido a favor del local bajo presión.",
@@ -153,7 +159,7 @@
         ],
         "againstPoints": [
           "Algunos estudios dan resultados nulos (p. ej. Morgulev et al. en básquet): no es universal.",
-          "Las jugadas clave de Argentina tienen, cada una, su explicación reglamentaria puntual y defendible.",
+          "Cada jugada discutida de Argentina tiene su defensa reglamentaria puntual.",
           "La terna asignada a un rival no cierra con una inclinación sistemática a favor de Argentina."
         ],
         "changeMind": "Un estudio ajustado por xG que compare las decisiones sobre Argentina con las de equipos parecidos, viendo si atrae más jugadas al límite, afinaría esto."
@@ -164,8 +170,8 @@
     "id": "h4",
     "order": 4,
     "code": "H4",
-    "rangeLow": 0.3,
-    "rangeHigh": 0.5,
+    "rangeLow": 0.35,
+    "rangeHigh": 0.55,
     "thread": "sporting",
     "sources": [
       "fifa-collina-statement",
@@ -175,37 +181,44 @@
       "aljazeera-elfath",
       "forbes-favoritism",
       "football365-favoritism",
-      "fifa-final-referee"
+      "fifa-final-referee",
+      "thehill-malvinas-whitehouse",
+      "nbc-officiating-red",
+      "yahoo-final-brawl"
     ],
     "content": {
       "en": {
         "headline": "No bias: variance + a perception cascade",
-        "short": "That it's just tight games, correct calls, and social media doing its thing.",
-        "full": "The boring, powerful one: three nervy knockouts, some viral clips, and social media equal a narrative, no bias needed. With H3, my best read of the perception.",
+        "short": "Tight games, correct calls, social media doing its thing.",
+        "full": "Three nervy knockouts plus viral clips make a narrative. With H3, my best read.",
         "rangeCaption": "as the primary explanation of the perception",
         "forPoints": [
           "Three straight one-goal or extra-time knockouts breed 'rub of the green' stories.",
-          "The viral moments had correct rule-based explanations (the Cape Verde restart, the Embolo dive).",
-          "Under maximum scrutiny the pattern faded: semifinal 1's disputed penalty hit Spain–France, Argentina off the pitch, and Argentina's own semifinal produced no headline-worthy call. The outrage follows the World Cup, not a shirt.",
-          "By the final the narrative crested: a millions-strong petition to expel Argentina, a textbook perception cascade. Collina again called the claims unfounded; England, Germany and Iran drew contentious VAR calls too, and the European final-referee pick cut toward Spain, not Argentina."
+          "Each viral moment had a correct rule-based explanation (Cape Verde restart, Embolo dive).",
+          "Under scrutiny it faded: the disputed semifinal penalty landed in Spain–France; Argentina's own semifinal had no headline call.",
+          "A millions-strong petition to expel Argentina: textbook cascade. Collina again called the allegations unfounded; England, Germany and Iran drew contentious VAR calls too; the European ref pick cut toward Spain.",
+          "Malvinas banner, no referee in it: a celebration flag drew a British-government complaint and a White House statement in 48 hours.",
+          "Regression test passed: in the final, no pro-Argentina call, the decisive red went against them. The post-match flashpoint was an Argentine-started brawl, not a referee. Outrage trailed Argentina, not officiating."
         ],
         "againstPoints": [
-          "The penalty outlier stubbornly persists across two tournaments.",
-          "Complaints came from many independent pundits, not only the losing sides.",
-          "'It's just variance' is unfalsifiable if you never look at the pattern rigorously."
+          "The penalty outlier persists across two tournaments.",
+          "Complaints came from independent pundits, not just the losers.",
+          "'It's just variance' is unfalsifiable if you never test it."
         ],
-        "changeMind": "If the officiating pattern regresses to the mean under semifinal and final scrutiny, that's confirmation; if it intensifies, this weakens."
+        "changeMind": "If the pattern regresses under semifinal and final scrutiny, that confirms it; if it intensifies, this weakens."
       },
       "es": {
         "headline": "Sin sesgo: varianza + una cascada de percepción",
         "short": "Que sean nada más partidos ajustados, fallos bien cobrados y las redes haciendo lo suyo.",
-        "full": "La aburrida y potente: tres eliminatorias al filo, unos clips virales y las redes dan un relato, sin ningún sesgo. Junto con H3, mi mejor lectura de la percepción.",
+        "full": "La aburrida y potente: tres eliminatorias al filo y unos clips virales arman un relato. Junto con H3, mi mejor lectura.",
         "rangeCaption": "como explicación principal de la percepción",
         "forPoints": [
           "Tres eliminatorias seguidas por un gol o en el alargue arman solas el relato de la 'suerte del campeón'.",
           "Los momentos virales tenían su explicación reglamentaria correcta (la reanudación ante Cabo Verde, el clavado de Embolo).",
           "Bajo el máximo escrutinio el patrón se diluyó: el penal discutido de la primera semifinal cayó en España–Francia, con Argentina fuera de la cancha, y la propia semifinal de Argentina no dejó ni un fallo digno de título. La bronca sigue al Mundial, no a una camiseta.",
-          "En la semana de la final el relato llegó a su pico: una petición con millones de firmas para expulsar a Argentina, el manual de la cascada de percepción. Collina volvió a llamar infundadas las acusaciones; Inglaterra, Alemania e Irán también tuvieron fallos discutidos del VAR, y el árbitro europeo elegido para la final juega en contra de España, no de Argentina."
+          "En la semana de la final el relato llegó a su pico: una petición con millones de firmas para expulsar a Argentina, el manual de la cascada de percepción. Collina volvió a llamar infundadas las acusaciones; Inglaterra, Alemania e Irán también tuvieron fallos discutidos del VAR, y el árbitro europeo elegido para la final se inclina hacia España, no hacia Argentina.",
+          "La bandera de Malvinas muestra lo rápido que cualquier cosa que haga Argentina en este Mundial deja de ser fútbol: una bandera de festejo terminó en un reclamo del gobierno británico y una declaración de la Casa Blanca en 48 horas, sin un solo fallo arbitral en el medio.",
+          "La prueba de regresión se cumplió: bajo las luces más brillantes de todas, la final no dejó ni un fallo a favor de Argentina: la roja decisiva fue en contra y el foco del lío tras el partido fue una trifulca iniciada por Argentina, no un árbitro. La bronca siguió a Argentina; el arbitraje ya no."
         ],
         "againstPoints": [
           "El dato atípico de los penales sigue ahí, cabezadura, en dos torneos.",

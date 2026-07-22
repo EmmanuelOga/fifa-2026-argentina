@@ -4,7 +4,7 @@
  */
 export const meta = {
   /** ISO date of the current data snapshot. */
-  lastUpdated: '2026-07-17',
+  lastUpdated: '2026-07-21',
   /** The final is July 19, 2026 (NY/NJ). Used for the "who wins" framing. */
   finalDate: '2026-07-19',
   /** Cloudflare Turnstile SITE key (public — safe to commit). Empty = widget off.

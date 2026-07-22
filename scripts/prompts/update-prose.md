@@ -1,7 +1,14 @@
-You are doing the **English prose pass** for the "La Alegría" site. This runs after
-the research step and BEFORE the Spanish translation pass, so every `en` field you
-clean here flows into `es` downstream. This is a MERGE pass over existing content,
-not a regeneration.
+You are doing the **English prose-polish pass** for the "La Alegría" site. This runs
+AFTER the `summarize` step (which already made the aggressive ≥50% word cut) and
+BEFORE the Spanish translation pass, so every `en` field you clean here flows into
+`es` downstream. This is a MERGE pass over existing content, not a regeneration.
+
+**The heavy cutting already happened.** Your job now is humanizing polish and legibility
+on already-lean text: de-AI the voice, fix grammar, break up any run-on the summarize
+pass left behind, and remove words only where they are genuinely wasted. Do NOT try to
+force another 25–50% cut on top of the summarize pass — the text is already tight, and
+squeezing it again risks dropping the facts, numbers, sources, and hedges that must stay.
+Cut what is honestly still padding; otherwise leave the substance alone.
 
 Read `.agents/skills/humanizer/SKILL.md` (vendored in this repo; fallback:
 `~/.claude/skills/humanizer/SKILL.md`) and apply its full pattern list. Either
@@ -17,24 +24,24 @@ so aim to move both in the right direction.
 
 ## What to do
 1. Read the `en` fields in `src/content/*.json` (sections, updates, timeline,
-   hypotheses, sources, precedents, glossary). This is a **full compression sweep of
-   every prose entry** — not only the ones the research step changed, not only the
-   `.prose-lint.md` flags. Those flags are the FLOOR, not the scope. **The site owner
-   considers this prose too verbose.** So do not exempt paragraphs as "already tight":
-   assume almost every multi-sentence paragraph can lose a quarter of its words, and
-   prove it can't before leaving one alone. Leave untouched only bare labels, single
-   short clauses, numbers, and reference strings that have nothing to cut.
-2. Rewrite for two goals. **Compression is the #1 goal and it is measured** — the
-   postlint gate checks total word count, and a pass that cuts under 25% has failed
-   the brief.
-   - **Cut 25–50% of the words — for real.** Go paragraph by paragraph and delete
-     words: throat-clearing ("it's worth noting", "actually", "in order to"), hedging
-     padding, redundant restatement, adjectives/adverbs that carry no information,
-     connective filler, and any clause that repeats what was already said. Prefer the
-     shorter word and the shorter construction every time.
+   hypotheses, sources, precedents, glossary). This is a **polish sweep of every prose
+   entry** — not only the ones the research step changed, not only the `.prose-lint.md`
+   flags. The `summarize` step already did the aggressive word cut; you are cleaning
+   what it left. Read every entry, fix the voice and grammar, and trim any padding that
+   survived, but don't second-guess a paragraph that is already lean just to move the
+   number. Leave untouched bare labels, single short clauses, numbers, and reference
+   strings that have nothing to cut.
+2. Rewrite for two goals. **Humanizing polish and legibility come first;** further
+   compression is welcome only where words are genuinely wasted.
+   - **Trim the padding the summarize pass missed.** Go paragraph by paragraph and
+     delete words that carry nothing: throat-clearing ("it's worth noting", "actually",
+     "in order to"), hedging padding, redundant restatement, adjectives/adverbs that
+     carry no information, connective filler, and any clause that repeats what was
+     already said. Prefer the shorter word and the shorter construction. But the deep
+     cut is done — do NOT strip substance to chase a further percentage.
      - **Splitting a sentence is NOT cutting.** Breaking one 60-word run-on into three
        20-word sentences leaves the word count almost unchanged. Do break up run-ons
-       for legibility, but you must ALSO remove words — the count has to drop.
+       for legibility; that alone is a valid outcome for this pass.
      - **Non-negotiable: never drop a fact, number, name, date, source, or any
        "speculative"/"allegation" hedge, and never blur the H1-vs-H2 distinction or
        assert anyone's guilt.** Compress the packaging around the substance; the

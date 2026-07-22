@@ -1,7 +1,7 @@
 /**
  * One command to re-run the living loop and republish.
  *
- *   node scripts/update.mjs                 # everything (additive): research → log → lint → prose → translate → postlint → score → build → deploy
+ *   node scripts/update.mjs                 # everything (additive): research → log → lint → summarize → prose → translate → postlint → score → build → deploy
  *   node scripts/update.mjs research        # just the additive research re-run (+ log recommendation)
  *   node scripts/update.mjs prose translate # a subset, in the order you list
  *   node scripts/update.mjs scratch "topic" # bootstrap a brand-new research topic, then stop
@@ -49,13 +49,17 @@ const raw = process.argv.slice(2);
 const noDeploy = raw.includes('--no-deploy');
 const tokens = raw.filter((a) => !a.startsWith('--'));
 
-const KNOWN = ['research', 'log', 'lint', 'prose', 'translate', 'postlint', 'timeline', 'score', 'video', 'build', 'deploy', 'publish', 'scratch'];
-// prose (EN de-AI/tightening pass) runs BEFORE translate so Spanish syncs from clean English.
-// lint (baseline) runs just before prose to hand it concrete grammar/long-sentence
-// targets (.prose-lint.md); postlint (verify) runs after translate to report the
-// word-count cut and whether grammar held. Both are soft — they never fail the run.
+const KNOWN = ['research', 'log', 'lint', 'summarize', 'prose', 'translate', 'postlint', 'timeline', 'score', 'video', 'build', 'deploy', 'publish', 'scratch'];
+// summarize (aggressive EN compression, ≥50% cut) runs right after lint so the
+// lint baseline captures the pre-cut word count and postlint can measure the full
+// reduction. prose (EN de-AI/humanizing polish) then cleans the summarized text;
+// both run BEFORE translate so Spanish syncs from the final clean English.
+// lint (baseline) runs just before summarize to hand it + prose concrete
+// grammar/long-sentence targets (.prose-lint.md); postlint (verify) runs after
+// translate to report the word-count cut and whether grammar held. All soft —
+// they never fail the run.
 // timeline snapshots ESPN match events for any bracket match with an espnId.
-const DEFAULT_ALL = ['research', 'log', 'lint', 'prose', 'translate', 'postlint', 'timeline', 'score', 'build', 'deploy'];
+const DEFAULT_ALL = ['research', 'log', 'lint', 'summarize', 'prose', 'translate', 'postlint', 'timeline', 'score', 'build', 'deploy'];
 
 // `scratch` is special: it takes a free-text topic and runs alone.
 if (tokens[0] === 'scratch') {
@@ -76,7 +80,7 @@ for (const s of scope) {
 if (noDeploy) scope = scope.filter((s) => s !== 'deploy');
 scope = [...new Set(scope)];
 
-const AI = { research: 'research', translate: 'translate', prose: 'prose' };
+const AI = { research: 'research', translate: 'translate', prose: 'prose', summarize: 'summarize' };
 const steps = scope.map((name) =>
   name === 'log' ? { kind: 'log', name } : AI[name] ? { kind: 'ai', name } : { kind: 'shell', name },
 );
@@ -112,20 +116,20 @@ function aiStep({ name, topic }) {
   let prompt = readFileSync(promptFile, 'utf8');
   if (topic) prompt += `\n${topic}\n`;
 
+  // The summarize step must hit a ≥50% cut across 8 content files — too much for one
+  // headless context, which goes shallow and conservative. Give it Task so it can fan
+  // out one focused subagent per file (the technique that actually compresses hard).
+  const allowed =
+    name === 'summarize'
+      ? 'Read Edit Write Grep Glob TodoWrite Task'
+      : 'Read Edit Write Grep Glob WebSearch WebFetch TodoWrite';
+
   console.log(
     c.dim(`  running claude headless — this can take several minutes (web search + edits)…`),
   );
   const res = spawnSync(
     claude,
-    [
-      '-p',
-      '--permission-mode',
-      'acceptEdits',
-      '--allowedTools',
-      'Read Edit Write Grep Glob WebSearch WebFetch TodoWrite',
-      '--add-dir',
-      root,
-    ],
+    ['-p', '--permission-mode', 'acceptEdits', '--allowedTools', allowed, '--add-dir', root],
     { cwd: root, input: prompt, stdio: ['pipe', 'inherit', 'inherit'] },
   );
   return res.status === 0;

@@ -2,9 +2,8 @@
 /**
  * Home — celebration-first landing. A compact, bracket-aware masthead whose
  * floodlight background fades into the page (no hard seam), the latest blog
- * post as the lead item, the two audience path cards, the SF watch guide with
- * venue links + an embedded map, a calm "rumors" ease-in, and the tab grid.
- * The fine print lives one click away on the appendix page.
+ * post as the lead item, the two audience path cards, a calm "rumors" ease-in,
+ * and the tab grid. The fine print lives one click away on the appendix page.
  */
 import type { Locale } from '../../lib/i18n';
 import { TAB_KEYS } from '../../lib/i18n';
@@ -14,7 +13,6 @@ import { section, updates } from '../../lib/content';
 import { longDate } from '../../lib/format';
 import { TEAMS, SEMIFINALS, FINAL, bracketStage, argentinaEliminated } from '../../data/bracket';
 import SnapshotBadge from '../SnapshotBadge.astro';
-import SourceRefs from '../SourceRefs.astro';
 
 interface Props {
   locale: Locale;
@@ -50,135 +48,6 @@ const matchLine =
     ? `${TEAMS[finalists[0]!]?.flag} ${TEAMS[finalists[0]!]?.name[locale]} v ${TEAMS[finalists[1]!]?.name[locale]} ${TEAMS[finalists[1]!]?.flag}`
     : null;
 
-/* "Where to watch the final" — SF for the EN page (re-verified 2026-07-15
- * against the host committee, SF Travel and Mission Local guides), Buenos
- * Aires for the ES page (verified 2026-07-16 against the city's Fan Fest
- * pages and local press — see sources). All free. Each venue links to its
- * best descriptive page and carries coordinates for the venue map below. */
-interface WatchSpot {
-  name: string;
-  note: string;
-  url: string;
-  lat: number;
-  lng: number;
-}
-const sfSpots: WatchSpot[] = [
-  {
-    name: 'Yerba Buena Gardens',
-    note: 'The big official fan-zone lawn — live music and vendors from noon.',
-    url: 'https://yerbabuenagardens.org/',
-    lat: 37.785,
-    lng: -122.4021,
-  },
-  {
-    name: 'Ferry Building',
-    note: 'Final on the bayside plaza; Hog Island oysters and Fort Point beers.',
-    url: 'https://www.ferrybuildingmarketplace.com/',
-    lat: 37.7956,
-    lng: -122.3934,
-  },
-  {
-    name: 'Thrive City (Chase Center)',
-    note: 'Fan zone by the arena, from noon.',
-    url: 'https://www.chasecenter.com/thrive-city',
-    lat: 37.768,
-    lng: -122.3874,
-  },
-  {
-    name: 'China Basin Park (Mission Rock)',
-    note: 'Waterfront screen across from Oracle Park.',
-    url: 'https://missionrock.com/china-basin-park/',
-    lat: 37.772,
-    lng: -122.389,
-  },
-  {
-    name: 'PIER 39',
-    note: '“Soccer with the sea lions” — the Embarcadero option.',
-    url: 'https://www.pier39.com/',
-    lat: 37.8087,
-    lng: -122.4098,
-  },
-  {
-    name: 'North Beach block party (1560 Powell St)',
-    note: '12-foot screen and a DJ in the street, 11am–4pm.',
-    url: 'https://missionlocal.org/2026/06/san-francisco-world-cup-viewing-guide-map/',
-    lat: 37.7999,
-    lng: -122.411,
-  },
-  {
-    name: 'Pride House SF at KQED (2601 Mariposa St)',
-    note: 'Watch party in the Mission from noon.',
-    url: 'https://www.sfbayareafwc26.com/bay-area-events',
-    lat: 37.7633,
-    lng: -122.4093,
-  },
-];
-const baSpots: WatchSpot[] = [
-  {
-    name: 'Buenos Aires Fan Fest — Plaza Seeber (Palermo)',
-    note: 'El festejo oficial de la Ciudad: pantalla gigante para 15.000 personas, DJs, shows y patio gastronómico desde el mediodía (Av. del Libertador y Av. Sarmiento).',
-    url: 'https://linda.buenosaires.gob.ar/eventos/buenos-aires-fan-fest',
-    lat: -34.578,
-    lng: -58.411,
-  },
-  {
-    name: 'Modo Hincha — Parque Los Andes (Chacarita)',
-    note: 'La sede barrial de los mata-mata: pantalla, food trucks y DJs desde las 14:00, en Corrientes y Dorrego.',
-    url: 'https://buenosaires.gob.ar/gcaba_historico/noticias/la-ciudad-empieza-vivir-el-mundial-con-un-mega-fan-fest-pantallas-gigantes',
-    lat: -34.589,
-    lng: -58.445,
-  },
-  {
-    name: 'El Obelisco',
-    note: 'La casa de todos los festejos. Hubo pantalla durante el torneo (confirmá en el día) — y si Argentina gana, ya sabés dónde termina la noche.',
-    url: 'https://turismo.buenosaires.gob.ar/es/article/buenos-aires-fan-fest',
-    lat: -34.6037,
-    lng: -58.3816,
-  },
-];
-const watchSpots = locale === 'es' ? baSpots : sfSpots;
-const watch =
-  locale === 'es'
-    ? {
-        id: 'buenos-aires',
-        aria: 'Dónde ver la final en Buenos Aires',
-        heading: '¿La ves desde Buenos Aires? Vení a festejar.',
-        intro:
-          'La final arranca el domingo 19 de julio a las 16:00. Estas pantallas son gratuitas y abiertas a todos:',
-        sources: ['ba-fan-fest-oficial', 'ba-ciudad-fan-fest', 'ba-fan-fest-prensa'],
-        findBtn: '📍 Encontrar la más cercana',
-        pinLabel: '📍 mapa',
-        pinTitle: (n: string) => `Ver ${n} en el mapa`,
-        mapLabel: 'Mapa de las pantallas en Buenos Aires',
-        strings: {
-          addrPlaceholder: 'Escribí una dirección',
-          addrGo: 'Buscar',
-          searching: 'Buscando…',
-          notFound: 'No encontramos esa dirección. Probá con otra.',
-          closest: 'La más cercana',
-          you: 'Vos',
-        },
-      }
-    : {
-        id: 'san-francisco',
-        aria: 'Where to watch in San Francisco',
-        heading: 'Watching from San Francisco? Come celebrate.',
-        intro:
-          'The final kicks off Sunday, July 19 at noon Pacific. These watch parties are free and open to everyone:',
-        sources: ['sf-host-committee-events', 'sftravel-watch-parties', 'missionlocal-viewing-guide'],
-        findBtn: '📍 Find closest to me',
-        pinLabel: '📍 map',
-        pinTitle: (n: string) => `Show ${n} on the map`,
-        mapLabel: 'Map of San Francisco watch-party venues',
-        strings: {
-          addrPlaceholder: 'Enter an address',
-          addrGo: 'Search',
-          searching: 'Searching…',
-          notFound: "Couldn't find that address. Try another one.",
-          closest: 'Closest',
-          you: 'You',
-        },
-      };
 const tabBlurb: Record<string, { en: string; es: string }> = {
   story: { en: 'What actually happened, as a timeline.', es: 'Lo que realmente pasó, en una línea de tiempo.' },
   log: { en: 'One post per update, predictions graded.', es: 'Un post por actualización, con las predicciones calificadas.' },
@@ -237,47 +106,6 @@ const tabBlurb: Record<string, { en: string; es: string }> = {
       </span>
     </a>
   </div>
-
-  <section class="sf" id={watch.id} aria-label={watch.aria}>
-    <h2>{watch.heading}</h2>
-    <p>{watch.intro}</p>
-    <ul class="sf-list">
-      {watchSpots.map((s, i) => (
-        <li>
-          <a href={s.url} target="_blank" rel="noopener">{s.name} ↗</a> — {s.note}
-          <button
-            type="button"
-            class="map-pin"
-            data-venue={i}
-            aria-pressed="false"
-            title={watch.pinTitle(s.name)}
-          >{watch.pinLabel}</button>
-        </li>
-      ))}
-    </ul>
-    <div class="find-closest">
-      <button type="button" class="find-btn" data-find-closest>{watch.findBtn}</button>
-      <form class="addr-form" data-addr-form hidden>
-        <input
-          type="text"
-          data-addr-input
-          placeholder={watch.strings.addrPlaceholder}
-          aria-label={watch.strings.addrPlaceholder}
-        />
-        <button type="submit" class="find-btn">{watch.strings.addrGo}</button>
-      </form>
-      <span class="find-status" data-find-status aria-live="polite"></span>
-    </div>
-    <div
-      class="sf-map"
-      data-venue-map
-      role="application"
-      aria-label={watch.mapLabel}
-      data-venues={JSON.stringify(watchSpots.map(({ name, lat, lng }) => ({ name, lat, lng })))}
-      data-strings={JSON.stringify(watch.strings)}
-    ></div>
-    <SourceRefs ids={watch.sources} locale={locale} />
-  </section>
 
   {/* The homework, one click behind the joy. */}
   <section class="rumors">
@@ -456,129 +284,8 @@ const tabBlurb: Record<string, { en: string; es: string }> = {
       grid-template-columns: 1fr;
     }
   }
-  .sf h2,
   .rumors h2 {
     font-size: var(--step-1);
-  }
-  .sf-list {
-    margin: 0 0 var(--s-4);
-    padding-left: 1.1em;
-    display: grid;
-    gap: 0.45em;
-    font-size: 0.95rem;
-  }
-  .sf-list a {
-    font-weight: 600;
-  }
-  .map-pin {
-    font: inherit;
-    font-family: var(--font-data);
-    font-size: 0.7rem;
-    letter-spacing: 0.03em;
-    cursor: pointer;
-    margin-left: 0.5em;
-    padding: 0.1em 0.5em;
-    color: var(--muted);
-    background: transparent;
-    border: 1px solid var(--line);
-    border-radius: var(--radius-sm);
-    white-space: nowrap;
-    transition: border-color 0.12s ease, color 0.12s ease;
-  }
-  .map-pin:hover {
-    border-color: var(--sky);
-    color: var(--sky);
-  }
-  .map-pin[aria-pressed='true'] {
-    border-color: var(--sky);
-    color: var(--sky);
-    background: var(--sky-soft);
-  }
-  .sf-map {
-    border: 1px solid var(--line);
-    border-radius: var(--radius);
-    overflow: hidden;
-    background: var(--surface-2);
-    width: 100%;
-    aspect-ratio: 16 / 9;
-    min-height: 260px;
-  }
-  /* Leaflet injects its DOM at runtime, so scoped styles miss it — go :global. */
-  .sf-map :global(.leaflet-tile-pane) {
-    /* theme-aware tile treatment: night-moded in dark, untouched in light */
-    filter: var(--map-filter);
-  }
-  .sf-map :global(.leaflet-container) {
-    width: 100%;
-    height: 100%;
-    background: var(--surface-2);
-    font: inherit;
-  }
-  .sf-map :global(.leaflet-popup-content-wrapper),
-  .sf-map :global(.leaflet-popup-tip) {
-    background: var(--surface);
-    color: var(--ink);
-    border-radius: var(--radius-sm);
-  }
-  .sf-map :global(.leaflet-container a.leaflet-popup-close-button) {
-    color: var(--muted);
-  }
-  .sf-map :global(.leaflet-control-attribution) {
-    background: var(--veil);
-    color: var(--muted);
-  }
-  .sf-map :global(.leaflet-control-attribution a) {
-    color: var(--sky);
-  }
-  .find-closest {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    gap: var(--s-3);
-    margin-bottom: var(--s-3);
-  }
-  .find-btn {
-    font: inherit;
-    font-family: var(--font-data);
-    font-size: 0.8rem;
-    font-weight: 600;
-    letter-spacing: 0.03em;
-    cursor: pointer;
-    padding: 0.35em 0.8em;
-    color: var(--sky);
-    background: transparent;
-    border: 1px solid var(--line);
-    border-radius: var(--radius-sm);
-    white-space: nowrap;
-    transition: border-color 0.12s ease, color 0.12s ease, box-shadow 0.12s ease;
-  }
-  .find-btn:hover {
-    border-color: var(--sky);
-    box-shadow: var(--glow-sky);
-  }
-  .addr-form {
-    display: flex;
-    gap: var(--s-2);
-    flex: 1 1 16rem;
-  }
-  .addr-form input {
-    font: inherit;
-    font-size: 0.9rem;
-    flex: 1;
-    min-width: 0;
-    padding: 0.3em 0.6em;
-    color: var(--ink);
-    background: var(--surface-2);
-    border: 1px solid var(--line);
-    border-radius: var(--radius-sm);
-  }
-  .addr-form input:focus {
-    outline: none;
-    border-color: var(--sky);
-  }
-  .find-status {
-    font-size: 0.85rem;
-    color: var(--sun-ink);
   }
   .rumor-links {
     display: flex;
@@ -636,8 +343,3 @@ const tabBlurb: Record<string, { en: string; es: string }> = {
     margin: 0;
   }
 </style>
-
-<script>
-  import { initVenueMap } from '../../scripts/venue-map';
-  initVenueMap();
-</script>

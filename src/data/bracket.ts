@@ -6,9 +6,10 @@
  * To update after a match: fill in the relevant result, advance `state`, bump
  * meta.lastUpdated, push. That is the entire workflow.
  *
- * Snapshot as of 2026-07-15 (evening): both semifinals played. Spain 2–0 France
- * (Jul 14); England 1–2 Argentina (Jul 15, verified vs ESPN full-time data).
- * The final is set: Spain v Argentina, July 19, MetLife.
+ * Snapshot as of 2026-07-21: the tournament is OVER. Spain 2–0 France (Jul 14);
+ * England 1–2 Argentina (Jul 15); FINAL Spain 1–0 Argentina after extra time
+ * (Jul 19, MetLife), Ferran Torres 106′. Stage is now `champion`; Spain are the
+ * 2026 world champions. Verified vs ESPN / FIFA / Wikipedia full-time data.
  */
 import type { Locale } from '../lib/i18n';
 
@@ -139,7 +140,15 @@ export const FINAL = {
   id: 'final',
   date: '2026-07-19',
   venue: { en: 'New York / New Jersey (MetLife)', es: 'Nueva York / Nueva Jersey (MetLife)' },
-  result: null as Match['result'],
+  result: {
+    home: 1, // ESP
+    away: 0, // ARG
+    winner: 'ESP',
+    note: {
+      en: 'AET. Ferran Torres 106′ (Nico Williams). Enzo Fernández sent off 90+3′ (2nd yellow, reckless challenge on Cubarsí; ESPN/VAR review judged it deserved), so Argentina played extra time a man down. Argentina did not register a shot on target in regulation. Spain’s 2nd title; no World Cup winner had ever conceded only one goal across a tournament. A post-match brawl saw Leandro Paredes shown a red after the whistle — later rescinded by FIFA, whose disciplinary prosecutor is investigating the incident.',
+      es: 'Tras alargue. Ferran Torres 106′ (Nico Williams). Enzo Fernández expulsado 90+3′ (2.ª amarilla, patada temeraria a Cubarsí; la revisión de ESPN/VAR la dio por bien cobrada), así que Argentina jugó el alargue con uno menos. Argentina no remató al arco en los 90. Segundo título de España; ningún campeón del mundo había recibido un solo gol en todo un torneo. Tras el pitazo hubo una trifulca y le mostraron la roja a Leandro Paredes — después la FIFA la anuló, y su fiscal disciplinario investiga el incidente.',
+    },
+  } as Match['result'],
 };
 
 /** Current bracket stage, derived from which results are filled in. */

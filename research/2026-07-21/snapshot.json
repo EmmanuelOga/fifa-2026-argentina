@@ -1,0 +1,78 @@
+{
+  "run": 10,
+  "date": "2026-07-21",
+  "bracketStage": "champion",
+  "supersedes": "New dated folder for 2026-07-21, two days after the final. Run 9 (the resolving pass) preserved in research/2026-07-20/, Run 8 in research/2026-07-19/, Runs 3-5 in research/2026-07-15/, Run 6 in research/2026-07-16/, Run 7 in research/2026-07-17/, all in git. This is the aftermath pass: discipline, succession, and the money thread moved; no probability band did.",
+  "outcomes": {
+    "champion": "ESP",
+    "finalRecordUnchanged": "Spain 1-0 Argentina AET (Torres 106'); all Run 9 result/awards/records facts stand. One correction: Paredes' post-whistle straight red was RESCINDED by FIFA (erased from the record; no disciplinary measure was actually imposed on the night).",
+    "aftermath": {
+      "brawlCase": "FORMAL as of Jul 20: FIFA appointed a Disciplinary and Ethics Prosecutor to investigate post-match breaches. Named in coverage: Paredes (throat-grab on Eric Garcia, shoved Gavi), Molina (jab at Rodri), assistant coach Roberto Ayala (struck Dani Olmo). Possible suspensions and/or fines for players, staff, and the AFA. Prosecutor's report pending, no date.",
+      "paredesRed": "Rescinded/erased. Any sanction flows from the retrospective inquiry, not the card.",
+      "enzoBan": "Enzo Fernandez's final red CARRIES OVER to Argentina's next official match under FIFA World Cup regulations (suspension unserved at the tournament).",
+      "malvinasRuling": "STILL NOT ISSUED as of Jul 21. 2014 precedent (CHF 30,000) was published after that tournament ended, so post-final timing is consistent. Pending; benchmark unchanged.",
+      "squadReturn": "Squad landed Ezeiza Jul 20 (Aerolineas charter); crowd turned out despite the loss; protocol reception, no celebration; Tapia, Scaloni, Otamendi first off. Messi and De Paul stayed in the US.",
+      "scaloni": "Contract to December 2026. Post-final: 'hasta diciembre sigo y despues seguramente corte' - will see it out, then probably step away; still has to talk to the AFA president. (Ambito)",
+      "messi": "39; NO announcement from him or the AFA. TyC Sports (Gaston Edul) reported the final was not his last international match. 'The Last Tango' boots + pre-final farewell letter read as a World Cup goodbye, not (yet) the shirt. Question recorded as open.",
+      "dojMovedToIndictment": false
+    },
+    "moneyThread": {
+      "tapiaReturn": "CLOSED open item: Tapia returned Jul 20 with the squad, as required by judge Diego Amarante's travel authorization (obligation to be back before Jul 21).",
+      "domesticProcessing": "Tapia procesado (no preventive detention) in the ARCA withholdings case: ~AR$20,000M (~US$13M; earlier reported as ~US$12.7M) in allegedly withheld taxes and pension contributions. Toviggino and other officials also processed; multimillion asset embargoes.",
+      "casacionReset": "The separate 'mansion' laundering thread moved BACKWARD: Camara Federal de Casacion (Barroetavena, Borinsky) annulled the ruling fixing the case with judge Gonzalez Charvay (Zarate-Campana); venue to be re-decided between San Martin and Comodoro Py. El Espanol: the FBI advances while the Argentine case regresses.",
+      "usInquiry": "Still preliminary; no charges; no formal imputation of Tapia; FBI declines comment. New reported detail (Infobae): >US$13.5M through PNC alone in under a year, inside the >$300M total. TourProdEnter principals named by Infobae; site keeps roles-not-names.",
+      "aug12Hearing": "Still the next fixed domestic date as previously reported; not re-confirmed post-annulment, phrased carefully in site copy."
+    }
+  },
+  "predictions": {
+    "note": "Forecasts resolved and graded in Run 9; models.ts and bayes.ts untouched this run.",
+    "hypotheses": {
+      "H1_deliberate_favoritism": { "low": 0.02, "high": 0.06, "moved": false },
+      "H2_inquiry_exists": { "low": 0.7, "high": 0.9, "moved": false },
+      "H2_chargeable_conduct": { "low": 0.45, "high": 0.65, "moved": false, "note": "changeMind (subpoena/indictment/cooperating witness) still unmet. Domestic procesamiento detail thickens the existing 'real heat' forPoint but is not US-side movement; Casacion reset is procedural, not exculpatory. No band edit." },
+      "H3_soft_bias_contributor": { "low": 0.35, "high": 0.55, "moved": false },
+      "H4_variance_perception": { "low": 0.35, "high": 0.55, "moved": false }
+    }
+  },
+  "carriedForwardFromRun9": "All Run 1-9 verified facts stand: the full result record (Spain 1-0 ARG AET, Torres 106', Enzo red 90+3' VAR-upheld, no ARG shot on target in regulation, attendance 80,663, Vincic/Dankert crew); awards sweep (Rodri Golden Ball, Messi Silver, Mbappe Golden Boot 10, Simon Glove, Cubarsi young player); Spain records (men's+women's double, one goal conceded, 37 unbeaten); Messi coda (second to appear in three finals after Cafu, first to start all three); forecast grading (favorite won - hit; extra-time tail - hit; Faghani tip - miss; 'no major controversy' - partial); H1 narrowed 2-6% and H4 strengthened 35-55% on the final's clean disconfirmation; prediction-market records (Kalshi >$1.27B contract, Polymarket >$4B); the money-thread corpus (five banks, TourProdEnter ~$260M/~$57M, Miami Herald ~$90M, Tofoni testimony, three named prosecutors, no US charges).",
+  "newSinceRun9": [
+    "BRAWL CASE FORMAL: FIFA appointed a Disciplinary and Ethics Prosecutor (Jul 20) over the post-final scenes; Paredes, Molina and assistant coach Ayala named in coverage; suspensions/fines possible for players, staff and the AFA. Source yahoo-red-rescinded (+ World Soccer Talk for the FIFA statement).",
+    "PAREDES RED RESCINDED: FIFA erased the post-whistle straight red from the record, clarifying no disciplinary measure had been imposed on the night; sanctions, if any, come from the retrospective inquiry. Corrects Run 9's 'straight red' record; bracket.ts note and timeline final-brawl updated.",
+    "ENZO BAN CARRIES: the final red transfers to Argentina's next official match under FIFA World Cup regulations.",
+    "SQUAD RETURN + SUCCESSION: Ezeiza landing Jul 20 with a crowd despite the loss; Messi and De Paul stayed in the US. Scaloni: 'hasta diciembre sigo y despues seguramente corte' (contract to Dec 2026). Messi announced nothing; TyC reported the final was not his last international match. New timeline node squad-returns (order 21).",
+    "TAPIA'S COURT-ORDERED RETURN: flew home with the squad as judge Diego Amarante's travel bond required (back before Jul 21) - closes the Run 8/9 open item. Infobae 'three storm fronts': domestic procesamiento (~AR$20,000M withholdings, embargoes, Toviggino too), the still-preliminary US inquiry (new PNC >US$13.5M detail), and the resuming Milei feud. New timeline node tapia-returns (order 22).",
+    "CASACION RESET: the mansion-case jurisdiction ruling was annulled (Barroetavena/Borinsky); venue re-decided between San Martin and Comodoro Py; the FBI-advances-while-the-domestic-case-regresses contrast recorded. Source elespanol-casacion.",
+    "MALVINAS RULING still pending (Jul 21); 2014 precedent timing (post-tournament) makes this unsurprising.",
+    "NO post-tournament refereeing review or xG study published yet; H1/H3/H4 held.",
+    "SILVER still paywalled (seventh consecutive run)."
+  ],
+  "dataChangesThisRun": [
+    "meta.lastUpdated 2026-07-20 -> 2026-07-21.",
+    "bracket.ts: header snapshot date bumped; FINAL note corrected (Paredes red later rescinded; FIFA prosecutor investigating).",
+    "models.ts, bayes.ts: unchanged.",
+    "timeline.json: final-brawl updated (formal prosecutor, rescission, Molina/Ayala; + source yahoo-red-rescinded); added squad-returns (order 21, sporting) and tapia-returns (order 22, financial).",
+    "hypotheses.json NOT edited (no band moves).",
+    "sources.json: added yahoo-red-rescinded (110), infobae-squad-return (111), ambito-scaloni (112), nbc-messi-future (113), infobae-tapia-return (114), elespanol-casacion (115), all tier 2.",
+    "sections.json, precedents.json, glossary.json NOT edited.",
+    "updates.json NOT edited (Log handled via .update-pending-log.json).",
+    ".update-pending-log.json written: recommend true, Log run 8 (id run-8-2026-07-21)."
+  ],
+  "openForNextRun": [
+    "FIFA's Malvinas-banner ruling (benchmark: 2014 CHF 30,000; timing precedent says coming weeks).",
+    "The brawl prosecutor's report: sanctions for Paredes/Molina/Ayala and/or an AFA fine.",
+    "First formal US step in the money thread (subpoena/indictment/cooperating witness) -> would move H2 secondary band; Aug 12 domestic hearing; mansion-case venue (San Martin vs Comodoro Py).",
+    "Scaloni's December decision; Messi's announcement.",
+    "Any post-tournament refereeing review or xG-adjusted study (H1/H3 sharpener).",
+    "Silver PELE per-team split if ever published (seventh run paywalled)."
+  ],
+  "keySources": {
+    "yahooRedRescinded": "https://sports.yahoo.com/articles/argentina-world-cup-final-red-144524307.html",
+    "worldSoccerTalkProsecutor": "https://worldsoccertalk.com/world-cup/argentina-faces-potential-sanctions-as-fifa-opens-disciplinary-review-into-world-cup-final-clash-with-spain/",
+    "siBrawlPunishments": "https://www.si.com/soccer/argentina-world-cup-final-brawl-potential-punishments-fifa-investigation",
+    "infobaeSquadReturn": "https://www.infobae.com/deportes/2026/07/20/la-seleccion-argentina-vuelve-al-pais-en-vivo-que-futbolistas-regresan-y-como-sera-la-recepcion-protocolar-en-ezeiza/",
+    "infobaeTapiaReturn": "https://www.infobae.com/politica/2026/07/20/sin-la-copa-y-sin-messi-en-el-avion-vuelve-tapia-y-debera-enfrentar-tres-frentes-de-tormenta-tras-la-pausa-del-mundial/",
+    "ambitoScaloni": "https://www.ambito.com/deportes/lionel-scaloni-puso-duda-su-continuidad-la-seleccion-hasta-diciembre-y-luego-probablemente-corte-n6301366",
+    "nbcMessiFuture": "https://www.nbcnews.com/sports/soccer/world-cup-final-heartbreak-was-end-lionel-messi-rcna588286",
+    "elespanolCasacion": "https://www.elespanol.com/deportes/futbol/20260716/corrupcion-afa-fbi-avanza-causa-tapia-argentina-retrocede-maniobras-peleas-jueces/1003744323219_0.html"
+  }
+}

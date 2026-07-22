@@ -1,0 +1,141 @@
+{
+  "run": 8,
+  "date": "2026-07-19",
+  "bracketStage": "final-set",
+  "supersedes": "New dated folder for 2026-07-19, the day of the final. Runs 3-5 preserved in research/2026-07-15/findings.md, Run 6 in research/2026-07-16/, Run 7 in research/2026-07-17/, all in git. This pass was written WITH THE FINAL IN PROGRESS (0-0 around 35'), so no result is recorded and bracket.ts is untouched.",
+  "matchInProgress": {
+    "note": "Live snapshot at time of writing, deliberately NOT written into site content: it goes stale within the hour and the site does not carry live match state.",
+    "score": "ESP 0-0 ARG",
+    "minute": "~35'",
+    "kickoff": "2026-07-19T15:00-04:00",
+    "venue": "MetLife Stadium, East Rutherford, NJ",
+    "referee": "Slavko Vincic (Slovenia/UEFA), as appointed Jul 17",
+    "stats": { "possessionESP": 0.63, "possessionARG": 0.37, "xgESP": 0.1, "xgARG": 0.0, "shotsOnGoalESP": 1, "shotsOnGoalARG": 0 },
+    "notes": "Yamal's deflected 5th-minute effort the only shot; reported as the fewest shots in the opening 25 minutes of a World Cup final on record (ESPN cites since 1966). Messi had two touches in the opening 20 minutes."
+  },
+  "predictions": {
+    "titleProbabilities": {
+      "ESP": {
+        "authorLow": 0.55,
+        "authorHigh": 0.6,
+        "opta": 0.595,
+        "optaNote": "CHANGED from Run 7: Opta re-ran the model for its match-day final preview (Jul 19, 25,000 pre-match sims) and moved further toward Spain - 59.5% v 40.5%, a ~3.4-point shift in three days with NO football played in between. This is a model refresh on final team news, not a reaction to a result. Supersedes the Jul 16 explicit pair (.561/.439), which is kept in models.ts as publishedJul16 for provenance. Sourced from The Analyst's own preview article - a primary read this time, not syndication."
+      },
+      "ARG": {
+        "authorLow": 0.4,
+        "authorHigh": 0.45,
+        "opta": 0.405,
+        "optaNote": "Opta match-day final sim. Note the gap to the regulation-time number: Opta's 90-minute split is ESP 45.0 / draw 29.0 / ARG 26.0, so ~29% of sims go to extra time and Argentina's title number (40.5%) sits well above its regulation-win number (26%) because the knockout path runs through ET and penalties."
+      },
+      "ENG": { "authorLow": 0, "authorHigh": 0, "opta": 0, "optaNote": "resolved to 0 by elimination Jul 15 (lost SF2 1-2 to Argentina)" },
+      "FRA": { "authorLow": 0, "authorHigh": 0, "opta": 0, "optaNote": "resolved to 0 by elimination Jul 14" }
+    },
+    "optaFinal90": { "ESP": 0.45, "draw": 0.29, "ARG": 0.26, "note": "Opta match-day preview, Jul 19. The trophy column hides this; the prose now surfaces it." },
+    "market": {
+      "asOf": "2026-07-19T12:00-07:00",
+      "moved": true,
+      "moveDirection": "firmed a shade further toward Spain vs Run 7 (~58 -> ~59), then flat into kickoff",
+      "note": "Re-checked at kickoff. Kalshi ~59% ESP / ~41.6% ARG; Polymarket 59c / 40c. Kalshi's regulation-time-only book is ESP 43 / draw 32 / ARG 28 - a slightly fatter draw than Opta's 29%, i.e. the market prices a bit more extra time than the model does. Kalshi also has ARG to score at least one goal 66%, over 2.5 goals 43%.",
+      "trophy": {
+        "caesars": { "ESP": "-170", "ARG": "+135", "note": "OPENING PRICE Jul 15; no re-quote in four days. Now explicitly labelled as opening, not live." },
+        "bet365": { "ESP": "-175", "ARG": "+125", "note": "opening price, carried" },
+        "thescore": { "ESP": "-160", "ARG": "+130", "note": "opening price, carried" },
+        "fanduel": { "ESP": "-156", "ARG": "+136", "note": "opening price, carried" },
+        "kalshi": { "ESP": 0.59, "ARG": 0.416, "prev": { "ESP": 0.582, "ARG": 0.41 } },
+        "polymarket": { "ESP": 0.59, "ARG": 0.4, "prev": { "ESP": 0.58, "ARG": 0.41 } }
+      },
+      "final90min": {
+        "kalshiRegulationOnly": { "ESP": 0.43, "draw": 0.32, "ARG": 0.28 },
+        "draftkings": { "ESP": "+115", "draw": "+200", "ARG": "+285", "note": "carried from Jul 17" }
+      },
+      "scale": {
+        "note": "Recorded because it is a genuine record, with the caveat that volume is liquidity, not accuracy - these same markets favored BOTH losing semifinalists.",
+        "kalshiEspArgContractUsd": 1270000000,
+        "polymarketWorldCupWinnerCumulativeUsd": 4000000000,
+        "polymarketComparison": "larger than its own 2024 US presidential market",
+        "totalWorldCupTradingUsd": 25000000000,
+        "reference": "~$2B for an NBA Finals, ~$1B for a Super Bowl"
+      }
+    },
+    "anchorConvergence": {
+      "note": "CHANGED IN CHARACTER from Run 7: the anchors no longer straddle the author band, they bunch at its Spain edge. Four independent reads within a point of each other, all at or just inside the top of the published .55-.60 Spain range rather than around its middle. Only the site's own Elo bracket at nudge=0 still sits low in the band. AUTHOR_RANGES HELD anyway - every anchor is still inside, and nudging a speculative band to chase the market on match day, hours before the result, is exactly the hindsight-shaped edit this project avoids. The drift is disclosed in the code comment instead of absorbed.",
+      "optaMatchDay": { "ESP": 0.595, "ARG": 0.405 },
+      "kalshi": { "ESP": 0.59, "ARG": 0.416 },
+      "polymarket": { "ESP": 0.59, "ARG": 0.4 },
+      "booksNormalized": { "ESP": 0.59, "ARG": 0.41 },
+      "eloBracketNudge0": { "ESP": 0.56, "ARG": 0.44 }
+    },
+    "hypotheses": {
+      "H1_deliberate_favoritism": { "low": 0.02, "high": 0.08, "moved": false, "note": "Gains an againstPoint: FIFA opened a disciplinary case against Argentina over the Malvinas banner three days before the final - not the behavior of a body shielding them." },
+      "H2_inquiry_exists": { "low": 0.7, "high": 0.9, "moved": false },
+      "H2_chargeable_conduct": { "low": 0.45, "high": 0.65, "moved": false, "note": "No legal movement. Still preliminary; prosecutors gathering testimony and bank documentation to decide whether it warrants a formal criminal referral; still seeking witnesses to the Tapia/Toviggino tenures; no charges; FBI declines comment. changeMind trigger (subpoena / indictment / formal cooperating witness) NOT met." },
+      "H3_soft_bias_contributor": { "low": 0.35, "high": 0.55, "moved": false },
+      "H4_variance_perception": { "low": 0.3, "high": 0.5, "moved": false, "note": "Gains a forPoint: the Malvinas banner is perception cascade with the officiating variable removed entirely - a celebration flag became a British-government complaint and a White House statement inside 48 hours, no refereeing involved." }
+    }
+  },
+  "outcomes": {
+    "note": "The final was IN PROGRESS when this pass was written. No result, no champion, no officiating verdict on the match. bracket.ts deliberately untouched; stage still final-set. Grading of Run 1-8 scorecards belongs to the score step, and the next run resolves the champion, H4's regression test, and Tapia's travel-bond return date.",
+    "champion": null,
+    "semifinals": { "FRA_v_ESP": "ESP 2-0", "ENG_v_ARG": "ARG 2-1" },
+    "final": null,
+    "finalReferee": "Slavko Vincic (Slovenia/UEFA); assistants Klancnik & Kovacic (SVN); 4th official Makhadmeh (JOR); VAR Dankert (GER); AVAR Gallo (COL); support VAR Al Marri (QAT)",
+    "dojMovedToIndictment": null,
+    "fifaMalvinasRulingIssued": false
+  },
+  "lineups": {
+    "note": "CONFIRMED starting elevens - this closes the fitness watch carried since Run 6 and the Alvarez-or-Lautaro question.",
+    "ESP": { "formation": "4-2-3-1", "xi": ["Unai Simon", "Porro", "Cubarsi", "Laporte", "Cucurella", "Rodri", "Fabian Ruiz", "Olmo", "Yamal", "Oyarzabal", "Baena"], "changes": "none - De la Fuente repeats the eleven that shut out France", "fitnessResolved": "Yamal (thigh strapping) and Porro (muscle overload) BOTH started; the doubts carried since Run 6 resolve as non-issues" },
+    "ARG": { "formation": "4-4-2", "xi": ["E. Martinez", "Montiel", "Romero", "L. Martinez", "Tagliafico", "Mac Allister", "De Paul", "E. Fernandez", "N. Gonzalez", "Messi", "J. Alvarez"], "changes": "three from the England semifinal - De Paul, Nico Gonzalez and Montiel in; Simeone, Paredes and Molina out", "resolved": "Alvarez-or-Lautaro resolves toward Alvarez; De Paul returns to the XI after being dropped for the semifinal" },
+    "milestone": "Messi is the first player to start three World Cup finals, and the oldest outfield player to appear in one."
+  },
+  "carriedForwardFromRun7": "All Run 1-7 verified facts stand: Spain 2-0 France with the disputed Digne-on-Yamal penalty; England 1-2 Argentina (Gordon 55'; E. Fernandez 85', L. Martinez 90+2' from a Messi cross; ARG 64% possession, xG ~1.84 v ~0.53; referee Elfath, no controversy of substance); market flip to Spain; the final referee appointment (Vincic, Slovenia/UEFA, announced Jul 17, first Slovenian and 23rd person to referee a men's WC final, full crew as recorded) and Run 6's 'neutral field / Faghani' reasoning graded a miss; five named banks; Miami Herald ~$90M; La Nacion $260M/$57M attribution; Tofoni ~3h videoconference (witness, not charged); the Jul 14 'from inside' inward turn (former AFA insiders, informal videoconferences, three named prosecutors across DC/SDFL, 'cuevas' mechanism, Toviggino>Tapia perceived focus); domestic 'mansion' case hearing set Aug 12; the multi-million-signature expulsion petition and Collina/Scaloni rebuttals; no US charges; FBI declines comment; no suspensions for the final; author ranges ESP 55-60 / ARG 40-45.",
+  "newSinceRun7": [
+    "MALVINAS BANNER + FIFA DISCIPLINARY REVIEW (biggest item; genuinely NEW material, not an update - Runs 6 and 7 covered the England semifinal without catching it). After beating England 2-1, several Argentina players unfurled a banner reading 'Las Malvinas son Argentinas'. A day later FIFA confirmed its independent disciplinary bodies were reviewing it under Article 34.3 of the tournament regulations (bars political messages before, during or after a match). DIRECT PRECEDENT BOUNDING THE OUTCOME: in 2014 the AFA was fined CHF 30,000 (~$37,000) for an identical banner before a Slovenia friendly, so the realistic range is warning -> fine, nothing touching the final. UK Business Secretary Peter Kyle called it 'entirely inappropriate'. Andrew Giuliani, executive director of the White House World Cup task force, defended the players on First Amendment grounds and rejected calls to punish them; commentators subsequently reported Trump was 'reexamining' his Falklands position (commentator-sourced, hedged). EDITORIAL READ, two separable points: (1) clearest case yet of how fast anything Argentina does here stops being football - celebration flag to British-government complaint to White House statement in 48 hours, with NO officiating involved: added as an H4 forPoint, perception cascade with the refereeing variable removed; (2) cuts AGAINST H1 - FIFA opened a case against a finalist three days before the final, not the behavior of a body shielding them: added as an H1 againstPoint. Bands HELD (H1 2-8, H4 30-50). Added timeline node malvinas-banner (order 16) and sources aljazeera-malvinas-probe + thehill-malvinas-whitehouse.",
+    "OPTA MATCH-DAY RE-RUN moves toward Spain: 25,000 pre-match sims, Jul 19, ESP 59.5% v ARG 40.5% - a ~3.4-point shift in three days with no football played between, so a model refresh on final team news rather than a reaction to a result. Also prints the 90-minute split ESP 45.0 / draw 29.0 / ARG 26.0, which is the clearest available statement that ~29% of sims go to extra time and that Argentina's title number sits well above its regulation-win number because the knockout path runs through ET/penalties. models.ts OPTA: asOf -> 2026-07-19, url -> the final preview article, teams .595/.405, new final90 field, publishedJul16 added for provenance; the stale file-header claim that the Opta column is 'DERIVED' corrected (it has been printed since Run 7 and the header never caught up). whowins-intro prose updated both locales with the new pair and the ET point.",
+    "ANCHORS BUNCH AT THE SPAIN EDGE (change in character, not just value): Opta .595/.405, Kalshi .590/.416, Polymarket .590/.400, books normalized ~.59/.41 - four independent reads within a point, all at or just inside the TOP of the .55-.60 author range rather than around its middle; only the site's own Elo bracket at nudge=0 (~.56/.44) still sits low. AUTHOR_RANGES HELD, with the reasoning written into the code comment: every anchor is still inside, and moving a speculative band to chase the market on match day, hours before the result, is the hindsight-shaped edit this project avoids. Disclosed rather than absorbed.",
+    "MARKET AT KICKOFF: Kalshi ~59% ESP / ~41.6% ARG, Polymarket 59c/40c - firmed a shade vs Run 7's ~58, then flat. Kalshi regulation-only ESP 43 / draw 32 / ARG 28, a fatter draw than Opta's 29%. Named trophy moneylines have not been re-quoted since Jul 15 and are now explicitly labelled OPENING prices in the code comment rather than restated as live. BOOKMAKERS.asOf -> 2026-07-19.",
+    "RECORD PREDICTION-MARKET SCALE: Kalshi's ESP-ARG contract passed $1.27B (largest single prediction market ever run); Polymarket's World Cup winner market cleared $4B cumulative since July 2025, more than its own 2024 US presidential market; total World Cup trading exceeded $25B vs ~$2B for an NBA Finals and ~$1B for a Super Bowl. Recorded with the caveat that volume is liquidity, not accuracy - these markets favored both losing semifinalists. Source fortune-prediction-market-record.",
+    "CONFIRMED ELEVENS close two carried open items: Spain unchanged from the France semifinal with BOTH Yamal (thigh strapping) and Porro (muscle overload) starting - the Run 6 fitness watch resolves as a non-issue; Argentina make three changes (De Paul, Nico Gonzalez, Montiel in; Simeone, Paredes, Molina out) and the Alvarez-or-Lautaro question resolves toward Alvarez. Messi becomes the first player to start three World Cup finals and the oldest outfield player to appear in one. Added timeline node final-day-teams (order 17) with sources espn-final-lineups + opta-final-preview + fortune-prediction-market-record + espn-final-tickets.",
+    "TICKET MARKET: FIFA's own resale site listed its cheapest seat at $6,411.25 Saturday morning, gone by lunchtime; last-minute seats $10,000-$60,000 (upper deck ~$10k, mid-level ~$16k, lower bowl to ~$35k, hospitality to $60k). No official attendance figure released. Source espn-final-tickets.",
+    "MONEY THREAD - NO LEGAL MOVEMENT, but a proximity item worth recording separately. Re-checked: no charges against AFA/Tapia/Toviggino in the US; inquiry still described as preliminary, with prosecutors gathering testimony and bank documentation to decide whether it warrants a formal criminal referral; still seeking witnesses to the Tapia and Toviggino tenures; FBI still declines comment. H2 changeMind NOT met, bands HELD. What IS new is proximity, not evidence, and the prose keeps them apart: Tapia travelled to the US on judicial authorization despite the open Argentine proceedings, was among the federation officials received at Trump Tower with Infantino on Friday, watches the final from the main box with FIFA/CONMEBOL/RFEF leadership and goes onto the pitch at full time, and Trump - whom FIFA disclosed had received $15,000 in tickets from Infantino - is expected to present the trophy. La Nacion's own framing ('close to Trump and, for now, far from the courts') quoted as the honest version. Added timeline node tapia-final-box (order 18, financial) and source lanacion-tapia-eeuu. Domestic hearing still Aug 12.",
+    "SILVER still paywalled (fifth consecutive run). Per-team PELE title split unavailable; methodology + market reference retained."
+  ],
+  "dataChangesThisRun": [
+    "meta.lastUpdated 2026-07-17 -> 2026-07-19.",
+    "bracket.ts UNTOUCHED - the final was in progress when this pass was written, so no result was invented and the stage stays final-set.",
+    "models.ts: file-header corrected (the Opta column is no longer 'DERIVED'). OPTA asOf -> 2026-07-19, url -> the match-day final preview, teams ESP .595 / ARG .405 (was .561/.439), new final90 field {ESP .45, draw .29, ARG .26}, new publishedJul16 provenance field, doc comment records the match-day re-run and why it moved without football being played. BOOKMAKERS asOf -> 2026-07-19, comment records the kickoff market, Kalshi's regulation-only split, the named lines being FOUR-DAY-STALE opening prices, and the record-volume context with the liquidity-is-not-accuracy caveat. AUTHOR_RANGES values UNCHANGED; comment rewritten to disclose that the anchors now bunch at the Spain edge and to state why the band is held anyway.",
+    "bayes.ts unchanged (config; bands hold).",
+    "timeline.json: added malvinas-banner (order 16, sporting, Jul 16), final-day-teams (order 17, sporting, Jul 19), tapia-final-box (order 18, financial, Jul 19).",
+    "hypotheses.json: H1 gains an againstPoint (FIFA opened a disciplinary case against Argentina three days before the final) + source aljazeera-malvinas-probe; H4 gains a forPoint (the Malvinas banner as perception cascade with officiating removed) + source thehill-malvinas-whitehouse. All bands UNCHANGED.",
+    "sources.json: added opta-final-preview (tier 2, 98), espn-final-lineups (tier 2, 99), aljazeera-malvinas-probe (tier 2, 100), thehill-malvinas-whitehouse (tier 2, 101), fortune-prediction-market-record (tier 2, 102), espn-final-tickets (tier 2, 103), lanacion-tapia-eeuu (tier 2, 104).",
+    "sections.json: whowins-intro updated both locales - Opta's match-day 59.5/40.5 replaces the 56/44, the 45/29/26 split and the extra-time point added, 'two days out' -> prices read at kickoff.",
+    "precedents.json NOT edited - the 2014 CHF 30,000 banner fine is a disciplinary precedent, not a match-fixing one, so it lives in the malvinas-banner timeline detail rather than being forced into a tab framed around fixing feasibility.",
+    "updates.json NOT edited (Log handled via .update-pending-log.json).",
+    ".update-pending-log.json written: recommend true, Log run 6 (id run-6-2026-07-19)."
+  ],
+  "openForNextRun": [
+    "THE RESULT. The final was 0-0 and in progress when this pass was written. The next run records the champion, the scoreline, the officiating verdict on the match itself, and grades every prior scorecard.",
+    "H4's regression test resolves with the final: did the most-scrutinized match of the tournament pass without a major officiating controversy?",
+    "Grade the Run 4 Log entry's 'neutral field / Faghani favourite' structural claim as a MISS (carried from Run 7; FIFA picked Vincic, a European).",
+    "Grade Opta's match-day 59.5/40.5 and the ~59/41 market against the actual result - and note whether the ~29-32% extra-time band was right.",
+    "FIFA's disciplinary ruling on the Malvinas banner: warning, fine, or nothing. The 2014 CHF 30,000 precedent is the benchmark to grade it against.",
+    "Tapia's travel-bond return date, and whether the Aug 12 domestic hearing holds.",
+    "Watch the money thread for the first formal step (subpoena/indictment/cooperating witness) that would move H2's secondary band.",
+    "Official attendance figure for the final, if FIFA releases one.",
+    "Replace the paywalled Silver PELE per-team split with a printed number if Silver ever publishes one."
+  ],
+  "keySources": {
+    "optaFinalPreview": "https://theanalyst.com/articles/spain-vs-argentina-prediction-world-cup-final-2026-match-preview",
+    "espnFinalLineups": "https://www.espn.com/soccer/story/_/id/49400794/argentina-spain-fifa-2026-world-cup-final-starting-lineups",
+    "aljazeeraMalvinasProbe": "https://www.aljazeera.com/sports/2026/7/16/fifa-to-probe-argentinas-falklands-banner-display-at-world-cup-semifinal",
+    "thehillMalvinasWhiteHouse": "https://thehill.com/policy/sports-gaming/5976445-argentina-falklands-banner-white-house/",
+    "siMalvinasPunishments": "https://www.si.com/soccer/argentina-falklands-banner-likely-punishments-fifa-investigation",
+    "fortunePredictionMarketRecord": "https://fortune.com/2026/07/17/world-cup-final-biggest-ever-prediction-market-kalshi-bets-top-spain-argentina/",
+    "espnFinalTickets": "https://www.espn.com/soccer/story/_/id/49392880/spain-argentina-world-cup-final-last-minute-tickets-start-10k",
+    "lanacionTapiaEeuu": "https://www.lanacion.com.ar/deportes/futbol/chiqui-tapia-en-eeuu-exultante-con-su-segunda-final-cerca-de-trump-y-por-ahora-lejos-de-los-nid16072026/",
+    "cnbcTrumpFifaTickets": "https://www.cnbc.com/2026/07/01/trump-fifa-infantino-world-cup-financial-disclosure.html",
+    "defirateMarkets": "https://defirate.com/prediction-markets/world-cup-odds/",
+    "espnLiveMatch": "https://www.espn.com/soccer/match/_/gameId/760517/argentina-spain",
+    "natesilver": "https://www.natesilver.net/p/world-cup-2026-odds-predictions"
+  }
+}

@@ -8,13 +8,13 @@
     "content": {
       "en": {
         "name": "Calciopoli (Italy)",
-        "summary": "Club officials rigged Serie A referee assignments; wiretaps exposed it. Juventus lost two titles, relegated.",
-        "lesson": "The one clear case of gaming the designators, and a domestic season still leaked."
+        "summary": "Wiretaps: club officials rigged Serie A ref assignments. Juventus lost two titles, relegated.",
+        "lesson": "Proven case of gaming the designators; still leaked."
       },
       "es": {
         "name": "Calciopoli (Italia)",
         "summary": "Dirigentes de clubes digitaron las designaciones arbitrales de la Serie A; lo destaparon unas escuchas. La Juventus perdió dos títulos y se fue al descenso.",
-        "lesson": "El único caso claro de haber manejado a los designadores, y aun siendo una liga local se filtró."
+        "lesson": "El único caso claro de haber manejado a los designadores, y aun así se filtró."
       }
     }
   },
@@ -27,8 +27,8 @@
     "content": {
       "en": {
         "name": "FIFA-Gate (US DOJ)",
-        "summary": "A 47-count US indictment over $150M+ in bribes through US banks; a Swiss banker admitted moving $25M+ tied to the late AFA president.",
-        "lesson": "Proof the money angle bites in US courts; the template the reported AFA inquiry follows."
+        "summary": "47-count indictment: $150M+ bribes via US banks. Swiss banker admitted moving $25M+ tied to the late AFA president.",
+        "lesson": "Money angle bites in US courts; template for the reported AFA inquiry."
       },
       "es": {
         "name": "FIFA-Gate (DOJ de EE.UU.)",
@@ -46,13 +46,13 @@
     "content": {
       "en": {
         "name": "South Korea 2002",
-        "summary": "Refereeing helped eliminate Italy and Spain as co-host South Korea advanced. Suspected favoritism; never proven.",
-        "lesson": "The 'everyone knows' case with no evidence. Suspicion, however widespread, isn't proof."
+        "summary": "Refereeing helped eliminate Italy and Spain; co-host South Korea advanced. Suspected, never proven.",
+        "lesson": "'Everyone knows' case, no evidence. Suspicion isn't proof."
       },
       "es": {
         "name": "Corea del Sur 2002",
         "summary": "Decisiones arbitrales ayudaron a eliminar a Italia y España mientras la coanfitriona Corea del Sur avanzaba. Se sospechó favoritismo; nunca se probó.",
-        "lesson": "El clásico 'todos lo saben' del que nunca salió una sola prueba. La sospecha, por más generalizada que esté, no es prueba."
+        "lesson": "El clásico 'todos lo saben' del que nunca salió una sola prueba. La sospecha no es prueba."
       }
     }
   },
@@ -65,13 +65,13 @@
     "content": {
       "en": {
         "name": "Argentina 6–0 Peru",
-        "summary": "Argentina needed a rout to reach the final and did, amid junta-era allegations of a grain shipment and a dressing-room visit. Circumstantial; never proven.",
-        "lesson": "Argentina's most-cited ghost: an enduring allegation, no proven quid pro quo. Included because it's inconvenient for me."
+        "summary": "Rout needed to reach the final; junta-era allegations of a grain shipment and dressing-room visit. Never proven.",
+        "lesson": "Argentina's own ghost: live allegation, no proven quid pro quo. Kept because it cuts against me."
       },
       "es": {
         "name": "Argentina 6–0 Perú",
         "summary": "Argentina necesitaba una goleada para meterse en la final y la consiguió, entre acusaciones de la época de la dictadura sobre un envío de granos y una visita al vestuario. Circunstancial; nunca probado.",
-        "lesson": "El fantasma más citado de la propia Argentina: una acusación que sigue viva pero sin ningún quid pro quo probado. Lo incluyo porque me juega en contra."
+        "lesson": "El fantasma propio de Argentina: una acusación que sigue viva, sin ningún quid pro quo probado. Está acá porque me juega en contra."
       }
     }
   },
@@ -84,8 +84,8 @@
     "content": {
       "en": {
         "name": "Lamptey (World Cup qualifier)",
-        "summary": "A referee, banned for life (upheld by CAS), manipulated a World Cup qualifier to fit a betting pattern.",
-        "lesson": "A real, proven fix, but a betting-syndicate job on a qualifier, not an organizer steering a finals team."
+        "summary": "Referee rigged it for a betting pattern. Life ban, upheld by CAS.",
+        "lesson": "Proven, but syndicate on a qualifier, not an organizer steering a finals team."
       },
       "es": {
         "name": "Lamptey (eliminatoria mundialista)",
@@ -103,8 +103,8 @@
     "content": {
       "en": {
         "name": "Perumal / Chaibou friendlies",
-        "summary": "A match-fixing syndicate supplied referees for pre-World-Cup friendlies, one with fabricated penalties, for betting fraud.",
-        "lesson": "Real fixing: low-stakes friendlies, betting money, corrupt individuals, not a steered champion."
+        "summary": "Syndicate supplied refs for pre-World-Cup friendlies (one with invented penalties) to defraud bettors.",
+        "lesson": "Real fixing: meaningless friendlies, betting money, corrupt individuals, not a steered champion."
       },
       "es": {
         "name": "Amistosos de Perumal / Chaibou",

@@ -1,0 +1,114 @@
+{
+  "run": 9,
+  "date": "2026-07-20",
+  "bracketStage": "champion",
+  "supersedes": "New dated folder for 2026-07-20, the day after the final. Run 8 (match-in-progress) preserved in research/2026-07-19/, Runs 3-5 in research/2026-07-15/, Run 6 in research/2026-07-16/, Run 7 in research/2026-07-17/, all in git. This is the resolving pass: the tournament is over and every result-dependent open item from Run 8 is now graded.",
+  "outcomes": {
+    "champion": "ESP",
+    "final": {
+      "score": "ESP 1-0 ARG",
+      "extraTime": true,
+      "scorer": "Ferran Torres 106' (assist Nico Williams header)",
+      "playerOfTheMatch": "Ferran Torres",
+      "redCards": [
+        "Enzo Fernandez (ARG) 90+3' - second yellow (dissent, then reckless challenge on Cubarsi); ESPN/VAR review judged it deserved. ARG played extra time a man down.",
+        "Leandro Paredes (ARG) - straight red AFTER the final whistle, in the post-match brawl"
+      ],
+      "argShotsOnTargetRegulation": 0,
+      "attendance": 80663,
+      "venue": "MetLife Stadium, East Rutherford, NJ",
+      "referee": "Slavko Vincic (Slovenia/UEFA), VAR Bastian Dankert (Germany)",
+      "officiatingNote": "The decisive call (Enzo red) went AGAINST Argentina and VAR upheld it. The only errors flagged went against Spain: a disallowed Nico Williams goal (Merino foul on Otamendi; Hackett argued VAR should have restored it) and a Torres offside. Under maximum scrutiny, not one call favored Argentina - the cleanest possible disconfirmation of the favoritism thesis.",
+      "disallowedSpainGoals": ["Nico Williams (Merino foul on Otamendi in build-up)", "Ferran Torres (offside)"]
+    },
+    "semifinals": { "FRA_v_ESP": "ESP 2-0", "ENG_v_ARG": "ARG 2-1" },
+    "records": {
+      "spainTitles": 2,
+      "spainNote": "Second title (after 2010). First nation to hold the men's and women's World Cups simultaneously (women's 2023). First World Cup winner ever to concede only one goal across a tournament (8 matches), anchored by Cubarsi + Laporte; part of a 37-match unbeaten run (last defeat March 2024). Rodri captained.",
+      "messi": "39; left the pitch in tears with a runners-up medal in likely his last World Cup match. Second man after Cafu to APPEAR in three finals, and the FIRST to START all three (Cafu came on as a substitute in the 1994 final). This reconciles Run 8's 'first to start three finals' with the 'second to appear' framing - both true."
+    },
+    "awards": {
+      "goldenBall": "Rodri (ESP)",
+      "silverBall": "Messi (ARG)",
+      "bronzeBall": "Mbappe (FRA)",
+      "goldenGlove": "Unai Simon (ESP) - one goal conceded in 8 matches",
+      "bestYoungPlayer": "Pau Cubarsi (ESP), 19 - NOT Yamal",
+      "goldenBoot": "Kylian Mbappe (FRA), 10 goals to Messi's 8 - second straight, first player since Muller (1970) with more than 8 at a single men's World Cup"
+    },
+    "aftermath": {
+      "brawl": "After the whistle Molina appeared to swing at Rodri; Paredes grabbed Eric Garcia by the throat and wrestled Gavi to the ground (straight red). Argentina's players declined to join Spain's trophy lift.",
+      "fifaCase": "FIFA reported to be investigating Argentina over the brawl - a SECOND FIFA disciplinary matter stacked on the still-open Malvinas-banner case, with zero refereeing involved.",
+      "malvinasRuling": "STILL NOT ISSUED as of Jul 20 - FIFA had announced only that its disciplinary bodies were assessing it. 2014 CHF 30,000 remains the benchmark. Pending.",
+      "dojMovedToIndictment": false
+    }
+  },
+  "grading": {
+    "modelFavoriteWon": { "verdict": "hit", "note": "Opta match-day 59.5% Spain, market ~59%; Spain won. After both semifinal favorites lost (France 57.7% to reach final, England 52.53%), the final favorite finally held." },
+    "extraTimeTail": { "verdict": "hit", "note": "Opta ~29% ET; Argentina's 40.5% title number sat well above its 26% regulation-win number because the knockout path ran through ET; Kalshi regulation-only had a 32% draw. The final went to extra time and was decided there (Torres 106'). The tail the split flagged is exactly where it was won." },
+    "noProArgentinaBiasInFinal": { "verdict": "hit", "note": "H4 regression test. The decisive call went against Argentina; the only errors went against Spain. Zero pro-Argentina officiating under maximum scrutiny." },
+    "finalPassedWithoutMajorControversy_literal": { "verdict": "partial", "note": "There WAS major controversy - a game-shaping red, two disallowed Spain goals, ex-refs blasting the crew, a post-match brawl - but none of it favored Argentina, so the bias thesis the claim was really testing failed cleanly." },
+    "faghaniNeutralRefereeTip": { "verdict": "miss", "note": "Carried from Run 6/8; FIFA appointed Vincic, a European. Closed." }
+  },
+  "predictions": {
+    "note": "Forecasts are now RESOLVED. models.ts pre-match numbers are intentionally left as the graded record (not overwritten to 1/0). Bracket.ts carries the actual result.",
+    "titleProbabilities_preMatch": {
+      "ESP": { "authorLow": 0.55, "authorHigh": 0.6, "opta": 0.595, "result": "CHAMPION" },
+      "ARG": { "authorLow": 0.4, "authorHigh": 0.45, "opta": 0.405, "result": "runner-up" },
+      "ENG": { "opta": 0 },
+      "FRA": { "opta": 0 }
+    },
+    "market_preMatch": { "kalshi": { "ESP": 0.59, "ARG": 0.416 }, "polymarket": { "ESP": 0.59, "ARG": 0.4 }, "note": "Firmed to ~59% Spain into kickoff; settled to Spain." },
+    "hypotheses": {
+      "H1_deliberate_favoritism": { "low": 0.02, "high": 0.06, "moved": true, "prev": { "low": 0.02, "high": 0.08 }, "note": "NARROWED. The tournament is fully observed and its cleanest test disconfirmed the thesis: in the final, under maximum scrutiny, the decisive red went AGAINST Argentina (VAR-upheld), the only errors went against Spain, and Argentina lost. rangeHigh 0.08 -> 0.06; strong againstPoint added; source nbc-officiating-red attached. Not zeroed - one match doesn't retroactively clean the earlier rounds and the penalty outlier persists, but the ceiling comes down." },
+      "H2_inquiry_exists": { "low": 0.7, "high": 0.9, "moved": false },
+      "H2_chargeable_conduct": { "low": 0.45, "high": 0.65, "moved": false, "note": "No legal movement. Still preliminary; no charges; FBI declines comment. changeMind (subpoena/indictment/cooperating witness) NOT met. Domestic hearing still Aug 12." },
+      "H3_soft_bias_contributor": { "low": 0.35, "high": 0.55, "moved": false },
+      "H4_variance_perception": { "low": 0.35, "high": 0.55, "moved": true, "prev": { "low": 0.3, "high": 0.5 }, "note": "STRENGTHENED. Its changeMind was 'if the pattern regresses under semifinal and final scrutiny, that confirms it.' It regressed: the final produced no pro-Argentina call and the post-match flashpoint was an Argentine-instigated brawl, not a referee. rangeLow 0.30 -> 0.35; regression-test forPoint added; sources nbc-officiating-red + yahoo-final-brawl attached." }
+    }
+  },
+  "carriedForwardFromRun8": "All Run 1-8 verified facts stand: the group/knockout run; Spain 2-0 France with the disputed Digne-on-Yamal penalty; England 1-2 Argentina (referee Elfath, no controversy of substance); the Vincic final appointment (Run 6's neutral-field/Faghani reasoning graded a miss); the record prediction-market scale (Kalshi ESP-ARG contract >$1.27B, Polymarket winner market >$4B cumulative, total World Cup trading >$25B, with the liquidity-is-not-accuracy caveat since these markets favored BOTH losing semifinalists); the Malvinas banner + FIFA Article 34.3 review (2014 CHF 30,000 precedent); confirmed final elevens (Spain unchanged, Argentina three changes, Alvarez over Lautaro, Yamal + Porro fit); ticket market ($6,411.25 cheapest, gone by lunchtime, last-minute $10k-$60k); the money thread (five named banks, TourProdEnter ~$260M / ~$57M unexplained, Miami Herald ~$90M, Tofoni ~3h videoconference as witness, the Jul 14 inward turn, three named prosecutors, no US charges); Tapia in the main box near Trump; author ranges ESP 55-60 / ARG 40-45.",
+  "newSinceRun8": [
+    "THE RESULT: Spain 1-0 Argentina after extra time (Torres 106', assist Nico Williams). Spain are 2026 world champions - second title. Enzo Fernandez red 90+3' (VAR-upheld); Argentina played ET a man down and had no shot on target in regulation. Attendance 80,663. Torres player of the match. bracket.ts FINAL.result filled; stage -> champion.",
+    "THE FAVORITISM THESIS FAILED ITS CLEANEST TEST: the final's decisive call went AGAINST Argentina and the only errors flagged (two disallowed Spain goals) went against Spain. NBC: 'A World Cup known for officiating controversy ends with Argentina seeing red.' H1 narrowed to 2-6%; H4 strengthened to 35-55%. Source nbc-officiating-red.",
+    "FORECAST GRADING: model favorite (Opta 59.5%, market ~59%) WON - hit; extra-time tail (~29-32%) HIT, the final went to ET and was decided there - hit. models.ts header records both without overwriting the pre-match numbers.",
+    "AWARDS (all but one to Spain): Golden Ball Rodri (Messi Silver, Mbappe Bronze); Golden Glove Unai Simon (1 goal in 8); Best Young Player Cubarsi (not Yamal); Golden Boot Mbappe 10 goals to Messi's 8. Source athlon-final-awards.",
+    "SPAIN RECORDS: first nation to hold men's + women's World Cups at once; first champion ever to concede only one goal across a tournament (Cubarsi + Laporte); 37-match unbeaten run. Source npr-spain-champion.",
+    "MESSI CODA: 39, left in tears with a runners-up medal in likely his last World Cup match; second after Cafu to appear in three finals, first to start all three.",
+    "POST-MATCH BRAWL + SECOND FIFA CASE: after the whistle Molina appeared to swing at Rodri, Paredes grabbed Eric Garcia by the throat and wrestled Gavi down (straight red), Argentina's players skipped Spain's trophy lift; FIFA reported to be investigating. A second FIFA disciplinary matter with zero refereeing in it. Added timeline node final-brawl (order 20). Source yahoo-final-brawl.",
+    "MALVINAS RULING STILL NOT ISSUED as of Jul 20 (only 'under assessment'); 2014 CHF 30,000 remains the benchmark. Pending.",
+    "MONEY THREAD: no legal movement - no US charges, still preliminary, FBI declines comment. H2 changeMind unmet, bands held. Domestic hearing still Aug 12.",
+    "SILVER still paywalled (sixth consecutive run)."
+  ],
+  "dataChangesThisRun": [
+    "meta.lastUpdated 2026-07-19 -> 2026-07-20.",
+    "bracket.ts: FINAL.result filled (ESP 1-0 ARG, winner ESP, bilingual note). bracketStage() -> champion; argentinaEliminated() -> true. Header comment updated to final state.",
+    "models.ts: header gains a RESULT-IN grading note (favorite won, extra-time tail hit); pre-match probabilities intentionally left as the graded forecast.",
+    "bayes.ts: unchanged (config; the island back-solves priors from the published bands, so the H1/H4 band moves flow through automatically).",
+    "timeline.json: added final-result (order 19, sporting, Jul 19) and final-brawl (order 20, sporting, Jul 19).",
+    "hypotheses.json: H1 rangeHigh 0.08 -> 0.06 + againstPoint + source nbc-officiating-red; H4 rangeLow 0.30 -> 0.35 + forPoint + sources nbc-officiating-red, yahoo-final-brawl.",
+    "sources.json: added espn-final-report (105), npr-spain-champion (106), athlon-final-awards (107), nbc-officiating-red (108), yahoo-final-brawl (109), all tier 2.",
+    "sections.json: whowins-intro reconciled to the result in both locales (forecast kept, resolution appended: Spain won 1-0 AET, favorite + extra-time tail landed).",
+    "precedents.json NOT edited (no new fixing precedent).",
+    "glossary.json NOT edited.",
+    "updates.json NOT edited (Log handled via .update-pending-log.json).",
+    ".update-pending-log.json written: recommend true, Log run 7 (id run-7-2026-07-20)."
+  ],
+  "openForNextRun": [
+    "FIFA's Malvinas-banner ruling: warning, fine, or dismissal. 2014 CHF 30,000 is the benchmark to grade against.",
+    "The post-final brawl case: any FIFA sanction or hearing date.",
+    "The money thread's first formal step (subpoena / indictment / cooperating witness) that would move H2's secondary band; the Aug 12 domestic hearing; Tapia's travel-bond return.",
+    "Any post-tournament refereeing review or study that would sharpen H1/H3 with an xG-adjusted comparison.",
+    "Replace the paywalled Silver PELE per-team split with a printed number if Silver ever publishes one (sixth run unavailable)."
+  ],
+  "keySources": {
+    "espnFinalReport": "https://www.espn.com/soccer/report/_/gameId/760517",
+    "wikipediaFinal": "https://en.wikipedia.org/wiki/2026_FIFA_World_Cup_final",
+    "nprSpainChampion": "https://www.npr.org/2026/07/19/nx-s1-5899071/2026-world-cup-fifa-argentina-spain-final-championship",
+    "athlonAwards": "https://athlonsports.com/soccer/fifa-world-cup-2026-award-winners-golden-boot-golden-ball-golden-glove-best-young-player-more",
+    "aljazeeraAwards": "https://www.aljazeera.com/sports/2026/7/20/mbappe-takes-home-second-golden-boot-spain-sweeps-world-cup-awards",
+    "nbcOfficiatingRed": "https://www.nbcnews.com/sports/soccer/world-cup-officiating-argentina-spain-red-card-enzo-fernandez-rcna588292",
+    "yahooBrawl": "https://sports.yahoo.com/soccer/article/fifa-will-reportedly-investigate-argentina-for-brawl-after-world-cup-final-loss-to-spain-173432819.html",
+    "espnVarReview": "https://www.espn.com/soccer/story/_/id/49027532/world-cup-2026-var-review-red-card-penalty-handball-goal-line-technology",
+    "cbsMoneyProbe": "https://www.cbssports.com/soccer/news/fbi-investigates-argentina-football-association-alleged-money-laundering-in-u-s-2026/"
+  }
+}
